@@ -17,9 +17,11 @@
       const lastname = parts.join(" ");
       const note = [
         payload.site_log_book_only !== "No" ? payload.site_log_book_only : "",
-        "Disciplines: " + payload.disciplines,
-        "Using today: " + payload.using_today,
-        payload.message,
+        "Phone: " + payload.phone,
+        payload.engineers_from_calculator
+          ? "Field engineers (from the calculator): " +
+            payload.engineers_from_calculator
+          : "",
         "Page: " + payload.page,
       ]
         .filter(Boolean)
@@ -34,7 +36,10 @@
       fetch(CRM_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ fields, context: { pageUri: payload.page, pageName: document.title } }),
+        body: JSON.stringify({
+          fields,
+          context: { pageUri: payload.page, pageName: document.title },
+        }),
         keepalive: true,
       }).catch(() => {});
     } catch (e) {
@@ -47,7 +52,8 @@
   const SAMPLE_ADS_CONVERSION = "AW-18545152858/3C2GCKaj-7YdENqmgotF";
   const SAMPLES = {
     battery: {
-      label: "Sample fire detection and alarm servicing certificate (with standby battery record)",
+      label:
+        "Sample fire detection and alarm servicing certificate (with standby battery record)",
       file: "/assets/documents/fire-alarm-periodic-inspection-servicing-certificate-sample.pdf",
     },
     certificate: {
@@ -55,34 +61,14 @@
       file: "/assets/documents/fire-alarm-periodic-inspection-servicing-certificate-sample.pdf",
     },
     logbook: {
-      label: "Sample fire detection and alarm servicing certificate (for the log book page)",
+      label:
+        "Sample fire detection and alarm servicing certificate (for the log book page)",
       file: "/assets/documents/fire-alarm-periodic-inspection-servicing-certificate-sample.pdf",
     },
   };
   const CONSENT_KEY = "compliar_cookie_consent";
   const PREFS_KEY = "compliar_cookie_prefs";
-  const SIZES = ["1–3", "4–10", "11–25", "25+"];
-  const DISCIPLINES = [
-    "Fire detection and alarm",
-    "Emergency lighting",
-    "Electrical",
-    "Security systems",
-    "Passive fire",
-  ];
-  const USING_TODAY = [
-    "Paper and spreadsheets",
-    "Certificate-only software",
-    "Job management software",
-    "A mix of the above",
-  ];
   let uid = 0;
-
-  function sizeFor(engineers) {
-    if (engineers <= 3) return "1–3";
-    if (engineers <= 10) return "4–10";
-    if (engineers <= 25) return "11–25";
-    return "25+";
-  }
 
   function hasMarketingConsent() {
     try {
@@ -107,7 +93,8 @@
   function trackSample(key) {
     if (!hasMarketingConsent() || typeof gtag !== "function") return;
     gtag("event", "sample_request", { sample_type: key });
-    if (SAMPLE_ADS_CONVERSION) gtag("event", "conversion", { send_to: SAMPLE_ADS_CONVERSION });
+    if (SAMPLE_ADS_CONVERSION)
+      gtag("event", "conversion", { send_to: SAMPLE_ADS_CONVERSION });
   }
 
   function buildSampleForm(key) {
@@ -139,7 +126,10 @@
       try {
         const response = await fetch(ENDPOINT, {
           method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
           body: JSON.stringify({
             access_key: ACCESS_KEY,
             subject: "Compliar FREE SAMPLE request (not a demo): " + key,
@@ -147,12 +137,14 @@
             request_type: "free_sample",
             sample_requested: sample.label,
             email: form.elements.email.value.trim(),
-            message: "Free sample request from a landing page. Not a demo request.",
+            message:
+              "Free sample request from a landing page. Not a demo request.",
             page: location.href,
           }),
         });
         const result = await response.json();
-        if (!response.ok || !result.success) throw new Error(result.message || "Request failed");
+        if (!response.ok || !result.success)
+          throw new Error(result.message || "Request failed");
         trackSample(key);
         showSample();
       } catch (err) {
@@ -170,7 +162,9 @@
       card.setAttribute("role", "status");
       card.innerHTML =
         '<div class="demo-thanks-icon" aria-hidden="true">✓</div><h3>Thanks. Your sample is ready.</h3>' +
-        '<p><a class="btn btn-primary" href="' + sample.file + '" target="_blank" rel="noopener">Open the sample PDF</a></p>' +
+        '<p><a class="btn btn-primary" href="' +
+        sample.file +
+        '" target="_blank" rel="noopener">Open the sample PDF</a></p>' +
         '<p class="sample-more">Also on our <a href="/sample-documents/">Sample documents</a> page.</p>' +
         '<p class="sample-next">Want to see how it runs a whole company? <a href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a></p>';
       form.replaceWith(card);
@@ -180,6 +174,7 @@
 
   function buildForm(options = {}) {
     const id = ++uid;
+    const logBookOnly = Boolean(options.logBookOnly);
     const wrap = document.createElement("div");
     wrap.innerHTML = `
       <form class="demo-form" novalidate>
@@ -188,85 +183,33 @@
             ? `From the calculator: ${options.engineers} field engineer${options.engineers === 1 ? "" : "s"}`
             : ""
         }</p>
-        <fieldset class="demo-fieldset demo-need">
-          <legend>What do you need?</legend>
-          <div class="demo-checks">
-            <label><input type="radio" name="need" value="full" checked /> <span>Compliar for my engineers and office</span></label>
-            <label><input type="radio" name="need" value="logbook" /> <span>Log book only (no engineers)</span></label>
-          </div>
-          <p class="fine demo-need-note" hidden>For any business holding several properties, such as estate agents, housing providers and property developers. UK sites only, working to British Standards. £4 + VAT per site per year.</p>
-        </fieldset>
+        <p class="fine demo-need-note" ${logBookOnly ? "" : "hidden"}>Log book only, with no engineers: for any business holding several properties, such as estate agents, housing providers and property developers. UK sites only, working to British Standards. £4 + VAT per site per year.</p>
         <div class="grid2">
           <div>
-            <label for="df-name-${id}">Full Name *</label>
+            <label for="df-name-${id}">Name *</label>
             <input id="df-name-${id}" name="name" type="text" autocomplete="name" placeholder="e.g. David Reynolds" required />
           </div>
           <div>
-            <label for="df-email-${id}">Work Email *</label>
-            <input id="df-email-${id}" name="email" type="email" autocomplete="email" placeholder="david@yourcompany.co.uk" required />
-          </div>
-          <div>
-            <label for="df-company-${id}">Company Name *</label>
+            <label for="df-company-${id}">Company *</label>
             <input id="df-company-${id}" name="company" type="text" autocomplete="organization" placeholder="Harbourview Fire & Security Ltd" required />
           </div>
-        </div>
-        <div class="grid2 demo-contractor-only">
           <div>
-            <label for="df-size-${id}">Number of Field Engineers</label>
-            <select id="df-size-${id}" name="team_size">
-              <option value="">Select team size…</option>
-              ${SIZES.map((s) => `<option value="${s}">${s} field engineers</option>`).join("")}
-            </select>
+            <label for="df-phone-${id}">Phone *</label>
+            <input id="df-phone-${id}" name="phone" type="tel" autocomplete="tel" placeholder="e.g. 07700 900123" required />
           </div>
-          <fieldset class="demo-fieldset">
-            <legend>Primary Disciplines</legend>
-            <div class="demo-checks">
-              ${DISCIPLINES.map((d) => `<label><input type="checkbox" name="disciplines" value="${d}" /> <span>${d}</span></label>`).join("")}
-            </div>
-          </fieldset>
-        </div>
-        <div class="demo-contractor-only">
-          <label for="df-using-${id}">What do you use today?</label>
-          <select id="df-using-${id}" name="using_today">
-            <option value="">Select one…</option>
-            ${USING_TODAY.map((u) => `<option value="${u}">${u}</option>`).join("")}
-          </select>
-        </div>
-        <div>
-          <label for="df-message-${id}">Optional Message / Requirements</label>
-          <textarea id="df-message-${id}" name="message" rows="3" placeholder="Tell us about your current certificate software, log books, or any specific BS workflows you want to see…"></textarea>
+          <div>
+            <label for="df-email-${id}">Work email *</label>
+            <input id="df-email-${id}" name="email" type="email" autocomplete="email" placeholder="david@yourcompany.co.uk" required />
+          </div>
         </div>
         <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="botcheck" tabindex="-1" autocomplete="off" /></label></div>
         <div class="demo-error" role="alert" hidden></div>
         <div class="demo-submit-row">
           <button type="submit" class="btn btn-primary">Book a demo</button>
-          <p class="fine">We use these details only to arrange your walkthrough. See our <a href="/privacy/">Privacy Policy</a>.</p>
+          <p class="fine"><strong>What happens next:</strong> 15 minutes with Keiran, on your own sites. We use these details only to arrange your demo. See our <a href="/privacy/">Privacy Policy</a>.</p>
         </div>
       </form>`;
     const form = wrap.firstElementChild;
-    if (options.engineers) form.elements.team_size.value = sizeFor(options.engineers);
-
-    // Log book only: hide the contractor-only fields and show a shorter form.
-    const message = form.elements.message;
-    const fullPlaceholder = message.placeholder;
-    function applyNeed() {
-      const logBook = form.elements.need.value === "logbook";
-      form.querySelectorAll(".demo-contractor-only").forEach((el) => {
-        el.hidden = logBook;
-        el.querySelectorAll("input, select").forEach((f) => (f.disabled = logBook));
-      });
-      form.querySelector(".demo-need-note").hidden = !logBook;
-      const prefill = form.querySelector(".demo-prefill");
-      if (prefill && logBook) prefill.hidden = true;
-      message.placeholder = logBook
-        ? "Roughly how many properties do you look after?"
-        : fullPlaceholder;
-    }
-    form.querySelectorAll("input[name=need]").forEach((r) => r.addEventListener("change", applyNeed));
-    if (options.logBookOnly) {
-      form.elements.need.value = "logbook";
-      applyNeed();
-    }
 
     const error = form.querySelector(".demo-error");
     const button = form.querySelector("button[type=submit]");
@@ -276,36 +219,38 @@
       error.hidden = true;
       if (!form.reportValidity()) return;
       if (form.elements.botcheck.value) return showThanks();
-      const logBookOnly = form.elements.need.value === "logbook";
-      const disciplines = logBookOnly
-        ? []
-        : [...form.querySelectorAll("input[name=disciplines]:checked")].map((c) => c.value);
       const payload = {
         access_key: ACCESS_KEY,
-        subject: "Compliar demo walkthrough request" + (logBookOnly ? " (log book only, no engineers)" : ""),
+        subject:
+          "Compliar demo request" +
+          (logBookOnly ? " (log book only, no engineers)" : ""),
         from_name: "Compliar website",
         name: form.elements.name.value.trim(),
-        email: form.elements.email.value.trim(),
         company: form.elements.company.value.trim(),
-        team_size: logBookOnly ? "Not applicable" : form.elements.team_size.value || "Not specified",
-        disciplines: logBookOnly ? "Not applicable" : disciplines.join(", ") || "Not specified",
-        using_today: logBookOnly ? "Not applicable" : form.elements.using_today.value || "Not specified",
-        site_log_book_only: logBookOnly ? "Yes: log book only, no engineers" : "No",
-        message:
-          (logBookOnly ? "Log book only (no engineers). " : "") + (form.elements.message.value.trim() || "None provided"),
-        engineers_from_calculator: form.dataset.engineers || (options.engineers ? String(options.engineers) : ""),
+        phone: form.elements.phone.value.trim(),
+        email: form.elements.email.value.trim(),
+        site_log_book_only: logBookOnly
+          ? "Yes: log book only, no engineers"
+          : "No",
+        engineers_from_calculator:
+          form.dataset.engineers ||
+          (options.engineers ? String(options.engineers) : ""),
         page: location.href,
       };
       button.disabled = true;
-      button.textContent = "Submitting request…";
+      button.textContent = "Sending…";
       try {
         const response = await fetch(ENDPOINT, {
           method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
           body: JSON.stringify(payload),
         });
         const result = await response.json();
-        if (!response.ok || !result.success) throw new Error(result.message || "Request failed");
+        if (!response.ok || !result.success)
+          throw new Error(result.message || "Request failed");
         saveToCrm(payload);
         trackConversion();
         showThanks();
@@ -323,7 +268,7 @@
       card.className = "demo-thanks";
       card.setAttribute("role", "status");
       card.innerHTML =
-        '<div class="demo-thanks-icon" aria-hidden="true">✓</div><h3>Thanks. Your demo request is in.</h3><p>We\'ll get back to you as soon as possible to arrange your walkthrough.</p><p><a href="/sample-documents/">Open the sample certificates</a><br /><a href="/pricing/">See pricing</a><br /><a href="/#see-it-working">Watch one job start to finish (36 seconds)</a></p>';
+        '<div class="demo-thanks-icon" aria-hidden="true">✓</div><h3>Thanks. Your demo request is in.</h3><p>We\'ll get back to you as soon as possible to arrange your demo: 15 minutes with Keiran, on your own sites.</p><p><a href="/sample-documents/">Open the sample certificates</a><br /><a href="/pricing/">See pricing</a><br /><a href="/#one-job-video">Watch one job start to finish (36 seconds)</a></p>';
       form.replaceWith(card);
     }
     return form;
@@ -342,12 +287,14 @@
       dialog.innerHTML = `
         <div class="demo-modal-inner">
           <button type="button" class="demo-modal-close" aria-label="Close">✕</button>
-          <h2 id="demo-modal-title">Book a 15-Minute Demo</h2>
-          <p class="modal-sub">Tell us which disciplines you maintain and we’ll tailor the walkthrough to your team.</p>
+          <h2 id="demo-modal-title">Book a demo</h2>
+          <p class="modal-sub">15 minutes with Keiran, on your own sites.</p>
           <div class="modal-form"></div>
         </div>`;
       document.body.appendChild(dialog);
-      dialog.querySelector(".demo-modal-close").addEventListener("click", () => dialog.close());
+      dialog
+        .querySelector(".demo-modal-close")
+        .addEventListener("click", () => dialog.close());
       dialog.addEventListener("click", (event) => {
         if (event.target === dialog) dialog.close();
       });
@@ -361,15 +308,15 @@
     const roiBtn = event.target.closest("#roi-cta");
     if (roiBtn) {
       const eng = parseInt(roiBtn.dataset.engineers, 10);
-      const inlineForm = document.querySelector("#contact-form form.demo-form, #demo form.demo-form");
+      const inlineForm = document.querySelector(
+        "#contact-form form.demo-form, #demo form.demo-form",
+      );
       if (inlineForm && !eng) {
-        if (inlineForm.dataset.engineers) inlineForm.elements.team_size.value = "";
         inlineForm.dataset.engineers = "";
         const stale = inlineForm.querySelector(".demo-prefill");
         if (stale) stale.hidden = true;
       }
       if (inlineForm && eng) {
-        inlineForm.elements.team_size.value = sizeFor(eng);
         inlineForm.dataset.engineers = String(eng);
         const pre = inlineForm.querySelector(".demo-prefill");
         if (pre) {
@@ -381,23 +328,40 @@
     }
     const opener = event.target.closest("[data-demo-open]");
     if (!opener) return;
-    if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0)
+      return;
     event.preventDefault();
     const engineers = parseInt(opener.dataset.engineers, 10);
-    openModal({ ...(engineers ? { engineers } : {}), logBookOnly: opener.hasAttribute("data-logbook-only") });
+    openModal({
+      ...(engineers ? { engineers } : {}),
+      logBookOnly: opener.hasAttribute("data-logbook-only"),
+    });
   });
 
   document.querySelectorAll("[data-sample-form]").forEach((mount) => {
     const host = mount.closest("[data-sample-offer]");
-    mount.replaceChildren(buildSampleForm(host ? host.dataset.sampleOffer : "certificate"));
+    mount.replaceChildren(
+      buildSampleForm(host ? host.dataset.sampleOffer : "certificate"),
+    );
   });
 
   document.querySelectorAll("[data-demo-form]").forEach((mount) => {
-    mount.replaceChildren(buildForm({ logBookOnly: new URLSearchParams(location.search).get("need") === "logbook" }));
+    mount.replaceChildren(
+      buildForm({
+        logBookOnly:
+          new URLSearchParams(location.search).get("need") === "logbook",
+      }),
+    );
   });
 
-  const card = document.getElementById("book-a-demo") || document.getElementById("contact-form");
-  if (card && new URLSearchParams(location.search).has("subject") && !location.hash) {
+  const card =
+    document.getElementById("book-a-demo") ||
+    document.getElementById("contact-form");
+  if (
+    card &&
+    new URLSearchParams(location.search).has("subject") &&
+    !location.hash
+  ) {
     card.scrollIntoView();
   }
 })();
