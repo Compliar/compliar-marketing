@@ -6,54 +6,77 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
-    <title>Fire Alarm Categories Explained: L1 to L5, M, P1, P2 — Compliar</title>
-    <meta name="description" content="Fire alarm categories M, L1, L2, L3, L4, L5, P1 and P2 from BS 5839-1 explained in plain English, with typical buildings and who chooses the category." />
-    <link rel="canonical" href="https://compliar.co.uk/fire-alarm-categories-explained/" />
+    <title>
+      Fire Alarm Categories Explained: L1 to L5, M, P1, P2 — Compliar
+    </title>
+    <meta
+      name="description"
+      content="Fire alarm categories M, L1, L2, L3, L4, L5, P1 and P2 from BS 5839-1 explained in plain English, with typical buildings and who chooses the category."
+    />
+    <link
+      rel="canonical"
+      href="https://compliar.co.uk/fire-alarm-categories-explained/"
+    />
     <meta name="theme-color" content="#1B2430" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="Fire Alarm Categories Explained: L1 to L5, M, P1, P2 — Compliar" />
-    <meta property="og:description" content="Fire alarm categories M, L1, L2, L3, L4, L5, P1 and P2 from BS 5839-1 explained in plain English, with typical buildings and who chooses the category." />
-    <meta property="og:url" content="https://compliar.co.uk/fire-alarm-categories-explained/" />
+    <meta
+      property="og:title"
+      content="Fire Alarm Categories Explained: L1 to L5, M, P1, P2 — Compliar"
+    />
+    <meta
+      property="og:description"
+      content="Fire alarm categories M, L1, L2, L3, L4, L5, P1 and P2 from BS 5839-1 explained in plain English, with typical buildings and who chooses the category."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/fire-alarm-categories-explained/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -62,8 +85,14 @@
       content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Fire Alarm Categories Explained: L1 to L5, M, P1, P2 — Compliar" />
-    <meta name="twitter:description" content="Fire alarm categories M, L1, L2, L3, L4, L5, P1 and P2 from BS 5839-1 explained in plain English, with typical buildings and who chooses the category." />
+    <meta
+      name="twitter:title"
+      content="Fire Alarm Categories Explained: L1 to L5, M, P1, P2 — Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="Fire alarm categories M, L1, L2, L3, L4, L5, P1 and P2 from BS 5839-1 explained in plain English, with typical buildings and who chooses the category."
+    />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
     <link
       rel="icon"
@@ -176,9 +205,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -200,7 +239,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -213,40 +254,196 @@
         </details>
       </div>
     </header>
-        <main id="main">
+    <main id="main">
       <section class="page-intro">
         <div class="wrap">
           <div class="crumbs">
-            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a><i>/</i>Fire alarm categories explained
+            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a
+            ><i>/</i>Fire alarm categories explained
           </div>
           <div class="eyebrow">Fire · Guide</div>
           <h1>Fire alarm categories explained: L1 to L5, M, P1 and P2</h1>
-          <p>BS 5839-1 describes a fire alarm system by its category. Here is what each letter and number means in practice, with typical buildings, and why the category is not for the installer to pick.</p>
+          <p>
+            BS 5839-1 describes a fire alarm system by its category. Here is
+            what each letter and number means in practice, with typical
+            buildings, and why the category is not for the installer to pick.
+          </p>
         </div>
       </section>
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <p><strong>General guidance only. Check the standard itself and take advice from your own competent person for the job in front of you.</strong> Last reviewed 22 October 2026.</p>
-<h2>What a category is</h2>
-<p>A category is shorthand for how much of a building has automatic detection, and why. It is written into the specification, the design and the certificates, and it tells everyone what the system is meant to achieve. In BS 5839-1 the letters stand for the purpose: M for manual, L for life protection and P for property protection.</p>
-<p>The category is decided through the fire risk assessment and by the people responsible for the building, with the insurer's requirements in mind. It is not a decision for the installer or the panel manufacturer, so if a specification does not name one, ask before you price.</p>
-<h2>The categories at a glance</h2>
-<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Category</th><th>In plain terms</th><th>Typical use</th></tr></thead><tbody><tr><th scope="row">M</th><td>Manual only. Call points and sounders, with no automatic detectors.</td><td>Offices, shops, factories and warehouses where the fire risk is low and people are always about. Insurers may ask for a P category as well.</td></tr><tr><th scope="row">L1</th><td>Automatic detection in every area of the building.</td><td>Sleeping risk and the highest life-safety demand, such as hotels, care homes, hostels and hospitals.</td></tr><tr><th scope="row">L2</th><td>Detection in the L3 areas plus rooms with a high chance of fire or a high risk to life.</td><td>Often used with L1 or in premises with sleeping accommodation, such as pubs with rooms.</td></tr><tr><th scope="row">L3</th><td>Detection on escape routes and in rooms that open onto them.</td><td>Buildings with phased evacuation, and a common choice for commercial buildings.</td></tr><tr><th scope="row">L4</th><td>Detection only in escape routes such as corridors and stairways.</td><td>Simpler buildings, for example some schools used in the evenings.</td></tr><tr><th scope="row">L5</th><td>Detection designed around a specific fire safety objective, not one of L1 to L4.</td><td>Inner rooms or non-standard escape arrangements, usually combined with M.</td></tr><tr><th scope="row">P1</th><td>Automatic detection throughout, to protect the building and its contents.</td><td>Where downtime or loss would hurt the business.</td></tr><tr><th scope="row">P2</th><td>Automatic detection in defined parts only, to protect property or keep the business running.</td><td>High-hazard or high-value areas such as kitchens with fryers, plant rooms or server rooms.</td></tr></tbody></table></div>
-<h2>Reading a specification</h2>
-<p>Categories are often combined. A hotel might be L1 in the bedrooms and L2 elsewhere, or a factory might be M with P2 in the plant room. A building can also carry an L category for people and a P category for the insurer. Each part of the system should be traceable to a stated purpose.</p>
-<p>When you quote, check three things: which category applies to which area, what the specification says about detector types, and whether any variations from the standard have been agreed and written down.</p>
-<h2>What changed in 2025</h2>
-<p>BS 5839-1:2025 made some changes that affect categories in practice. The 2025 edition no longer accepts heat detectors in rooms where people sleep in L2 and L3 systems, and stairway lobbies that used to be treated as low risk are expected to have automatic detection. The detail is in the standard, so read the clause before you design or sign off.</p>
-<h2>Domestic premises</h2>
-<p>Categories belong to BS 5839-1, which covers non-domestic premises. Domestic systems are dealt with in BS 5839-6, which uses a different grading, so do not mix the two on a certificate. Houses in multiple occupation sit in between, and the local authority may set its own requirement.</p>
-<h2>Why the category matters to you</h2>
-<ul>
-  <li>It sets the scope of the design, and so the number of devices you are pricing.</li>
-  <li>It tells whoever services the system what they are meant to be testing.</li>
-  <li>It is a line on the certificate. If the category is wrong or missing, the certificate is of little use to anyone.</li>
-  <li>If the building changes use, the category may need to change with it, and the system with it.</li>
-</ul>
+            <p>
+              <strong
+                >General guidance only. Check the standard itself and take
+                advice from your own competent person for the job in front of
+                you.</strong
+              >
+              Last reviewed 22 October 2026.
+            </p>
+            <h2>What a category is</h2>
+            <p>
+              A category is shorthand for how much of a building has automatic
+              detection, and why. It is written into the specification, the
+              design and the certificates, and it tells everyone what the system
+              is meant to achieve. In BS 5839-1 the letters stand for the
+              purpose: M for manual, L for life protection and P for property
+              protection.
+            </p>
+            <p>
+              The category is decided through the fire risk assessment and by
+              the people responsible for the building, with the insurer's
+              requirements in mind. It is not a decision for the installer or
+              the panel manufacturer, so if a specification does not name one,
+              ask before you price.
+            </p>
+            <h2>The categories at a glance</h2>
+            <div class="tbl-wrap">
+              <table class="tbl">
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>In plain terms</th>
+                    <th>Typical use</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">M</th>
+                    <td>
+                      Manual only. Call points and sounders, with no automatic
+                      detectors.
+                    </td>
+                    <td>
+                      Offices, shops, factories and warehouses where the fire
+                      risk is low and people are always about. Insurers may ask
+                      for a P category as well.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">L1</th>
+                    <td>Automatic detection in every area of the building.</td>
+                    <td>
+                      Sleeping risk and the highest life-safety demand, such as
+                      hotels, care homes, hostels and hospitals.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">L2</th>
+                    <td>
+                      Detection in the L3 areas plus rooms with a high chance of
+                      fire or a high risk to life.
+                    </td>
+                    <td>
+                      Often used with L1 or in premises with sleeping
+                      accommodation, such as pubs with rooms.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">L3</th>
+                    <td>
+                      Detection on escape routes and in rooms that open onto
+                      them.
+                    </td>
+                    <td>
+                      Buildings with phased evacuation, and a common choice for
+                      commercial buildings.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">L4</th>
+                    <td>
+                      Detection only in escape routes such as corridors and
+                      stairways.
+                    </td>
+                    <td>
+                      Simpler buildings, for example some schools used in the
+                      evenings.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">L5</th>
+                    <td>
+                      Detection designed around a specific fire safety
+                      objective, not one of L1 to L4.
+                    </td>
+                    <td>
+                      Inner rooms or non-standard escape arrangements, usually
+                      combined with M.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">P1</th>
+                    <td>
+                      Automatic detection throughout, to protect the building
+                      and its contents.
+                    </td>
+                    <td>Where downtime or loss would hurt the business.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">P2</th>
+                    <td>
+                      Automatic detection in defined parts only, to protect
+                      property or keep the business running.
+                    </td>
+                    <td>
+                      High-hazard or high-value areas such as kitchens with
+                      fryers, plant rooms or server rooms.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h2>Reading a specification</h2>
+            <p>
+              Categories are often combined. A hotel might be L1 in the bedrooms
+              and L2 elsewhere, or a factory might be M with P2 in the plant
+              room. A building can also carry an L category for people and a P
+              category for the insurer. Each part of the system should be
+              traceable to a stated purpose.
+            </p>
+            <p>
+              When you quote, check three things: which category applies to
+              which area, what the specification says about detector types, and
+              whether any variations from the standard have been agreed and
+              written down.
+            </p>
+            <h2>What changed in 2025</h2>
+            <p>
+              BS 5839-1:2025 made some changes that affect categories in
+              practice. The 2025 edition no longer accepts heat detectors in
+              rooms where people sleep in L2 and L3 systems, and stairway
+              lobbies that used to be treated as low risk are expected to have
+              automatic detection. The detail is in the standard, so read the
+              clause before you design or sign off.
+            </p>
+            <h2>Domestic premises</h2>
+            <p>
+              Categories belong to BS 5839-1, which covers non-domestic
+              premises. Domestic systems are dealt with in BS 5839-6, which uses
+              a different grading, so do not mix the two on a certificate.
+              Houses in multiple occupation sit in between, and the local
+              authority may set its own requirement.
+            </p>
+            <h2>Why the category matters to you</h2>
+            <ul>
+              <li>
+                It sets the scope of the design, and so the number of devices
+                you are pricing.
+              </li>
+              <li>
+                It tells whoever services the system what they are meant to be
+                testing.
+              </li>
+              <li>
+                It is a line on the certificate. If the category is wrong or
+                missing, the certificate is of little use to anyone.
+              </li>
+              <li>
+                If the building changes use, the category may need to change
+                with it, and the system with it.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -258,20 +455,42 @@
           </div>
           <div class="faq-list">
             <details class="faq-item">
-              <summary>What do the L, M and P mean in fire alarm categories?</summary>
-              <p>M is manual, with call points and sounders only. L is life protection, with automatic detection to protect people. P is property protection, with automatic detection to protect the building and its contents.</p>
+              <summary>
+                What do the L, M and P mean in fire alarm categories?
+              </summary>
+              <p>
+                M is manual, with call points and sounders only. L is life
+                protection, with automatic detection to protect people. P is
+                property protection, with automatic detection to protect the
+                building and its contents.
+              </p>
             </details>
             <details class="faq-item">
               <summary>What is the difference between L1, L2 and L3?</summary>
-              <p>L1 has automatic detection throughout the building. L2 covers the L3 areas plus rooms with a high fire risk or a high risk to life. L3 covers escape routes and the rooms that open onto them.</p>
+              <p>
+                L1 has automatic detection throughout the building. L2 covers
+                the L3 areas plus rooms with a high fire risk or a high risk to
+                life. L3 covers escape routes and the rooms that open onto them.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>Who decides which fire alarm category a building needs?</summary>
-              <p>The category comes from the fire risk assessment and the people responsible for the building, with the insurer's requirements in mind. It is not a decision for the installer or the panel manufacturer.</p>
+              <summary>
+                Who decides which fire alarm category a building needs?
+              </summary>
+              <p>
+                The category comes from the fire risk assessment and the people
+                responsible for the building, with the insurer's requirements in
+                mind. It is not a decision for the installer or the panel
+                manufacturer.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Can a building have more than one category?</summary>
-              <p>Yes. Categories are often combined, for example L1 in sleeping areas and L2 elsewhere, or M with P2 in a plant room. Each part of the system should be traceable to a stated purpose.</p>
+              <p>
+                Yes. Categories are often combined, for example L1 in sleeping
+                areas and L2 elsewhere, or M with P2 in a plant room. Each part
+                of the system should be traceable to a stated purpose.
+              </p>
             </details>
           </div>
         </div>
@@ -279,30 +498,68 @@
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">In the app</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              In the app
+            </div>
             <h2>How Compliar helps</h2>
-<p>Compliar's fire detection and alarm servicing certificate asks for the system category (Category M, L1, L2, L3, L4, L5, P1 or P2), the technology and the signalling method, so the specification is on the document alongside the readings and results.</p>
-<ul>
-  <li>Certificate templates for the design, installation, commissioning, handover and servicing stages of a fire alarm, referenced to BS 5839-1:2025.</li>
-  <li>A standby battery calculator built to BS 5839-1:2025 Annex E, which you can add when you build or edit a template (Office plans and above).</li>
-  <li>Site equipment, defects and fire protection and life safety records kept with the job.</li>
-</ul>
+            <p>
+              Compliar's fire detection and alarm servicing certificate asks for
+              the system category (Category M, L1, L2, L3, L4, L5, P1 or P2),
+              the technology and the signalling method, so the specification is
+              on the document alongside the readings and results.
+            </p>
+            <ul>
+              <li>
+                Certificate templates for the design, installation,
+                commissioning, handover and servicing stages of a fire alarm,
+                referenced to BS 5839-1:2025.
+              </li>
+              <li>
+                A standby battery calculator built to BS 5839-1:2025 Annex E,
+                which you can add when you build or edit a template (Office
+                plans and above).
+              </li>
+              <li>
+                Site equipment, defects and fire protection and life safety
+                records kept with the job.
+              </li>
+            </ul>
             <div class="more-links">
-              <a href="/fire-alarm-servicing-guide/">Fire detection and alarm servicing guide</a>
-              <a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a>
-              <a href="/fire-alarm-certificate-software/">Fire detection and alarm certificate software</a>
-              <a href="/emergency-lighting-testing-guide/">Emergency lighting testing guide</a>
-                          <a href="/what-is-an-l4-fire-alarm-system/">What is an L4 fire alarm system?</a>
-</div>
+              <a href="/fire-alarm-servicing-guide/"
+                >Fire detection and alarm servicing guide</a
+              >
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificate software</a
+              >
+              <a href="/emergency-lighting-testing-guide/"
+                >Emergency lighting testing guide</a
+              >
+              <a href="/what-is-an-l4-fire-alarm-system/"
+                >What is an L4 fire alarm system?</a
+              >
+            </div>
           </div>
         </div>
       </section>
       <section class="final-cta band">
         <div class="wrap">
           <h2>One app. Every job, start to finish.</h2>
-          <p>Book a demo and Keiran will walk through your own jobs. Early adopters lock their price for 3 years, with no contract.</p>
+          <p>
+            Book a demo and Keiran will walk through your own jobs. Early
+            adopters lock their price for 3 years, with no contract.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a><a class="btn btn-ghost-on-navy" href="/getting-started/">How getting started works</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            ><a class="btn btn-ghost-on-navy" href="/getting-started/"
+              >How getting started works</a
+            >
           </div>
         </div>
       </section>
@@ -319,7 +576,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -333,34 +591,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -370,10 +681,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -381,11 +704,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

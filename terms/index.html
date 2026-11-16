@@ -6,47 +6,56 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>Terms of service — Compliar</title>
-    <meta name="description" content="The terms for using the Compliar website and paid subscriptions, including data processing, liability and professional responsibility." />
+    <meta
+      name="description"
+      content="The terms for using the Compliar website and paid subscriptions, including data processing, liability and professional responsibility."
+    />
     <link rel="canonical" href="https://compliar.co.uk/terms/" />
     <meta name="theme-color" content="#1B2430" />
     <meta property="og:type" content="website" />
@@ -87,9 +96,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -111,7 +130,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -125,210 +146,255 @@
       </div>
     </header>
     <main id="main">
-<section class="page-intro">
-  <div class="wrap">
-    <div class="eyebrow">Legal · Terms of service</div>
-    <h1>The terms we<br />work to.</h1>
-    <p>
-      These terms cover use of this website and paid subscriptions to the Compliar
-      application. By creating or using a workspace you agree to them on behalf of your company.
-    </p>
-  </div>
-</section>
-<section class="band">
-  <div class="wrap prose">
-    <p><strong>Last updated:</strong> 14 November 2026.</p>
+      <section class="page-intro">
+        <div class="wrap">
+          <div class="eyebrow">Legal · Terms of service</div>
+          <h1>The terms we<br />work to.</h1>
+          <p>
+            These terms cover use of this website and paid subscriptions to the
+            Compliar application. By creating or using a workspace you agree to
+            them on behalf of your company.
+          </p>
+        </div>
+      </section>
+      <section class="band">
+        <div class="wrap prose">
+          <p><strong>Last updated:</strong> 14 November 2026.</p>
 
-    <h2>1. Who these terms are between</h2>
-    <p>
-      "Compliar", "we" and "us" means COMPLIAR LTD, registered in England and Wales, company
-      number 17519777, VAT number GB 532 0690 15, registered office 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. "You" means
-      the business that holds the workspace and each person it allows to use it. Compliar is
-      supplied to businesses only; it is not for consumers.
-    </p>
+          <h2>1. Who these terms are between</h2>
+          <p>
+            "Compliar", "we" and "us" means COMPLIAR LTD, registered in England
+            and Wales, company number 17519777, VAT number GB 532 0690 15,
+            registered office 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF.
+            "You" means the business that holds the workspace and each person it
+            allows to use it. Compliar is supplied to businesses only; it is not
+            for consumers.
+          </p>
 
-    <h2>2. Accounts</h2>
-    <p>
-      Workspaces are created by invitation after you book a demo and agree to a subscription. You are responsible for the people you invite, for keeping
-      sign-in details confidential and for telling us promptly if an account is compromised.
-    </p>
+          <h2>2. Accounts</h2>
+          <p>
+            Workspaces are created by invitation after you book a demo and agree
+            to a subscription. You are responsible for the people you invite,
+            for keeping sign-in details confidential and for telling us promptly
+            if an account is compromised.
+          </p>
 
-    <h2>3. Users, prices and payment</h2>
-    <p>
-      Each person in your workspace is on one plan: Lite, Office or Design. You may mix plans in
-      one workspace and change a person's plan at any time. You pay per user, per month or per
-      year (yearly billing is ten months' price for twelve). Prices are on the
-      <a href="/pricing/">pricing page</a> in pounds sterling. All prices are plus VAT, which is
-      added where it applies. Our VAT number is GB 532 0690 15.
-    </p>
-    <p>
-      Payment is collected by Stripe at the start of each billing period. You can add users at any
-      time (charged pro rata) and remove users from the next period. If a payment fails we will
-      tell you and retry; if it stays unpaid for 14 days we may suspend the workspace until it is
-      settled. We may change prices with at least 30 days' notice, from your next billing period.
-    </p>
-    <p>
-      Early-adopter offer: the offer runs until 31 March 2027, or when the first 50 companies have joined, whichever comes first. If you sign up while it is open, your price is locked in for 3 years
-      from the date you joined. It is not a contract and you are free to leave.
-    </p>
+          <h2>3. Users, prices and payment</h2>
+          <p>
+            Each person in your workspace is on one plan: Lite, Office or
+            Design. You may mix plans in one workspace and change a person's
+            plan at any time. You pay per user, per month or per year (yearly
+            billing is ten months' price for twelve). Prices are on the
+            <a href="/pricing/">pricing page</a> in pounds sterling. All prices
+            are plus VAT, which is added where it applies. Our VAT number is GB
+            532 0690 15.
+          </p>
+          <p>
+            Payment is collected by Stripe at the start of each billing period.
+            You can add users at any time (charged pro rata) and remove users
+            from the next period. If a payment fails we will tell you and retry;
+            if it stays unpaid for 14 days we may suspend the workspace until it
+            is settled. We may change prices with at least 30 days' notice, from
+            your next billing period.
+          </p>
+          <p>
+            Early-adopter offer: the offer runs until 31 March 2027, or when the
+            first 50 companies have joined, whichever comes first. If you sign
+            up while it is open, your price is locked in for 3 years from the
+            date you joined. It is not a contract and you are free to leave.
+          </p>
 
-    <h2>3A. Site log book, stickers and onboarding</h2>
-    <p>
-      <strong>Site log book.</strong> The site log book costs &pound;4 plus VAT per site per year. A
-      contractor may add it to a customer's service plan at their own price; if it is added
-      part-way through the year, it is charged to the customer straight away. A site activated by
-      scanning a QR sticker has 7 days to pay the log book amount, and we send reminders 2 weeks
-      before and 1 day before the payment date.
-    </p>
-    <p>
-      <strong>When cover lapses.</strong> If log book cover is not renewed, the log book becomes
-      read-only 7 days after the payment date. Records stay visible and nothing is deleted, but no
-      new entries can be added until it is renewed.
-    </p>
-    <p>
-      <strong>Log-book-only accounts.</strong> A log-book-only account has no per-user plan. It is
-      for UK sites only, works to British Standards and is available to any business that holds
-      several properties, such as estate agents, housing providers and property developers. The
-      rest of Compliar is for electrical, fire and security contractors.
-    </p>
-    <p>
-      <strong>QR sticker orders.</strong> Printed stickers (named-site, blank QR and false alarm
-      notice) cost &pound;1 plus VAT each, plus &pound;3.95 plus VAT postage per order. We deliver
-      to UK addresses only. The stickers belong to the company that buys them. The &pound;4 a year
-      log book charge is separate and starts when a sticker is activated onto a site. You can also
-      print stickers yourself at no charge.
-    </p>
-    <p>
-      <strong>Onboarding.</strong> Onboarding is optional. It starts from &pound;195 plus VAT and
-      is quoted individually. A self-service route is available to everyone after a demo.
-    </p>
+          <h2>3A. Site log book, stickers and onboarding</h2>
+          <p>
+            <strong>Site log book.</strong> The site log book costs &pound;4
+            plus VAT per site per year. A contractor may add it to a customer's
+            service plan at their own price; if it is added part-way through the
+            year, it is charged to the customer straight away. A site activated
+            by scanning a QR sticker has 7 days to pay the log book amount, and
+            we send reminders 2 weeks before and 1 day before the payment date.
+          </p>
+          <p>
+            <strong>When cover lapses.</strong> If log book cover is not
+            renewed, the log book becomes read-only 7 days after the payment
+            date. Records stay visible and nothing is deleted, but no new
+            entries can be added until it is renewed.
+          </p>
+          <p>
+            <strong>Log-book-only accounts.</strong> A log-book-only account has
+            no per-user plan. It is for UK sites only, works to British
+            Standards and is available to any business that holds several
+            properties, such as estate agents, housing providers and property
+            developers. The rest of Compliar is for electrical, fire and
+            security contractors.
+          </p>
+          <p>
+            <strong>QR sticker orders.</strong> Printed stickers (named-site,
+            blank QR and false alarm notice) cost &pound;1 plus VAT each, plus
+            &pound;3.95 plus VAT postage per order. We deliver to UK addresses
+            only. The stickers belong to the company that buys them. The
+            &pound;4 a year log book charge is separate and starts when a
+            sticker is activated onto a site. You can also print stickers
+            yourself at no charge.
+          </p>
+          <p>
+            <strong>Onboarding.</strong> Onboarding is optional. It starts from
+            &pound;195 plus VAT and is quoted individually. A self-service route
+            is available to everyone after a demo.
+          </p>
 
-    <h2>3B. Subcontractor access</h2>
-    <p>
-      A subcontractor is a separate business that takes work from you job by job. A subcontractor can
-      sign in to Compliar to see and update only the jobs you give them.
-    </p>
-    <p>
-      Anyone who is employed by you, is paid through your PAYE, or works regularly under your own
-      management is not a subcontractor for the purposes of Compliar. They need a paid user.
-    </p>
-    <p>
-      Each subcontractor sign-in costs &pound;15 plus VAT per month. We charge it only while that
-      subcontractor has at least one live job from you (offered or accepted), and the charge follows the
-      jobs as they start and finish. A subcontractor with no live job costs nothing and sees nothing.
-      Subcontractor access is free during a free trial.
-    </p>
-    <p>
-      We may look at how subcontractor access is being used on your account. If a sign-in looks like it
-      belongs to someone who is employed by you, or who works for you continuously rather than job by
-      job, we will tell you first. We may then move that person onto a paid user from the next billing date.
-    </p>
-    <p>
-      You can end a subcontractor&rsquo;s access at any time by setting an end date on their record.
-    </p>
+          <h2>3B. Subcontractor access</h2>
+          <p>
+            A subcontractor is a separate business that takes work from you job
+            by job. A subcontractor can sign in to Compliar to see and update
+            only the jobs you give them.
+          </p>
+          <p>
+            Anyone who is employed by you, is paid through your PAYE, or works
+            regularly under your own management is not a subcontractor for the
+            purposes of Compliar. They need a paid user.
+          </p>
+          <p>
+            Each subcontractor sign-in costs &pound;15 plus VAT per month. We
+            charge it only while that subcontractor has at least one live job
+            from you (offered or accepted), and the charge follows the jobs as
+            they start and finish. A subcontractor with no live job costs
+            nothing and sees nothing. Subcontractor access is free during a free
+            trial.
+          </p>
+          <p>
+            We may look at how subcontractor access is being used on your
+            account. If a sign-in looks like it belongs to someone who is
+            employed by you, or who works for you continuously rather than job
+            by job, we will tell you first. We may then move that person onto a
+            paid user from the next billing date.
+          </p>
+          <p>
+            You can end a subcontractor&rsquo;s access at any time by setting an
+            end date on their record.
+          </p>
 
-    <h2>4. What we provide</h2>
-    <p>
-      Access to the Compliar application for your users, software updates, data storage within
-      fair-use limits, and support by email during UK business hours. Fair use means storage in
-      keeping with normal use of the features in your users (photos, certificates, drawings and
-      attachments for your own jobs); as a guide, 10 GB per user. If a workspace goes well beyond
-      that we will talk to you about options before anything is restricted. We aim for
-      high availability and take daily backups, but we do not promise uninterrupted service.
-      Planned maintenance will be announced in advance where practical.
-    </p>
+          <h2>4. What we provide</h2>
+          <p>
+            Access to the Compliar application for your users, software updates,
+            data storage within fair-use limits, and support by email during UK
+            business hours. Fair use means storage in keeping with normal use of
+            the features in your users (photos, certificates, drawings and
+            attachments for your own jobs); as a guide, 10 GB per user. If a
+            workspace goes well beyond that we will talk to you about options
+            before anything is restricted. We aim for high availability and take
+            daily backups, but we do not promise uninterrupted service. Planned
+            maintenance will be announced in advance where practical.
+          </p>
 
-    <h2>5. Your responsibilities and professional judgement</h2>
-    <p>
-      Compliar is a record-keeping and workflow tool. <strong>It does not design, test, inspect or
-      certify anything, and it does not replace the competence, qualifications or professional
-      judgement of the people doing the work.</strong> You remain responsible for the accuracy and
-      completeness of everything recorded, for the decisions made on site, for the content and
-      issue of every certificate, report and document produced from your workspace, and for
-      holding any registrations or accreditations your work requires.
-    </p>
-    <p>
-      Our certificate and report templates are structured to follow the relevant British
-      Standards and industry guidance as we understand them at the time of writing. Standards
-      change and interpretations differ; you must check that each template suits the work and
-      the current edition of the standard before you rely on it, and you can edit templates
-      within the application. Compliar is not affiliated with, endorsed by or certified by BSI,
-      the IET, or any certification or registration body. "BS", "BSI" and scheme names are the
-      trade marks of their owners.
-    </p>
+          <h2>5. Your responsibilities and professional judgement</h2>
+          <p>
+            Compliar is a record-keeping and workflow tool.
+            <strong
+              >It does not design, test, inspect or certify anything, and it
+              does not replace the competence, qualifications or professional
+              judgement of the people doing the work.</strong
+            >
+            You remain responsible for the accuracy and completeness of
+            everything recorded, for the decisions made on site, for the content
+            and issue of every certificate, report and document produced from
+            your workspace, and for holding any registrations or accreditations
+            your work requires.
+          </p>
+          <p>
+            Our certificate and report templates are structured to follow the
+            relevant British Standards and industry guidance as we understand
+            them at the time of writing. Standards change and interpretations
+            differ; you must check that each template suits the work and the
+            current edition of the standard before you rely on it, and you can
+            edit templates within the application. Compliar is not affiliated
+            with, endorsed by or certified by BSI, the IET, or any certification
+            or registration body. "BS", "BSI" and scheme names are the trade
+            marks of their owners.
+          </p>
 
-    <h2>6. Acceptable use</h2>
-    <p>
-      You must not use Compliar to break the law, to store content you have no right to store, to
-      send unsolicited messages, to attack or probe our systems, to copy or resell the service, or
-      to share one user between several people. Logos, badges and marks you upload must be ones
-      you are entitled to use. We may suspend access that breaches this section while we talk to
-      you about it.
-    </p>
+          <h2>6. Acceptable use</h2>
+          <p>
+            You must not use Compliar to break the law, to store content you
+            have no right to store, to send unsolicited messages, to attack or
+            probe our systems, to copy or resell the service, or to share one
+            user between several people. Logos, badges and marks you upload must
+            be ones you are entitled to use. We may suspend access that breaches
+            this section while we talk to you about it.
+          </p>
 
-    <h2>7. Your data</h2>
-    <p>
-      Everything you and your users record in Compliar is yours. You grant us only the rights
-      needed to host, display, back up and process it to provide the service. We act as your
-      processor for the personal data of your customers and staff within the workspace: we
-      process it only on your documented instructions (these terms and your use of the product),
-      keep it confidential, apply appropriate security, use the sub-processors listed in our
-      <a href="/privacy/">Privacy Policy</a> (we will give notice of changes), help you respond to
-      data-subject requests, tell you without undue delay of any personal-data breach affecting
-      your data, and delete or return it at the end of the contract. You can export your data at
-      any time in standard formats, and for 30 days after the subscription ends.
-    </p>
+          <h2>7. Your data</h2>
+          <p>
+            Everything you and your users record in Compliar is yours. You grant
+            us only the rights needed to host, display, back up and process it
+            to provide the service. We act as your processor for the personal
+            data of your customers and staff within the workspace: we process it
+            only on your documented instructions (these terms and your use of
+            the product), keep it confidential, apply appropriate security, use
+            the sub-processors listed in our
+            <a href="/privacy/">Privacy Policy</a> (we will give notice of
+            changes), help you respond to data-subject requests, tell you
+            without undue delay of any personal-data breach affecting your data,
+            and delete or return it at the end of the contract. You can export
+            your data at any time in standard formats, and for 30 days after the
+            subscription ends.
+          </p>
 
-    <h2>8. Our intellectual property</h2>
-    <p>
-      The Compliar software, templates, designs and documentation are ours or our licensors'.
-      You may use them only within the service. You may keep and use documents you have issued
-      from your workspace after you leave.
-    </p>
+          <h2>8. Our intellectual property</h2>
+          <p>
+            The Compliar software, templates, designs and documentation are ours
+            or our licensors'. You may use them only within the service. You may
+            keep and use documents you have issued from your workspace after you
+            leave.
+          </p>
 
-    <h2>9. Liability</h2>
-    <p>
-      Nothing in these terms limits liability for death or personal injury caused by negligence,
-      for fraud, or for anything else that cannot be limited by law. Subject to that, we are not
-      liable for loss of profit, business, contracts or goodwill, for indirect or consequential
-      loss, or for loss arising from reliance on a certificate, report or record you produced
-      using the service; and our total liability to you in any 12-month period is limited to the
-      fees you paid for the service in that period.
-    </p>
+          <h2>9. Liability</h2>
+          <p>
+            Nothing in these terms limits liability for death or personal injury
+            caused by negligence, for fraud, or for anything else that cannot be
+            limited by law. Subject to that, we are not liable for loss of
+            profit, business, contracts or goodwill, for indirect or
+            consequential loss, or for loss arising from reliance on a
+            certificate, report or record you produced using the service; and
+            our total liability to you in any 12-month period is limited to the
+            fees you paid for the service in that period.
+          </p>
 
-    <h2>10. Ending the agreement</h2>
-    <p>
-      You can cancel from the billing settings at any time; access continues to the end of the
-      paid period and no refund is due for the remainder. We may end the agreement on 30 days'
-      notice, or immediately if you seriously or repeatedly breach these terms or do not pay.
-      Sections 5, 7, 8, 9 and 12 continue after it ends.
-    </p>
+          <h2>10. Ending the agreement</h2>
+          <p>
+            You can cancel from the billing settings at any time; access
+            continues to the end of the paid period and no refund is due for the
+            remainder. We may end the agreement on 30 days' notice, or
+            immediately if you seriously or repeatedly breach these terms or do
+            not pay. Sections 5, 7, 8, 9 and 12 continue after it ends.
+          </p>
 
-    <h2>11. Changes to these terms</h2>
-    <p>
-      We may update these terms. We will tell account holders by email at least 30 days before a
-      material change takes effect; continuing to use the service after that date means you
-      accept the change.
-    </p>
+          <h2>11. Changes to these terms</h2>
+          <p>
+            We may update these terms. We will tell account holders by email at
+            least 30 days before a material change takes effect; continuing to
+            use the service after that date means you accept the change.
+          </p>
 
-    <h2>12. General</h2>
-    <p>
-      These terms are governed by the law of England and Wales and the courts of England and
-      Wales have exclusive jurisdiction. If part of these terms is found unenforceable the rest
-      still applies. Neither side is liable for delay caused by events outside its reasonable
-      control. These terms, the pricing page and the Privacy Policy are the whole agreement
-      between us about the service.
-    </p>
+          <h2>12. General</h2>
+          <p>
+            These terms are governed by the law of England and Wales and the
+            courts of England and Wales have exclusive jurisdiction. If part of
+            these terms is found unenforceable the rest still applies. Neither
+            side is liable for delay caused by events outside its reasonable
+            control. These terms, the pricing page and the Privacy Policy are
+            the whole agreement between us about the service.
+          </p>
 
-    <h2>This website</h2>
-    <p>
-      The website is provided for information. We try to keep it accurate but it is not advice
-      and may change without notice. Calculators and guides, including the fire alarm battery
-      calculator, are aids for competent persons; check the result against the current standard
-      and the manufacturer's data before relying on it.
-    </p>
-  </div>
-</section>
+          <h2>This website</h2>
+          <p>
+            The website is provided for information. We try to keep it accurate
+            but it is not advice and may change without notice. Calculators and
+            guides, including the fire alarm battery calculator, are aids for
+            competent persons; check the result against the current standard and
+            the manufacturer's data before relying on it.
+          </p>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="wrap foot-grid">
@@ -342,7 +408,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -356,34 +423,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -393,10 +513,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -404,11 +536,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

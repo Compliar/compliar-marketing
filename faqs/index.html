@@ -6,44 +6,50 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>FAQs — Compliar</title>
     <meta
@@ -90,9 +96,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -114,7 +130,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -141,13 +159,14 @@
         <div class="wrap">
           <div class="faq-list">
             <details class="faq-item">
-              <summary>
-                Can I give subcontractors their own login?
-              </summary>
+              <summary>Can I give subcontractors their own login?</summary>
               <p>
-                Yes. Add a subcontractor and they see and update only the jobs you give them, and their work stays in your
-                company's records. Each subcontractor login is £15 + VAT per user per month, separate
-                from the Lite, Office and Design plans. You pay only while they have a live job from you, and you can end their access at any time.
+                Yes. Add a subcontractor and they see and update only the jobs
+                you give them, and their work stays in your company's records.
+                Each subcontractor login is £15 + VAT per user per month,
+                separate from the Lite, Office and Design plans. You pay only
+                while they have a live job from you, and you can end their
+                access at any time.
                 <a href="/pricing/">See pricing</a>.
               </p>
             </details>
@@ -171,13 +190,12 @@
               <p>
                 Compliar supports the records that carry a job through handover:
                 certificates and reports, plus zone plans and as-fitted drawings
-                with a Design plan. Digital fire log books are kept by your
-                team in the app and cost £4 + VAT per site per year, added to any
-                plan. You can create a
-                user-customised, printable QR label for the site; your team
-                scan it, sign in and open that site’s log book. You can also
-                turn the log book on in the customer portal, so your customer
-                sees it alongside their certificates.
+                with a Design plan. Digital fire log books are kept by your team
+                in the app and cost £4 + VAT per site per year, added to any
+                plan. You can create a user-customised, printable QR label for
+                the site; your team scan it, sign in and open that site’s log
+                book. You can also turn the log book on in the customer portal,
+                so your customer sees it alongside their certificates.
                 <a href="/features/#packs">Explore handover packs</a> or
                 <a href="/features/#logbooks">see fire log books</a>.
               </p>
@@ -185,94 +203,104 @@
             <details class="faq-item">
               <summary>How do I get started?</summary>
               <p>
-                <a href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a> and we will walk through your own jobs. If Compliar fits, we set up your account. We can also help with set-up and moving your data across if you would like it.
+                <a href="/contact/?subject=Demo+request" data-demo-open
+                  >Book a demo</a
+                >
+                and we will walk through your own jobs. If Compliar fits, we set
+                up your account. We can also help with set-up and moving your
+                data across if you would like it.
               </p>
             </details>
             <details class="faq-item">
               <summary>How much does Compliar cost?</summary>
               <p>
-                Compliar is priced per person, by plan: Lite £35, Office £65
-                and Design £95 per user per month, plus VAT. The site log book
-                is priced separately at £4 + VAT per site per year, and can be
-                added to any plan. Pay
-                yearly and you get two months free. The early-adopter offer runs until 31 March 2027, or when the first 50 companies have joined, whichever comes first. Sign up while it is open and your price is locked in for 3 years.
-                It is not a contract and you are free to leave. Onboarding
-                is separate, from £195 and quoted individually; a self-service
-                option is available to everyone after a demo. The customer portal
-                is included on every plan. You can mix users in one
-                company, there is no minimum number of users, and we can talk you through set-up in a demo.
+                Compliar is priced per person, by plan: Lite £35, Office £65 and
+                Design £95 per user per month, plus VAT. The site log book is
+                priced separately at £4 + VAT per site per year, and can be
+                added to any plan. Pay yearly and you get two months free. The
+                early-adopter offer runs until 31 March 2027, or when the first
+                50 companies have joined, whichever comes first. Sign up while
+                it is open and your price is locked in for 3 years. It is not a
+                contract and you are free to leave. Onboarding is separate, from
+                £195 and quoted individually; a self-service option is available
+                to everyone after a demo. The customer portal is included on
+                every plan. You can mix users in one company, there is no
+                minimum number of users, and we can talk you through set-up in a
+                demo.
               </p>
             </details>
             <details class="faq-item">
               <summary>What does each plan include?</summary>
               <p>
-                Lite is the whole field product, for engineers and small businesses:
-                calendar, jobs, customers, sites and assets, asset checks and
-                visit recording, certificates, defects, quotes, RAMS, reports
-                and timesheets, from a phone or a desk. Office adds the tools
-                that run the business: maintenance plans, invoicing and credit
-                control, rates, stock, purchase orders, projects and tenders,
-                job costing, advanced reports, your own certificate templates
-                and qualified supervisor countersign. Design adds take-offs,
-                CAD drawings, zone plans and as-fitted plans. Each plan
-                includes everything in the one below it. Fire log books
-                are not part of the plan price: they are £4 + VAT per site per
-                year and can be added to any plan.
+                Lite is the whole field product, for engineers and small
+                businesses: calendar, jobs, customers, sites and assets, asset
+                checks and visit recording, certificates, defects, quotes, RAMS,
+                reports and timesheets, from a phone or a desk. Office adds the
+                tools that run the business: maintenance plans, invoicing and
+                credit control, rates, stock, purchase orders, projects and
+                tenders, job costing, advanced reports, your own certificate
+                templates and qualified supervisor countersign. Design adds
+                take-offs, CAD drawings, zone plans and as-fitted plans. Each
+                plan includes everything in the one below it. Fire log books are
+                not part of the plan price: they are £4 + VAT per site per year
+                and can be added to any plan.
               </p>
             </details>
             <details class="faq-item">
               <summary>What disciplines does Compliar cover?</summary>
               <p>
-                Every discipline we support across fire protection and life safety,
-                security and electrical, each with built-in certificate
-                templates. That covers fire protection and
-                life safety (including fire detection and alarm systems, aspirating detection,
-                emergency lighting, extinguishers, sprinklers, risers, gas and
-                kitchen suppression, voice alarm, emergency voice communication
-                and nurse call), 7 in security (intruder and hold-up alarm systems, CCTV, access
-                control, automatic doors, door entry, gates and barriers, and
-                alarm signalling) and 5 in electrical (installation, inspection
-                and testing, emergency lighting, PAT testing and EV charge
-                points). <a href="/features/#coverage-title">See the full list</a>. Manage design, pricing, installation, commissioning
-                and maintenance, with certificates and reports linked to the
-                work.
+                Every discipline we support across fire protection and life
+                safety, security and electrical, each with built-in certificate
+                templates. That covers fire protection and life safety
+                (including fire detection and alarm systems, aspirating
+                detection, emergency lighting, extinguishers, sprinklers,
+                risers, gas and kitchen suppression, voice alarm, emergency
+                voice communication and nurse call), 7 in security (intruder and
+                hold-up alarm systems, CCTV, access control, automatic doors,
+                door entry, gates and barriers, and alarm signalling) and 5 in
+                electrical (installation, inspection and testing, emergency
+                lighting, PAT testing and EV charge points).
+                <a href="/features/#coverage-title">See the full list</a>.
+                Manage design, pricing, installation, commissioning and
+                maintenance, with certificates and reports linked to the work.
                 <a href="/features/#coverage-title">Explore the trades</a>.
               </p>
             </details>
             <details class="faq-item">
               <summary>Do the certificates follow British Standards?</summary>
               <p>
-                Compliar is built around the standards, and it keeps your records in one place for your audit. The certificate templates are built to follow the
-                relevant British Standards for each discipline, and the template
-                for each discipline names the standard it follows. They include
-                BS 5839-1 (fire detection and alarm systems), PD 6662 &amp; BS EN 50131 (intruder
-                and hold-up alarm systems), BS EN 62676 (CCTV), BS 5266-1 (emergency
+                Compliar is built around the standards, and it keeps your
+                records in one place for your audit. The certificate templates
+                are built to follow the relevant British Standards for each
+                discipline, and the template for each discipline names the
+                standard it follows. They include BS 5839-1 (fire detection and
+                alarm systems), PD 6662 &amp; BS EN 50131 (intruder and hold-up
+                alarm systems), BS EN 62676 (CCTV), BS 5266-1 (emergency
                 lighting) and BS 7671 (electrical installations). The engineer
                 who signs a certificate remains responsible for its content.
                 Compliar is independent of BSI and of the certification and
                 registration schemes; check each template against the current
-                edition of the standard and your scheme's requirements, and
-                edit it where your scheme asks for something different.
+                edition of the standard and your scheme's requirements, and edit
+                it where your scheme asks for something different.
               </p>
             </details>
             <details class="faq-item">
               <summary>Is there a contract or minimum commitment?</summary>
-              <p>
-                No. There is no minimum term or minimum number of
-                users.
-              </p>
+              <p>No. There is no minimum term or minimum number of users.</p>
             </details>
             <details class="faq-item">
-              <summary>How do I cancel, and what happens to my records?</summary>
+              <summary>
+                How do I cancel, and what happens to my records?
+              </summary>
               <p>
                 You can cancel from the billing settings at any time. Access
                 carries on to the end of the period you have paid for, and no
                 refund is due for the remainder of that period. Before you go,
                 owners and admins can download company data as CSV files from
                 Import &amp; export, so your customers, sites, assets,
-                certificates and invoices stay yours. Yearly cover on log
-                books renews with reminders two weeks and one day before, and
-                the log book goes read-only if cover lapses.
+                certificates and invoices stay yours. Yearly cover on log books
+                renews with reminders two weeks and one day before, and the log
+                book goes read-only if cover lapses.
               </p>
             </details>
             <details class="faq-item">
@@ -280,19 +308,19 @@
               <p>
                 Yes. Each person has their own plan, so you can put field
                 engineers on Lite, the office on Office, a designer or estimator
-                on Design, and change a person's plan later. A company might
-                run 20 Lite, 5 Office and 2 Design plans.
+                on Design, and change a person's plan later. A company might run
+                20 Lite, 5 Office and 2 Design plans.
               </p>
             </details>
             <details class="faq-item">
               <summary>How does Compliar help with safe working?</summary>
               <p>
-                RAMS — risk assessments and method statements — are included with
-                every plan. Create one from a job using
-                discipline-specific templates, or start from scratch. Review the
-                hazards and methods for the actual site and task, then sign off
-                and issue a PDF. It helps your team plan work with the safety of
-                engineers, customers and others on site in mind.
+                RAMS — risk assessments and method statements — are included
+                with every plan. Create one from a job using discipline-specific
+                templates, or start from scratch. Review the hazards and methods
+                for the actual site and task, then sign off and issue a PDF. It
+                helps your team plan work with the safety of engineers,
+                customers and others on site in mind.
                 <a href="/features/#rams">Explore RAMS</a>.
               </p>
             </details>
@@ -309,13 +337,15 @@
             <details class="faq-item">
               <summary>Does Compliar work with Xero?</summary>
               <p>
-                Yes, in both directions. When you send an invoice from
-                Compliar, it is created in Xero, with the customer's Xero contact matched or created. When a
-                payment is recorded in Xero, the Compliar invoice is marked
-                paid or part paid. Payments come back automatically, and you can press Sync now to bring them in straight away. Invoices already in Xero are locked in Compliar,
-                so edit them in Xero or raise a credit note. To connect,
-                go to Settings and link your Xero organisation. It is set up
-                per company, so each Compliar company connects to its own Xero.
+                Yes, in both directions. When you send an invoice from Compliar,
+                it is created in Xero, with the customer's Xero contact matched
+                or created. When a payment is recorded in Xero, the Compliar
+                invoice is marked paid or part paid. Payments come back
+                automatically, and you can press Sync now to bring them in
+                straight away. Invoices already in Xero are locked in Compliar,
+                so edit them in Xero or raise a credit note. To connect, go to
+                Settings and link your Xero organisation. It is set up per
+                company, so each Compliar company connects to its own Xero.
               </p>
             </details>
             <details class="faq-item">
@@ -336,24 +366,27 @@
                 to download from an app store. Technicians get a simplified view
                 built for site work: status and timer, directions, parts,
                 billable items and the certificates a job needs, without the
-                office clutter. Once your jobs have loaded on the phone it
-                keeps working with no signal: jobs, certificates and times are
-                saved on the phone and sent when you are back in range. Site audits and the Help chat still need a
-                connection.
+                office clutter. Once your jobs have loaded on the phone it keeps
+                working with no signal: jobs, certificates and times are saved
+                on the phone and sent when you are back in range. Site audits
+                and the Help chat still need a connection.
               </p>
             </details>
             <details class="faq-item">
               <summary>Can I bring my existing data into Compliar?</summary>
               <p>
-                Yes. Owners and admins can import records from CSV or Excel files under
-                Import &amp; export, one file at a time. You can import
-                customers and sites, assets, jobs, defects, certificate and
-                service history and parts, plus asset types, maintenance plans,
-                defect wording, contracts and contacts. Templates to download
-                are included. If you would like a hand,
-                <a href="/pricing/#onboarding">onboarding is from £195, quoted
-                individually</a>, or
-                <a href="/contact/">talk to us about your current setup</a>. See also <a href="/switching-to-compliar/">switching to Compliar</a>.
+                Yes. Owners and admins can import records from CSV or Excel
+                files under Import &amp; export, one file at a time. You can
+                import customers and sites, assets, jobs, defects, certificate
+                and service history and parts, plus asset types, maintenance
+                plans, defect wording, contracts and contacts. Templates to
+                download are included. If you would like a hand,
+                <a href="/pricing/#onboarding"
+                  >onboarding is from £195, quoted individually</a
+                >, or
+                <a href="/contact/">talk to us about your current setup</a>. See
+                also
+                <a href="/switching-to-compliar/">switching to Compliar</a>.
               </p>
             </details>
             <details class="faq-item">
@@ -371,10 +404,10 @@
               <p>
                 The digital site log book is £4 + VAT per site per year, and you
                 can add it to any plan. If you only want the log book, choose
-                Log book only: sites, the digital log book and QR labels, with no
-                per-user plan needed, at the same £4 + VAT per site per year. It suits
-                any business that looks after several properties, such as
-                estate agents, landlords, developers and facilities managers.
+                Log book only: sites, the digital log book and QR labels, with
+                no per-user plan needed, at the same £4 + VAT per site per year.
+                It suits any business that looks after several properties, such
+                as estate agents, landlords, developers and facilities managers.
                 Compliar is for UK sites only and works to British Standards.
                 <a href="/pricing/#log-book">See log book pricing</a>.
               </p>
@@ -388,18 +421,21 @@
                 and housing and facilities teams. You get a digital fire,
                 emergency lighting and site log book for each site, without
                 buying a per-user plan. It costs £4 + VAT per site per year.
-                Staff record weekly fire alarm tests, monthly emergency
-                lighting tests, false alarms, faults and visits, and the
-                records stay visible. A QR code or sticker on site opens the
-                site’s log book, and viewing needs an account. You choose when
-                a missed-test alert goes out and who gets it. QR stickers are
-                free to print yourself, or order blank stickers at £1 each + VAT
-                (orders of 10 to 1,000, in tens), which you activate onto a site
-                by scanning, or printed stickers made out to a named site at £1
-                each + VAT. Postage is £3.95 + VAT per order for either. There is no self-serve sign-up:
-                <a href="/contact/?subject=Demo+request" data-demo-open>book a demo</a> and Compliar
-                sets up the account. It is for UK sites only and works to
-                British Standards.
+                Staff record weekly fire alarm tests, monthly emergency lighting
+                tests, false alarms, faults and visits, and the records stay
+                visible. A QR code or sticker on site opens the site’s log book,
+                and viewing needs an account. You choose when a missed-test
+                alert goes out and who gets it. QR stickers are free to print
+                yourself, or order blank stickers at £1 each + VAT (orders of 10
+                to 1,000, in tens), which you activate onto a site by scanning,
+                or printed stickers made out to a named site at £1 each + VAT.
+                Postage is £3.95 + VAT per order for either. There is no
+                self-serve sign-up:
+                <a href="/contact/?subject=Demo+request" data-demo-open
+                  >book a demo</a
+                >
+                and Compliar sets up the account. It is for UK sites only and
+                works to British Standards.
                 <a href="/log-book/">More about the log book</a>.
               </p>
             </details>
@@ -416,25 +452,25 @@
                 Yes. Each site has its own QR label. You can print it or
                 download it as an image, and choose the label size, from small
                 40 × 30 mm labels up to an A5 sheet, and portrait or landscape.
-                You also choose what the label shows, such as your logo,
-                company name, the site and customer names, your contact details
-                and your accreditations. Your team scan it, sign in and open that
-                site’s log book. Printing your own is free. If you would rather
-                have stickers posted to you, blank ones are £1 each + VAT
-                (orders of 10 to 1,000, in tens) and you activate them onto a
-                site by scanning, and printed ones made out to a named site are
-                £1 each + VAT. Postage is £3.95 + VAT per order for either, in 50 × 70,
+                You also choose what the label shows, such as your logo, company
+                name, the site and customer names, your contact details and your
+                accreditations. Your team scan it, sign in and open that site’s
+                log book. Printing your own is free. If you would rather have
+                stickers posted to you, blank ones are £1 each + VAT (orders of
+                10 to 1,000, in tens) and you activate them onto a site by
+                scanning, and printed ones made out to a named site are £1 each
+                + VAT. Postage is £3.95 + VAT per order for either, in 50 × 70,
                 50 × 60, 50 × 40 and 50 × 30 mm.
               </p>
             </details>
             <details class="faq-item">
               <summary>Who can see my data?</summary>
               <p>
-                Each company's data is separated by database-level access controls, so
-                your records are visible to your own users and to the portal
-                logins you grant. Your own
-                customers only see what you give them: a contact can be invited
-                for the whole account or a single site.
+                Each company's data is separated by database-level access
+                controls, so your records are visible to your own users and to
+                the portal logins you grant. Your own customers only see what
+                you give them: a contact can be invited for the whole account or
+                a single site.
               </p>
             </details>
           </div>
@@ -448,13 +484,19 @@
         <div class="wrap">
           <div class="eyebrow">Your next job starts here</div>
           <h2>One app. Every job, start to finish.</h2>
-          <p>Book a demo and Keiran will walk through your own jobs. Early adopters lock their price for 3 years, with no contract.</p>
+          <p>
+            Book a demo and Keiran will walk through your own jobs. Early
+            adopters lock their price for 3 years, with no contract.
+          </p>
           <div class="final-ctas">
             <a
               class="btn btn-primary"
-              href="/contact/?subject=Demo+request" data-demo-open
+              href="/contact/?subject=Demo+request"
+              data-demo-open
               >Book a demo</a
-            ><a class="btn btn-ghost-on-navy" href="/getting-started/">How getting started works</a>
+            ><a class="btn btn-ghost-on-navy" href="/getting-started/"
+              >How getting started works</a
+            >
           </div>
         </div>
       </section>
@@ -471,7 +513,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -485,34 +528,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -522,10 +618,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -533,11 +641,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

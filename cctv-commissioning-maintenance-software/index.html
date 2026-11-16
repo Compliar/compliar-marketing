@@ -6,44 +6,50 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>
       CCTV Commissioning &amp; Maintenance Software | BS EN 62676 — Compliar
@@ -64,9 +70,18 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="CCTV Commissioning &amp; Maintenance Software | BS EN 62676 — Compliar" />
-    <meta property="og:description" content="Keep CCTV commissioning, handover and maintenance records in one place: camera schedules, checks, defects to quotes, signatures and branded PDFs, referenced to BS EN 62676. Book a demo." />
-    <meta property="og:url" content="https://compliar.co.uk/cctv-commissioning-maintenance-software/" />
+    <meta
+      property="og:title"
+      content="CCTV Commissioning &amp; Maintenance Software | BS EN 62676 — Compliar"
+    />
+    <meta
+      property="og:description"
+      content="Keep CCTV commissioning, handover and maintenance records in one place: camera schedules, checks, defects to quotes, signatures and branded PDFs, referenced to BS EN 62676. Book a demo."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/cctv-commissioning-maintenance-software/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -76,91 +91,97 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
-    <meta name="twitter:title" content="CCTV Commissioning &amp; Maintenance Software | BS EN 62676 — Compliar" />
-    <meta name="twitter:description" content="Keep CCTV commissioning, handover and maintenance records in one place: camera schedules, checks, defects to quotes, signatures and branded PDFs, referenced to BS EN 62676. Book a demo." />
+    <meta
+      name="twitter:title"
+      content="CCTV Commissioning &amp; Maintenance Software | BS EN 62676 — Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="Keep CCTV commissioning, handover and maintenance records in one place: camera schedules, checks, defects to quotes, signatures and branded PDFs, referenced to BS EN 62676. Book a demo."
+    />
     <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Compliar",
-        "item": "https://compliar.co.uk/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "CCTV software",
-        "item": "https://compliar.co.uk/cctv-commissioning-maintenance-software/"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Which standard do the CCTV records reference?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The templates reference BS EN 62676, the standard series for video surveillance systems used in security applications. Always check what your contract or specification requires on top."
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Compliar",
+              "item": "https://compliar.co.uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "CCTV software",
+              "item": "https://compliar.co.uk/cctv-commissioning-maintenance-software/"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Which standard do the CCTV records reference?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The templates reference BS EN 62676, the standard series for video surveillance systems used in security applications. Always check what your contract or specification requires on top."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is there a handover record the customer can sign?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. A shared handover and acceptance record is used across intruder, CCTV and access control, so the customer can sign off at the end of an installation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can a failed camera become a quote?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. A fault found on a visit can be raised as a defect and quoted without re-typing, then tracked as an open defect."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What should a CCTV commissioning record include?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The operational requirement for each camera, the position and field of view, reference images, recording settings and retention, time synchronisation, remote access and the signed handover. Compliar's template works through these in order."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I keep reference images against each camera?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Photos taken on the visit are captured on the device and held against the asset and the record, so the next engineer can compare the view."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who is responsible for data protection on a CCTV system?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The system owner, as the data controller. Compliar keeps your commissioning and maintenance records; lawful use of the footage, signage and access to it are for the customer to manage."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What does it cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The built-in templates are included from the Lite plan at £35 + VAT per user per month, with no per-certificate fees and no contract."
+              }
+            }
+          ]
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Is there a handover record the customer can sign?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. A shared handover and acceptance record is used across intruder, CCTV and access control, so the customer can sign off at the end of an installation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can a failed camera become a quote?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. A fault found on a visit can be raised as a defect and quoted without re-typing, then tracked as an open defect."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What should a CCTV commissioning record include?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The operational requirement for each camera, the position and field of view, reference images, recording settings and retention, time synchronisation, remote access and the signed handover. Compliar's template works through these in order."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I keep reference images against each camera?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Photos taken on the visit are captured on the device and held against the asset and the record, so the next engineer can compare the view."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who is responsible for data protection on a CCTV system?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The system owner, as the data controller. Compliar keeps your commissioning and maintenance records; lawful use of the footage, signage and access to it are for the customer to manage."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does it cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The built-in templates are included from the Lite plan at £35 + VAT per user per month, with no per-certificate fees and no contract."
-        }
-      }
-    ]
-  }
-]
+      ]
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -178,9 +199,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -202,7 +233,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -225,24 +258,40 @@
             </div>
             <div class="eyebrow">CCTV records</div>
             <h1>CCTV commissioning and maintenance <span>software</span></h1>
-            <p class="hero-sub">Compliar gives CCTV installers and maintainers commissioning, handover and maintenance records that reference BS EN 62676. Fill them in on site, capture the customer's signature, and send a branded PDF from the job.</p>
+            <p class="hero-sub">
+              Compliar gives CCTV installers and maintainers commissioning,
+              handover and maintenance records that reference BS EN 62676. Fill
+              them in on site, capture the customer's signature, and send a
+              branded PDF from the job.
+            </p>
             <div
               class="calc-badge"
               style="display: inline-flex; margin-bottom: 22px"
             >
-              BOOK A DEMO · NO CONTRACT · EARLY ADOPTERS LOCK THEIR PRICE FOR 3 YEARS
+              BOOK A DEMO · NO CONTRACT · EARLY ADOPTERS LOCK THEIR PRICE FOR 3
+              YEARS
             </div>
             <div class="hero-ctas">
-              <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a>
+              <a
+                class="btn btn-primary"
+                href="/contact/?subject=Demo+request"
+                data-demo-open
+                >Book a demo</a
+              >
               <a class="btn btn-ghost-on-navy" href="/pricing/">See pricing</a>
             </div>
             <div class="standards"><span>BS EN 62676</span></div>
           </div>
           <div class="mock" style="border-color: var(--line-on-navy)">
-                        <div class="mock-body">
+            <div class="mock-body">
               <div class="doc-row" style="padding-top: 0">
-                <span class="calc-title" style="color: var(--ink)">CCTV record set</span
-                ><span class="doc-amt" style="font-weight: 400; color: var(--muted)">BS EN 62676</span>
+                <span class="calc-title" style="color: var(--ink)"
+                  >CCTV record set</span
+                ><span
+                  class="doc-amt"
+                  style="font-weight: 400; color: var(--muted)"
+                  >BS EN 62676</span
+                >
               </div>
               <div class="doc-row">
                 <span class="doc-tag sales">COMMISSION</span
@@ -274,18 +323,49 @@
           <div class="section-head">
             <div class="eyebrow">What's included</div>
             <h2>Records for the whole life of the system</h2>
-            <p>For security work the commissioning and handover record is where the customer signs, so it matters as much as the maintenance report.</p>
+            <p>
+              For security work the commissioning and handover record is where
+              the customer signs, so it matters as much as the maintenance
+              report.
+            </p>
           </div>
           <div class="tbl-wrap">
             <table class="tbl">
               <thead>
-                <tr><th>Record</th><th>When you use it</th></tr>
+                <tr>
+                  <th>Record</th>
+                  <th>When you use it</th>
+                </tr>
               </thead>
               <tbody>
-                <tr><th>Commissioning record</th><td>At installation: what was installed, how it was set up and what was checked before handover.</td></tr>
-                <tr><th>Handover and acceptance</th><td>A shared handover and acceptance record used across intruder, CCTV and access control, signed by the customer.</td></tr>
-                <tr><th>Maintenance record</th><td>Each service visit: per-device results, notes, photos and an overall outcome.</td></tr>
-                <tr><th>Defects and quotes</th><td>A fault found on a visit is raised as a defect and quoted without re-typing.</td></tr>
+                <tr>
+                  <th>Commissioning record</th>
+                  <td>
+                    At installation: what was installed, how it was set up and
+                    what was checked before handover.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Handover and acceptance</th>
+                  <td>
+                    A shared handover and acceptance record used across
+                    intruder, CCTV and access control, signed by the customer.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Maintenance record</th>
+                  <td>
+                    Each service visit: per-device results, notes, photos and an
+                    overall outcome.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Defects and quotes</th>
+                  <td>
+                    A fault found on a visit is raised as a defect and quoted
+                    without re-typing.
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -301,15 +381,25 @@
           <div class="card-grid">
             <div class="roadmap-card">
               <h4>Per device</h4>
-              <p>Cameras, recorders and other equipment can be held as assets on the site, with a result recorded for each on a visit.</p>
+              <p>
+                Cameras, recorders and other equipment can be held as assets on
+                the site, with a result recorded for each on a visit.
+              </p>
             </div>
             <div class="roadmap-card">
               <h4>Evidence</h4>
-              <p>Photos and signatures are captured on the device as part of the record, then included in the branded PDF.</p>
+              <p>
+                Photos and signatures are captured on the device as part of the
+                record, then included in the branded PDF.
+              </p>
             </div>
             <div class="roadmap-card">
               <h4>Your own templates</h4>
-              <p>Edit the built-in templates or build your own (company admins, Office plans and above) so the record matches how your company works.</p>
+              <p>
+                Edit the built-in templates or build your own (company admins,
+                Office plans and above) so the record matches how your company
+                works.
+              </p>
             </div>
           </div>
         </div>
@@ -318,17 +408,41 @@
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">Good to know</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              Good to know
+            </div>
             <h2>What a CCTV record should cover</h2>
-            <p>BS EN 62676 is the European standard series for video surveillance systems used in security applications, and its application guidelines part is the usual starting point for installers. Which grade and what performance a site needs comes from its operational requirement, so record that requirement and what was agreed with the customer.</p>
-            <p>A good commissioning record shows what was installed and where: each camera and its position, the recorder and storage, how long footage is kept, that the clocks are correct and that the system was demonstrated to the customer. A maintenance record then shows each check, what failed, and what was done.</p>
-            <p>Lawful use of the footage is a separate matter for the system owner, and data protection rules apply. Compliar keeps your installation and maintenance records; the engineer and the customer remain responsible for the system and how it is used.</p>
             <p>
-              The same system covers 32 system types across fire protection and life safety, security and electrical, so one login handles the whole company. See the
+              BS EN 62676 is the European standard series for video surveillance
+              systems used in security applications, and its application
+              guidelines part is the usual starting point for installers. Which
+              grade and what performance a site needs comes from its operational
+              requirement, so record that requirement and what was agreed with
+              the customer.
+            </p>
+            <p>
+              A good commissioning record shows what was installed and where:
+              each camera and its position, the recorder and storage, how long
+              footage is kept, that the clocks are correct and that the system
+              was demonstrated to the customer. A maintenance record then shows
+              each check, what failed, and what was done.
+            </p>
+            <p>
+              Lawful use of the footage is a separate matter for the system
+              owner, and data protection rules apply. Compliar keeps your
+              installation and maintenance records; the engineer and the
+              customer remain responsible for the system and how it is used.
+            </p>
+            <p>
+              The same system covers 32 system types across fire protection and
+              life safety, security and electrical, so one login handles the
+              whole company. See the
               <a href="/features/#coverage-title">full list of disciplines</a>.
             </p>
             <div class="more-links">
-              <a href="/intruder-alarm-grades-maintenance-guide/">Intruder alarm guide</a>
+              <a href="/intruder-alarm-grades-maintenance-guide/"
+                >Intruder alarm guide</a
+              >
               <a href="/features/">All features</a>
               <a href="/pricing/">Pricing</a>
             </div>
@@ -339,34 +453,108 @@
       <section class="band" style="background: var(--cream-2)">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">What to check</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              What to check
+            </div>
             <h2>Commissioning and maintenance, camera by camera</h2>
-            <p><strong>General guidance only.</strong> The BS EN 62676 series is the reference, with its application guidelines part the usual starting point; check your specification and your scheme document. Last reviewed 3 November 2026.</p>
+            <p>
+              <strong>General guidance only.</strong> The BS EN 62676 series is
+              the reference, with its application guidelines part the usual
+              starting point; check your specification and your scheme document.
+              Last reviewed 3 November 2026.
+            </p>
             <h3>Start from the operational requirement</h3>
-            <p>What a camera has to achieve is set by the operational requirement agreed with the customer: whether an image is for monitoring a space, detecting that something is there, observing, recognising a known person or identifying an unknown one. That decision drives lens choice, mounting height and recording settings, and it is the first thing to record on the commissioning record, because a maintenance engineer three years later needs to know what each camera was for.</p>
+            <p>
+              What a camera has to achieve is set by the operational requirement
+              agreed with the customer: whether an image is for monitoring a
+              space, detecting that something is there, observing, recognising a
+              known person or identifying an unknown one. That decision drives
+              lens choice, mounting height and recording settings, and it is the
+              first thing to record on the commissioning record, because a
+              maintenance engineer three years later needs to know what each
+              camera was for.
+            </p>
             <h3>Commissioning</h3>
             <ul>
-              <li><strong>Each camera.</strong> Position, field of view against the operational requirement, focus and exposure by day and by night, and a reference image captured and kept.</li>
-              <li><strong>Recording.</strong> Frame rate and resolution per camera, retention period, storage capacity against that retention, and that recording actually happens on motion or continuously as specified.</li>
-              <li><strong>Time and date.</strong> Recorder and cameras synchronised and correct, because footage with the wrong time is hard to use as evidence.</li>
-              <li><strong>Remote access and alerts.</strong> Who can view, from where, and how alarms or events are passed on, with default passwords changed.</li>
-              <li><strong>Handover.</strong> The customer shown how to review and export footage, and the signed handover and acceptance record.</li>
+              <li>
+                <strong>Each camera.</strong> Position, field of view against
+                the operational requirement, focus and exposure by day and by
+                night, and a reference image captured and kept.
+              </li>
+              <li>
+                <strong>Recording.</strong> Frame rate and resolution per
+                camera, retention period, storage capacity against that
+                retention, and that recording actually happens on motion or
+                continuously as specified.
+              </li>
+              <li>
+                <strong>Time and date.</strong> Recorder and cameras
+                synchronised and correct, because footage with the wrong time is
+                hard to use as evidence.
+              </li>
+              <li>
+                <strong>Remote access and alerts.</strong> Who can view, from
+                where, and how alarms or events are passed on, with default
+                passwords changed.
+              </li>
+              <li>
+                <strong>Handover.</strong> The customer shown how to review and
+                export footage, and the signed handover and acceptance record.
+              </li>
             </ul>
             <h3>Maintenance</h3>
             <ul>
-              <li><strong>Image check per camera</strong> against the reference image: drift, dirt, condensation, foliage, a new sign in the view.</li>
-              <li><strong>Recorder health.</strong> Disks, retention still being met, firmware, any gaps in recording.</li>
-              <li><strong>Housings, mounts and cabling</strong>, especially external cameras and heaters.</li>
-              <li><strong>Defects raised</strong> for anything that fails, with a photo, and quoted from the job.</li>
+              <li>
+                <strong>Image check per camera</strong> against the reference
+                image: drift, dirt, condensation, foliage, a new sign in the
+                view.
+              </li>
+              <li>
+                <strong>Recorder health.</strong> Disks, retention still being
+                met, firmware, any gaps in recording.
+              </li>
+              <li>
+                <strong>Housings, mounts and cabling</strong>, especially
+                external cameras and heaters.
+              </li>
+              <li>
+                <strong>Defects raised</strong> for anything that fails, with a
+                photo, and quoted from the job.
+              </li>
             </ul>
             <h3>Worked example</h3>
-            <p>On the Harbourview sample site a 12-camera system with one recorder is serviced annually. The engineer opens the asset list on the phone, works through each camera comparing the live view with the stored reference image, and records a result per camera. Camera 9 over the goods yard is out of focus after a mount knock: it is marked Fail with a photo and becomes a defect. The recorder's retention is checked against the 31 days agreed at commissioning. The maintenance record and the open defect go to the customer from the job, and the office raises a quote for the realignment.</p>
+            <p>
+              On the Harbourview sample site a 12-camera system with one
+              recorder is serviced annually. The engineer opens the asset list
+              on the phone, works through each camera comparing the live view
+              with the stored reference image, and records a result per camera.
+              Camera 9 over the goods yard is out of focus after a mount knock:
+              it is marked Fail with a photo and becomes a defect. The
+              recorder's retention is checked against the 31 days agreed at
+              commissioning. The maintenance record and the open defect go to
+              the customer from the job, and the office raises a quote for the
+              realignment.
+            </p>
             <h3>Common mistakes</h3>
             <ul>
-              <li><strong>No reference images.</strong> Without them, "camera drifted" is an opinion.</li>
-              <li><strong>Retention assumed, not checked.</strong> Adding cameras or raising resolution quietly shortens retention.</li>
-              <li><strong>Operational requirement never written down.</strong> It is the basis for every later judgement about the system.</li>
-              <li><strong>Data protection left to chance.</strong> Lawful use of footage, signage and who can view it are the system owner's responsibility, but a commissioning record that notes what was agreed helps everyone.</li>
+              <li>
+                <strong>No reference images.</strong> Without them, "camera
+                drifted" is an opinion.
+              </li>
+              <li>
+                <strong>Retention assumed, not checked.</strong> Adding cameras
+                or raising resolution quietly shortens retention.
+              </li>
+              <li>
+                <strong>Operational requirement never written down.</strong> It
+                is the basis for every later judgement about the system.
+              </li>
+              <li>
+                <strong>Data protection left to chance.</strong> Lawful use of
+                footage, signage and who can view it are the system owner's
+                responsibility, but a commissioning record that notes what was
+                agreed helps everyone.
+              </li>
             </ul>
           </div>
         </div>
@@ -381,31 +569,68 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary>Which standard do the CCTV records reference?</summary>
-              <p>The templates reference BS EN 62676, the standard series for video surveillance systems used in security applications. Always check what your contract or specification requires on top.</p>
+              <p>
+                The templates reference BS EN 62676, the standard series for
+                video surveillance systems used in security applications. Always
+                check what your contract or specification requires on top.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>Is there a handover record the customer can sign?</summary>
-              <p>Yes. A shared handover and acceptance record is used across intruder, CCTV and access control, so the customer can sign off at the end of an installation.</p>
+              <summary>
+                Is there a handover record the customer can sign?
+              </summary>
+              <p>
+                Yes. A shared handover and acceptance record is used across
+                intruder, CCTV and access control, so the customer can sign off
+                at the end of an installation.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Can a failed camera become a quote?</summary>
-              <p>Yes. A fault found on a visit can be raised as a defect and quoted without re-typing, then tracked as an open defect.</p>
+              <p>
+                Yes. A fault found on a visit can be raised as a defect and
+                quoted without re-typing, then tracked as an open defect.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>What should a CCTV commissioning record include?</summary>
-              <p>The operational requirement for each camera, the position and field of view, reference images, recording settings and retention, time synchronisation, remote access and the signed handover. Compliar&#x27;s template works through these in order.</p>
+              <summary>
+                What should a CCTV commissioning record include?
+              </summary>
+              <p>
+                The operational requirement for each camera, the position and
+                field of view, reference images, recording settings and
+                retention, time synchronisation, remote access and the signed
+                handover. Compliar&#x27;s template works through these in order.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>Can I keep reference images against each camera?</summary>
-              <p>Yes. Photos taken on the visit are captured on the device and held against the asset and the record, so the next engineer can compare the view.</p>
+              <summary>
+                Can I keep reference images against each camera?
+              </summary>
+              <p>
+                Yes. Photos taken on the visit are captured on the device and
+                held against the asset and the record, so the next engineer can
+                compare the view.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>Who is responsible for data protection on a CCTV system?</summary>
-              <p>The system owner, as the data controller. Compliar keeps your commissioning and maintenance records; lawful use of the footage, signage and access to it are for the customer to manage.</p>
+              <summary>
+                Who is responsible for data protection on a CCTV system?
+              </summary>
+              <p>
+                The system owner, as the data controller. Compliar keeps your
+                commissioning and maintenance records; lawful use of the
+                footage, signage and access to it are for the customer to
+                manage.
+              </p>
             </details>
             <details class="faq-item">
               <summary>What does it cost?</summary>
-              <p>The built-in templates are included from the Lite plan at £35 + VAT per user per month, with no per-certificate fees and no contract.</p>
+              <p>
+                The built-in templates are included from the Lite plan at £35 +
+                VAT per user per month, with no per-certificate fees and no
+                contract.
+              </p>
             </details>
           </div>
         </div>
@@ -414,9 +639,17 @@
       <section class="final-cta band">
         <div class="wrap">
           <h2>Hand over your next CCTV job with a proper record</h2>
-          <p>See the CCTV records on your own jobs in a demo. Onboarding is from £195, quoted individually.</p>
+          <p>
+            See the CCTV records on your own jobs in a demo. Onboarding is from
+            £195, quoted individually.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            >
             <a class="btn btn-ghost-on-navy" href="/pricing/">See pricing</a>
           </div>
         </div>
@@ -435,7 +668,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -449,34 +683,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -486,10 +773,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -497,11 +796,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

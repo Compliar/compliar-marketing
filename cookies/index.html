@@ -6,47 +6,56 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>Cookies — Compliar</title>
-    <meta name="description" content="Which cookies compliar.co.uk uses, how to change your choice, and what the Compliar application stores in your browser and why." />
+    <meta
+      name="description"
+      content="Which cookies compliar.co.uk uses, how to change your choice, and what the Compliar application stores in your browser and why."
+    />
     <link rel="canonical" href="https://compliar.co.uk/cookies/" />
     <meta name="theme-color" content="#1B2430" />
     <meta property="og:type" content="website" />
@@ -87,9 +96,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -111,7 +130,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -125,80 +146,107 @@
       </div>
     </header>
     <main id="main">
-<section class="page-intro">
-  <div class="wrap">
-    <div class="eyebrow">Legal · Cookies</div>
-    <h1>Cookies, and<br />your choice.</h1>
-    <p>
-      This website only sets analytics and advertising cookies if you choose &ldquo;Accept&rdquo;.
-      Here is what each choice means, how to change it, and what the Compliar application stores.
-    </p>
-  </div>
-</section>
-<section class="band">
-  <div class="wrap prose">
-    <p><strong>Last updated:</strong> 30 October 2026.</p>
+      <section class="page-intro">
+        <div class="wrap">
+          <div class="eyebrow">Legal · Cookies</div>
+          <h1>Cookies, and<br />your choice.</h1>
+          <p>
+            This website only sets analytics and advertising cookies if you
+            choose &ldquo;Accept&rdquo;. Here is what each choice means, how to
+            change it, and what the Compliar application stores.
+          </p>
+        </div>
+      </section>
+      <section class="band">
+        <div class="wrap prose">
+          <p><strong>Last updated:</strong> 30 October 2026.</p>
 
-    <h2>compliar.co.uk</h2>
-    <p>
-      On your first visit a banner asks whether you accept optional cookies. You can change your
-      choice at any time with <button type="button" class="cookie-settings-inline" data-cookie-settings>Cookie settings</button>
-      (also in the footer of every page).
-    </p>
-    <h3>Essential (always on)</h3>
-    <p>
-      We store your cookie choice in your browser's local storage under the name
-      <code>compliar_cookie_consent</code>, so we don't ask again on every page. It is not used
-      for anything else.
-    </p>
-    <h3>Analytics and marketing (only if you choose &ldquo;Accept&rdquo;)</h3>
-    <p>
-      We use the Google tag for Google Ads to measure which adverts lead to demo and free sample requests. If you
-      accept, Google may set cookies such as <code>_gcl_au</code> on compliar.co.uk (kept for up to
-      90 days) and its own cookies on Google domains such as doubleclick.net. Google acts as an
-      independent controller for this data; see
-      <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">how Google uses information from sites that use its services</a>.
-    </p>
-    <p>
-      If you choose &ldquo;Decline&rdquo;, or make no choice, no analytics or advertising
-      cookies are set. We use Google Consent Mode, so the Google tag still sends Google limited,
-      cookieless signals (for example that a page was viewed or a demo button was clicked, with
-      your IP address and browser details as part of the request) so that conversions can be
-      modelled in aggregate.
-    </p>
-    <h3>Other third parties</h3>
-    <p>
-      Typefaces load from Google Fonts, and Cloudflare Web Analytics counts page views without
-      cookies, without storing anything in your browser and without tracking you across sites;
-      see our <a href="/privacy/">Privacy Policy</a>.
-    </p>
+          <h2>compliar.co.uk</h2>
+          <p>
+            On your first visit a banner asks whether you accept optional
+            cookies. You can change your choice at any time with
+            <button
+              type="button"
+              class="cookie-settings-inline"
+              data-cookie-settings
+            >
+              Cookie settings
+            </button>
+            (also in the footer of every page).
+          </p>
+          <h3>Essential (always on)</h3>
+          <p>
+            We store your cookie choice in your browser's local storage under
+            the name
+            <code>compliar_cookie_consent</code>, so we don't ask again on every
+            page. It is not used for anything else.
+          </p>
+          <h3>
+            Analytics and marketing (only if you choose &ldquo;Accept&rdquo;)
+          </h3>
+          <p>
+            We use the Google tag for Google Ads to measure which adverts lead
+            to demo and free sample requests. If you accept, Google may set
+            cookies such as <code>_gcl_au</code> on compliar.co.uk (kept for up
+            to 90 days) and its own cookies on Google domains such as
+            doubleclick.net. Google acts as an independent controller for this
+            data; see
+            <a
+              href="https://policies.google.com/technologies/partner-sites"
+              rel="noopener"
+              >how Google uses information from sites that use its services</a
+            >.
+          </p>
+          <p>
+            If you choose &ldquo;Decline&rdquo;, or make no choice, no analytics
+            or advertising cookies are set. We use Google Consent Mode, so the
+            Google tag still sends Google limited, cookieless signals (for
+            example that a page was viewed or a demo button was clicked, with
+            your IP address and browser details as part of the request) so that
+            conversions can be modelled in aggregate.
+          </p>
+          <h3>Other third parties</h3>
+          <p>
+            Typefaces load from Google Fonts, and Cloudflare Web Analytics
+            counts page views without cookies, without storing anything in your
+            browser and without tracking you across sites; see our
+            <a href="/privacy/">Privacy Policy</a>.
+          </p>
 
-    <h2>The Compliar application (app.compliar.co.uk)</h2>
-    <p>
-      The application uses only strictly necessary storage: a session token so you stay signed in,
-      local storage for drafts and preferences such as the last label size you printed, and a copy
-      of your work records and unsent changes kept on the phone (in IndexedDB, with a service
-      worker) so the field app keeps working without signal. These
-      are essential to provide the service you asked for, so consent is not required for them and
-      there is no banner. None of it is used for tracking. The application sets no analytics or
-      advertising cookies. Stripe sets its own cookies on its payment pages when you enter card details; see
-      <a href="https://stripe.com/gb/privacy" rel="noopener">Stripe's privacy policy</a>.
-    </p>
+          <h2>The Compliar application (app.compliar.co.uk)</h2>
+          <p>
+            The application uses only strictly necessary storage: a session
+            token so you stay signed in, local storage for drafts and
+            preferences such as the last label size you printed, and a copy of
+            your work records and unsent changes kept on the phone (in
+            IndexedDB, with a service worker) so the field app keeps working
+            without signal. These are essential to provide the service you asked
+            for, so consent is not required for them and there is no banner.
+            None of it is used for tracking. The application sets no analytics
+            or advertising cookies. Stripe sets its own cookies on its payment
+            pages when you enter card details; see
+            <a href="https://stripe.com/gb/privacy" rel="noopener"
+              >Stripe's privacy policy</a
+            >.
+          </p>
 
-    <h2>Managing storage</h2>
-    <p>
-      Use Cookie settings on any page to change your choice on compliar.co.uk. You can also clear
-      site data for compliar.co.uk and app.compliar.co.uk in your browser settings at any time.
-      Clearing it for the application signs you out and removes unsent drafts.
-    </p>
+          <h2>Managing storage</h2>
+          <p>
+            Use Cookie settings on any page to change your choice on
+            compliar.co.uk. You can also clear site data for compliar.co.uk and
+            app.compliar.co.uk in your browser settings at any time. Clearing it
+            for the application signs you out and removes unsent drafts.
+          </p>
 
-    <h2>Questions</h2>
-    <p>
-      Email <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>. Our
-      <a href="/privacy/">Privacy Policy</a> explains the personal data we hold.
-    </p>
-  </div>
-</section>
+          <h2>Questions</h2>
+          <p>
+            Email
+            <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>.
+            Our <a href="/privacy/">Privacy Policy</a> explains the personal
+            data we hold.
+          </p>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="wrap foot-grid">
@@ -212,7 +260,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -226,34 +275,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -263,10 +365,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -274,11 +388,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

@@ -6,57 +6,82 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>Emergency Lighting Certificate Software | Compliar</title>
-    <meta name="description" content="Emergency lighting design, installation, commissioning and periodic test certificates in BS 5266-1 format, with an offline field app and defects to quotes. Book a demo." />
-    <link rel="canonical" href="https://compliar.co.uk/emergency-lighting-certificate-software/" />
+    <meta
+      name="description"
+      content="Emergency lighting design, installation, commissioning and periodic test certificates in BS 5266-1 format, with an offline field app and defects to quotes. Book a demo."
+    />
+    <link
+      rel="canonical"
+      href="https://compliar.co.uk/emergency-lighting-certificate-software/"
+    />
     <meta name="theme-color" content="#141D2A" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="Emergency Lighting Certificate Software | Compliar" />
-    <meta property="og:description" content="Emergency lighting design, installation, commissioning and periodic test certificates in BS 5266-1 format, with an offline field app and defects to quotes. Book a demo." />
-    <meta property="og:url" content="https://compliar.co.uk/emergency-lighting-certificate-software/" />
+    <meta
+      property="og:title"
+      content="Emergency Lighting Certificate Software | Compliar"
+    />
+    <meta
+      property="og:description"
+      content="Emergency lighting design, installation, commissioning and periodic test certificates in BS 5266-1 format, with an offline field app and defects to quotes. Book a demo."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/emergency-lighting-certificate-software/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Compliar — management software for electrical, fire protection and life safety, and security contractors" />
+    <meta
+      property="og:image:alt"
+      content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
     <link
@@ -75,76 +100,76 @@
     <script src="/cookie-consent.js" defer></script>
     <script src="/demo-form.js" defer></script>
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Which emergency lighting certificates are included?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Design, installation, commissioning and periodic inspection and testing templates, plus a monthly test record. They are built around BS 5266-1, and each template names the standard it follows."
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Which emergency lighting certificates are included?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Design, installation, commissioning and periodic inspection and testing templates, plus a monthly test record. They are built around BS 5266-1, and each template names the standard it follows."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it work without a signal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The field app keeps today’s work on the phone and queues changes, so engineers can keep working in a basement with no signal. Changes send when the phone is back online."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who is responsible for the certificate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The engineer who signs it. Compliar produces the records and is not affiliated with any standards body or scheme."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who does the monthly emergency lighting test?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Usually the site's own staff, as a short functional test. Compliar's digital log book lets site staff log the monthly test for each site, and alerts you when a test is missed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is each luminaire recorded separately?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Each fitting is held as an asset on the site, and the annual certificate records a pass, fail or no test per fitting, with photos where needed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I print a label for a failed fitting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. A FAILED sticker with your logo and space for the date and initials can be printed from the app on a label printer, or ordered printed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Compliar replace the emergency lighting log book?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It gives each site a digital log book for the monthly tests and the other records the site keeps, at £4 + VAT per site per year; the annual certificates and defects are held against the site. Whether a paper log book is also kept is up to the site."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does it cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Lite is £35 per user per month plus VAT, or £350 plus VAT paid yearly, which is about £1 a day. Office is £65 and Design is £95. There is no contract and no per-certificate fee."
+            }
+          }
+        ]
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Does it work without a signal?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The field app keeps today’s work on the phone and queues changes, so engineers can keep working in a basement with no signal. Changes send when the phone is back online."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who is responsible for the certificate?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The engineer who signs it. Compliar produces the records and is not affiliated with any standards body or scheme."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who does the monthly emergency lighting test?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Usually the site's own staff, as a short functional test. Compliar's digital log book lets site staff log the monthly test for each site, and alerts you when a test is missed."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is each luminaire recorded separately?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Each fitting is held as an asset on the site, and the annual certificate records a pass, fail or no test per fitting, with photos where needed."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I print a label for a failed fitting?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. A FAILED sticker with your logo and space for the date and initials can be printed from the app on a label printer, or ordered printed."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does Compliar replace the emergency lighting log book?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It gives each site a digital log book for the monthly tests and the other records the site keeps, at £4 + VAT per site per year; the annual certificates and defects are held against the site. Whether a paper log book is also kept is up to the site."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What does it cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Lite is £35 per user per month plus VAT, or £350 plus VAT paid yearly, which is about £1 a day. Office is £65 and Design is £95. There is no contract and no per-certificate fee."
-      }
-    }
-  ]
-}
     </script>
   </head>
   <body class="home-page">
@@ -153,9 +178,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -177,7 +212,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -196,17 +233,38 @@
         <div class="wrap v2-hero-grid">
           <div>
             <span class="v2-pill">Emergency lighting · certificates</span>
-            <h1 id="hero-title">Emergency lighting certificate software <span>for contractors and their engineers.</span></h1>
-            <p class="v2-sub">Record the monthly test, issue the periodic certificate in BS 5266-1 format, and turn failed luminaires into a quote, from the engineer’s phone, offline.</p>
+            <h1 id="hero-title">
+              Emergency lighting certificate software
+              <span>for contractors and their engineers.</span>
+            </h1>
+            <p class="v2-sub">
+              Record the monthly test, issue the periodic certificate in BS
+              5266-1 format, and turn failed luminaires into a quote, from the
+              engineer’s phone, offline.
+            </p>
             <div class="v2-ctas">
               <a class="btn btn-primary" href="#contact-form">Book a demo</a>
             </div>
-            <p class="v2-reassure">From £35 per user per month, plus VAT · Early adopters lock their price for 3 years · No contract</p>
+            <p class="v2-reassure">
+              From £35 per user per month, plus VAT · Early adopters lock their
+              price for 3 years · No contract
+            </p>
           </div>
           <div class="hero-showcase">
             <figure class="device-frame device-desktop">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>app.compliar.co.uk</span><span class="device-badge">SAMPLE DATA</span></div>
-              <a class="shot" href="/assets/screens/desk-calendar.webp"><img src="/assets/screens/desk-calendar.webp" width="1600" height="1000" alt="Compliar calendar week view on sample data with engineers in rows and a Jobs to plan list on the right" decoding="async" fetchpriority="high" /></a>
+              <div class="device-bar" aria-hidden="true">
+                <i></i><i></i><i></i><span>app.compliar.co.uk</span
+                ><span class="device-badge">SAMPLE DATA</span>
+              </div>
+              <a class="shot" href="/assets/screens/desk-calendar.webp"
+                ><img
+                  src="/assets/screens/desk-calendar.webp"
+                  width="1600"
+                  height="1000"
+                  alt="Compliar calendar week view on sample data with engineers in rows and a Jobs to plan list on the right"
+                  decoding="async"
+                  fetchpriority="high"
+              /></a>
             </figure>
           </div>
         </div>
@@ -217,9 +275,16 @@
           <div class="price-strip">
             <div>
               <h2 id="price-h">From £35 per user per month, plus VAT</h2>
-              <p>No per-certificate fees and no contract. Plans, the site log book, stickers and onboarding are all on the pricing page.</p>
+              <p>
+                No per-certificate fees and no contract. Plans, the site log
+                book, stickers and onboarding are all on the pricing page.
+              </p>
             </div>
-            <div><a class="btn btn-ghost-on-cream" href="/pricing/">See pricing →</a></div>
+            <div>
+              <a class="btn btn-ghost-on-cream" href="/pricing/"
+                >See pricing →</a
+              >
+            </div>
           </div>
         </div>
       </section>
@@ -228,39 +293,106 @@
         <div class="wrap">
           <div class="v2-head">
             <span class="v2-kicker">What you get</span>
-            <h2 class="v2-h2" id="proof-h">From the maintenance plan to the certificate and the quote.</h2>
+            <h2 class="v2-h2" id="proof-h">
+              From the maintenance plan to the certificate and the quote.
+            </h2>
           </div>
           <div class="lp-proof">
             <div>
               <h3>Certificates in BS 5266-1 format</h3>
-              <p>Compliar has emergency lighting templates for design, installation, commissioning and periodic inspection and testing, plus a monthly test record. They are built around BS 5266-1 and the engineer completes them on site, collects the signature and emails the PDF to the customer.</p><p>Each template names the standard it follows. The engineer who signs remains responsible for the content.</p><ul><li><a href="/emergency-lighting-testing-guide/">Emergency lighting testing guide</a></li></ul>
+              <p>
+                Compliar has emergency lighting templates for design,
+                installation, commissioning and periodic inspection and testing,
+                plus a monthly test record. They are built around BS 5266-1 and
+                the engineer completes them on site, collects the signature and
+                emails the PDF to the customer.
+              </p>
+              <p>
+                Each template names the standard it follows. The engineer who
+                signs remains responsible for the content.
+              </p>
+              <ul>
+                <li>
+                  <a href="/emergency-lighting-testing-guide/"
+                    >Emergency lighting testing guide</a
+                  >
+                </li>
+              </ul>
             </div>
             <figure class="lp-proof-fig lp-phone">
-              <a class="shot" href="/assets/screens/field-job-work.webp"><img src="/assets/screens/field-job-work.webp" width="480" height="1039" loading="lazy" alt="The Work tab of a job in the Compliar field app on sample data, with a five-step visit tracker and an open defect on the site" decoding="async" /></a>
-              <figcaption>Job Work tab with visit step tracker, sample data</figcaption>
+              <a class="shot" href="/assets/screens/field-job-work.webp"
+                ><img
+                  src="/assets/screens/field-job-work.webp"
+                  width="480"
+                  height="1039"
+                  loading="lazy"
+                  alt="The Work tab of a job in the Compliar field app on sample data, with a five-step visit tracker and an open defect on the site"
+                  decoding="async"
+              /></a>
+              <figcaption>
+                Job Work tab with visit step tracker, sample data
+              </figcaption>
             </figure>
           </div>
           <div class="lp-proof lp-flip">
             <div>
               <h3>Test every luminaire on the phone, offline</h3>
-              <p>Engineers see today’s jobs and the assets in each visit on their phone, and record pass, fail or no test on tap. The app keeps today’s work on the phone, so it keeps working in a basement or plant room with no signal, and queued changes send when it is back online.</p><p>Each luminaire is an asset on the site with its location and type, so it is found from the asset list at the visit and its history runs from one annual test to the next.</p>
+              <p>
+                Engineers see today’s jobs and the assets in each visit on their
+                phone, and record pass, fail or no test on tap. The app keeps
+                today’s work on the phone, so it keeps working in a basement or
+                plant room with no signal, and queued changes send when it is
+                back online.
+              </p>
+              <p>
+                Each luminaire is an asset on the site with its location and
+                type, so it is found from the asset list at the visit and its
+                history runs from one annual test to the next.
+              </p>
             </div>
             <figure class="lp-proof-fig">
-              <a class="shot" href="/assets/screens/desk-calendar.webp"><img src="/assets/screens/desk-calendar.webp" width="800" height="500" loading="lazy" alt="Compliar calendar week view on sample data with engineers in rows and a Jobs to plan list on the right" decoding="async" /></a>
-              <figcaption>Week calendar and Jobs to plan list, sample data</figcaption>
+              <a class="shot" href="/assets/screens/desk-calendar.webp"
+                ><img
+                  src="/assets/screens/desk-calendar.webp"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  alt="Compliar calendar week view on sample data with engineers in rows and a Jobs to plan list on the right"
+                  decoding="async"
+              /></a>
+              <figcaption>
+                Week calendar and Jobs to plan list, sample data
+              </figcaption>
             </figure>
           </div>
           <div class="lp-proof">
             <div>
               <h3>Failed luminaires become a quote</h3>
-              <p>A failed item can be raised as a defect on the job, with a Needs quoting status. Defects go into a defect quote, and the customer can approve the quote from a link in the email.</p>
+              <p>
+                A failed item can be raised as a defect on the job, with a Needs
+                quoting status. Defects go into a defect quote, and the customer
+                can approve the quote from a link in the email.
+              </p>
             </div>
             <figure class="lp-proof-fig">
-              <a class="shot" href="/assets/screens/desk-quotes-tenders.webp"><img src="/assets/screens/desk-quotes-tenders.webp" width="1600" height="653" loading="lazy" alt="Compliar Quotes list on sample data with status and type filters" decoding="async" /></a>
+              <a class="shot" href="/assets/screens/desk-quotes-tenders.webp"
+                ><img
+                  src="/assets/screens/desk-quotes-tenders.webp"
+                  width="1600"
+                  height="653"
+                  loading="lazy"
+                  alt="Compliar Quotes list on sample data with status and type filters"
+                  decoding="async"
+              /></a>
               <figcaption>Quotes and Tenders, sample data</figcaption>
             </figure>
           </div>
-          <p class="lp-note">Screens show sample data. Compliar produces records; the engineer and the scheme remain responsible for the work and for the certificates issued. Compliar is not affiliated with any standards body or scheme.</p>
+          <p class="lp-note">
+            Screens show sample data. Compliar produces records; the engineer
+            and the scheme remain responsible for the work and for the
+            certificates issued. Compliar is not affiliated with any standards
+            body or scheme.
+          </p>
         </div>
       </section>
 
@@ -268,32 +400,115 @@
         <div class="wrap">
           <div class="v2-head">
             <span class="v2-kicker">What to check</span>
-            <h2 class="v2-h2" id="depth-h">Monthly, annual and the records in between</h2>
+            <h2 class="v2-h2" id="depth-h">
+              Monthly, annual and the records in between
+            </h2>
           </div>
           <div class="prose">
-            <p><strong>General guidance only.</strong> BS 5266-1 and BS EN 50172 set out the testing and the records; check the edition your contract names. Last reviewed 3 November 2026.</p>
+            <p>
+              <strong>General guidance only.</strong> BS 5266-1 and BS EN 50172
+              set out the testing and the records; check the edition your
+              contract names. Last reviewed 3 November 2026.
+            </p>
             <h3>The two tests</h3>
-            <p>Emergency lighting has a short monthly functional test, which the site's own staff can do, and an annual full rated duration test, usually three hours, which is normally done by a contractor. The annual test is the one that produces the periodic inspection and test certificate. Compliar has both: a monthly test record the site staff can log in its <a href="/fire-log-book-software/">digital log book</a>, and the annual certificate the engineer completes fitting by fitting.</p>
+            <p>
+              Emergency lighting has a short monthly functional test, which the
+              site's own staff can do, and an annual full rated duration test,
+              usually three hours, which is normally done by a contractor. The
+              annual test is the one that produces the periodic inspection and
+              test certificate. Compliar has both: a monthly test record the
+              site staff can log in its
+              <a href="/fire-log-book-software/">digital log book</a>, and the
+              annual certificate the engineer completes fitting by fitting.
+            </p>
             <h3>What the annual visit records</h3>
             <ul>
-              <li><strong>Every luminaire, by location.</strong> Each fitting is an asset on the site with its position, type and whether it is maintained or non-maintained, so the certificate lists them in the order the engineer walks the building.</li>
-              <li><strong>The duration test.</strong> The fitting was discharged for its rated duration and still lit at the end. A fitting that dims early is a fail, with the time it lasted recorded.</li>
-              <li><strong>Charging indicator and recovery.</strong> The charge indicator shows on restoration, and the fitting is left to recharge before the building relies on it.</li>
-              <li><strong>Signs and visibility.</strong> Exit signs present, correct pictogram, unobstructed, and illuminated on test.</li>
-              <li><strong>Coverage against the drawing.</strong> Points of emphasis covered: changes of direction, stairs, final exits, fire-fighting equipment and call points, plant rooms and toilets over a certain size. Record anything the layout has changed since the design.</li>
-              <li><strong>Outcome and next test.</strong> A pass or fail per fitting and an overall outcome, with the next monthly and annual dates.</li>
+              <li>
+                <strong>Every luminaire, by location.</strong> Each fitting is
+                an asset on the site with its position, type and whether it is
+                maintained or non-maintained, so the certificate lists them in
+                the order the engineer walks the building.
+              </li>
+              <li>
+                <strong>The duration test.</strong> The fitting was discharged
+                for its rated duration and still lit at the end. A fitting that
+                dims early is a fail, with the time it lasted recorded.
+              </li>
+              <li>
+                <strong>Charging indicator and recovery.</strong> The charge
+                indicator shows on restoration, and the fitting is left to
+                recharge before the building relies on it.
+              </li>
+              <li>
+                <strong>Signs and visibility.</strong> Exit signs present,
+                correct pictogram, unobstructed, and illuminated on test.
+              </li>
+              <li>
+                <strong>Coverage against the drawing.</strong> Points of
+                emphasis covered: changes of direction, stairs, final exits,
+                fire-fighting equipment and call points, plant rooms and toilets
+                over a certain size. Record anything the layout has changed
+                since the design.
+              </li>
+              <li>
+                <strong>Outcome and next test.</strong> A pass or fail per
+                fitting and an overall outcome, with the next monthly and annual
+                dates.
+              </li>
             </ul>
             <h3>Worked example</h3>
-            <p>On the Harbourview sample site there are 35 fittings. The engineer starts the discharge, walks the building logging each fitting from the asset list on the phone, and comes back after the rated duration to record the end state. Fitting EL-17 on the first-floor landing is out after 95 minutes: it is marked Fail with a photo, a FAILED sticker is printed from the app and put on the fitting, and the fail becomes a defect with a Needs quoting status. The office quotes a replacement that day. The certificate shows 34 passes, one fail and the open defect, and goes to the customer as a PDF. The monthly tests the duty manager logs in the log book sit alongside it, so the next annual visit starts with a full year's record.</p>
+            <p>
+              On the Harbourview sample site there are 35 fittings. The engineer
+              starts the discharge, walks the building logging each fitting from
+              the asset list on the phone, and comes back after the rated
+              duration to record the end state. Fitting EL-17 on the first-floor
+              landing is out after 95 minutes: it is marked Fail with a photo, a
+              FAILED sticker is printed from the app and put on the fitting, and
+              the fail becomes a defect with a Needs quoting status. The office
+              quotes a replacement that day. The certificate shows 34 passes,
+              one fail and the open defect, and goes to the customer as a PDF.
+              The monthly tests the duty manager logs in the log book sit
+              alongside it, so the next annual visit starts with a full year's
+              record.
+            </p>
             <h3>Common mistakes</h3>
             <ul>
-              <li><strong>Testing in working hours without planning.</strong> After a full discharge the fittings need time to recharge; plan the annual test for when the building can cope.</li>
-              <li><strong>Testing from the key switch and walking away.</strong> The end-of-duration check is the test. Record the end state, not just the start.</li>
-              <li><strong>Missing fittings in cupboards and plant rooms.</strong> Holding every fitting as an asset means a missing result shows as not tested.</li>
-              <li><strong>No monthly record.</strong> An annual certificate with no monthly tests behind it is a gap an assessor will notice. The log book is where the site keeps that record, and it alerts you when a test is missed.</li>
-              <li><strong>Leaving a failed fitting unmarked.</strong> A FAILED sticker on the fitting tells everyone, including the next engineer, which one it is.</li>
+              <li>
+                <strong>Testing in working hours without planning.</strong>
+                After a full discharge the fittings need time to recharge; plan
+                the annual test for when the building can cope.
+              </li>
+              <li>
+                <strong>Testing from the key switch and walking away.</strong>
+                The end-of-duration check is the test. Record the end state, not
+                just the start.
+              </li>
+              <li>
+                <strong>Missing fittings in cupboards and plant rooms.</strong>
+                Holding every fitting as an asset means a missing result shows
+                as not tested.
+              </li>
+              <li>
+                <strong>No monthly record.</strong> An annual certificate with
+                no monthly tests behind it is a gap an assessor will notice. The
+                log book is where the site keeps that record, and it alerts you
+                when a test is missed.
+              </li>
+              <li>
+                <strong>Leaving a failed fitting unmarked.</strong> A FAILED
+                sticker on the fitting tells everyone, including the next
+                engineer, which one it is.
+              </li>
             </ul>
-            <p>See the <a href="/emergency-lighting-testing-guide/">emergency lighting testing guide</a> for the testing routine in full, and the <a href="/fire-log-book-software/">digital log book</a> for the monthly record.</p>
+            <p>
+              See the
+              <a href="/emergency-lighting-testing-guide/"
+                >emergency lighting testing guide</a
+              >
+              for the testing routine in full, and the
+              <a href="/fire-log-book-software/">digital log book</a> for the
+              monthly record.
+            </p>
           </div>
         </div>
       </section>
@@ -306,36 +521,73 @@
           </div>
           <div class="faq-list">
             <details class="faq-item">
-              <summary>Which emergency lighting certificates are included?</summary>
-              <p>Design, installation, commissioning and periodic inspection and testing templates, plus a monthly test record. They are built around BS 5266-1, and each template names the standard it follows.</p>
+              <summary>
+                Which emergency lighting certificates are included?
+              </summary>
+              <p>
+                Design, installation, commissioning and periodic inspection and
+                testing templates, plus a monthly test record. They are built
+                around BS 5266-1, and each template names the standard it
+                follows.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Does it work without a signal?</summary>
-              <p>Yes. The field app keeps today’s work on the phone and queues changes, so engineers can keep working in a basement with no signal. Changes send when the phone is back online.</p>
+              <p>
+                Yes. The field app keeps today’s work on the phone and queues
+                changes, so engineers can keep working in a basement with no
+                signal. Changes send when the phone is back online.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Who is responsible for the certificate?</summary>
-              <p>The engineer who signs it. Compliar produces the records and is not affiliated with any standards body or scheme.</p>
+              <p>
+                The engineer who signs it. Compliar produces the records and is
+                not affiliated with any standards body or scheme.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Who does the monthly emergency lighting test?</summary>
-              <p>Usually the site&#x27;s own staff, as a short functional test. Compliar&#x27;s digital log book lets site staff log the monthly test for each site, and alerts you when a test is missed.</p>
+              <p>
+                Usually the site&#x27;s own staff, as a short functional test.
+                Compliar&#x27;s digital log book lets site staff log the monthly
+                test for each site, and alerts you when a test is missed.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Is each luminaire recorded separately?</summary>
-              <p>Yes. Each fitting is held as an asset on the site, and the annual certificate records a pass, fail or no test per fitting, with photos where needed.</p>
+              <p>
+                Yes. Each fitting is held as an asset on the site, and the
+                annual certificate records a pass, fail or no test per fitting,
+                with photos where needed.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Can I print a label for a failed fitting?</summary>
-              <p>Yes. A FAILED sticker with your logo and space for the date and initials can be printed from the app on a label printer, or ordered printed.</p>
+              <p>
+                Yes. A FAILED sticker with your logo and space for the date and
+                initials can be printed from the app on a label printer, or
+                ordered printed.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>Does Compliar replace the emergency lighting log book?</summary>
-              <p>It gives each site a digital log book for the monthly tests and the other records the site keeps, at £4 + VAT per site per year; the annual certificates and defects are held against the site. Whether a paper log book is also kept is up to the site.</p>
+              <summary>
+                Does Compliar replace the emergency lighting log book?
+              </summary>
+              <p>
+                It gives each site a digital log book for the monthly tests and
+                the other records the site keeps, at £4 + VAT per site per year;
+                the annual certificates and defects are held against the site.
+                Whether a paper log book is also kept is up to the site.
+              </p>
             </details>
             <details class="faq-item">
               <summary>What does it cost?</summary>
-              <p>Lite is £35 per user per month plus VAT, or £350 plus VAT paid yearly, which is about £1 a day. Office is £65 and Design is £95. There is no contract and no per-certificate fee.</p>
+              <p>
+                Lite is £35 per user per month plus VAT, or £350 plus VAT paid
+                yearly, which is about £1 a day. Office is £65 and Design is
+                £95. There is no contract and no per-certificate fee.
+              </p>
             </details>
           </div>
         </div>
@@ -343,19 +595,43 @@
 
       <section class="v2-section" aria-labelledby="more-h">
         <div class="wrap">
-          <h2 class="v2-h2" id="more-h" style="font-size:1.4rem">More from Compliar</h2>
-          <ul class="lp-more"><li><a href="/">Compliar home</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/features/">Features</a></li><li><a href="/emergency-lighting-testing-guide/">Emergency lighting testing guide</a></li><li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li><li><a href="/fire-log-book-software/">Digital fire log book</a></li></ul>
+          <h2 class="v2-h2" id="more-h" style="font-size: 1.4rem">
+            More from Compliar
+          </h2>
+          <ul class="lp-more">
+            <li><a href="/">Compliar home</a></li>
+            <li><a href="/pricing/">Pricing</a></li>
+            <li><a href="/features/">Features</a></li>
+            <li>
+              <a href="/emergency-lighting-testing-guide/"
+                >Emergency lighting testing guide</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="v2-section v2-dark v2-demo-section" id="contact-form" aria-labelledby="demo-title">
+      <section
+        class="v2-section v2-dark v2-demo-section"
+        id="contact-form"
+        aria-labelledby="demo-title"
+      >
         <div id="demo" aria-hidden="true"></div>
         <div class="wrap">
           <div class="v2-head">
             <span class="v2-kicker">Book a demo</span>
             <h2 class="v2-h2" id="demo-title">See it on your own sites.</h2>
             <p class="v2-lead">
-              15 minutes with Keiran, on your own sites. Fill in the form and we’ll get back to you as soon as possible.
+              15 minutes with Keiran, on your own sites. Fill in the form and
+              we’ll get back to you as soon as possible.
             </p>
           </div>
           <div class="demo-wrap" data-demo-form></div>
@@ -375,7 +651,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -389,34 +666,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -426,10 +756,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -437,11 +779,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-    <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
   </body>
 </html>

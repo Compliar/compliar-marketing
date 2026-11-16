@@ -6,45 +6,55 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
-    <title>Compliar | Job Management Software for Fire, Security and Electrical Contractors</title>
+    <title>
+      Compliar | Job Management Software for Fire, Security and Electrical
+      Contractors
+    </title>
     <meta
       name="description"
       content="One app for the whole job, from quote to certificate to invoice, built by a fire and security contractor. Scheduling, an offline field app, certificates laid out to BS 7671 and BS 5839, invoicing with Xero or QuickBooks, RAMS, drawings and a QR log book for every site. No per-certificate fees."
@@ -156,9 +166,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -176,11 +196,15 @@
         </nav>
 
         <div class="nav-cta">
-          <a class="btn btn-primary btn-sm" href="#contact-form" data-demo-open>Book a demo</a>
+          <a class="btn btn-primary btn-sm" href="#contact-form" data-demo-open
+            >Book a demo</a
+          >
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="#trades">Trades</a></li>
@@ -194,7 +218,6 @@
       </div>
     </header>
 
-
     <main id="main">
       <!-- 1. HERO -->
       <section class="v2-hero" aria-labelledby="hero-title">
@@ -205,9 +228,14 @@
               <span>built by a fire and security contractor.</span>
             </h1>
             <div class="v2-ctas">
-              <a class="btn btn-primary" href="#contact-form" data-demo-open>Book a demo</a>
+              <a class="btn btn-primary" href="#contact-form" data-demo-open
+                >Book a demo</a
+              >
             </div>
-            <p class="v2-reassure">From £35 per user per month, plus VAT · <a href="/pricing/" style="color:#f6c3a2">See pricing</a></p>
+            <p class="v2-reassure">
+              From £35 per user per month, plus VAT ·
+              <a href="/pricing/" style="color: #f6c3a2">See pricing</a>
+            </p>
           </div>
           <div class="hero-showcase">
             <figure class="device-frame device-desktop" id="one-job-video">
@@ -217,24 +245,84 @@
                 <span class="device-badge">SAMPLE DATA</span>
               </div>
               <div class="hero-video" data-hero-video>
-                <video controls muted autoplay playsinline preload="auto" width="1280" height="720" poster="/assets/screens/desk-01-dashboard.webp" aria-label="A 36 second walk through one job in Compliar, from the enquiry to the invoice, using screens from the Harbourview sample company">
-                  <source src="/assets/video/one-job-start-to-finish.mp4" type="video/mp4" />
-                  Your browser can't play this video. The same screens are shown further down the page.
+                <video
+                  controls
+                  muted
+                  autoplay
+                  playsinline
+                  preload="auto"
+                  width="1280"
+                  height="720"
+                  poster="/assets/screens/desk-01-dashboard.webp"
+                  aria-label="A 36 second walk through one job in Compliar, from the enquiry to the invoice, using screens from the Harbourview sample company"
+                >
+                  <source
+                    src="/assets/video/one-job-start-to-finish.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser can't play this video. The same screens are shown
+                  further down the page.
                 </video>
-                <button type="button" class="hero-video-enlarge" data-hero-video-enlarge aria-label="Enlarge the video">Enlarge ⤢</button>
+                <button
+                  type="button"
+                  class="hero-video-enlarge"
+                  data-hero-video-enlarge
+                  aria-label="Enlarge the video"
+                >
+                  Enlarge ⤢
+                </button>
                 <div class="hero-video-end" data-hero-video-end hidden>
                   <p>To find out more, book a demo</p>
-                  <a class="btn btn-primary" href="#contact-form" data-demo-open>Book a demo</a>
-                  <button type="button" class="btn btn-ghost-on-navy" data-hero-video-replay>Watch again</button>
+                  <a class="btn btn-primary" href="#contact-form" data-demo-open
+                    >Book a demo</a
+                  >
+                  <button
+                    type="button"
+                    class="btn btn-ghost-on-navy"
+                    data-hero-video-replay
+                  >
+                    Watch again
+                  </button>
                 </div>
               </div>
-              <dialog class="hero-video-dialog" data-hero-video-dialog aria-label="One job, start to finish video">
-                <button type="button" class="hero-video-close" data-hero-video-close aria-label="Close the video">Close ✕</button>
-                <video controls playsinline preload="none" width="1280" height="720" poster="/assets/screens/desk-01-dashboard.webp" data-hero-video-big></video>
+              <dialog
+                class="hero-video-dialog"
+                data-hero-video-dialog
+                aria-label="One job, start to finish video"
+              >
+                <button
+                  type="button"
+                  class="hero-video-close"
+                  data-hero-video-close
+                  aria-label="Close the video"
+                >
+                  Close ✕
+                </button>
+                <video
+                  controls
+                  playsinline
+                  preload="none"
+                  width="1280"
+                  height="720"
+                  poster="/assets/screens/desk-01-dashboard.webp"
+                  data-hero-video-big
+                ></video>
                 <div class="hero-video-end" data-hero-video-end-big hidden>
                   <p>To find out more, book a demo</p>
-                  <a class="btn btn-primary" href="#contact-form" data-hero-video-close data-demo-open>Book a demo</a>
-                  <button type="button" class="btn btn-ghost-on-navy" data-hero-video-replay-big>Watch again</button>
+                  <a
+                    class="btn btn-primary"
+                    href="#contact-form"
+                    data-hero-video-close
+                    data-demo-open
+                    >Book a demo</a
+                  >
+                  <button
+                    type="button"
+                    class="btn btn-ghost-on-navy"
+                    data-hero-video-replay-big
+                  >
+                    Watch again
+                  </button>
                 </div>
               </dialog>
             </figure>
@@ -243,117 +331,271 @@
       </section>
 
       <!-- 2. THREE TRADES -->
-      <section class="v2-section v2-white" id="trades" aria-labelledby="trades-title">
+      <section
+        class="v2-section v2-white"
+        id="trades"
+        aria-labelledby="trades-title"
+      >
         <div class="wrap">
           <div class="v2-head">
             <span class="v2-kicker">Three trades, one login</span>
-            <h2 class="v2-h2" id="trades-title">Fire, electrical and security, in the same app.</h2>
+            <h2 class="v2-h2" id="trades-title">
+              Fire, electrical and security, in the same app.
+            </h2>
             <p class="v2-lead">
-              Over 100 certificate and form templates across 32 system types, included with every plan. The templates reference the standards; your competent engineers and your scheme remain responsible for the work and for the certificates issued.
+              Over 100 certificate and form templates across 32 system types,
+              included with every plan. The templates reference the standards;
+              your competent engineers and your scheme remain responsible for
+              the work and for the certificates issued.
             </p>
           </div>
           <div class="home-pricing-grid">
             <article class="hp-card">
               <span class="hp-tier">BS 5839-1 · BS 5839-6 · BS 5266-1</span>
               <h3>Fire protection and life safety</h3>
-              <p>Fire detection and alarm systems, emergency lighting, extinguishers, fire doors, dampers and suppression: commissioning, servicing and modification records.</p>
-              <p><a class="text-link" href="/fire-alarm-certificate-software/">Fire detection and alarm certificates →</a></p>
+              <p>
+                Fire detection and alarm systems, emergency lighting,
+                extinguishers, fire doors, dampers and suppression:
+                commissioning, servicing and modification records.
+              </p>
+              <p>
+                <a class="text-link" href="/fire-alarm-certificate-software/"
+                  >Fire detection and alarm certificates →</a
+                >
+              </p>
             </article>
             <article class="hp-card">
               <span class="hp-tier">BS 7671 · IET Code of Practice</span>
               <h3>Electrical</h3>
-              <p>EIC, EICR and minor works with circuit schedules and observations, plus PAT, EV charging, UPS and generator records.</p>
-              <p><a class="text-link" href="/eicr-and-electrical-certificate-software/">Electrical certificates →</a></p>
+              <p>
+                EIC, EICR and minor works with circuit schedules and
+                observations, plus PAT, EV charging, UPS and generator records.
+              </p>
+              <p>
+                <a
+                  class="text-link"
+                  href="/eicr-and-electrical-certificate-software/"
+                  >Electrical certificates →</a
+                >
+              </p>
             </article>
             <article class="hp-card">
               <span class="hp-tier">BS EN 50131 · BS EN 62676</span>
               <h3>Security systems</h3>
-              <p>Intruder and hold-up alarm systems, CCTV, access control and door entry, gates and barriers: commissioning and maintenance records.</p>
-              <p><a class="text-link" href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance →</a></p>
+              <p>
+                Intruder and hold-up alarm systems, CCTV, access control and
+                door entry, gates and barriers: commissioning and maintenance
+                records.
+              </p>
+              <p>
+                <a
+                  class="text-link"
+                  href="/intruder-alarm-maintenance-software/"
+                  >Intruder alarm maintenance →</a
+                >
+              </p>
             </article>
           </div>
         </div>
       </section>
 
       <!-- 3. ONE JOB IN FIVE STEPS -->
-      <section class="v2-section v2-dark" id="see-it-working" aria-labelledby="working-title">
+      <section
+        class="v2-section v2-dark"
+        id="see-it-working"
+        aria-labelledby="working-title"
+      >
         <div class="wrap">
           <div class="v2-head">
             <span class="v2-kicker">One job in five steps</span>
-            <h2 class="v2-h2" id="working-title">From the first call to the invoice, nothing is typed twice.</h2>
+            <h2 class="v2-h2" id="working-title">
+              From the first call to the invoice, nothing is typed twice.
+            </h2>
             <p class="v2-lead">
-              Five real screens from the app, in the order the work happens. Drawings, handover (O&amp;M) packs, the customer portal and the QR log book for every site come off the same job; they are all on the <a href="/features/" style="color:#f6c3a2">features page</a>.
+              Five real screens from the app, in the order the work happens.
+              Drawings, handover (O&amp;M) packs, the customer portal and the QR
+              log book for every site come off the same job; they are all on the
+              <a href="/features/" style="color: #f6c3a2">features page</a>.
             </p>
           </div>
-          <div class="showcase-desks showcase-desks-3" style="margin-top:0">
+          <div class="showcase-desks showcase-desks-3" style="margin-top: 0">
             <figure class="desk-frame-card">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>1. Quote it</span></div>
-              <a class="shot" href="/assets/screens/desk-quotes-tenders.webp" aria-label="Open Quote it full size">
-                <img src="/assets/screens/desk-quotes-tenders.webp" width="1600" height="653" loading="lazy" alt="Compliar Quotes list on sample data with status and type filters and tabs for Needs action, All quotes, Sales, Defect and Prospect pipeline" decoding="async" />
+              <div class="device-bar" aria-hidden="true">
+                <i></i><i></i><i></i><span>1. Quote it</span>
+              </div>
+              <a
+                class="shot"
+                href="/assets/screens/desk-quotes-tenders.webp"
+                aria-label="Open Quote it full size"
+              >
+                <img
+                  src="/assets/screens/desk-quotes-tenders.webp"
+                  width="1600"
+                  height="653"
+                  loading="lazy"
+                  alt="Compliar Quotes list on sample data with status and type filters and tabs for Needs action, All quotes, Sales, Defect and Prospect pipeline"
+                  decoding="async"
+                />
               </a>
               <figcaption>
                 <strong>1. Quote it</strong>
-                <span>The enquiry is raised as a quote. Sales, defect and project quotes are numbered separately, and the customer approves from a link in the email. On a Design plan, device counts and cable runs come off the drawing into the quote.</span>
+                <span
+                  >The enquiry is raised as a quote. Sales, defect and project
+                  quotes are numbered separately, and the customer approves from
+                  a link in the email. On a Design plan, device counts and cable
+                  runs come off the drawing into the quote.</span
+                >
               </figcaption>
             </figure>
             <figure class="desk-frame-card">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>2. Schedule it</span></div>
-              <a class="shot" href="/assets/screens/desk-calendar.webp" aria-label="Open Schedule it full size">
-                <img src="/assets/screens/desk-calendar.webp" width="800" height="500" loading="lazy" alt="Compliar calendar week view on sample data with engineers in rows, job type filters and a Jobs to plan list with Map and Rounds buttons on the right" decoding="async" />
+              <div class="device-bar" aria-hidden="true">
+                <i></i><i></i><i></i><span>2. Schedule it</span>
+              </div>
+              <a
+                class="shot"
+                href="/assets/screens/desk-calendar.webp"
+                aria-label="Open Schedule it full size"
+              >
+                <img
+                  src="/assets/screens/desk-calendar.webp"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  alt="Compliar calendar week view on sample data with engineers in rows, job type filters and a Jobs to plan list with Map and Rounds buttons on the right"
+                  decoding="async"
+                />
               </a>
               <figcaption>
                 <strong>2. Schedule it</strong>
-                <span>Maintenance plans generate the routine visits. The calendar shows them by engineer, and the Jobs to plan list lets you tick the jobs, plan the route and drag them onto a day.</span>
+                <span
+                  >Maintenance plans generate the routine visits. The calendar
+                  shows them by engineer, and the Jobs to plan list lets you
+                  tick the jobs, plan the route and drag them onto a day.</span
+                >
               </figcaption>
             </figure>
             <figure class="desk-frame-card">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>3. Test it</span></div>
-              <a class="shot" href="/assets/screens/field-11-asset-tests.webp" aria-label="Open Test it full size">
-                <img src="/assets/screens/field-11-asset-tests.webp" width="750" height="1624" loading="lazy" style="aspect-ratio:8/5;object-fit:cover;object-position:center 25%" alt="Compliar field app on a phone showing the asset testing list for an emergency lighting job, with Pass, Fail and No test buttons for each exit sign" decoding="async" />
+              <div class="device-bar" aria-hidden="true">
+                <i></i><i></i><i></i><span>3. Test it</span>
+              </div>
+              <a
+                class="shot"
+                href="/assets/screens/field-11-asset-tests.webp"
+                aria-label="Open Test it full size"
+              >
+                <img
+                  src="/assets/screens/field-11-asset-tests.webp"
+                  width="750"
+                  height="1624"
+                  loading="lazy"
+                  style="
+                    aspect-ratio: 8/5;
+                    object-fit: cover;
+                    object-position: center 25%;
+                  "
+                  alt="Compliar field app on a phone showing the asset testing list for an emergency lighting job, with Pass, Fail and No test buttons for each exit sign"
+                  decoding="async"
+                />
               </a>
               <figcaption>
                 <strong>3. Test it</strong>
-                <span>The engineer works down the asset list with Pass, Fail or No test, logs parts and time and signs the RAMS, in the phone’s browser with or without signal. A failed device is logged as a defect and goes into a quote without re-typing.</span>
+                <span
+                  >The engineer works down the asset list with Pass, Fail or No
+                  test, logs parts and time and signs the RAMS, in the phone’s
+                  browser with or without signal. A failed device is logged as a
+                  defect and goes into a quote without re-typing.</span
+                >
               </figcaption>
             </figure>
             <figure class="desk-frame-card">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>4. Certify it</span></div>
-              <a class="shot" href="/assets/screens/desk-13-certificate-issued.webp" aria-label="Open Certify it full size">
-                <img src="/assets/screens/desk-13-certificate-issued.webp" width="800" height="500" loading="lazy" alt="Compliar issued fire alarm system periodic inspection and servicing certificate on sample data, laid out to BS 5839-1, with print, preview, download, amend and send buttons" decoding="async" />
+              <div class="device-bar" aria-hidden="true">
+                <i></i><i></i><i></i><span>4. Certify it</span>
+              </div>
+              <a
+                class="shot"
+                href="/assets/screens/desk-13-certificate-issued.webp"
+                aria-label="Open Certify it full size"
+              >
+                <img
+                  src="/assets/screens/desk-13-certificate-issued.webp"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  alt="Compliar issued fire alarm system periodic inspection and servicing certificate on sample data, laid out to BS 5839-1, with print, preview, download, amend and send buttons"
+                  decoding="async"
+                />
               </a>
               <figcaption>
                 <strong>4. Certify it</strong>
-                <span>The certificate is issued from the visit and held against the site, with its assets, defects and history. Once issued it cannot be deleted; an amendment needs a reason and makes a new revision.</span>
+                <span
+                  >The certificate is issued from the visit and held against the
+                  site, with its assets, defects and history. Once issued it
+                  cannot be deleted; an amendment needs a reason and makes a new
+                  revision.</span
+                >
               </figcaption>
             </figure>
             <figure class="desk-frame-card">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>5. Invoice it</span></div>
-              <a class="shot" href="/assets/screens/desk-08-invoicing.webp" aria-label="Open Invoice it full size">
-                <img src="/assets/screens/desk-08-invoicing.webp" width="1600" height="653" loading="lazy" alt="Compliar invoicing hub on sample data with amounts to raise, send and chase, and a list of completed jobs waiting to be invoiced" decoding="async" />
+              <div class="device-bar" aria-hidden="true">
+                <i></i><i></i><i></i><span>5. Invoice it</span>
+              </div>
+              <a
+                class="shot"
+                href="/assets/screens/desk-08-invoicing.webp"
+                aria-label="Open Invoice it full size"
+              >
+                <img
+                  src="/assets/screens/desk-08-invoicing.webp"
+                  width="1600"
+                  height="653"
+                  loading="lazy"
+                  alt="Compliar invoicing hub on sample data with amounts to raise, send and chase, and a list of completed jobs waiting to be invoiced"
+                  decoding="async"
+                />
               </a>
               <figcaption>
                 <strong>5. Invoice it</strong>
-                <span>One hub for everything to raise, send and chase. Sending an invoice creates it in Xero or QuickBooks Online, and CIS on the labour share and retention held back are worked out on the invoice.</span>
+                <span
+                  >One hub for everything to raise, send and chase. Sending an
+                  invoice creates it in Xero or QuickBooks Online, and CIS on
+                  the labour share and retention held back are worked out on the
+                  invoice.</span
+                >
               </figcaption>
             </figure>
           </div>
-          <p class="v2-lead" style="margin-top:24px">All screens are the app on the Harbourview sample company. Tap any screen to view it full size.</p>
+          <p class="v2-lead" style="margin-top: 24px">
+            All screens are the app on the Harbourview sample company. Tap any
+            screen to view it full size.
+          </p>
         </div>
       </section>
 
       <!-- 4. WHAT AN AUDITOR WILL NOTICE -->
-      <section class="v2-section v2-white" id="records" aria-labelledby="records-title">
+      <section
+        class="v2-section v2-white"
+        id="records"
+        aria-labelledby="records-title"
+      >
         <div class="wrap story-grid">
           <div class="story-copy">
             <span class="v2-kicker">Records are the foundation</span>
-            <h2 class="v2-h2" id="records-title">Every certificate is laid out to the standard it belongs to.</h2>
+            <h2 class="v2-h2" id="records-title">
+              Every certificate is laid out to the standard it belongs to.
+            </h2>
             <div class="story-prose">
               <p>
-                The job management sits on top of a certificate system, not the other way round. The templates follow the layout of the standards, so the fields an auditor or a customer looks for are where they expect them.
+                The job management sits on top of a certificate system, not the
+                other way round. The templates follow the layout of the
+                standards, so the fields an auditor or a customer looks for are
+                where they expect them.
               </p>
             </div>
             <p class="compliance-note">
-              Compliar keeps the records; your competent engineers and your scheme remain responsible for the work and for the certificates issued. <a href="/features/#coverage-title">See every template →</a>
+              Compliar keeps the records; your competent engineers and your
+              scheme remain responsible for the work and for the certificates
+              issued.
+              <a href="/features/#coverage-title">See every template →</a>
             </p>
           </div>
 
@@ -362,19 +604,41 @@
             <ul class="v2-points">
               <li>
                 <strong>Issued certificates can never be deleted</strong>
-                <span>Every edit to an issued certificate needs a reason, and the reason is logged in the job's event log with who made it and when.</span>
+                <span
+                  >Every edit to an issued certificate needs a reason, and the
+                  reason is logged in the job's event log with who made it and
+                  when.</span
+                >
               </li>
               <li>
-                <strong>Every device is an asset with its own test history</strong>
-                <span>Each detector, luminaire, camera and circuit is a record on the site, so the last result and the one before it are a tap away.</span>
+                <strong
+                  >Every device is an asset with its own test history</strong
+                >
+                <span
+                  >Each detector, luminaire, camera and circuit is a record on
+                  the site, so the last result and the one before it are a tap
+                  away.</span
+                >
               </li>
               <li>
-                <strong>Each site shows red, amber or green from real records</strong>
-                <span>The colour comes from failed assets, open defects and overdue maintenance, not from a tick box. Your office is alerted when a site turns red, and your customers see the same status on their portal map.</span>
+                <strong
+                  >Each site shows red, amber or green from real records</strong
+                >
+                <span
+                  >The colour comes from failed assets, open defects and overdue
+                  maintenance, not from a tick box. Your office is alerted when
+                  a site turns red, and your customers see the same status on
+                  their portal map.</span
+                >
               </li>
               <li>
                 <strong>Instruments fill in on the certificate</strong>
-                <span>The equipment register holds each tester with its serial number, calibration date and who holds it. The engineer's instruments fill in on the certificate, and calibration due dates are tracked.</span>
+                <span
+                  >The equipment register holds each tester with its serial
+                  number, calibration date and who holds it. The engineer's
+                  instruments fill in on the certificate, and calibration due
+                  dates are tracked.</span
+                >
               </li>
             </ul>
           </div>
@@ -386,42 +650,65 @@
         <div class="wrap story-grid">
           <div class="story-copy">
             <span class="v2-kicker">Talk to the person who built it</span>
-            <h2 class="v2-h2" id="founder-title">I still run an electrical, fire and security team. That is why Compliar works the way it does.</h2>
+            <h2 class="v2-h2" id="founder-title">
+              I still run an electrical, fire and security team. That is why
+              Compliar works the way it does.
+            </h2>
             <div class="story-prose">
               <p>
-                I'm Keiran Sandham. I have worked in the electrical, fire and security industry for 20 years, and I still do, as a Fire and Security Manager with engineers on the road every day. I built Compliar because the tools we had covered one piece each and the records fell between them.
+                I'm Keiran Sandham. I have worked in the electrical, fire and
+                security industry for 20 years, and I still do, as a Fire and
+                Security Manager with engineers on the road every day. I built
+                Compliar because the tools we had covered one piece each and the
+                records fell between them.
               </p>
               <p>
-                I run every demo and every onboarding myself. If something in the app is wrong for how your company works, you tell me and I fix it.
+                I run every demo and every onboarding myself. If something in
+                the app is wrong for how your company works, you tell me and I
+                fix it.
               </p>
             </div>
           </div>
           <div class="story-commitments">
-            <div class="founder-card" style="margin-top:0">
+            <div class="founder-card" style="margin-top: 0">
               <img
                 src="/assets/keiran-sandham-portrait.jpg"
                 alt="Keiran Sandham, founder of Compliar"
                 width="72"
                 height="72"
-                loading="lazy" decoding="async" />
+                loading="lazy"
+                decoding="async"
+              />
               <div>
                 <strong>Keiran Sandham</strong>
-                <span>Founder of Compliar · Fire and Security Manager · 20 years in the electrical, fire and security industry</span>
+                <span
+                  >Founder of Compliar · Fire and Security Manager · 20 years in
+                  the electrical, fire and security industry</span
+                >
                 <a href="/about/">Read the full Compliar story →</a>
               </div>
             </div>
             <ul class="v2-points">
               <li>
                 <strong>No per-certificate fees</strong>
-                <span>Certificates come with every plan, from Lite up. You pay per user per month, not per certificate.</span>
+                <span
+                  >Certificates come with every plan, from Lite up. You pay per
+                  user per month, not per certificate.</span
+                >
               </li>
               <li>
                 <strong>No contract</strong>
-                <span>Monthly or yearly, and you are free to leave. Early adopters keep their price for three years.</span>
+                <span
+                  >Monthly or yearly, and you are free to leave. Early adopters
+                  keep their price for three years.</span
+                >
               </li>
               <li>
                 <strong>Your records stay yours</strong>
-                <span>Export every table to CSV whenever you like, and bring legacy certificates in as PDFs and photos against the site.</span>
+                <span
+                  >Export every table to CSV whenever you like, and bring legacy
+                  certificates in as PDFs and photos against the site.</span
+                >
               </li>
             </ul>
           </div>
@@ -429,31 +716,60 @@
       </section>
 
       <!-- 6. PRICE -->
-      <section class="v2-section v2-white" id="pricing" aria-labelledby="price-title">
+      <section
+        class="v2-section v2-white"
+        id="pricing"
+        aria-labelledby="price-title"
+      >
         <div class="wrap">
           <div class="price-strip">
             <div>
               <h2 id="price-title">From £35 per user per month, plus VAT</h2>
-              <p>No per-certificate fees and no contract. Plans, the site log book, stickers and onboarding are all on the pricing page.</p>
+              <p>
+                No per-certificate fees and no contract. Plans, the site log
+                book, stickers and onboarding are all on the pricing page.
+              </p>
             </div>
-            <div><a class="btn btn-ghost-on-cream" href="/pricing/">See pricing →</a></div>
+            <div>
+              <a class="btn btn-ghost-on-cream" href="/pricing/"
+                >See pricing →</a
+              >
+            </div>
           </div>
         </div>
       </section>
 
       <!-- 7. DEMO FORM -->
-      <section class="v2-section v2-dark v2-demo-section" id="contact-form" aria-labelledby="demo-title">
+      <section
+        class="v2-section v2-dark v2-demo-section"
+        id="contact-form"
+        aria-labelledby="demo-title"
+      >
         <div id="demo" aria-hidden="true"></div>
         <div class="wrap">
           <div class="v2-head">
             <span class="v2-kicker">Book a demo</span>
-            <h2 class="v2-h2" id="demo-title">15 minutes with Keiran, on your own sites.</h2>
+            <h2 class="v2-h2" id="demo-title">
+              15 minutes with Keiran, on your own sites.
+            </h2>
             <p class="v2-lead">
-              Fill in the form and Keiran will get back to you as soon as possible to arrange it. Early adopters keep their price for three years: the offer runs until 31 March 2027, or when the first 50 companies have joined, whichever comes first. <a href="/early-adopters/" style="color:#f6c3a2">How the early-adopter offer works →</a>
+              Fill in the form and Keiran will get back to you as soon as
+              possible to arrange it. Early adopters keep their price for three
+              years: the offer runs until 31 March 2027, or when the first 50
+              companies have joined, whichever comes first.
+              <a href="/early-adopters/" style="color: #f6c3a2"
+                >How the early-adopter offer works →</a
+              >
             </p>
           </div>
           <div class="demo-wrap" data-demo-form></div>
-<noscript><p>Please enable JavaScript to use this form, or email <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a> to book a demo.</p></noscript>
+          <noscript
+            ><p>
+              Please enable JavaScript to use this form, or email
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+              to book a demo.
+            </p></noscript
+          >
         </div>
       </section>
     </main>
@@ -470,7 +786,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -484,34 +801,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -521,10 +891,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="#contact-form" data-demo-open>Book a demo</a></li>
           </ul>
         </div>
@@ -532,11 +914,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-    <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
   </body>
 </html>

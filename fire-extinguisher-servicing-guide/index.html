@@ -6,54 +6,75 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>Fire Extinguisher Servicing Basics: BS 5306-3 — Compliar</title>
-    <meta name="description" content="Fire extinguisher servicing basics under BS 5306-3: monthly user checks, the annual basic service, extended service intervals, labels, records and when to replace." />
-    <link rel="canonical" href="https://compliar.co.uk/fire-extinguisher-servicing-guide/" />
+    <meta
+      name="description"
+      content="Fire extinguisher servicing basics under BS 5306-3: monthly user checks, the annual basic service, extended service intervals, labels, records and when to replace."
+    />
+    <link
+      rel="canonical"
+      href="https://compliar.co.uk/fire-extinguisher-servicing-guide/"
+    />
     <meta name="theme-color" content="#1B2430" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="Fire Extinguisher Servicing Basics: BS 5306-3 — Compliar" />
-    <meta property="og:description" content="Fire extinguisher servicing basics under BS 5306-3: monthly user checks, the annual basic service, extended service intervals, labels, records and when to replace." />
-    <meta property="og:url" content="https://compliar.co.uk/fire-extinguisher-servicing-guide/" />
+    <meta
+      property="og:title"
+      content="Fire Extinguisher Servicing Basics: BS 5306-3 — Compliar"
+    />
+    <meta
+      property="og:description"
+      content="Fire extinguisher servicing basics under BS 5306-3: monthly user checks, the annual basic service, extended service intervals, labels, records and when to replace."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/fire-extinguisher-servicing-guide/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -62,8 +83,14 @@
       content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Fire Extinguisher Servicing Basics: BS 5306-3 — Compliar" />
-    <meta name="twitter:description" content="Fire extinguisher servicing basics under BS 5306-3: monthly user checks, the annual basic service, extended service intervals, labels, records and when to replace." />
+    <meta
+      name="twitter:title"
+      content="Fire Extinguisher Servicing Basics: BS 5306-3 — Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="Fire extinguisher servicing basics under BS 5306-3: monthly user checks, the annual basic service, extended service intervals, labels, records and when to replace."
+    />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
     <link
       rel="icon"
@@ -176,9 +203,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -200,7 +237,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -213,48 +252,125 @@
         </details>
       </div>
     </header>
-        <main id="main">
+    <main id="main">
       <section class="page-intro">
         <div class="wrap">
           <div class="crumbs">
-            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a><i>/</i>Fire extinguisher servicing guide
+            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a
+            ><i>/</i>Fire extinguisher servicing guide
           </div>
           <div class="eyebrow">Fire · Guide</div>
           <h1>Fire extinguisher servicing basics</h1>
-          <p>The monthly checks, the annual basic service and the longer-interval extended service for portable fire extinguishers, as set out in BS 5306-3, and the records that go with them.</p>
+          <p>
+            The monthly checks, the annual basic service and the longer-interval
+            extended service for portable fire extinguishers, as set out in BS
+            5306-3, and the records that go with them.
+          </p>
         </div>
       </section>
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <p><strong>General guidance only. Check the standard itself and take advice from your own competent person for the job in front of you.</strong> Last reviewed 22 October 2026.</p>
-<h2>Why servicing matters</h2>
-<p>A portable extinguisher is life-safety equipment that sits unused for years. Gauges drift, valves seize, cases corrode and someone moves the unit behind a door. BS 5306-3 sets out the commissioning and maintenance routine that keeps extinguishers safe and ready, and it works in layers: a quick look every month by the people in the building, a basic service every year by a competent engineer, and a heavier extended service at longer intervals.</p>
-<h2>Monthly checks by the responsible person</h2>
-<p>The responsible person or someone they nominate should walk round once a month and confirm that each extinguisher:</p>
-<ul>
-  <li>is in its place, visible and not blocked, with its signage;</li>
-  <li>shows no sign of discharge, tampering, damage, corrosion or leakage;</li>
-  <li>has an intact pin, tamper seal and label, and a gauge in the correct range where one is fitted.</li>
-</ul>
-<p>Anything that is not right should be dealt with straight away rather than saved for the next service.</p>
-<h2>The annual basic service</h2>
-<p>Once a year a competent technician carries out a basic service. It is a hands-on check of condition, operation indicators, labels, accessibility and service history, including the manufacture date. The unit is labelled or tagged afterwards so the next person can see what was done and when.</p>
-<p>It is there to catch the obvious faults and to decide whether a unit needs an extended service, a repair or replacing.</p>
-<h2>Extended service</h2>
-<p>An extended service goes deeper. For most extinguishers it comes round at about five years, and for carbon dioxide extinguishers at about ten years. It usually involves discharging the unit to test it, checking and servicing the valve, refilling or recharging and repressurising. The exact interval depends on the type of extinguisher, its condition and the manufacturer's guidance, so use the standard and the maker's instructions rather than a single figure.</p>
-<p>Record the year of the last extended service against each unit. It is the item most often missing when you take over a customer's extinguishers.</p>
-<h2>When to service or replace early</h2>
-<ul>
-  <li>After any use, however slight, the unit should be serviced or replaced straight away.</li>
-  <li>After damage, corrosion or a leak.</li>
-  <li>When a unit has been discharged or tampered with.</li>
-  <li>When it is obsolete or not worth the cost of servicing. Say so in your report so the customer can decide.</li>
-</ul>
-<h2>What to record</h2>
-<p>For each extinguisher, record its reference and location, type and size, year of manufacture, the date of the last basic and extended service, the checks made and the weight or pressure where you read it. Keep the annual service certificate and the schedule together as the site's asset register. New or relocated extinguishers should be checked and commissioned by a competent person before they are relied on.</p>
-<h2>Competence</h2>
-<p>BS 5306-3 expects servicing to be done by someone with the training, tools and knowledge to do it. The BAFE SP101 scheme assesses both extinguisher companies and the individual technicians they employ, and customers can check registrations on the BAFE register. If your customer asks for third-party certification, find out which scheme they mean before you quote.</p>
+            <p>
+              <strong
+                >General guidance only. Check the standard itself and take
+                advice from your own competent person for the job in front of
+                you.</strong
+              >
+              Last reviewed 22 October 2026.
+            </p>
+            <h2>Why servicing matters</h2>
+            <p>
+              A portable extinguisher is life-safety equipment that sits unused
+              for years. Gauges drift, valves seize, cases corrode and someone
+              moves the unit behind a door. BS 5306-3 sets out the commissioning
+              and maintenance routine that keeps extinguishers safe and ready,
+              and it works in layers: a quick look every month by the people in
+              the building, a basic service every year by a competent engineer,
+              and a heavier extended service at longer intervals.
+            </p>
+            <h2>Monthly checks by the responsible person</h2>
+            <p>
+              The responsible person or someone they nominate should walk round
+              once a month and confirm that each extinguisher:
+            </p>
+            <ul>
+              <li>
+                is in its place, visible and not blocked, with its signage;
+              </li>
+              <li>
+                shows no sign of discharge, tampering, damage, corrosion or
+                leakage;
+              </li>
+              <li>
+                has an intact pin, tamper seal and label, and a gauge in the
+                correct range where one is fitted.
+              </li>
+            </ul>
+            <p>
+              Anything that is not right should be dealt with straight away
+              rather than saved for the next service.
+            </p>
+            <h2>The annual basic service</h2>
+            <p>
+              Once a year a competent technician carries out a basic service. It
+              is a hands-on check of condition, operation indicators, labels,
+              accessibility and service history, including the manufacture date.
+              The unit is labelled or tagged afterwards so the next person can
+              see what was done and when.
+            </p>
+            <p>
+              It is there to catch the obvious faults and to decide whether a
+              unit needs an extended service, a repair or replacing.
+            </p>
+            <h2>Extended service</h2>
+            <p>
+              An extended service goes deeper. For most extinguishers it comes
+              round at about five years, and for carbon dioxide extinguishers at
+              about ten years. It usually involves discharging the unit to test
+              it, checking and servicing the valve, refilling or recharging and
+              repressurising. The exact interval depends on the type of
+              extinguisher, its condition and the manufacturer's guidance, so
+              use the standard and the maker's instructions rather than a single
+              figure.
+            </p>
+            <p>
+              Record the year of the last extended service against each unit. It
+              is the item most often missing when you take over a customer's
+              extinguishers.
+            </p>
+            <h2>When to service or replace early</h2>
+            <ul>
+              <li>
+                After any use, however slight, the unit should be serviced or
+                replaced straight away.
+              </li>
+              <li>After damage, corrosion or a leak.</li>
+              <li>When a unit has been discharged or tampered with.</li>
+              <li>
+                When it is obsolete or not worth the cost of servicing. Say so
+                in your report so the customer can decide.
+              </li>
+            </ul>
+            <h2>What to record</h2>
+            <p>
+              For each extinguisher, record its reference and location, type and
+              size, year of manufacture, the date of the last basic and extended
+              service, the checks made and the weight or pressure where you read
+              it. Keep the annual service certificate and the schedule together
+              as the site's asset register. New or relocated extinguishers
+              should be checked and commissioned by a competent person before
+              they are relied on.
+            </p>
+            <h2>Competence</h2>
+            <p>
+              BS 5306-3 expects servicing to be done by someone with the
+              training, tools and knowledge to do it. The BAFE SP101 scheme
+              assesses both extinguisher companies and the individual
+              technicians they employ, and customers can check registrations on
+              the BAFE register. If your customer asks for third-party
+              certification, find out which scheme they mean before you quote.
+            </p>
           </div>
         </div>
       </section>
@@ -266,20 +382,41 @@
           </div>
           <div class="faq-list">
             <details class="faq-item">
-              <summary>How often should fire extinguishers be serviced?</summary>
-              <p>A competent technician should carry out a basic service at least once a year under BS 5306-3, and the responsible person should check the units by eye every month.</p>
+              <summary>
+                How often should fire extinguishers be serviced?
+              </summary>
+              <p>
+                A competent technician should carry out a basic service at least
+                once a year under BS 5306-3, and the responsible person should
+                check the units by eye every month.
+              </p>
             </details>
             <details class="faq-item">
               <summary>What is an extended fire extinguisher service?</summary>
-              <p>A deeper service, usually including a discharge test, valve service and recharge. For most extinguishers it is due at about five years, and for carbon dioxide extinguishers at about ten, depending on type, condition and the manufacturer's guidance.</p>
+              <p>
+                A deeper service, usually including a discharge test, valve
+                service and recharge. For most extinguishers it is due at about
+                five years, and for carbon dioxide extinguishers at about ten,
+                depending on type, condition and the manufacturer's guidance.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Who can service fire extinguishers?</summary>
-              <p>A competent person with the training, tools and knowledge to follow BS 5306-3. The BAFE SP101 scheme assesses companies and technicians, and customers can check registrations on the BAFE register.</p>
+              <p>
+                A competent person with the training, tools and knowledge to
+                follow BS 5306-3. The BAFE SP101 scheme assesses companies and
+                technicians, and customers can check registrations on the BAFE
+                register.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>What should I do if an extinguisher has been used?</summary>
-              <p>Service or replace it straight away, even if it was only partly discharged.</p>
+              <summary>
+                What should I do if an extinguisher has been used?
+              </summary>
+              <p>
+                Service or replace it straight away, even if it was only partly
+                discharged.
+              </p>
             </details>
           </div>
         </div>
@@ -287,19 +424,42 @@
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">In the app</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              In the app
+            </div>
             <h2>How Compliar helps</h2>
-<p>Compliar has a Portable Fire Extinguisher Annual Service Record, referenced to BS 5306-3. It carries an extinguisher schedule with one row for each unit: reference, location, type, size, year of manufacture, last extended service year, the visual checks and the weight or pressure reading.</p>
-<ul>
-  <li>Maintenance plans on an annual cycle, scheduled against the property (maintenance plans are on Office plans and above).</li>
-  <li>Failed or overdue units raised as defects and turned into a quote for replacement or extended service.</li>
-  <li>Reports sent as branded PDFs when the engineer finishes, with the site history kept in one place.</li>
-</ul>
+            <p>
+              Compliar has a Portable Fire Extinguisher Annual Service Record,
+              referenced to BS 5306-3. It carries an extinguisher schedule with
+              one row for each unit: reference, location, type, size, year of
+              manufacture, last extended service year, the visual checks and the
+              weight or pressure reading.
+            </p>
+            <ul>
+              <li>
+                Maintenance plans on an annual cycle, scheduled against the
+                property (maintenance plans are on Office plans and above).
+              </li>
+              <li>
+                Failed or overdue units raised as defects and turned into a
+                quote for replacement or extended service.
+              </li>
+              <li>
+                Reports sent as branded PDFs when the engineer finishes, with
+                the site history kept in one place.
+              </li>
+            </ul>
             <div class="more-links">
-              <a href="/fire-alarm-servicing-guide/">Fire detection and alarm servicing guide</a>
-              <a href="/emergency-lighting-testing-guide/">Emergency lighting testing guide</a>
+              <a href="/fire-alarm-servicing-guide/"
+                >Fire detection and alarm servicing guide</a
+              >
+              <a href="/emergency-lighting-testing-guide/"
+                >Emergency lighting testing guide</a
+              >
               <a href="/how-to-write-rams/">How to write RAMS</a>
-              <a href="/fire-alarm-certificate-software/">Fire detection and alarm certificate software</a>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificate software</a
+              >
             </div>
           </div>
         </div>
@@ -307,9 +467,19 @@
       <section class="final-cta band">
         <div class="wrap">
           <h2>One app. Every job, start to finish.</h2>
-          <p>Book a demo and Keiran will walk through your own jobs. Early adopters lock their price for 3 years, with no contract.</p>
+          <p>
+            Book a demo and Keiran will walk through your own jobs. Early
+            adopters lock their price for 3 years, with no contract.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a><a class="btn btn-ghost-on-navy" href="/getting-started/">How getting started works</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            ><a class="btn btn-ghost-on-navy" href="/getting-started/"
+              >How getting started works</a
+            >
           </div>
         </div>
       </section>
@@ -326,7 +496,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -340,34 +511,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -377,10 +601,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -388,11 +624,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

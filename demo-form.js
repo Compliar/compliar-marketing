@@ -18,7 +18,10 @@
       const note = [
         payload.site_log_book_only !== "No" ? payload.site_log_book_only : "",
         "Phone: " + payload.phone,
-        payload.engineers_from_calculator ? "Field engineers (from the calculator): " + payload.engineers_from_calculator : "",
+        payload.engineers_from_calculator
+          ? "Field engineers (from the calculator): " +
+            payload.engineers_from_calculator
+          : "",
         "Page: " + payload.page,
       ]
         .filter(Boolean)
@@ -33,7 +36,10 @@
       fetch(CRM_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ fields, context: { pageUri: payload.page, pageName: document.title } }),
+        body: JSON.stringify({
+          fields,
+          context: { pageUri: payload.page, pageName: document.title },
+        }),
         keepalive: true,
       }).catch(() => {});
     } catch (e) {
@@ -46,7 +52,8 @@
   const SAMPLE_ADS_CONVERSION = "AW-18545152858/3C2GCKaj-7YdENqmgotF";
   const SAMPLES = {
     battery: {
-      label: "Sample fire detection and alarm servicing certificate (with standby battery record)",
+      label:
+        "Sample fire detection and alarm servicing certificate (with standby battery record)",
       file: "/assets/documents/fire-alarm-periodic-inspection-servicing-certificate-sample.pdf",
     },
     certificate: {
@@ -54,7 +61,8 @@
       file: "/assets/documents/fire-alarm-periodic-inspection-servicing-certificate-sample.pdf",
     },
     logbook: {
-      label: "Sample fire detection and alarm servicing certificate (for the log book page)",
+      label:
+        "Sample fire detection and alarm servicing certificate (for the log book page)",
       file: "/assets/documents/fire-alarm-periodic-inspection-servicing-certificate-sample.pdf",
     },
   };
@@ -85,7 +93,8 @@
   function trackSample(key) {
     if (!hasMarketingConsent() || typeof gtag !== "function") return;
     gtag("event", "sample_request", { sample_type: key });
-    if (SAMPLE_ADS_CONVERSION) gtag("event", "conversion", { send_to: SAMPLE_ADS_CONVERSION });
+    if (SAMPLE_ADS_CONVERSION)
+      gtag("event", "conversion", { send_to: SAMPLE_ADS_CONVERSION });
   }
 
   function buildSampleForm(key) {
@@ -117,7 +126,10 @@
       try {
         const response = await fetch(ENDPOINT, {
           method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
           body: JSON.stringify({
             access_key: ACCESS_KEY,
             subject: "Compliar FREE SAMPLE request (not a demo): " + key,
@@ -125,12 +137,14 @@
             request_type: "free_sample",
             sample_requested: sample.label,
             email: form.elements.email.value.trim(),
-            message: "Free sample request from a landing page. Not a demo request.",
+            message:
+              "Free sample request from a landing page. Not a demo request.",
             page: location.href,
           }),
         });
         const result = await response.json();
-        if (!response.ok || !result.success) throw new Error(result.message || "Request failed");
+        if (!response.ok || !result.success)
+          throw new Error(result.message || "Request failed");
         trackSample(key);
         showSample();
       } catch (err) {
@@ -148,7 +162,9 @@
       card.setAttribute("role", "status");
       card.innerHTML =
         '<div class="demo-thanks-icon" aria-hidden="true">✓</div><h3>Thanks. Your sample is ready.</h3>' +
-        '<p><a class="btn btn-primary" href="' + sample.file + '" target="_blank" rel="noopener">Open the sample PDF</a></p>' +
+        '<p><a class="btn btn-primary" href="' +
+        sample.file +
+        '" target="_blank" rel="noopener">Open the sample PDF</a></p>' +
         '<p class="sample-more">Also on our <a href="/sample-documents/">Sample documents</a> page.</p>' +
         '<p class="sample-next">Want to see how it runs a whole company? <a href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a></p>';
       form.replaceWith(card);
@@ -205,14 +221,20 @@
       if (form.elements.botcheck.value) return showThanks();
       const payload = {
         access_key: ACCESS_KEY,
-        subject: "Compliar demo request" + (logBookOnly ? " (log book only, no engineers)" : ""),
+        subject:
+          "Compliar demo request" +
+          (logBookOnly ? " (log book only, no engineers)" : ""),
         from_name: "Compliar website",
         name: form.elements.name.value.trim(),
         company: form.elements.company.value.trim(),
         phone: form.elements.phone.value.trim(),
         email: form.elements.email.value.trim(),
-        site_log_book_only: logBookOnly ? "Yes: log book only, no engineers" : "No",
-        engineers_from_calculator: form.dataset.engineers || (options.engineers ? String(options.engineers) : ""),
+        site_log_book_only: logBookOnly
+          ? "Yes: log book only, no engineers"
+          : "No",
+        engineers_from_calculator:
+          form.dataset.engineers ||
+          (options.engineers ? String(options.engineers) : ""),
         page: location.href,
       };
       button.disabled = true;
@@ -220,11 +242,15 @@
       try {
         const response = await fetch(ENDPOINT, {
           method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
           body: JSON.stringify(payload),
         });
         const result = await response.json();
-        if (!response.ok || !result.success) throw new Error(result.message || "Request failed");
+        if (!response.ok || !result.success)
+          throw new Error(result.message || "Request failed");
         saveToCrm(payload);
         trackConversion();
         showThanks();
@@ -266,7 +292,9 @@
           <div class="modal-form"></div>
         </div>`;
       document.body.appendChild(dialog);
-      dialog.querySelector(".demo-modal-close").addEventListener("click", () => dialog.close());
+      dialog
+        .querySelector(".demo-modal-close")
+        .addEventListener("click", () => dialog.close());
       dialog.addEventListener("click", (event) => {
         if (event.target === dialog) dialog.close();
       });
@@ -280,7 +308,9 @@
     const roiBtn = event.target.closest("#roi-cta");
     if (roiBtn) {
       const eng = parseInt(roiBtn.dataset.engineers, 10);
-      const inlineForm = document.querySelector("#contact-form form.demo-form, #demo form.demo-form");
+      const inlineForm = document.querySelector(
+        "#contact-form form.demo-form, #demo form.demo-form",
+      );
       if (inlineForm && !eng) {
         inlineForm.dataset.engineers = "";
         const stale = inlineForm.querySelector(".demo-prefill");
@@ -298,23 +328,40 @@
     }
     const opener = event.target.closest("[data-demo-open]");
     if (!opener) return;
-    if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0)
+      return;
     event.preventDefault();
     const engineers = parseInt(opener.dataset.engineers, 10);
-    openModal({ ...(engineers ? { engineers } : {}), logBookOnly: opener.hasAttribute("data-logbook-only") });
+    openModal({
+      ...(engineers ? { engineers } : {}),
+      logBookOnly: opener.hasAttribute("data-logbook-only"),
+    });
   });
 
   document.querySelectorAll("[data-sample-form]").forEach((mount) => {
     const host = mount.closest("[data-sample-offer]");
-    mount.replaceChildren(buildSampleForm(host ? host.dataset.sampleOffer : "certificate"));
+    mount.replaceChildren(
+      buildSampleForm(host ? host.dataset.sampleOffer : "certificate"),
+    );
   });
 
   document.querySelectorAll("[data-demo-form]").forEach((mount) => {
-    mount.replaceChildren(buildForm({ logBookOnly: new URLSearchParams(location.search).get("need") === "logbook" }));
+    mount.replaceChildren(
+      buildForm({
+        logBookOnly:
+          new URLSearchParams(location.search).get("need") === "logbook",
+      }),
+    );
   });
 
-  const card = document.getElementById("book-a-demo") || document.getElementById("contact-form");
-  if (card && new URLSearchParams(location.search).has("subject") && !location.hash) {
+  const card =
+    document.getElementById("book-a-demo") ||
+    document.getElementById("contact-form");
+  if (
+    card &&
+    new URLSearchParams(location.search).has("subject") &&
+    !location.hash
+  ) {
     card.scrollIntoView();
   }
 })();

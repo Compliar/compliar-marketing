@@ -6,47 +6,56 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>Digital fire log book for property owners | Compliar</title>
-    <meta name="description" content="A digital fire, emergency lighting and site log book for each property, without buying a per-user plan. £4 + VAT per site per year, with QR stickers and missed-test alerts. UK sites only." />
+    <meta
+      name="description"
+      content="A digital fire, emergency lighting and site log book for each property, without buying a per-user plan. £4 + VAT per site per year, with QR stickers and missed-test alerts. UK sites only."
+    />
     <link rel="canonical" href="https://compliar.co.uk/log-book/" />
     <meta name="theme-color" content="#1B2430" />
     <link
@@ -56,17 +65,32 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="Digital fire log book for property owners | Compliar" />
-    <meta property="og:description" content="A digital fire, emergency lighting and site log book for each property, without buying a per-user plan. £4 + VAT per site per year, with QR stickers and missed-test alerts. UK sites only." />
+    <meta
+      property="og:title"
+      content="Digital fire log book for property owners | Compliar"
+    />
+    <meta
+      property="og:description"
+      content="A digital fire, emergency lighting and site log book for each property, without buying a per-user plan. £4 + VAT per site per year, with QR stickers and missed-test alerts. UK sites only."
+    />
     <meta property="og:url" content="https://compliar.co.uk/log-book/" />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Compliar — management software for electrical, fire protection and life safety, and security contractors" />
+    <meta
+      property="og:image:alt"
+      content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
-    <meta name="twitter:title" content="Digital fire log book for property owners | Compliar" />
-    <meta name="twitter:description" content="A digital fire, emergency lighting and site log book for each property, without buying a per-user plan. £4 + VAT per site per year, with QR stickers and missed-test alerts. UK sites only." />
+    <meta
+      name="twitter:title"
+      content="Digital fire log book for property owners | Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="A digital fire, emergency lighting and site log book for each property, without buying a per-user plan. £4 + VAT per site per year, with QR stickers and missed-test alerts. UK sites only."
+    />
     <script type="application/ld+json">
       [
         {
@@ -159,9 +183,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -183,7 +217,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -201,41 +237,85 @@
       <section class="hero sub-hero">
         <div class="wrap hero-grid">
           <div>
-            <div class="crumbs">
-              <a href="/">Compliar</a><i>/</i>Log book
-            </div>
+            <div class="crumbs"><a href="/">Compliar</a><i>/</i>Log book</div>
             <div class="eyebrow">Log book only</div>
             <h1>Digital fire log book for <span>property owners</span></h1>
             <p class="hero-sub">
               A digital fire, emergency lighting and site log book for every
               property you look after. Your staff record the tests and visits,
-              the records stay in one place, and you do not need to buy
-              a per-user plan. £4 + VAT per site per year.
+              the records stay in one place, and you do not need to buy a
+              per-user plan. £4 + VAT per site per year.
             </p>
             <div class="hero-ctas">
-              <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a>
-              <a class="btn btn-ghost-on-navy" href="/pricing/#log-book">See log book pricing</a>
+              <a
+                class="btn btn-primary"
+                href="/contact/?subject=Demo+request"
+                data-demo-open
+                >Book a demo</a
+              >
+              <a class="btn btn-ghost-on-navy" href="/pricing/#log-book"
+                >See log book pricing</a
+              >
             </div>
-            <p class="fine" style="margin-top:12px">Only need the log book? <a href="/contact/?subject=Demo+request&amp;need=logbook" data-demo-open data-logbook-only>Choose “Log book only (no engineers)” on the enquiry form</a> for a shorter form.</p>
+            <p class="fine" style="margin-top: 12px">
+              Only need the log book?
+              <a
+                href="/contact/?subject=Demo+request&amp;need=logbook"
+                data-demo-open
+                data-logbook-only
+                >Choose “Log book only (no engineers)” on the enquiry form</a
+              >
+              for a shorter form.
+            </p>
             <div class="standards">
               <span>UK sites only</span><span>British Standards</span>
             </div>
           </div>
-          <figure class="phone-bezel" style="max-width:300px;margin:0 auto">
-            <img src="/assets/screens/field-12-logbook.webp" width="750" height="1624" alt="Compliar site log book on a phone, sample data: QR sticker controls, Add entry, and the weekly fire alarm test log with date, time, responsible person and further action" decoding="async" fetchpriority="high" />
+          <figure class="phone-bezel" style="max-width: 300px; margin: 0 auto">
+            <img
+              src="/assets/screens/field-12-logbook.webp"
+              width="750"
+              height="1624"
+              alt="Compliar site log book on a phone, sample data: QR sticker controls, Add entry, and the weekly fire alarm test log with date, time, responsible person and further action"
+              decoding="async"
+              fetchpriority="high"
+            />
           </figure>
         </div>
       </section>
 
-      <section class="band-tight sample-offer" id="free-sample" aria-labelledby="sample-offer-title" data-sample-offer="logbook">
+      <section
+        class="band-tight sample-offer"
+        id="free-sample"
+        aria-labelledby="sample-offer-title"
+        data-sample-offer="logbook"
+      >
         <div class="wrap sample-offer-grid">
           <div class="sample-offer-copy">
-            <div class="eyebrow" style="color: var(--orange-deep)">Free sample</div>
-            <h2 id="sample-offer-title">Free sample: the servicing certificate that goes with the log book</h2>
-            <p>The log book records the weekly tests. The servicing visit is recorded on a certificate. Leave your email to open a sample fire detection and alarm servicing certificate made in Compliar, on fictional data and watermarked SAMPLE.</p>
-            <p class="sample-by">From Keiran Sandham, founder, Kendal. 20 years in electrical, fire and security.</p>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              Free sample
+            </div>
+            <h2 id="sample-offer-title">
+              Free sample: the servicing certificate that goes with the log book
+            </h2>
+            <p>
+              The log book records the weekly tests. The servicing visit is
+              recorded on a certificate. Leave your email to open a sample fire
+              detection and alarm servicing certificate made in Compliar, on
+              fictional data and watermarked SAMPLE.
+            </p>
+            <p class="sample-by">
+              From Keiran Sandham, founder, Kendal. 20 years in electrical, fire
+              and security.
+            </p>
           </div>
-          <div class="sample-offer-box" data-sample-form><p class="sample-nojs"><a class="btn btn-primary" href="/sample-documents/">See the sample documents</a></p></div>
+          <div class="sample-offer-box" data-sample-form>
+            <p class="sample-nojs">
+              <a class="btn btn-primary" href="/sample-documents/"
+                >See the sample documents</a
+              >
+            </p>
+          </div>
         </div>
       </section>
 
@@ -265,7 +345,11 @@
       </section>
 
       <!-- WHAT YOU GET -->
-      <section class="band" id="what-you-get" style="background: var(--cream-2)">
+      <section
+        class="band"
+        id="what-you-get"
+        style="background: var(--cream-2)"
+      >
         <div class="wrap">
           <div class="section-head">
             <div class="eyebrow">What you get</div>
@@ -307,7 +391,9 @@
       <section class="band" id="missed-test-alerts">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">Missed-test alerts</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              Missed-test alerts
+            </div>
             <h2>Find out when a test is missed</h2>
             <p>
               You decide when an alert goes out and who receives it, so it fits
@@ -331,7 +417,9 @@
       <section class="band" id="qr-stickers" style="background: var(--cream-2)">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">QR stickers</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              QR stickers
+            </div>
             <h2>Put the log book where people will find it</h2>
             <ul>
               <li>
@@ -363,11 +451,11 @@
             <div class="eyebrow">Price</div>
             <h2>£4 + VAT per site per year</h2>
             <p>
-              No per-user plan to buy. Each site you add has its own log book. We email
-              payment reminders 2 weeks and 1 day before the yearly payment
-              date. If it is still unpaid 7 days after the date, the log book
-              becomes read-only. Nothing is deleted, the records stay visible,
-              and it opens again once it is paid.
+              No per-user plan to buy. Each site you add has its own log book.
+              We email payment reminders 2 weeks and 1 day before the yearly
+              payment date. If it is still unpaid 7 days after the date, the log
+              book becomes read-only. Nothing is deleted, the records stay
+              visible, and it opens again once it is paid.
             </p>
           </div>
           <div class="more-links">
@@ -380,14 +468,18 @@
       <section class="band" id="get-started" style="background: var(--cream-2)">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">How to get started</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              How to get started
+            </div>
             <h2>Book a demo and we set it up</h2>
             <p>
-              There is no self-serve sign-up. Book a demo or get in touch,
-              and Compliar sets up your log book only account.
+              There is no self-serve sign-up. Book a demo or get in touch, and
+              Compliar sets up your log book only account.
             </p>
             <div class="more-links">
-              <a href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a>
+              <a href="/contact/?subject=Demo+request" data-demo-open
+                >Book a demo</a
+              >
               <a href="/getting-started/">How getting started works</a>
             </div>
           </div>
@@ -404,27 +496,60 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary>Do I need a per-user plan to use the log book?</summary>
-              <p>No. A log book only account has no per-user plan. You pay £4 + VAT per site per year for each site that has a log book. If you are a contractor who wants the full app, see the <a href="/pricing/">user plans on the pricing page</a>.</p>
+              <p>
+                No. A log book only account has no per-user plan. You pay £4 +
+                VAT per site per year for each site that has a log book. If you
+                are a contractor who wants the full app, see the
+                <a href="/pricing/">user plans on the pricing page</a>.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Who can see and add to a site's log book?</summary>
-              <p>A QR code or sticker on site opens the site's log book. Viewing needs an account, so the record is not open to the public. Your staff record the weekly fire alarm tests, monthly emergency lighting tests, false alarms, faults and visits.</p>
+              <p>
+                A QR code or sticker on site opens the site's log book. Viewing
+                needs an account, so the record is not open to the public. Your
+                staff record the weekly fire alarm tests, monthly emergency
+                lighting tests, false alarms, faults and visits.
+              </p>
             </details>
             <details class="faq-item">
               <summary>What happens if I do not pay the yearly fee?</summary>
-              <p>We email payment reminders 2 weeks and 1 day before the yearly payment date. If it is still unpaid 7 days after that date, the log book becomes read-only. Nothing is deleted, every record stays visible, and the log book opens for new entries again once it is paid.</p>
+              <p>
+                We email payment reminders 2 weeks and 1 day before the yearly
+                payment date. If it is still unpaid 7 days after that date, the
+                log book becomes read-only. Nothing is deleted, every record
+                stays visible, and the log book opens for new entries again once
+                it is paid.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Who gets a missed-test alert?</summary>
-              <p>You choose. Pick when an alert goes out, for example after 1, 2 or 3 missed weekly tests, or after 1 or 2 weeks overdue, and who receives it. That can be the site contact, you, anyone else you add, and your installer if they agree.</p>
+              <p>
+                You choose. Pick when an alert goes out, for example after 1, 2
+                or 3 missed weekly tests, or after 1 or 2 weeks overdue, and who
+                receives it. That can be the site contact, you, anyone else you
+                add, and your installer if they agree.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Can we use our own QR codes?</summary>
-              <p>Yes. You can print your own QR codes for free, or order stickers from us: blank QR stickers at £1 each + VAT (orders of 10 to 1,000, in tens), which you activate onto a site by scanning, or printed stickers made out to a named site at £1 each + VAT. Postage is £3.95 + VAT per order for either.</p>
+              <p>
+                Yes. You can print your own QR codes for free, or order stickers
+                from us: blank QR stickers at £1 each + VAT (orders of 10 to
+                1,000, in tens), which you activate onto a site by scanning, or
+                printed stickers made out to a named site at £1 each + VAT.
+                Postage is £3.95 + VAT per order for either.
+              </p>
             </details>
             <details class="faq-item">
               <summary>How do I get started?</summary>
-              <p>There is no self-serve sign-up. <a href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a> or contact us, and Compliar sets up your log book only account.</p>
+              <p>
+                There is no self-serve sign-up.
+                <a href="/contact/?subject=Demo+request" data-demo-open
+                  >Book a demo</a
+                >
+                or contact us, and Compliar sets up your log book only account.
+              </p>
             </details>
           </div>
         </div>
@@ -438,8 +563,15 @@
             Book a demo and we will show you the log book on your own sites.
           </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a>
-            <a class="btn btn-ghost-on-navy" href="/pricing/#log-book">See pricing</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            >
+            <a class="btn btn-ghost-on-navy" href="/pricing/#log-book"
+              >See pricing</a
+            >
           </div>
         </div>
       </section>
@@ -457,7 +589,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -471,34 +604,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -508,10 +694,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -519,11 +717,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

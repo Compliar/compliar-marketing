@@ -6,44 +6,50 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>Fire Alarm Battery Calculator | BS 5839-1 — Compliar</title>
     <meta
@@ -224,9 +230,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -248,7 +264,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -288,8 +306,8 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   /></svg
-                >The same calculator linked from Compliar's fire alarm
-                servicing certificate
+                >The same calculator linked from Compliar's fire alarm servicing
+                certificate
               </li>
               <li>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
@@ -316,7 +334,9 @@
               </li>
             </ul>
             <div class="standards"><span>BS 5839-1:2025 Annex E</span></div>
-            <p style="margin-top:18px"><a class="btn btn-primary" href="/contact/">Book a demo</a></p>
+            <p style="margin-top: 18px">
+              <a class="btn btn-primary" href="/contact/">Book a demo</a>
+            </p>
           </div>
 
           <div class="calc-card">
@@ -366,11 +386,16 @@
                 aria-describedby="standbyContext"
                 onchange="calcBattery()"
               >
-                <option value="24" selected>24 h — Category M/L, most buildings</option>
-                <option value="6">
-                  6 h — Category M/L with an automatically started standby generator
+                <option value="24" selected>
+                  24 h — Category M/L, most buildings
                 </option>
-                <option value="72">72 h — Category P, the longest allowed</option>
+                <option value="6">
+                  6 h — Category M/L with an automatically started standby
+                  generator
+                </option>
+                <option value="72">
+                  72 h — Category P, the longest allowed
+                </option>
               </select>
               <p class="calc-context" id="standbyContext">
                 24 h — Category M/L, most buildings
@@ -399,8 +424,9 @@
               <div class="calc-work" id="workOut"></div>
             </div>
             <p class="calc-scope">
-              For valve-regulated lead-acid batteries, to BS 5839-1:2025 Annex E.
-              For other battery types, take the figures from the battery manufacturer.
+              For valve-regulated lead-acid batteries, to BS 5839-1:2025 Annex
+              E. For other battery types, take the figures from the battery
+              manufacturer.
             </p>
             <div class="calc-note">
               Illustrative guide only. Use the manufacturer's current figures
@@ -412,15 +438,38 @@
         </div>
       </section>
 
-      <section class="band-tight sample-offer" id="free-sample" aria-labelledby="sample-offer-title" data-sample-offer="battery">
+      <section
+        class="band-tight sample-offer"
+        id="free-sample"
+        aria-labelledby="sample-offer-title"
+        data-sample-offer="battery"
+      >
         <div class="wrap sample-offer-grid">
           <div class="sample-offer-copy">
-            <div class="eyebrow" style="color: var(--orange-deep)">Free sample</div>
-            <h2 id="sample-offer-title">Free sample: see where the battery figures go</h2>
-            <p>Our sample fire detection and alarm servicing certificate has the power supply and standby battery readings and battery record filled in, on fictional data and watermarked SAMPLE. Leave your email and open it straight away.</p>
-            <p class="sample-by">From Keiran Sandham, founder, Kendal. 20 years in electrical, fire and security.</p>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              Free sample
+            </div>
+            <h2 id="sample-offer-title">
+              Free sample: see where the battery figures go
+            </h2>
+            <p>
+              Our sample fire detection and alarm servicing certificate has the
+              power supply and standby battery readings and battery record
+              filled in, on fictional data and watermarked SAMPLE. Leave your
+              email and open it straight away.
+            </p>
+            <p class="sample-by">
+              From Keiran Sandham, founder, Kendal. 20 years in electrical, fire
+              and security.
+            </p>
           </div>
-          <div class="sample-offer-box" data-sample-form><p class="sample-nojs"><a class="btn btn-primary" href="/sample-documents/">See the sample documents</a></p></div>
+          <div class="sample-offer-box" data-sample-form>
+            <p class="sample-nojs">
+              <a class="btn btn-primary" href="/sample-documents/"
+                >See the sample documents</a
+              >
+            </p>
+          </div>
         </div>
       </section>
 
@@ -447,24 +496,23 @@
               valve-regulated lead-acid batteries. For other battery types,
               consult the battery manufacturer (E.2).
             </p>
-            <div class="formula">
-              Cmin = 1.25 × (T1 × I1 + D × I2 × T2)
-            </div>
+            <div class="formula">Cmin = 1.25 × (T1 × I1 + D × I2 × T2)</div>
             <ul>
               <li>
                 <strong>Cmin</strong> is the minimum battery capacity when new,
                 at the 20 hour discharge rate and 20 °C, in Ah.
               </li>
               <li>
-                <strong>I1</strong> is the total standby (quiescent) load in amps:
-                the panel, detectors, interfaces and all ancillary equipment.
+                <strong>I1</strong> is the total standby (quiescent) load in
+                amps: the panel, detectors, interfaces and all ancillary
+                equipment.
               </li>
               <li>
                 <strong>T1</strong> is the total standby period in hours, set by
-                clause 24.3.5: normally 24 hours for Category M/L, 6 hours with an
-                automatically started standby generator serving the system, or
-                up to 72 hours for Category P. See the standby FAQ below for the
-                Category P rule.
+                clause 24.3.5: normally 24 hours for Category M/L, 6 hours with
+                an automatically started standby generator serving the system,
+                or up to 72 hours for Category P. See the standby FAQ below for
+                the Category P rule.
               </li>
               <li>
                 <strong>I2</strong> is the total alarm load in amps, including
@@ -480,9 +528,7 @@
                 use the battery manufacturer's data or D = 1.75. This calculator
                 uses 1.75 in that case.
               </li>
-              <li>
-                <strong>1.25</strong> is part of the standard's formula.
-              </li>
+              <li><strong>1.25</strong> is part of the standard's formula.</li>
             </ul>
             <h3>Worked example</h3>
             <p>
@@ -496,8 +542,8 @@
             </div>
             <p>
               The next available size is 7 Ah. With 72 hours of standby, the
-              same system still needs D = 1.75: Cmin = 1.25 × (72 × 0.18 +
-              1.75 × 1.2 × 0.5) = 17.51 Ah, so choose 18 Ah.
+              same system still needs D = 1.75: Cmin = 1.25 × (72 × 0.18 + 1.75
+              × 1.2 × 0.5) = 17.51 Ah, so choose 18 Ah.
             </p>
             <h3>Available battery sizes</h3>
             <p>
@@ -511,8 +557,8 @@
               <span>3.2 Ah</span><span>4 Ah</span><span>5 Ah</span>
               <span>7 Ah</span><span>7.2 Ah</span><span>9 Ah</span>
               <span>12 Ah</span><span>17 Ah</span><span>18 Ah</span>
-              <span>24 Ah</span><span>38 Ah</span>
-              <span>65 Ah</span><span>100 Ah</span><span>120 Ah</span>
+              <span>24 Ah</span><span>38 Ah</span> <span>65 Ah</span
+              ><span>100 Ah</span><span>120 Ah</span>
             </div>
             <p style="font-size: 0.92rem; color: var(--muted)">
               Panels with a 24 V supply normally use two 12 V batteries wired in
@@ -576,10 +622,10 @@
             <h2>Record the battery calculation on the certificate</h2>
             <p>
               Compliar's fire alarm periodic inspection and servicing
-              certificate records the panel, PSU and battery readings, with a link to this
-              calculator beside them so the measured values and the sizing are
-              worked out together on the visit. The certificate
-              goes to your customer as a branded PDF when you finish.
+              certificate records the panel, PSU and battery readings, with a
+              link to this calculator beside them so the measured values and the
+              sizing are worked out together on the visit. The certificate goes
+              to your customer as a branded PDF when you finish.
             </p>
             <div class="more-links">
               <a href="/fire-alarm-certificate-software/"
@@ -608,13 +654,13 @@
               </summary>
               <p>
                 For valve-regulated lead-acid batteries, BS 5839-1:2025 Annex
-                E.1 uses Cmin = 1.25 × (T1 × I1 + D × I2 × T2), with currents
-                in amps and periods in hours. First calculate with D = 1. If
-                that capacity divided by 20 is at least the alarm current,
-                keep D = 1; otherwise use the manufacturer's de-rating data or
-                D = 1.75, as this calculator does. Under E.1.3, choose the
-                next highest available size if the capacity is not an exact
-                available size. The calculator shows the working.
+                E.1 uses Cmin = 1.25 × (T1 × I1 + D × I2 × T2), with currents in
+                amps and periods in hours. First calculate with D = 1. If that
+                capacity divided by 20 is at least the alarm current, keep D =
+                1; otherwise use the manufacturer's de-rating data or D = 1.75,
+                as this calculator does. Under E.1.3, choose the next highest
+                available size if the capacity is not an exact available size.
+                The calculator shows the working.
               </p>
             </details>
             <details class="faq-item">
@@ -652,8 +698,10 @@
             <details class="faq-item">
               <summary>Does Compliar do this automatically?</summary>
               <p>
-                The fire alarm periodic inspection and servicing
-                certificate in Compliar records the panel, power supply and battery readings, with a link to this calculator beside them, so the sizing is worked out on the visit from the measured values.
+                The fire alarm periodic inspection and servicing certificate in
+                Compliar records the panel, power supply and battery readings,
+                with a link to this calculator beside them, so the sizing is
+                worked out on the visit from the measured values.
               </p>
             </details>
           </div>
@@ -666,13 +714,14 @@
           <h2>Battery sizing, built into your certificates</h2>
           <p>
             Compliar records the standby battery calculation on the fire alarm
-            servicing certificate and sends the PDF to your customer. Book a demo to
-            see it on your own jobs.
+            servicing certificate and sends the PDF to your customer. Book a
+            demo to see it on your own jobs.
           </p>
           <div class="final-ctas">
             <a
               class="btn btn-primary"
-              href="/contact/?subject=Demo+request" data-demo-open
+              href="/contact/?subject=Demo+request"
+              data-demo-open
               >Book a demo</a
             >
             <a class="btn btn-ghost-on-navy" href="/pricing/">See pricing</a>
@@ -693,7 +742,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -707,34 +757,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -744,10 +847,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -755,8 +870,9 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
@@ -775,31 +891,56 @@
 
         var iqA = iq / 1000;
         var result = window.CompliarBattery.batterySizing({
-          i1A: iqA, t1h: sb, i2A: ia, t2h: al
+          i1A: iqA,
+          t1h: sb,
+          i2A: ia,
+          t2h: al,
         });
         document.getElementById("needOut").textContent =
           "Calculated: " + result.cmin.toFixed(2) + " Ah";
-        document.getElementById("sizeOut").textContent =
-          result.aboveMax ? "Above 120" : result.size;
+        document.getElementById("sizeOut").textContent = result.aboveMax
+          ? "Above 120"
+          : result.size;
         var work =
-          "Cmin = 1.25 × (" + sb + " h × " + iqA.toFixed(3) +
-          " A + " + result.d + " × " + ia.toFixed(1) + " A × " + al +
-          " h) = " + result.cmin.toFixed(2) + " Ah. ";
+          "Cmin = 1.25 × (" +
+          sb +
+          " h × " +
+          iqA.toFixed(3) +
+          " A + " +
+          result.d +
+          " × " +
+          ia.toFixed(1) +
+          " A × " +
+          al +
+          " h) = " +
+          result.cmin.toFixed(2) +
+          " Ah. ";
         if (result.d === 1) {
           work += "D = 1 because Cmin / 20 is at least the alarm current.";
         } else {
-          work += "D = 1.75 because " + result.c1.toFixed(2) +
-            " / 20 = " + (result.c1 / 20).toFixed(2) +
-            " A is less than the " + ia.toFixed(1) +
+          work +=
+            "D = 1.75 because " +
+            result.c1.toFixed(2) +
+            " / 20 = " +
+            (result.c1 / 20).toFixed(2) +
+            " A is less than the " +
+            ia.toFixed(1) +
             " A alarm current (initial calculation with D = 1).";
         }
         if (result.aboveMax) {
-          work += " Above 120 Ah: use a larger power supply or split the load across more than one supply.";
+          work +=
+            " Above 120 Ah: use a larger power supply or split the load across more than one supply.";
         }
         document.getElementById("workOut").textContent = work;
       }
       calcBattery();
     </script>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

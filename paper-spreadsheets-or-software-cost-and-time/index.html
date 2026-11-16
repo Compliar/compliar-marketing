@@ -6,48 +6,62 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
-    <title>Paper, Spreadsheets or Software? Cost and Time Compared — Compliar</title>
-    <meta name="description" content="Compare paper, spreadsheets, per-certificate software and a per-user app for electrical, fire and security contractors. Published prices, honest sums you can redo with your own numbers." />
-    <link rel="canonical" href="https://compliar.co.uk/paper-spreadsheets-or-software-cost-and-time/" />
+    <title>
+      Paper, Spreadsheets or Software? Cost and Time Compared — Compliar
+    </title>
+    <meta
+      name="description"
+      content="Compare paper, spreadsheets, per-certificate software and a per-user app for electrical, fire and security contractors. Published prices, honest sums you can redo with your own numbers."
+    />
+    <link
+      rel="canonical"
+      href="https://compliar.co.uk/paper-spreadsheets-or-software-cost-and-time/"
+    />
     <meta name="theme-color" content="#1B2430" />
     <link
       rel="icon"
@@ -56,114 +70,132 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="Paper, Spreadsheets or Software? Cost and Time Compared — Compliar" />
-    <meta property="og:description" content="Compare paper, spreadsheets, per-certificate software and a per-user app for electrical, fire and security contractors. Published prices, honest sums you can redo with your own numbers." />
-    <meta property="og:url" content="https://compliar.co.uk/paper-spreadsheets-or-software-cost-and-time/" />
+    <meta
+      property="og:title"
+      content="Paper, Spreadsheets or Software? Cost and Time Compared — Compliar"
+    />
+    <meta
+      property="og:description"
+      content="Compare paper, spreadsheets, per-certificate software and a per-user app for electrical, fire and security contractors. Published prices, honest sums you can redo with your own numbers."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/paper-spreadsheets-or-software-cost-and-time/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Compliar — management software for electrical, fire protection and life safety, and security contractors" />
+    <meta
+      property="og:image:alt"
+      content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
+    />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Paper, Spreadsheets or Software? Cost and Time Compared — Compliar" />
-    <meta name="twitter:description" content="Compare paper, spreadsheets, per-certificate software and a per-user app for electrical, fire and security contractors. Published prices, honest sums you can redo with your own numbers." />
+    <meta
+      name="twitter:title"
+      content="Paper, Spreadsheets or Software? Cost and Time Compared — Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="Compare paper, spreadsheets, per-certificate software and a per-user app for electrical, fire and security contractors. Published prices, honest sums you can redo with your own numbers."
+    />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
     <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Compliar",
-        "item": "https://compliar.co.uk/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Resources",
-        "item": "https://compliar.co.uk/resources/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Paper, spreadsheets or software?",
-        "item": "https://compliar.co.uk/paper-spreadsheets-or-software-cost-and-time/"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Paper, spreadsheets or software: what each costs a small contractor",
-    "description": "Compare paper, spreadsheets, per-certificate software and a per-user app for electrical, fire and security contractors. Published prices, honest sums you can redo with your own numbers.",
-    "image": "https://compliar.co.uk/og.png",
-    "inLanguage": "en-GB",
-    "datePublished": "2026-11-02",
-    "dateModified": "2026-11-02",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://compliar.co.uk/paper-spreadsheets-or-software-cost-and-time/"
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "Compliar",
-      "url": "https://compliar.co.uk/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Compliar",
-      "url": "https://compliar.co.uk/"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is it cheaper than paying per certificate?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It depends on how many certificates you issue and what you pay now. Compliar charges per user with no per-certificate fee, so the cost does not rise in a busy month. Use the time and cost calculator with your own numbers."
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Compliar",
+              "item": "https://compliar.co.uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Resources",
+              "item": "https://compliar.co.uk/resources/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Paper, spreadsheets or software?",
+              "item": "https://compliar.co.uk/paper-spreadsheets-or-software-cost-and-time/"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Paper, spreadsheets or software: what each costs a small contractor",
+          "description": "Compare paper, spreadsheets, per-certificate software and a per-user app for electrical, fire and security contractors. Published prices, honest sums you can redo with your own numbers.",
+          "image": "https://compliar.co.uk/og.png",
+          "inLanguage": "en-GB",
+          "datePublished": "2026-11-02",
+          "dateModified": "2026-11-02",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://compliar.co.uk/paper-spreadsheets-or-software-cost-and-time/"
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "Compliar",
+            "url": "https://compliar.co.uk/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Compliar",
+            "url": "https://compliar.co.uk/"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is it cheaper than paying per certificate?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It depends on how many certificates you issue and what you pay now. Compliar charges per user with no per-certificate fee, so the cost does not rise in a busy month. Use the time and cost calculator with your own numbers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I still need spreadsheets if I use Compliar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not for jobs, certificates, quotes, invoices, log books or drawings, which all sit in the one system. You can import your existing customers and sites, and export your data."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Compliar certify my work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Compliar provides record-keeping and certificate workflows. Your competent engineers and your scheme remain responsible for the work and for what is signed."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is there a contract?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No contract. Early adopters lock their price for 3 years."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who will I speak to?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The founder, Keiran Sandham, who has 20 years in the electrical, fire and security industry, runs the demos."
+              }
+            }
+          ]
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I still need spreadsheets if I use Compliar?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Not for jobs, certificates, quotes, invoices, log books or drawings, which all sit in the one system. You can import your existing customers and sites, and export your data."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does Compliar certify my work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Compliar provides record-keeping and certificate workflows. Your competent engineers and your scheme remain responsible for the work and for what is signed."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is there a contract?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No contract. Early adopters lock their price for 3 years."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who will I speak to?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The founder, Keiran Sandham, who has 20 years in the electrical, fire and security industry, runs the demos."
-        }
-      }
-    ]
-  }
-]
+      ]
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -181,9 +213,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -205,7 +247,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -218,51 +262,173 @@
         </details>
       </div>
     </header>
-        <main id="main">
+    <main id="main">
       <section class="page-intro">
         <div class="wrap">
           <div class="crumbs">
-            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a><i>/</i>Paper, spreadsheets or software?
+            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a
+            ><i>/</i>Paper, spreadsheets or software?
           </div>
           <div class="eyebrow">Cost and time · Guide</div>
-          <h1>Paper, spreadsheets or software: what each costs a small contractor</h1>
-          <p>A plain comparison for small and medium contractors: what paper, spreadsheets, per-certificate software and a one-app system really cost in money and time.</p>
+          <h1>
+            Paper, spreadsheets or software: what each costs a small contractor
+          </h1>
+          <p>
+            A plain comparison for small and medium contractors: what paper,
+            spreadsheets, per-certificate software and a one-app system really
+            cost in money and time.
+          </p>
         </div>
       </section>
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <p><strong>Illustration only.</strong> The figures below use Compliar's published prices (ex VAT) and example numbers you should replace with your own. Last reviewed 2 November 2026.</p>
-<h2>The short version</h2>
-<p>A small contractor can run on paper, on spreadsheets and email, on software that charges for every certificate, or on software that charges per user. The cost is not just the subscription. It is also the evenings spent typing up, the certificates re-done because a field was missed, and the quote that never went out because the defect was only written in a notebook.</p>
-<div class="tbl-wrap"><table class="tbl"><thead><tr><th></th><th>Paper and notebooks</th><th>Spreadsheets, Word and email</th><th>Charge per certificate</th><th>Per-user, one app</th></tr></thead><tbody>
-<tr><th scope="row">Cash cost</th><td>Pads, printing, storage</td><td>Low, mostly your own time</td><td>Grows with every certificate you issue</td><td>Fixed per user, however many certificates</td></tr>
-<tr><th scope="row">Typing up</th><td>Every visit, again, in the office</td><td>Copy and paste between files</td><td>Done on site, but you pay each time</td><td>Done on site, once</td></tr>
-<tr><th scope="row">Defects to quotes</th><td>Re-keyed by hand</td><td>Re-keyed by hand</td><td>Usually a separate tool</td><td>Defect becomes a quote in the same system</td></tr>
-<tr><th scope="row">Finding last year's record</th><td>Search the binder or the van</td><td>Search folders and inboxes</td><td>In the certificate tool only</td><td>On the site record and the QR log book</td></tr>
-<tr><th scope="row">Rest of the business</th><td>Separate</td><td>Separate</td><td>Jobs, quotes and invoices elsewhere</td><td>Jobs, certificates, quotes, invoices and drawings together</td></tr>
-</tbody></table></div>
-<h2>What per-certificate pricing does to a busy month</h2>
-<p>Per-certificate pricing looks cheap in a quiet month and expensive in a busy one, which is the wrong way round for a growing business. Compliar charges per user and nothing per certificate. An illustration with published prices:</p>
-<ul>
-  <li><strong>3 engineers on Lite:</strong> 3 &times; &pound;35 = &pound;105 a month, ex VAT, billed monthly. Billed yearly it is &pound;350 per user a year, so &pound;1,050 for the three.</li>
-  <li><strong>Add one office user:</strong> an Office plan is &pound;65 a month, or &pound;650 a year.</li>
-  <li><strong>Log books:</strong> &pound;4 per site per year, only for sites you put a digital log book on.</li>
-</ul>
-<p>Whether that beats your current spend depends on your own numbers: how many certificates you issue, what you pay for them now, and how long each takes to write up. Put your own figures into the <a href="/time-and-cost-calculator/">time and cost calculator</a>. It does the sum on what you type in and does not assume a saving for you.</p>
-<h2>Where the time goes</h2>
-<ul>
-  <li><strong>Writing up after the visit.</strong> If results are recorded on site, even with no signal, there is nothing to type up in the evening.</li>
-  <li><strong>Chasing missing fields.</strong> A certificate that will not issue until the required readings are in is quicker than finding out at the office.</li>
-  <li><strong>Defects that get lost.</strong> A failed item logged on the visit can go straight into a quote instead of being remembered on the drive home.</li>
-  <li><strong>Reminders and renewals.</strong> Maintenance plans that generate the next visits save keeping a diary of due dates.</li>
-  <li><strong>Invoicing.</strong> A completed job can go to invoice without re-entering the customer, site and work done.</li>
-</ul>
-<h2>Keeping records you can stand behind</h2>
-<p>Cost is only half of it. Customers, insurers and assessors ask for the history of a site: what was tested, what failed, what was done about it. Certificates laid out to the standards (BS 7671 for electrical, BS 5839-1 for fire detection and alarm systems, BS 5266-1 for emergency lighting, the BS EN 50131 series for intruder and hold-up alarm systems) and a log book that stays with the site keep that history in one place. Compliar provides the record-keeping and certificate workflow. It does not certify work, and your competent engineers and scheme remain responsible for what is signed.</p>
-<h2>Talking to the person who built it</h2>
-<p>Compliar was founded by Keiran Sandham, who has spent 20 years in the electrical, fire and security industry. Early adopters lock their price for 3 years, there is no contract, and demos are run by the founder on your own kind of jobs.</p>
-<p>See the <a href="/pricing/">pricing page</a> for every plan, and <a href="/getting-started/">how getting started works</a>.</p>
+            <p>
+              <strong>Illustration only.</strong> The figures below use
+              Compliar's published prices (ex VAT) and example numbers you
+              should replace with your own. Last reviewed 2 November 2026.
+            </p>
+            <h2>The short version</h2>
+            <p>
+              A small contractor can run on paper, on spreadsheets and email, on
+              software that charges for every certificate, or on software that
+              charges per user. The cost is not just the subscription. It is
+              also the evenings spent typing up, the certificates re-done
+              because a field was missed, and the quote that never went out
+              because the defect was only written in a notebook.
+            </p>
+            <div class="tbl-wrap">
+              <table class="tbl">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Paper and notebooks</th>
+                    <th>Spreadsheets, Word and email</th>
+                    <th>Charge per certificate</th>
+                    <th>Per-user, one app</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Cash cost</th>
+                    <td>Pads, printing, storage</td>
+                    <td>Low, mostly your own time</td>
+                    <td>Grows with every certificate you issue</td>
+                    <td>Fixed per user, however many certificates</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Typing up</th>
+                    <td>Every visit, again, in the office</td>
+                    <td>Copy and paste between files</td>
+                    <td>Done on site, but you pay each time</td>
+                    <td>Done on site, once</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Defects to quotes</th>
+                    <td>Re-keyed by hand</td>
+                    <td>Re-keyed by hand</td>
+                    <td>Usually a separate tool</td>
+                    <td>Defect becomes a quote in the same system</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Finding last year's record</th>
+                    <td>Search the binder or the van</td>
+                    <td>Search folders and inboxes</td>
+                    <td>In the certificate tool only</td>
+                    <td>On the site record and the QR log book</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Rest of the business</th>
+                    <td>Separate</td>
+                    <td>Separate</td>
+                    <td>Jobs, quotes and invoices elsewhere</td>
+                    <td>
+                      Jobs, certificates, quotes, invoices and drawings together
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h2>What per-certificate pricing does to a busy month</h2>
+            <p>
+              Per-certificate pricing looks cheap in a quiet month and expensive
+              in a busy one, which is the wrong way round for a growing
+              business. Compliar charges per user and nothing per certificate.
+              An illustration with published prices:
+            </p>
+            <ul>
+              <li>
+                <strong>3 engineers on Lite:</strong> 3 &times; &pound;35 =
+                &pound;105 a month, ex VAT, billed monthly. Billed yearly it is
+                &pound;350 per user a year, so &pound;1,050 for the three.
+              </li>
+              <li>
+                <strong>Add one office user:</strong> an Office plan is
+                &pound;65 a month, or &pound;650 a year.
+              </li>
+              <li>
+                <strong>Log books:</strong> &pound;4 per site per year, only for
+                sites you put a digital log book on.
+              </li>
+            </ul>
+            <p>
+              Whether that beats your current spend depends on your own numbers:
+              how many certificates you issue, what you pay for them now, and
+              how long each takes to write up. Put your own figures into the
+              <a href="/time-and-cost-calculator/">time and cost calculator</a>.
+              It does the sum on what you type in and does not assume a saving
+              for you.
+            </p>
+            <h2>Where the time goes</h2>
+            <ul>
+              <li>
+                <strong>Writing up after the visit.</strong> If results are
+                recorded on site, even with no signal, there is nothing to type
+                up in the evening.
+              </li>
+              <li>
+                <strong>Chasing missing fields.</strong> A certificate that will
+                not issue until the required readings are in is quicker than
+                finding out at the office.
+              </li>
+              <li>
+                <strong>Defects that get lost.</strong> A failed item logged on
+                the visit can go straight into a quote instead of being
+                remembered on the drive home.
+              </li>
+              <li>
+                <strong>Reminders and renewals.</strong> Maintenance plans that
+                generate the next visits save keeping a diary of due dates.
+              </li>
+              <li>
+                <strong>Invoicing.</strong> A completed job can go to invoice
+                without re-entering the customer, site and work done.
+              </li>
+            </ul>
+            <h2>Keeping records you can stand behind</h2>
+            <p>
+              Cost is only half of it. Customers, insurers and assessors ask for
+              the history of a site: what was tested, what failed, what was done
+              about it. Certificates laid out to the standards (BS 7671 for
+              electrical, BS 5839-1 for fire detection and alarm systems, BS
+              5266-1 for emergency lighting, the BS EN 50131 series for intruder
+              and hold-up alarm systems) and a log book that stays with the site
+              keep that history in one place. Compliar provides the
+              record-keeping and certificate workflow. It does not certify work,
+              and your competent engineers and scheme remain responsible for
+              what is signed.
+            </p>
+            <h2>Talking to the person who built it</h2>
+            <p>
+              Compliar was founded by Keiran Sandham, who has spent 20 years in
+              the electrical, fire and security industry. Early adopters lock
+              their price for 3 years, there is no contract, and demos are run
+              by the founder on your own kind of jobs.
+            </p>
+            <p>
+              See the <a href="/pricing/">pricing page</a> for every plan, and
+              <a href="/getting-started/">how getting started works</a>.
+            </p>
           </div>
         </div>
       </section>
@@ -275,15 +441,28 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary>Is it cheaper than paying per certificate?</summary>
-              <p>It depends on how many certificates you issue and what you pay now. Compliar charges per user with no per-certificate fee, so the cost does not rise in a busy month. Use the time and cost calculator with your own numbers.</p>
+              <p>
+                It depends on how many certificates you issue and what you pay
+                now. Compliar charges per user with no per-certificate fee, so
+                the cost does not rise in a busy month. Use the time and cost
+                calculator with your own numbers.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Do I still need spreadsheets if I use Compliar?</summary>
-              <p>Not for jobs, certificates, quotes, invoices, log books or drawings, which all sit in the one system. You can import your existing customers and sites, and export your data.</p>
+              <p>
+                Not for jobs, certificates, quotes, invoices, log books or
+                drawings, which all sit in the one system. You can import your
+                existing customers and sites, and export your data.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Does Compliar certify my work?</summary>
-              <p>No. Compliar provides record-keeping and certificate workflows. Your competent engineers and your scheme remain responsible for the work and for what is signed.</p>
+              <p>
+                No. Compliar provides record-keeping and certificate workflows.
+                Your competent engineers and your scheme remain responsible for
+                the work and for what is signed.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Is there a contract?</summary>
@@ -291,7 +470,10 @@
             </details>
             <details class="faq-item">
               <summary>Who will I speak to?</summary>
-              <p>The founder, Keiran Sandham, who has 20 years in the electrical, fire and security industry, runs the demos.</p>
+              <p>
+                The founder, Keiran Sandham, who has 20 years in the electrical,
+                fire and security industry, runs the demos.
+              </p>
             </details>
           </div>
         </div>
@@ -299,9 +481,15 @@
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">In the app</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              In the app
+            </div>
             <h2>How Compliar helps</h2>
-<p>Compliar runs jobs, maintenance plans, certificates, defect quotes, invoicing, QR log books and drawings in one system, with an offline app for engineers and no per-certificate fees.</p>
+            <p>
+              Compliar runs jobs, maintenance plans, certificates, defect
+              quotes, invoicing, QR log books and drawings in one system, with
+              an offline app for engineers and no per-certificate fees.
+            </p>
             <div class="more-links">
               <a href="/pricing/">Pricing</a>
               <a href="/fire-log-book-software/">Fire log book software</a>
@@ -313,9 +501,19 @@
       <section class="final-cta band">
         <div class="wrap">
           <h2>One app. Every job, start to finish.</h2>
-          <p>Book a demo and Keiran will walk through your own jobs. Early adopters lock their price for 3 years, with no contract.</p>
+          <p>
+            Book a demo and Keiran will walk through your own jobs. Early
+            adopters lock their price for 3 years, with no contract.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a><a class="btn btn-ghost-on-navy" href="/getting-started/">How getting started works</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            ><a class="btn btn-ghost-on-navy" href="/getting-started/"
+              >How getting started works</a
+            >
           </div>
         </div>
       </section>
@@ -332,7 +530,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -346,34 +545,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -383,10 +635,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -394,11 +658,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

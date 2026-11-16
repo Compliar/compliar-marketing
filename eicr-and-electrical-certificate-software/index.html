@@ -6,44 +6,50 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>
       EICR Software &amp; Electrical Certificates | BS 7671 — Compliar
@@ -185,9 +191,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -209,7 +225,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -236,31 +254,33 @@
             <h1>EICR &amp; electrical certificate <span>software</span></h1>
             <p class="hero-sub">
               Issue Electrical Installation Condition Reports, Electrical
-              Installation Certificates and Minor Works Certificates built
-              to follow BS 7671. Record circuits and test results,
-              add photos to observations, collect signatures and send a branded
-              PDF.
+              Installation Certificates and Minor Works Certificates built to
+              follow BS 7671. Record circuits and test results, add photos to
+              observations, collect signatures and send a branded PDF.
             </p>
             <div
               class="calc-badge"
               style="display: inline-flex; margin-bottom: 22px"
             >
-              BOOK A DEMO · NO CONTRACT · EARLY ADOPTERS LOCK THEIR PRICE FOR 3 YEARS
+              BOOK A DEMO · NO CONTRACT · EARLY ADOPTERS LOCK THEIR PRICE FOR 3
+              YEARS
             </div>
             <div class="hero-ctas">
               <a
                 class="btn btn-primary"
-                href="/contact/?subject=Demo+request" data-demo-open
+                href="/contact/?subject=Demo+request"
+                data-demo-open
                 >Book a demo</a
               >
               <a class="btn btn-ghost-on-navy" href="/pricing/">See pricing</a>
             </div>
             <div class="standards">
-              <span>BS 7671</span><span>IET Code of Practice</span><span>BS 5266-1</span>
+              <span>BS 7671</span><span>IET Code of Practice</span
+              ><span>BS 5266-1</span>
             </div>
           </div>
           <div class="mock" style="border-color: var(--line-on-navy)">
-                        <div class="mock-body">
+            <div class="mock-body">
               <div class="doc-row" style="padding-top: 0">
                 <span class="calc-title" style="color: var(--ink)"
                   >Electrical certificates</span
@@ -277,7 +297,8 @@
               </div>
               <div class="doc-row">
                 <span class="doc-tag sales">EICR</span
-                ><span class="doc-num">Electrical Installation Condition Report</span
+                ><span class="doc-num"
+                  >Electrical Installation Condition Report</span
                 ><span class="doc-amt">Periodic</span>
               </div>
               <div class="doc-row">
@@ -309,8 +330,8 @@
               Everything an EICR needs to record, in a form that works on site
             </h2>
             <p>
-              The Compliar EICR is built to record the information BS 7671
-              Part 6 asks for, in an order an engineer can work down on site.
+              The Compliar EICR is built to record the information BS 7671 Part
+              6 asks for, in an order an engineer can work down on site.
             </p>
           </div>
           <div class="card-grid">
@@ -412,13 +433,13 @@
             </ul>
             <h3>Related electrical certificates</h3>
             <p>
-              Electrical covers installation (EIC and minor
-              works), inspection and testing (EICR), emergency lighting to
-              BS 5266-1:2025, PAT testing against the IET Code of Practice for
-              In-Service Inspection and Testing of Electrical Equipment, and EV
-              charge points, with EV charger planned preventative maintenance to
-              BS EN IEC 61851-1. All sit in the same system as fire protection
-              and life safety and security.
+              Electrical covers installation (EIC and minor works), inspection
+              and testing (EICR), emergency lighting to BS 5266-1:2025, PAT
+              testing against the IET Code of Practice for In-Service Inspection
+              and Testing of Electrical Equipment, and EV charge points, with EV
+              charger planned preventative maintenance to BS EN IEC 61851-1. All
+              sit in the same system as fire protection and life safety and
+              security.
             </p>
             <div class="more-links">
               <a href="/fire-alarm-certificate-software/"
@@ -450,8 +471,9 @@
                 The Electrical Installation Certificate (EIC), the Electrical
                 Installation Condition Report (EICR) and the Minor Electrical
                 Installation Works Certificate, each prepared to record the
-                information BS 7671 Part 6 asks for. There are also templates for the other electrical disciplines: emergency lighting, PAT testing and EV
-                charge points (including EV charger PPM).
+                information BS 7671 Part 6 asks for. There are also templates
+                for the other electrical disciplines: emergency lighting, PAT
+                testing and EV charge points (including EV charger PPM).
               </p>
             </details>
             <details class="faq-item">
@@ -474,7 +496,9 @@
             <details class="faq-item">
               <summary>Can I use my own certificate layout?</summary>
               <p>
-                Yes. On Office plans and above, company admins can edit the templates or build your own, and every certificate is issued as a PDF with your company details.
+                Yes. On Office plans and above, company admins can edit the
+                templates or build your own, and every certificate is issued as
+                a PDF with your company details.
               </p>
             </details>
             <details class="faq-item">
@@ -491,8 +515,8 @@
               <p>
                 Compliar is priced per person. A Lite plan is £35 + VAT a month,
                 Office £65 and Design £95, and certificates are included from
-                the Lite plan up. Pay yearly and you get two
-                months free. Prices are plus VAT. There is no contract.
+                the Lite plan up. Pay yearly and you get two months free. Prices
+                are plus VAT. There is no contract.
               </p>
             </details>
           </div>
@@ -504,14 +528,16 @@
         <div class="wrap">
           <h2>Issue your next EICR from site</h2>
           <p>
-            See the electrical certificates on your own jobs in a demo. Onboarding is from £195, quoted individually.
+            See the electrical certificates on your own jobs in a demo.
+            Onboarding is from £195, quoted individually.
           </p>
           <div class="final-ctas">
             <a
               class="btn btn-primary"
-              href="/contact/?subject=Demo+request" data-demo-open
-                >Book a demo</a
-              >
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            >
             <a class="btn btn-ghost-on-navy" href="/pricing/">See pricing</a>
           </div>
         </div>
@@ -530,7 +556,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -544,34 +571,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -581,10 +661,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -592,11 +684,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

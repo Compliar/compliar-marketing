@@ -6,44 +6,50 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>
       PAT Testing Software | In-Service Inspection Records — Compliar
@@ -52,10 +58,7 @@
       name="description"
       content="Record PAT in-service inspection and testing on your phone: an asset list per site, pass or fail per appliance, retest dates, defects and a branded PDF report. Book a demo."
     />
-    <link
-      rel="canonical"
-      href="https://compliar.co.uk/pat-testing-software/"
-    />
+    <link rel="canonical" href="https://compliar.co.uk/pat-testing-software/" />
     <meta name="theme-color" content="#1B2430" />
     <link
       rel="icon"
@@ -64,9 +67,18 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="PAT Testing Software | In-Service Inspection Records — Compliar" />
-    <meta property="og:description" content="Record PAT in-service inspection and testing on your phone: an asset list per site, pass or fail per appliance, retest dates, defects and a branded PDF report. Book a demo." />
-    <meta property="og:url" content="https://compliar.co.uk/pat-testing-software/" />
+    <meta
+      property="og:title"
+      content="PAT Testing Software | In-Service Inspection Records — Compliar"
+    />
+    <meta
+      property="og:description"
+      content="Record PAT in-service inspection and testing on your phone: an asset list per site, pass or fail per appliance, retest dates, defects and a branded PDF report. Book a demo."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/pat-testing-software/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -76,75 +88,81 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
-    <meta name="twitter:title" content="PAT Testing Software | In-Service Inspection Records — Compliar" />
-    <meta name="twitter:description" content="Record PAT in-service inspection and testing on your phone: an asset list per site, pass or fail per appliance, retest dates, defects and a branded PDF report. Book a demo." />
+    <meta
+      name="twitter:title"
+      content="PAT Testing Software | In-Service Inspection Records — Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="Record PAT in-service inspection and testing on your phone: an asset list per site, pass or fail per appliance, retest dates, defects and a branded PDF report. Book a demo."
+    />
     <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Compliar",
-        "item": "https://compliar.co.uk/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "PAT testing software",
-        "item": "https://compliar.co.uk/pat-testing-software/"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is there a fixed interval for PAT testing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. The interval depends on the type of equipment, how it is used and where, and is set from a risk assessment. The IET Code of Practice for In-service Inspection and Testing of Electrical Equipment gives guidance. Always check it for the job in front of you."
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Compliar",
+              "item": "https://compliar.co.uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "PAT testing software",
+              "item": "https://compliar.co.uk/pat-testing-software/"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is there a fixed interval for PAT testing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The interval depends on the type of equipment, how it is used and where, and is set from a risk assessment. The IET Code of Practice for In-service Inspection and Testing of Electrical Equipment gives guidance. Always check it for the job in front of you."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I record PAT results on my phone?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The field app runs in your phone's browser with nothing to install, and once your jobs have loaded it keeps working with no signal on site and sends your work when you are back in range."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens when an appliance fails?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can raise it as a defect from the failed result, and it can be quoted for repair or replacement, then tracked as an open defect against the site."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I print PAT labels?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Each appliance can carry a printed QR asset tag (50 × 25 mm, printed from the site to a Niimbot, Phomemo, Brother or Dymo label printer), and scanning it on a later visit opens that item. Pass and fail result labels are planned; ask at the demo for the current position."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is PAT included in every plan?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The built-in certificate and report templates are included from the Lite plan at £35 + VAT per user per month, with no per-certificate fees and no contract."
+              }
+            }
+          ]
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I record PAT results on my phone?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. The field app runs in your phone's browser with nothing to install, and once your jobs have loaded it keeps working with no signal on site and sends your work when you are back in range."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What happens when an appliance fails?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can raise it as a defect from the failed result, and it can be quoted for repair or replacement, then tracked as an open defect against the site."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I print PAT labels?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Each appliance can carry a printed QR asset tag (50 × 25 mm, printed from the site to a Niimbot, Phomemo, Brother or Dymo label printer), and scanning it on a later visit opens that item. Pass and fail result labels are planned; ask at the demo for the current position."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is PAT included in every plan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. The built-in certificate and report templates are included from the Lite plan at £35 + VAT per user per month, with no per-certificate fees and no contract."
-        }
-      }
-    ]
-  }
-]
+      ]
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -162,9 +180,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -186,7 +214,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -209,24 +239,40 @@
             </div>
             <div class="eyebrow">PAT testing</div>
             <h1>PAT testing <span>software</span></h1>
-            <p class="hero-sub">Compliar keeps PAT (portable appliance testing) records against each site and each appliance. Work down the asset list on your phone, record the result, and send the customer a branded report with the retest dates on it.</p>
+            <p class="hero-sub">
+              Compliar keeps PAT (portable appliance testing) records against
+              each site and each appliance. Work down the asset list on your
+              phone, record the result, and send the customer a branded report
+              with the retest dates on it.
+            </p>
             <div
               class="calc-badge"
               style="display: inline-flex; margin-bottom: 22px"
             >
-              BOOK A DEMO · NO CONTRACT · EARLY ADOPTERS LOCK THEIR PRICE FOR 3 YEARS
+              BOOK A DEMO · NO CONTRACT · EARLY ADOPTERS LOCK THEIR PRICE FOR 3
+              YEARS
             </div>
             <div class="hero-ctas">
-              <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a>
+              <a
+                class="btn btn-primary"
+                href="/contact/?subject=Demo+request"
+                data-demo-open
+                >Book a demo</a
+              >
               <a class="btn btn-ghost-on-navy" href="/pricing/">See pricing</a>
             </div>
             <div class="standards"><span>IET Code of Practice</span></div>
           </div>
           <div class="mock" style="border-color: var(--line-on-navy)">
-                        <div class="mock-body">
+            <div class="mock-body">
               <div class="doc-row" style="padding-top: 0">
-                <span class="calc-title" style="color: var(--ink)">PAT visit record</span
-                ><span class="doc-amt" style="font-weight: 400; color: var(--muted)">Sample data</span>
+                <span class="calc-title" style="color: var(--ink)"
+                  >PAT visit record</span
+                ><span
+                  class="doc-amt"
+                  style="font-weight: 400; color: var(--muted)"
+                  >Sample data</span
+                >
               </div>
               <div class="doc-row">
                 <span class="doc-tag sales">ASSET</span
@@ -258,20 +304,64 @@
           <div class="section-head">
             <div class="eyebrow">What's included</div>
             <h2>A record for every appliance, not a loose sheet</h2>
-            <p>Each appliance is an asset held against a site, so its history builds up visit after visit and the next test date is never a guess.</p>
+            <p>
+              Each appliance is an asset held against a site, so its history
+              builds up visit after visit and the next test date is never a
+              guess.
+            </p>
           </div>
           <div class="tbl-wrap">
             <table class="tbl">
               <thead>
-                <tr><th>What is recorded</th><th>Detail</th></tr>
+                <tr>
+                  <th>What is recorded</th>
+                  <th>Detail</th>
+                </tr>
               </thead>
               <tbody>
-                <tr><th>Appliance register</th><td>Description and location for each appliance, kept per site and carried from visit to visit.</td></tr>
-                <tr><th>Result per appliance</th><td>Pass, fail or not tested for each item, entered as you work down the list.</td></tr>
-                <tr><th>Dates</th><td>Test date and retest due date, printed on the report in UK date format.</td></tr>
-                <tr><th>Failures</th><td>A failed appliance can be raised as a defect, then quoted or replaced without re-typing it.</td></tr>
-                <tr><th>Asset tags</th><td>Print a QR asset tag for every appliance from the site in one go, 50 × 25 mm, to a handheld label printer. Scanning the tag on a job opens that appliance.</td></tr>
-                <tr><th>Sign-off</th><td>Engineer signature and your company details on the branded PDF report.</td></tr>
+                <tr>
+                  <th>Appliance register</th>
+                  <td>
+                    Description and location for each appliance, kept per site
+                    and carried from visit to visit.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Result per appliance</th>
+                  <td>
+                    Pass, fail or not tested for each item, entered as you work
+                    down the list.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Dates</th>
+                  <td>
+                    Test date and retest due date, printed on the report in UK
+                    date format.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Failures</th>
+                  <td>
+                    A failed appliance can be raised as a defect, then quoted or
+                    replaced without re-typing it.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Asset tags</th>
+                  <td>
+                    Print a QR asset tag for every appliance from the site in
+                    one go, 50 × 25 mm, to a handheld label printer. Scanning
+                    the tag on a job opens that appliance.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Sign-off</th>
+                  <td>
+                    Engineer signature and your company details on the branded
+                    PDF report.
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -287,15 +377,26 @@
           <div class="card-grid">
             <div class="roadmap-card">
               <h4>On site</h4>
-              <p>The field app runs in your phone's browser and keeps working with no signal. QR asset tag scanning is included from the Lite plan, so you can scan an item to find it on the list.</p>
+              <p>
+                The field app runs in your phone's browser and keeps working
+                with no signal. QR asset tag scanning is included from the Lite
+                plan, so you can scan an item to find it on the list.
+              </p>
             </div>
             <div class="roadmap-card">
               <h4>Back at the office</h4>
-              <p>Reports are emailed from the job with a record of what was sent, and a customer portal login can show the customer their reports as soon as they are issued.</p>
+              <p>
+                Reports are emailed from the job with a record of what was sent,
+                and a customer portal login can show the customer their reports
+                as soon as they are issued.
+              </p>
             </div>
             <div class="roadmap-card">
               <h4>Repeat visits</h4>
-              <p>Because appliances stay on the site's asset list, a repeat visit starts from the last one and shows what is due.</p>
+              <p>
+                Because appliances stay on the site's asset list, a repeat visit
+                starts from the last one and shows what is due.
+              </p>
             </div>
           </div>
         </div>
@@ -304,17 +405,45 @@
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">Good to know</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              Good to know
+            </div>
             <h2>What PAT testing involves, in short</h2>
-            <p>PAT is the in-service inspection and testing of portable electrical equipment. There is no single legal test interval. How often an item is inspected and tested depends on the type of equipment, how it is used and the environment, so a laptop in an office is treated differently from a power tool on a building site.</p>
-            <p>A visual inspection comes first, because most faults can be seen. Where the equipment type and your risk assessment call for it, electrical tests follow, such as earth continuity and insulation resistance for Class I equipment. Class II (double insulated) equipment is generally tested differently, so record the class against the item.</p>
-            <p>Whatever you decide for a site, the useful thing is a dated record per appliance that shows the result and when it is next due. The IET Code of Practice for In-service Inspection and Testing of Electrical Equipment is the usual reference. Check it, and your own competent-person judgement, for the job in front of you. Compliar keeps the records; it does not decide the test regime for you.</p>
             <p>
-              The same system covers 32 system types across fire protection and life safety, security and electrical, so one login handles the whole company. See the
+              PAT is the in-service inspection and testing of portable
+              electrical equipment. There is no single legal test interval. How
+              often an item is inspected and tested depends on the type of
+              equipment, how it is used and the environment, so a laptop in an
+              office is treated differently from a power tool on a building
+              site.
+            </p>
+            <p>
+              A visual inspection comes first, because most faults can be seen.
+              Where the equipment type and your risk assessment call for it,
+              electrical tests follow, such as earth continuity and insulation
+              resistance for Class I equipment. Class II (double insulated)
+              equipment is generally tested differently, so record the class
+              against the item.
+            </p>
+            <p>
+              Whatever you decide for a site, the useful thing is a dated record
+              per appliance that shows the result and when it is next due. The
+              IET Code of Practice for In-service Inspection and Testing of
+              Electrical Equipment is the usual reference. Check it, and your
+              own competent-person judgement, for the job in front of you.
+              Compliar keeps the records; it does not decide the test regime for
+              you.
+            </p>
+            <p>
+              The same system covers 32 system types across fire protection and
+              life safety, security and electrical, so one login handles the
+              whole company. See the
               <a href="/features/#coverage-title">full list of disciplines</a>.
             </p>
             <div class="more-links">
-              <a href="/eicr-and-electrical-certificate-software/">EICR &amp; electrical certificates</a>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >EICR &amp; electrical certificates</a
+              >
               <a href="/features/">All features</a>
               <a href="/pricing/">Pricing</a>
             </div>
@@ -331,23 +460,47 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary>Is there a fixed interval for PAT testing?</summary>
-              <p>No. The interval depends on the type of equipment, how it is used and where, and is set from a risk assessment. The IET Code of Practice for In-service Inspection and Testing of Electrical Equipment gives guidance. Always check it for the job in front of you.</p>
+              <p>
+                No. The interval depends on the type of equipment, how it is
+                used and where, and is set from a risk assessment. The IET Code
+                of Practice for In-service Inspection and Testing of Electrical
+                Equipment gives guidance. Always check it for the job in front
+                of you.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Can I record PAT results on my phone?</summary>
-              <p>Yes. The field app runs in your phone's browser with nothing to install, and once your jobs have loaded it keeps working with no signal on site and sends your work when you are back in range.</p>
+              <p>
+                Yes. The field app runs in your phone's browser with nothing to
+                install, and once your jobs have loaded it keeps working with no
+                signal on site and sends your work when you are back in range.
+              </p>
             </details>
             <details class="faq-item">
               <summary>What happens when an appliance fails?</summary>
-              <p>You can raise it as a defect from the failed result, and it can be quoted for repair or replacement, then tracked as an open defect against the site.</p>
+              <p>
+                You can raise it as a defect from the failed result, and it can
+                be quoted for repair or replacement, then tracked as an open
+                defect against the site.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Can I print PAT labels?</summary>
-              <p>Each appliance can carry a printed QR asset tag (50 × 25 mm, printed from the site to a Niimbot, Phomemo, Brother or Dymo label printer), and scanning it on a later visit opens that item. Pass and fail result labels are planned; ask at the demo for the current position.</p>
+              <p>
+                Each appliance can carry a printed QR asset tag (50 × 25 mm,
+                printed from the site to a Niimbot, Phomemo, Brother or Dymo
+                label printer), and scanning it on a later visit opens that
+                item. Pass and fail result labels are planned; ask at the demo
+                for the current position.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Is PAT included in every plan?</summary>
-              <p>Yes. The built-in certificate and report templates are included from the Lite plan at £35 + VAT per user per month, with no per-certificate fees and no contract.</p>
+              <p>
+                Yes. The built-in certificate and report templates are included
+                from the Lite plan at £35 + VAT per user per month, with no
+                per-certificate fees and no contract.
+              </p>
             </details>
           </div>
         </div>
@@ -356,9 +509,17 @@
       <section class="final-cta band">
         <div class="wrap">
           <h2>Run your next PAT visit from your phone</h2>
-          <p>See the PAT report on your own sites in a demo. Onboarding is from £195, quoted individually.</p>
+          <p>
+            See the PAT report on your own sites in a demo. Onboarding is from
+            £195, quoted individually.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            >
             <a class="btn btn-ghost-on-navy" href="/pricing/">See pricing</a>
           </div>
         </div>
@@ -377,7 +538,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -391,34 +553,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -428,10 +643,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -439,11 +666,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

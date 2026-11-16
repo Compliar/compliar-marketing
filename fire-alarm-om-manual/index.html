@@ -6,47 +6,58 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
-    <title>Fire Alarm O&amp;M Manual: What to Include and How to Do It — Compliar</title>
-    <meta name="description" content="What goes in a fire alarm operation and maintenance (O&amp;M) manual: certificates, zone plan, as-fitted drawings, log book, manuals and test records, and how to put one together." />
+    <title>
+      Fire Alarm O&amp;M Manual: What to Include and How to Do It — Compliar
+    </title>
+    <meta
+      name="description"
+      content="What goes in a fire alarm operation and maintenance (O&amp;M) manual: certificates, zone plan, as-fitted drawings, log book, manuals and test records, and how to put one together."
+    />
     <link rel="canonical" href="https://compliar.co.uk/fire-alarm-om-manual/" />
     <meta name="theme-color" content="#1B2430" />
     <link
@@ -56,130 +67,148 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="Fire Alarm O&amp;M Manual: What to Include and How to Do It — Compliar" />
-    <meta property="og:description" content="What goes in a fire alarm operation and maintenance (O&amp;M) manual: certificates, zone plan, as-fitted drawings, log book, manuals and test records, and how to put one together." />
-    <meta property="og:url" content="https://compliar.co.uk/fire-alarm-om-manual/" />
+    <meta
+      property="og:title"
+      content="Fire Alarm O&amp;M Manual: What to Include and How to Do It — Compliar"
+    />
+    <meta
+      property="og:description"
+      content="What goes in a fire alarm operation and maintenance (O&amp;M) manual: certificates, zone plan, as-fitted drawings, log book, manuals and test records, and how to put one together."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/fire-alarm-om-manual/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Compliar — management software for electrical, fire protection and life safety, and security contractors" />
+    <meta
+      property="og:image:alt"
+      content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
+    />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Fire Alarm O&amp;M Manual: What to Include and How to Do It — Compliar" />
-    <meta name="twitter:description" content="What goes in a fire alarm operation and maintenance (O&amp;M) manual: certificates, zone plan, as-fitted drawings, log book, manuals and test records, and how to put one together." />
+    <meta
+      name="twitter:title"
+      content="Fire Alarm O&amp;M Manual: What to Include and How to Do It — Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="What goes in a fire alarm operation and maintenance (O&amp;M) manual: certificates, zone plan, as-fitted drawings, log book, manuals and test records, and how to put one together."
+    />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
     <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Compliar",
-        "item": "https://compliar.co.uk/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Resources",
-        "item": "https://compliar.co.uk/resources/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Fire alarm O&M manual",
-        "item": "https://compliar.co.uk/fire-alarm-om-manual/"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "How to do a fire alarm O&M manual",
-    "description": "What goes in a fire alarm operation and maintenance (O&M) manual: certificates, zone plan, as-fitted drawings, log book, manuals and test records, and how to put one together.",
-    "image": "https://compliar.co.uk/og.png",
-    "inLanguage": "en-GB",
-    "datePublished": "2026-11-02",
-    "dateModified": "2026-11-02",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://compliar.co.uk/fire-alarm-om-manual/"
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "Compliar",
-      "url": "https://compliar.co.uk/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Compliar",
-      "url": "https://compliar.co.uk/"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is a fire alarm O&M manual?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "An O&M manual is the set of documents handed over with a fire alarm system so the responsible person and the maintainer know what is installed, how it works and how it should be maintained."
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Compliar",
+              "item": "https://compliar.co.uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Resources",
+              "item": "https://compliar.co.uk/resources/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Fire alarm O&M manual",
+              "item": "https://compliar.co.uk/fire-alarm-om-manual/"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "How to do a fire alarm O&M manual",
+          "description": "What goes in a fire alarm operation and maintenance (O&M) manual: certificates, zone plan, as-fitted drawings, log book, manuals and test records, and how to put one together.",
+          "image": "https://compliar.co.uk/og.png",
+          "inLanguage": "en-GB",
+          "datePublished": "2026-11-02",
+          "dateModified": "2026-11-02",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://compliar.co.uk/fire-alarm-om-manual/"
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "Compliar",
+            "url": "https://compliar.co.uk/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Compliar",
+            "url": "https://compliar.co.uk/"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is a fire alarm O&M manual?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An O&M manual is the set of documents handed over with a fire alarm system so the responsible person and the maintainer know what is installed, how it works and how it should be maintained."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is an O&M manual a requirement of BS 5839-1?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "BS 5839-1 sets out the documents that should be provided at handover, such as certificates, drawings, the log book and user instructions. Whether you also need a formal O&M manual depends on the contract or specification, so check it."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What goes in a fire alarm O&M manual?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The certificates, zone plan, as-fitted drawings, cause and effect, test records, specification and variations, product manuals and user instructions, and the system log book. Many contracts ask for extras such as the battery calculation and a maintenance schedule."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who should get the O&M manual?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The customer or responsible person, who signs for the handover. Keep a copy yourself."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long should an O&M manual be?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "As long as it needs to be to run and maintain the system, and no longer. A small system might be a dozen pages. Site-specific pages matter more than a thick stack of manufacturer literature."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is an O&M manual a legal requirement?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It is part of good handover practice and the documentation expected under BS 5839-1. Check your contract and the standard for what is required on a given job."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can the O&M manual be digital?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, as long as the customer can open it, it is backed up, and a copy is available at or near the panel when it is needed."
+              }
+            }
+          ]
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Is an O&M manual a requirement of BS 5839-1?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "BS 5839-1 sets out the documents that should be provided at handover, such as certificates, drawings, the log book and user instructions. Whether you also need a formal O&M manual depends on the contract or specification, so check it."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What goes in a fire alarm O&M manual?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The certificates, zone plan, as-fitted drawings, cause and effect, test records, specification and variations, product manuals and user instructions, and the system log book. Many contracts ask for extras such as the battery calculation and a maintenance schedule."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who should get the O&M manual?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The customer or responsible person, who signs for the handover. Keep a copy yourself."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long should an O&M manual be?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "As long as it needs to be to run and maintain the system, and no longer. A small system might be a dozen pages. Site-specific pages matter more than a thick stack of manufacturer literature."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is an O&M manual a legal requirement?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It is part of good handover practice and the documentation expected under BS 5839-1. Check your contract and the standard for what is required on a given job."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can the O&M manual be digital?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, as long as the customer can open it, it is backed up, and a copy is available at or near the panel when it is needed."
-        }
-      }
-    ]
-  }
-]
+      ]
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -197,9 +226,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -221,7 +260,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -234,70 +275,241 @@
         </details>
       </div>
     </header>
-        <main id="main">
+    <main id="main">
       <section class="page-intro">
         <div class="wrap">
           <div class="crumbs">
-            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a><i>/</i>Fire alarm O&amp;M manual
+            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a
+            ><i>/</i>Fire alarm O&amp;M manual
           </div>
           <div class="eyebrow">Fire · How-to</div>
           <h1>How to do a fire alarm O&amp;M manual</h1>
-          <p>An O&amp;M manual is the pack you hand over so the customer can run and maintain the system. Here is what goes in it and how to put it together.</p>
+          <p>
+            An O&amp;M manual is the pack you hand over so the customer can run
+            and maintain the system. Here is what goes in it and how to put it
+            together.
+          </p>
         </div>
       </section>
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <p><strong>General guidance only. Check the standard itself and take advice from your own competent person for the job in front of you.</strong> Last reviewed 2 November 2026.</p>
-<h2>What an O&amp;M manual is</h2>
-<p>O&amp;M stands for operation and maintenance. For a fire alarm it is the set of documents you hand over with the system, so the responsible person and whoever services it later know what is installed, how it works and how it should be maintained. Many contracts ask for a formal O&amp;M manual. BS 5839-1 sets out the documents that should be provided at handover, and those form the core of it. Check your contract or specification for anything extra.</p>
-<h2>What to include</h2>
-<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Item</th><th>What it is for</th></tr></thead><tbody>
-<tr><th scope="row">Design, installation and commissioning certificates</th><td>Record that the system was designed, installed and commissioned to the standard, with the category and any variations stated.</td></tr>
-<tr><th scope="row">Acceptance and handover certificate</th><td>Signed by the customer or their representative when the system is handed over.</td></tr>
-<tr><th scope="row">Zone plan</th><td>The geographic plan fitted next to the panel and each repeater. A copy goes in the manual.</td></tr>
-<tr><th scope="row">As-fitted drawings</th><td>The final installation, including cable details. They should be complete and up to date.</td></tr>
-<tr><th scope="row">Cause and effect</th><td>What each device or input triggers, as agreed in the design.</td></tr>
-<tr><th scope="row">Cable and insulation resistance test records</th><td>Evidence of the tests carried out during installation.</td></tr>
-<tr><th scope="row">Specification and agreed variations</th><td>The designer's specification and a written list of variations from the standard.</td></tr>
-<tr><th scope="row">Product manuals and user instructions</th><td>For the panel, devices and power supply, so the customer can operate the system.</td></tr>
-<tr><th scope="row">System log book</th><td>Issued to the responsible person with the operating instructions.</td></tr>
-</tbody></table></div>
-<p>Many contracts also ask for the standby battery calculation, a maintenance schedule, contact and call-out details for the maintainer, and the commissioning engineer's programming records. Add what the specification asks for.</p>
-<h2>How to put one together</h2>
-<ol>
-  <li><strong>Check the contract first.</strong> Find out what the customer expects and in what format, on paper or as a PDF.</li>
-  <li><strong>Collect the records as you go.</strong> Certificates, test results, drawings and manuals are easier to gather during the job than at the end.</li>
-  <li><strong>Check the as-fitted drawings and zone plan.</strong> They must match what is on site, not what was on the design.</li>
-  <li><strong>Index it.</strong> A contents page, section tabs or bookmarks in a PDF, and a revision and issue date on the front.</li>
-  <li><strong>Issue it with the log book.</strong> Hand over the log book and operating instructions to the responsible person, and record who received them and when.</li>
-  <li><strong>Keep a copy.</strong> You will need it if there is a query, or when the system is extended.</li>
-  <li><strong>Update it after changes.</strong> Reissue the affected drawings, plans and certificates when the system is altered.</li>
-</ol>
-<h2>A contents list you can copy</h2>
-<ol>
-  <li>Cover sheet: site, address, system description, category, date of handover and the contractor's details.</li>
-  <li>Handover certificates: design, installation and commissioning, with any variations and the declaration of who signed.</li>
-  <li>Drawings: zone plan, as-fitted floor plans, cause-and-effect matrix, cable schedule and schematic.</li>
-  <li>Equipment schedule: panel, devices, power supplies and batteries, with model, quantity and location.</li>
-  <li>Operating instructions: how to silence, reset, isolate and test, and what to do on a fault, in plain English.</li>
-  <li>Manufacturer data: manuals and data sheets for the main components.</li>
-  <li>Maintenance schedule: servicing frequency and the tests to carry out at each visit.</li>
-  <li>Log book: the record of weekly tests, false alarms, faults, servicing and changes.</li>
-  <li>Contacts: who to call for service, out-of-hours support and monitoring, and the named responsible person.</li>
-</ol>
-<h2>Who gets a copy</h2>
-<p>The customer keeps the master copy, in a place the staff can find it. The servicing company needs a copy before its first visit, and a short summary of the system is useful beside the panel. A digital copy means everyone has the same version and replacements are easy.</p>
-<h2>Keeping it current</h2>
-<p>An O&amp;M manual is only useful if it matches the system on site. Every time the system is altered, update the equipment schedule and drawings and reissue the affected pages with a revision date. A manual that describes the building as it was at handover is worse than none, because people trust it.</p>
-<h2>Common mistakes</h2>
-<ul>
-  <li>Handing over a pile of manufacturer manuals with no site-specific information.</li>
-  <li>Leaving out the operating instructions the customer's own staff need.</li>
-  <li>No contact for out-of-hours faults.</li>
-  <li>Different versions of the drawings in different places.</li>
-</ul>
-<p>Related guides: <a href="/how-to-create-a-fire-alarm-zone-plan/">how to create a zone plan</a> and <a href="/fire-alarm-as-fitted-drawings/">how to do an as-fitted drawing</a>.</p>
+            <p>
+              <strong
+                >General guidance only. Check the standard itself and take
+                advice from your own competent person for the job in front of
+                you.</strong
+              >
+              Last reviewed 2 November 2026.
+            </p>
+            <h2>What an O&amp;M manual is</h2>
+            <p>
+              O&amp;M stands for operation and maintenance. For a fire alarm it
+              is the set of documents you hand over with the system, so the
+              responsible person and whoever services it later know what is
+              installed, how it works and how it should be maintained. Many
+              contracts ask for a formal O&amp;M manual. BS 5839-1 sets out the
+              documents that should be provided at handover, and those form the
+              core of it. Check your contract or specification for anything
+              extra.
+            </p>
+            <h2>What to include</h2>
+            <div class="tbl-wrap">
+              <table class="tbl">
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>What it is for</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      Design, installation and commissioning certificates
+                    </th>
+                    <td>
+                      Record that the system was designed, installed and
+                      commissioned to the standard, with the category and any
+                      variations stated.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Acceptance and handover certificate</th>
+                    <td>
+                      Signed by the customer or their representative when the
+                      system is handed over.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Zone plan</th>
+                    <td>
+                      The geographic plan fitted next to the panel and each
+                      repeater. A copy goes in the manual.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">As-fitted drawings</th>
+                    <td>
+                      The final installation, including cable details. They
+                      should be complete and up to date.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Cause and effect</th>
+                    <td>
+                      What each device or input triggers, as agreed in the
+                      design.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      Cable and insulation resistance test records
+                    </th>
+                    <td>
+                      Evidence of the tests carried out during installation.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Specification and agreed variations</th>
+                    <td>
+                      The designer's specification and a written list of
+                      variations from the standard.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Product manuals and user instructions</th>
+                    <td>
+                      For the panel, devices and power supply, so the customer
+                      can operate the system.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">System log book</th>
+                    <td>
+                      Issued to the responsible person with the operating
+                      instructions.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              Many contracts also ask for the standby battery calculation, a
+              maintenance schedule, contact and call-out details for the
+              maintainer, and the commissioning engineer's programming records.
+              Add what the specification asks for.
+            </p>
+            <h2>How to put one together</h2>
+            <ol>
+              <li>
+                <strong>Check the contract first.</strong> Find out what the
+                customer expects and in what format, on paper or as a PDF.
+              </li>
+              <li>
+                <strong>Collect the records as you go.</strong> Certificates,
+                test results, drawings and manuals are easier to gather during
+                the job than at the end.
+              </li>
+              <li>
+                <strong>Check the as-fitted drawings and zone plan.</strong>
+                They must match what is on site, not what was on the design.
+              </li>
+              <li>
+                <strong>Index it.</strong> A contents page, section tabs or
+                bookmarks in a PDF, and a revision and issue date on the front.
+              </li>
+              <li>
+                <strong>Issue it with the log book.</strong> Hand over the log
+                book and operating instructions to the responsible person, and
+                record who received them and when.
+              </li>
+              <li>
+                <strong>Keep a copy.</strong> You will need it if there is a
+                query, or when the system is extended.
+              </li>
+              <li>
+                <strong>Update it after changes.</strong> Reissue the affected
+                drawings, plans and certificates when the system is altered.
+              </li>
+            </ol>
+            <h2>A contents list you can copy</h2>
+            <ol>
+              <li>
+                Cover sheet: site, address, system description, category, date
+                of handover and the contractor's details.
+              </li>
+              <li>
+                Handover certificates: design, installation and commissioning,
+                with any variations and the declaration of who signed.
+              </li>
+              <li>
+                Drawings: zone plan, as-fitted floor plans, cause-and-effect
+                matrix, cable schedule and schematic.
+              </li>
+              <li>
+                Equipment schedule: panel, devices, power supplies and
+                batteries, with model, quantity and location.
+              </li>
+              <li>
+                Operating instructions: how to silence, reset, isolate and test,
+                and what to do on a fault, in plain English.
+              </li>
+              <li>
+                Manufacturer data: manuals and data sheets for the main
+                components.
+              </li>
+              <li>
+                Maintenance schedule: servicing frequency and the tests to carry
+                out at each visit.
+              </li>
+              <li>
+                Log book: the record of weekly tests, false alarms, faults,
+                servicing and changes.
+              </li>
+              <li>
+                Contacts: who to call for service, out-of-hours support and
+                monitoring, and the named responsible person.
+              </li>
+            </ol>
+            <h2>Who gets a copy</h2>
+            <p>
+              The customer keeps the master copy, in a place the staff can find
+              it. The servicing company needs a copy before its first visit, and
+              a short summary of the system is useful beside the panel. A
+              digital copy means everyone has the same version and replacements
+              are easy.
+            </p>
+            <h2>Keeping it current</h2>
+            <p>
+              An O&amp;M manual is only useful if it matches the system on site.
+              Every time the system is altered, update the equipment schedule
+              and drawings and reissue the affected pages with a revision date.
+              A manual that describes the building as it was at handover is
+              worse than none, because people trust it.
+            </p>
+            <h2>Common mistakes</h2>
+            <ul>
+              <li>
+                Handing over a pile of manufacturer manuals with no
+                site-specific information.
+              </li>
+              <li>
+                Leaving out the operating instructions the customer's own staff
+                need.
+              </li>
+              <li>No contact for out-of-hours faults.</li>
+              <li>Different versions of the drawings in different places.</li>
+            </ul>
+            <p>
+              Related guides:
+              <a href="/how-to-create-a-fire-alarm-zone-plan/"
+                >how to create a zone plan</a
+              >
+              and
+              <a href="/fire-alarm-as-fitted-drawings/"
+                >how to do an as-fitted drawing</a
+              >.
+            </p>
           </div>
         </div>
       </section>
@@ -310,31 +522,63 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary>What is a fire alarm O&amp;M manual?</summary>
-              <p>An O&amp;M manual is the set of documents handed over with a fire alarm system so the responsible person and the maintainer know what is installed, how it works and how it should be maintained.</p>
+              <p>
+                An O&amp;M manual is the set of documents handed over with a
+                fire alarm system so the responsible person and the maintainer
+                know what is installed, how it works and how it should be
+                maintained.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>Is an O&amp;M manual a requirement of BS 5839-1?</summary>
-              <p>BS 5839-1 sets out the documents that should be provided at handover, such as certificates, drawings, the log book and user instructions. Whether you also need a formal O&amp;M manual depends on the contract or specification, so check it.</p>
+              <summary>
+                Is an O&amp;M manual a requirement of BS 5839-1?
+              </summary>
+              <p>
+                BS 5839-1 sets out the documents that should be provided at
+                handover, such as certificates, drawings, the log book and user
+                instructions. Whether you also need a formal O&amp;M manual
+                depends on the contract or specification, so check it.
+              </p>
             </details>
             <details class="faq-item">
               <summary>What goes in a fire alarm O&amp;M manual?</summary>
-              <p>The certificates, zone plan, as-fitted drawings, cause and effect, test records, specification and variations, product manuals and user instructions, and the system log book. Many contracts ask for extras such as the battery calculation and a maintenance schedule.</p>
+              <p>
+                The certificates, zone plan, as-fitted drawings, cause and
+                effect, test records, specification and variations, product
+                manuals and user instructions, and the system log book. Many
+                contracts ask for extras such as the battery calculation and a
+                maintenance schedule.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Who should get the O&amp;M manual?</summary>
-              <p>The customer or responsible person, who signs for the handover. Keep a copy yourself.</p>
+              <p>
+                The customer or responsible person, who signs for the handover.
+                Keep a copy yourself.
+              </p>
             </details>
             <details class="faq-item">
               <summary>How long should an O&M manual be?</summary>
-              <p>As long as it needs to be to run and maintain the system, and no longer. A small system might be a dozen pages. Site-specific pages matter more than a thick stack of manufacturer literature.</p>
+              <p>
+                As long as it needs to be to run and maintain the system, and no
+                longer. A small system might be a dozen pages. Site-specific
+                pages matter more than a thick stack of manufacturer literature.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Is an O&M manual a legal requirement?</summary>
-              <p>It is part of good handover practice and the documentation expected under BS 5839-1. Check your contract and the standard for what is required on a given job.</p>
+              <p>
+                It is part of good handover practice and the documentation
+                expected under BS 5839-1. Check your contract and the standard
+                for what is required on a given job.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Can the O&M manual be digital?</summary>
-              <p>Yes, as long as the customer can open it, it is backed up, and a copy is available at or near the panel when it is needed.</p>
+              <p>
+                Yes, as long as the customer can open it, it is backed up, and a
+                copy is available at or near the panel when it is needed.
+              </p>
             </details>
           </div>
         </div>
@@ -342,12 +586,24 @@
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">In the app</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              In the app
+            </div>
             <h2>How Compliar helps</h2>
-<p>Compliar has certificate templates for the design, installation, commissioning, handover and servicing stages of a fire alarm, referenced to BS 5839-1:2025, with branded PDFs sent to the customer when you finish. The digital fire log book and the drawings sit on the same site record.</p>
+            <p>
+              Compliar has certificate templates for the design, installation,
+              commissioning, handover and servicing stages of a fire alarm,
+              referenced to BS 5839-1:2025, with branded PDFs sent to the
+              customer when you finish. The digital fire log book and the
+              drawings sit on the same site record.
+            </p>
             <div class="more-links">
-              <a href="/how-to-create-a-fire-alarm-zone-plan/">How to create a zone plan</a>
-              <a href="/fire-alarm-as-fitted-drawings/">Fire alarm as-fitted drawings</a>
+              <a href="/how-to-create-a-fire-alarm-zone-plan/"
+                >How to create a zone plan</a
+              >
+              <a href="/fire-alarm-as-fitted-drawings/"
+                >Fire alarm as-fitted drawings</a
+              >
               <a href="/fire-log-book-software/">Fire log book software</a>
             </div>
           </div>
@@ -356,9 +612,19 @@
       <section class="final-cta band">
         <div class="wrap">
           <h2>One app. Every job, start to finish.</h2>
-          <p>Book a demo and Keiran will walk through your own jobs. Early adopters lock their price for 3 years, with no contract.</p>
+          <p>
+            Book a demo and Keiran will walk through your own jobs. Early
+            adopters lock their price for 3 years, with no contract.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a><a class="btn btn-ghost-on-navy" href="/getting-started/">How getting started works</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            ><a class="btn btn-ghost-on-navy" href="/getting-started/"
+              >How getting started works</a
+            >
           </div>
         </div>
       </section>
@@ -375,7 +641,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -389,34 +656,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -426,10 +746,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -437,11 +769,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

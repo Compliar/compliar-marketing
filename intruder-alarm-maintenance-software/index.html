@@ -6,57 +6,84 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
-    <title>Intruder Alarm Maintenance Software and Certificates | Compliar</title>
-    <meta name="description" content="Intruder alarm maintenance certificates with a panel check, commissioning and installation records, an offline field app and defects to quotes. Book a demo." />
-    <link rel="canonical" href="https://compliar.co.uk/intruder-alarm-maintenance-software/" />
+    <title>
+      Intruder Alarm Maintenance Software and Certificates | Compliar
+    </title>
+    <meta
+      name="description"
+      content="Intruder alarm maintenance certificates with a panel check, commissioning and installation records, an offline field app and defects to quotes. Book a demo."
+    />
+    <link
+      rel="canonical"
+      href="https://compliar.co.uk/intruder-alarm-maintenance-software/"
+    />
     <meta name="theme-color" content="#141D2A" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="Intruder Alarm Maintenance Software and Certificates | Compliar" />
-    <meta property="og:description" content="Intruder alarm maintenance certificates with a panel check, commissioning and installation records, an offline field app and defects to quotes. Book a demo." />
-    <meta property="og:url" content="https://compliar.co.uk/intruder-alarm-maintenance-software/" />
+    <meta
+      property="og:title"
+      content="Intruder Alarm Maintenance Software and Certificates | Compliar"
+    />
+    <meta
+      property="og:description"
+      content="Intruder alarm maintenance certificates with a panel check, commissioning and installation records, an offline field app and defects to quotes. Book a demo."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/intruder-alarm-maintenance-software/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Compliar — management software for electrical, fire protection and life safety, and security contractors" />
+    <meta
+      property="og:image:alt"
+      content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
     <link
@@ -75,76 +102,76 @@
     <script src="/cookie-consent.js" defer></script>
     <script src="/demo-form.js" defer></script>
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What does the intruder alarm maintenance certificate record?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The visit, the panel check readings with their limits, the standby battery check, the zone and device tests and any defects, ready to sign and send."
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does the intruder alarm maintenance certificate record?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The visit, the panel check readings with their limits, the standby battery check, the zone and device tests and any defects, ready to sign and send."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it work without a signal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The field app keeps today’s work on the phone and queues changes until the phone is back online."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the commissioning record an inspectorate certificate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. It is your own record of the commissioning and says so. Compliar is not affiliated with any standards body or scheme, and the engineer remains responsible for the work."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How often should an intruder alarm be maintained?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The usual pattern is two visits a year for a monitored system and one for an audible-only system, with PD 6662 allowing part of the routine to be done remotely for some systems. Check the edition your contract names and your scheme document."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I put the ARC on test from the app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The site's monitoring and ARC details are held against the site and shown on the job, so the engineer has the reference and number to hand. Note the on-test and off-test times on the visit; Compliar does not connect to the ARC itself."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the certificate show the battery limits?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The panel check shows the charge voltage limits beside each reading, so an out-of-range value is visible on the phone, and the standby battery check sits on the same certificate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can engineers see the site's history on the phone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The job shows the site's open defects and previous visits, so the engineer knows what was found last time before they start."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does it cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Lite is £35 per user per month plus VAT, or £350 plus VAT paid yearly, which is about £1 a day. Office is £65 and Design is £95. There is no contract and no per-certificate fee."
+            }
+          }
+        ]
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Does it work without a signal?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The field app keeps today’s work on the phone and queues changes until the phone is back online."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is the commissioning record an inspectorate certificate?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. It is your own record of the commissioning and says so. Compliar is not affiliated with any standards body or scheme, and the engineer remains responsible for the work."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How often should an intruder alarm be maintained?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The usual pattern is two visits a year for a monitored system and one for an audible-only system, with PD 6662 allowing part of the routine to be done remotely for some systems. Check the edition your contract names and your scheme document."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I put the ARC on test from the app?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The site's monitoring and ARC details are held against the site and shown on the job, so the engineer has the reference and number to hand. Note the on-test and off-test times on the visit; Compliar does not connect to the ARC itself."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does the certificate show the battery limits?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The panel check shows the charge voltage limits beside each reading, so an out-of-range value is visible on the phone, and the standby battery check sits on the same certificate."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can engineers see the site's history on the phone?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The job shows the site's open defects and previous visits, so the engineer knows what was found last time before they start."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What does it cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Lite is £35 per user per month plus VAT, or £350 plus VAT paid yearly, which is about £1 a day. Office is £65 and Design is £95. There is no contract and no per-certificate fee."
-      }
-    }
-  ]
-}
     </script>
   </head>
   <body class="home-page">
@@ -153,9 +180,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -177,7 +214,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -196,17 +235,38 @@
         <div class="wrap v2-hero-grid">
           <div>
             <span class="v2-pill">Intruder alarm · maintenance</span>
-            <h1 id="hero-title">Intruder alarm maintenance software <span>for contractors and their engineers.</span></h1>
-            <p class="v2-sub">Record the planned maintenance visit with its panel check, issue the certificate, and turn defects into quotes, from the engineer’s phone, offline.</p>
+            <h1 id="hero-title">
+              Intruder alarm maintenance software
+              <span>for contractors and their engineers.</span>
+            </h1>
+            <p class="v2-sub">
+              Record the planned maintenance visit with its panel check, issue
+              the certificate, and turn defects into quotes, from the engineer’s
+              phone, offline.
+            </p>
             <div class="v2-ctas">
               <a class="btn btn-primary" href="#contact-form">Book a demo</a>
             </div>
-            <p class="v2-reassure">From £35 per user per month, plus VAT · Early adopters lock their price for 3 years · No contract</p>
+            <p class="v2-reassure">
+              From £35 per user per month, plus VAT · Early adopters lock their
+              price for 3 years · No contract
+            </p>
           </div>
           <div class="hero-showcase">
             <figure class="device-frame device-desktop">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>app.compliar.co.uk</span><span class="device-badge">SAMPLE DATA</span></div>
-              <a class="shot" href="/assets/screens/desk-calendar.webp"><img src="/assets/screens/desk-calendar.webp" width="1600" height="1000" alt="Compliar calendar week view on sample data with engineers in rows and a Jobs to plan list on the right" decoding="async" fetchpriority="high" /></a>
+              <div class="device-bar" aria-hidden="true">
+                <i></i><i></i><i></i><span>app.compliar.co.uk</span
+                ><span class="device-badge">SAMPLE DATA</span>
+              </div>
+              <a class="shot" href="/assets/screens/desk-calendar.webp"
+                ><img
+                  src="/assets/screens/desk-calendar.webp"
+                  width="1600"
+                  height="1000"
+                  alt="Compliar calendar week view on sample data with engineers in rows and a Jobs to plan list on the right"
+                  decoding="async"
+                  fetchpriority="high"
+              /></a>
             </figure>
           </div>
         </div>
@@ -217,9 +277,16 @@
           <div class="price-strip">
             <div>
               <h2 id="price-h">From £35 per user per month, plus VAT</h2>
-              <p>No per-certificate fees and no contract. Plans, the site log book, stickers and onboarding are all on the pricing page.</p>
+              <p>
+                No per-certificate fees and no contract. Plans, the site log
+                book, stickers and onboarding are all on the pricing page.
+              </p>
             </div>
-            <div><a class="btn btn-ghost-on-cream" href="/pricing/">See pricing →</a></div>
+            <div>
+              <a class="btn btn-ghost-on-cream" href="/pricing/"
+                >See pricing →</a
+              >
+            </div>
           </div>
         </div>
       </section>
@@ -228,39 +295,106 @@
         <div class="wrap">
           <div class="v2-head">
             <span class="v2-kicker">What you get</span>
-            <h2 class="v2-h2" id="proof-h">From the maintenance plan to the certificate and the quote.</h2>
+            <h2 class="v2-h2" id="proof-h">
+              From the maintenance plan to the certificate and the quote.
+            </h2>
           </div>
           <div class="lp-proof">
             <div>
               <h3>Planned maintenance visits with a panel check</h3>
-              <p>The intruder alarm planned preventative maintenance certificate includes a panel check: battery and charger readings, with the limits shown beside each reading, and a standby battery check. It is built around the intruder alarm standards, PD 6662 and BS EN 50131.</p><p>The engineer records the visit on site, collects the signature and emails the PDF to the customer.</p><ul><li><a href="/intruder-alarm-grades-maintenance-guide/">Intruder alarm grades and maintenance guide</a></li><li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li></ul>
+              <p>
+                The intruder alarm planned preventative maintenance certificate
+                includes a panel check: battery and charger readings, with the
+                limits shown beside each reading, and a standby battery check.
+                It is built around the intruder alarm standards, PD 6662 and BS
+                EN 50131.
+              </p>
+              <p>
+                The engineer records the visit on site, collects the signature
+                and emails the PDF to the customer.
+              </p>
+              <ul>
+                <li>
+                  <a href="/intruder-alarm-grades-maintenance-guide/"
+                    >Intruder alarm grades and maintenance guide</a
+                  >
+                </li>
+                <li>
+                  <a href="/intruder-alarm-battery-calculator/"
+                    >Intruder alarm battery calculator</a
+                  >
+                </li>
+              </ul>
             </div>
             <figure class="lp-proof-fig lp-phone">
-              <a class="shot" href="/assets/screens/field-job-work.webp"><img src="/assets/screens/field-job-work.webp" width="480" height="1039" loading="lazy" alt="The Work tab of a job in the Compliar field app on sample data, with a five-step visit tracker and an open defect on the site" decoding="async" /></a>
-              <figcaption>Job Work tab with visit step tracker, sample data</figcaption>
+              <a class="shot" href="/assets/screens/field-job-work.webp"
+                ><img
+                  src="/assets/screens/field-job-work.webp"
+                  width="480"
+                  height="1039"
+                  loading="lazy"
+                  alt="The Work tab of a job in the Compliar field app on sample data, with a five-step visit tracker and an open defect on the site"
+                  decoding="async"
+              /></a>
+              <figcaption>
+                Job Work tab with visit step tracker, sample data
+              </figcaption>
             </figure>
           </div>
           <div class="lp-proof lp-flip">
             <div>
               <h3>Commissioning and installation records too</h3>
-              <p>There are intruder alarm commissioning and installation completion templates, plus CCTV, access control and alarm signalling. The commissioning record says plainly that it is not a certificate issued under an inspectorate scheme, so it never looks like one.</p>
+              <p>
+                There are intruder alarm commissioning and installation
+                completion templates, plus CCTV, access control and alarm
+                signalling. The commissioning record says plainly that it is not
+                a certificate issued under an inspectorate scheme, so it never
+                looks like one.
+              </p>
             </div>
             <figure class="lp-proof-fig">
-              <a class="shot" href="/assets/screens/desk-calendar.webp"><img src="/assets/screens/desk-calendar.webp" width="800" height="500" loading="lazy" alt="Compliar calendar week view on sample data with engineers in rows and a Jobs to plan list on the right" decoding="async" /></a>
-              <figcaption>Week calendar and Jobs to plan list, sample data</figcaption>
+              <a class="shot" href="/assets/screens/desk-calendar.webp"
+                ><img
+                  src="/assets/screens/desk-calendar.webp"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  alt="Compliar calendar week view on sample data with engineers in rows and a Jobs to plan list on the right"
+                  decoding="async"
+              /></a>
+              <figcaption>
+                Week calendar and Jobs to plan list, sample data
+              </figcaption>
             </figure>
           </div>
           <div class="lp-proof">
             <div>
               <h3>Defects become quotes</h3>
-              <p>Defects found on site are listed on the job with a Needs quoting status, go into a defect quote, and the customer can approve the quote from a link in the email.</p>
+              <p>
+                Defects found on site are listed on the job with a Needs quoting
+                status, go into a defect quote, and the customer can approve the
+                quote from a link in the email.
+              </p>
             </div>
             <figure class="lp-proof-fig">
-              <a class="shot" href="/assets/screens/desk-quotes-tenders.webp"><img src="/assets/screens/desk-quotes-tenders.webp" width="1600" height="653" loading="lazy" alt="Compliar Quotes list on sample data with status and type filters" decoding="async" /></a>
+              <a class="shot" href="/assets/screens/desk-quotes-tenders.webp"
+                ><img
+                  src="/assets/screens/desk-quotes-tenders.webp"
+                  width="1600"
+                  height="653"
+                  loading="lazy"
+                  alt="Compliar Quotes list on sample data with status and type filters"
+                  decoding="async"
+              /></a>
               <figcaption>Quotes and Tenders, sample data</figcaption>
             </figure>
           </div>
-          <p class="lp-note">Screens show sample data. Compliar produces records; the engineer and the scheme remain responsible for the work and for the certificates issued. Compliar is not affiliated with any standards body or scheme.</p>
+          <p class="lp-note">
+            Screens show sample data. Compliar produces records; the engineer
+            and the scheme remain responsible for the work and for the
+            certificates issued. Compliar is not affiliated with any standards
+            body or scheme.
+          </p>
         </div>
       </section>
 
@@ -268,33 +402,126 @@
         <div class="wrap">
           <div class="v2-head">
             <span class="v2-kicker">What to check</span>
-            <h2 class="v2-h2" id="depth-h">A maintenance visit, in the order engineers do it</h2>
+            <h2 class="v2-h2" id="depth-h">
+              A maintenance visit, in the order engineers do it
+            </h2>
           </div>
           <div class="prose">
-            <p><strong>General guidance only.</strong> PD 6662 and the BS EN 50131 series set the requirements; check the edition your contract names and your scheme document. Last reviewed 3 November 2026.</p>
+            <p>
+              <strong>General guidance only.</strong> PD 6662 and the BS EN
+              50131 series set the requirements; check the edition your contract
+              names and your scheme document. Last reviewed 3 November 2026.
+            </p>
             <h3>How often</h3>
-            <p>The usual pattern for a monitored intruder and hold-up alarm system is two maintenance visits a year, and for an audible-only system one. PD 6662 allows part of that routine to be done remotely for some systems, and your contract and scheme may say more. Compliar's maintenance plan holds the frequency per site, generates the routine jobs ahead of time and keeps the due date fixed, so a visit done early or late does not drift the cycle.</p>
+            <p>
+              The usual pattern for a monitored intruder and hold-up alarm
+              system is two maintenance visits a year, and for an audible-only
+              system one. PD 6662 allows part of that routine to be done
+              remotely for some systems, and your contract and scheme may say
+              more. Compliar's maintenance plan holds the frequency per site,
+              generates the routine jobs ahead of time and keeps the due date
+              fixed, so a visit done early or late does not drift the cycle.
+            </p>
             <h3>What the visit covers</h3>
             <ul>
-              <li><strong>Panel and power.</strong> Mains present, charger output, standby battery voltage and condition, and the battery's age against its replacement date. The certificate shows the limits beside each reading, so an out-of-range value is obvious on the phone, not back at the office.</li>
-              <li><strong>Standby duration.</strong> The standby time a grade needs depends on the grade and on whether a mains failure is signalled. The <a href="/intruder-alarm-battery-calculator/">intruder alarm battery calculator</a> works the capacity through for Grade 2 and Grade 3.</li>
-              <li><strong>Every detector and contact.</strong> Walk test each zone, check tamper, and confirm masking and anti-masking where the grade requires it. Record a result per device so that a detector that was never walked is shown as not tested, not as a pass.</li>
-              <li><strong>Hold-up devices.</strong> Operate each one and confirm the signal, with the ARC on test.</li>
-              <li><strong>Signalling.</strong> Fire and fault signals both reach the alarm receiving centre; the path fault is reported; the ARC's reference and the keyholders on file are still right.</li>
-              <li><strong>Sounders and strobes.</strong> Internal and external devices operate, and the external sounder's own battery is checked where fitted.</li>
-              <li><strong>Settings and users.</strong> Time and date, user codes still appropriate, no engineer defaults left in, event log reviewed for repeated false activations.</li>
+              <li>
+                <strong>Panel and power.</strong> Mains present, charger output,
+                standby battery voltage and condition, and the battery's age
+                against its replacement date. The certificate shows the limits
+                beside each reading, so an out-of-range value is obvious on the
+                phone, not back at the office.
+              </li>
+              <li>
+                <strong>Standby duration.</strong> The standby time a grade
+                needs depends on the grade and on whether a mains failure is
+                signalled. The
+                <a href="/intruder-alarm-battery-calculator/"
+                  >intruder alarm battery calculator</a
+                >
+                works the capacity through for Grade 2 and Grade 3.
+              </li>
+              <li>
+                <strong>Every detector and contact.</strong> Walk test each
+                zone, check tamper, and confirm masking and anti-masking where
+                the grade requires it. Record a result per device so that a
+                detector that was never walked is shown as not tested, not as a
+                pass.
+              </li>
+              <li>
+                <strong>Hold-up devices.</strong> Operate each one and confirm
+                the signal, with the ARC on test.
+              </li>
+              <li>
+                <strong>Signalling.</strong> Fire and fault signals both reach
+                the alarm receiving centre; the path fault is reported; the
+                ARC's reference and the keyholders on file are still right.
+              </li>
+              <li>
+                <strong>Sounders and strobes.</strong> Internal and external
+                devices operate, and the external sounder's own battery is
+                checked where fitted.
+              </li>
+              <li>
+                <strong>Settings and users.</strong> Time and date, user codes
+                still appropriate, no engineer defaults left in, event log
+                reviewed for repeated false activations.
+              </li>
             </ul>
             <h3>Worked example</h3>
-            <p>On the Harbourview sample site a Grade 3 system has 14 detectors across six zones, a hold-up button at reception and a dual-path signalling unit. On the six-monthly visit the engineer walks each zone from the phone, marking Pass or Fail per device; the panel readings go in with the limits shown; the ARC is put on test using the monitoring details held against the site; the hold-up button is operated and the signal confirmed. A PIR in the stock room fails its walk test twice. It is marked Fail with a photo, becomes a defect with a Needs quoting status, and the office raises a defect quote that evening. The certificate goes to the customer as a PDF from the job, with the two open defects shown.</p>
+            <p>
+              On the Harbourview sample site a Grade 3 system has 14 detectors
+              across six zones, a hold-up button at reception and a dual-path
+              signalling unit. On the six-monthly visit the engineer walks each
+              zone from the phone, marking Pass or Fail per device; the panel
+              readings go in with the limits shown; the ARC is put on test using
+              the monitoring details held against the site; the hold-up button
+              is operated and the signal confirmed. A PIR in the stock room
+              fails its walk test twice. It is marked Fail with a photo, becomes
+              a defect with a Needs quoting status, and the office raises a
+              defect quote that evening. The certificate goes to the customer as
+              a PDF from the job, with the two open defects shown.
+            </p>
             <h3>Common mistakes</h3>
             <ul>
-              <li><strong>Copying last visit's readings.</strong> Battery voltage drifts; the point of the record is the trend.</li>
-              <li><strong>Walk-testing from the panel log only.</strong> A detector that reports to the panel can still be misaligned or masked.</li>
-              <li><strong>Forgetting to take the system off test.</strong> Record the on and off times on the visit.</li>
-              <li><strong>Leaving the defect in the notes.</strong> A fault written in free text never becomes a quote. Raise it as a defect so it is tracked to resolved.</li>
-              <li><strong>Certificates that look like scheme certificates.</strong> Compliar's intruder records say plainly that they are your own record and not a certificate issued under an inspectorate scheme.</li>
+              <li>
+                <strong>Copying last visit's readings.</strong> Battery voltage
+                drifts; the point of the record is the trend.
+              </li>
+              <li>
+                <strong>Walk-testing from the panel log only.</strong> A
+                detector that reports to the panel can still be misaligned or
+                masked.
+              </li>
+              <li>
+                <strong>Forgetting to take the system off test.</strong> Record
+                the on and off times on the visit.
+              </li>
+              <li>
+                <strong>Leaving the defect in the notes.</strong> A fault
+                written in free text never becomes a quote. Raise it as a defect
+                so it is tracked to resolved.
+              </li>
+              <li>
+                <strong
+                  >Certificates that look like scheme certificates.</strong
+                >
+                Compliar's intruder records say plainly that they are your own
+                record and not a certificate issued under an inspectorate
+                scheme.
+              </li>
             </ul>
-            <p>See also the <a href="/intruder-alarm-grades-maintenance-guide/">grades and maintenance guide</a>, <a href="/what-is-a-grade-3-intruder-alarm/">what a Grade 3 system is</a>, and the <a href="/nsi-ssaib-audit-records-guide/">records a scheme audit asks for</a>.</p>
+            <p>
+              See also the
+              <a href="/intruder-alarm-grades-maintenance-guide/"
+                >grades and maintenance guide</a
+              >,
+              <a href="/what-is-a-grade-3-intruder-alarm/"
+                >what a Grade 3 system is</a
+              >, and the
+              <a href="/nsi-ssaib-audit-records-guide/"
+                >records a scheme audit asks for</a
+              >.
+            </p>
           </div>
         </div>
       </section>
@@ -307,36 +534,77 @@
           </div>
           <div class="faq-list">
             <details class="faq-item">
-              <summary>What does the intruder alarm maintenance certificate record?</summary>
-              <p>The visit, the panel check readings with their limits, the standby battery check, the zone and device tests and any defects, ready to sign and send.</p>
+              <summary>
+                What does the intruder alarm maintenance certificate record?
+              </summary>
+              <p>
+                The visit, the panel check readings with their limits, the
+                standby battery check, the zone and device tests and any
+                defects, ready to sign and send.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Does it work without a signal?</summary>
-              <p>Yes. The field app keeps today’s work on the phone and queues changes until the phone is back online.</p>
+              <p>
+                Yes. The field app keeps today’s work on the phone and queues
+                changes until the phone is back online.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>Is the commissioning record an inspectorate certificate?</summary>
-              <p>No. It is your own record of the commissioning and says so. Compliar is not affiliated with any standards body or scheme, and the engineer remains responsible for the work.</p>
+              <summary>
+                Is the commissioning record an inspectorate certificate?
+              </summary>
+              <p>
+                No. It is your own record of the commissioning and says so.
+                Compliar is not affiliated with any standards body or scheme,
+                and the engineer remains responsible for the work.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>How often should an intruder alarm be maintained?</summary>
-              <p>The usual pattern is two visits a year for a monitored system and one for an audible-only system, with PD 6662 allowing part of the routine to be done remotely for some systems. Check the edition your contract names and your scheme document.</p>
+              <summary>
+                How often should an intruder alarm be maintained?
+              </summary>
+              <p>
+                The usual pattern is two visits a year for a monitored system
+                and one for an audible-only system, with PD 6662 allowing part
+                of the routine to be done remotely for some systems. Check the
+                edition your contract names and your scheme document.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Can I put the ARC on test from the app?</summary>
-              <p>The site&#x27;s monitoring and ARC details are held against the site and shown on the job, so the engineer has the reference and number to hand. Note the on-test and off-test times on the visit; Compliar does not connect to the ARC itself.</p>
+              <p>
+                The site&#x27;s monitoring and ARC details are held against the
+                site and shown on the job, so the engineer has the reference and
+                number to hand. Note the on-test and off-test times on the
+                visit; Compliar does not connect to the ARC itself.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Does the certificate show the battery limits?</summary>
-              <p>Yes. The panel check shows the charge voltage limits beside each reading, so an out-of-range value is visible on the phone, and the standby battery check sits on the same certificate.</p>
+              <p>
+                Yes. The panel check shows the charge voltage limits beside each
+                reading, so an out-of-range value is visible on the phone, and
+                the standby battery check sits on the same certificate.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>Can engineers see the site&#x27;s history on the phone?</summary>
-              <p>Yes. The job shows the site&#x27;s open defects and previous visits, so the engineer knows what was found last time before they start.</p>
+              <summary>
+                Can engineers see the site&#x27;s history on the phone?
+              </summary>
+              <p>
+                Yes. The job shows the site&#x27;s open defects and previous
+                visits, so the engineer knows what was found last time before
+                they start.
+              </p>
             </details>
             <details class="faq-item">
               <summary>What does it cost?</summary>
-              <p>Lite is £35 per user per month plus VAT, or £350 plus VAT paid yearly, which is about £1 a day. Office is £65 and Design is £95. There is no contract and no per-certificate fee.</p>
+              <p>
+                Lite is £35 per user per month plus VAT, or £350 plus VAT paid
+                yearly, which is about £1 a day. Office is £65 and Design is
+                £95. There is no contract and no per-certificate fee.
+              </p>
             </details>
           </div>
         </div>
@@ -344,19 +612,45 @@
 
       <section class="v2-section" aria-labelledby="more-h">
         <div class="wrap">
-          <h2 class="v2-h2" id="more-h" style="font-size:1.4rem">More from Compliar</h2>
-          <ul class="lp-more"><li><a href="/">Compliar home</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/features/">Features</a></li><li><a href="/intruder-alarm-grades-maintenance-guide/">Intruder alarm grades guide</a></li><li><a href="/intruder-alarm-battery-calculator/">Battery calculator</a></li><li><a href="/cctv-commissioning-maintenance-software/">CCTV software</a></li></ul>
+          <h2 class="v2-h2" id="more-h" style="font-size: 1.4rem">
+            More from Compliar
+          </h2>
+          <ul class="lp-more">
+            <li><a href="/">Compliar home</a></li>
+            <li><a href="/pricing/">Pricing</a></li>
+            <li><a href="/features/">Features</a></li>
+            <li>
+              <a href="/intruder-alarm-grades-maintenance-guide/"
+                >Intruder alarm grades guide</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/"
+                >CCTV software</a
+              >
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="v2-section v2-dark v2-demo-section" id="contact-form" aria-labelledby="demo-title">
+      <section
+        class="v2-section v2-dark v2-demo-section"
+        id="contact-form"
+        aria-labelledby="demo-title"
+      >
         <div id="demo" aria-hidden="true"></div>
         <div class="wrap">
           <div class="v2-head">
             <span class="v2-kicker">Book a demo</span>
             <h2 class="v2-h2" id="demo-title">See it on your own sites.</h2>
             <p class="v2-lead">
-              15 minutes with Keiran, on your own sites. Fill in the form and we’ll get back to you as soon as possible.
+              15 minutes with Keiran, on your own sites. Fill in the form and
+              we’ll get back to you as soon as possible.
             </p>
           </div>
           <div class="demo-wrap" data-demo-form></div>
@@ -376,7 +670,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -390,34 +685,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -427,10 +775,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -438,11 +798,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-    <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
   </body>
 </html>

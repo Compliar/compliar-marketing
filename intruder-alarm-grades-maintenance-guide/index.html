@@ -6,54 +6,75 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>Intruder Alarm Grades 1 to 4 and Maintenance — Compliar</title>
-    <meta name="description" content="Intruder alarm grades 1 to 4 under BS EN 50131 and PD 6662 explained, with what police response involves and how often maintenance visits are expected." />
-    <link rel="canonical" href="https://compliar.co.uk/intruder-alarm-grades-maintenance-guide/" />
+    <meta
+      name="description"
+      content="Intruder alarm grades 1 to 4 under BS EN 50131 and PD 6662 explained, with what police response involves and how often maintenance visits are expected."
+    />
+    <link
+      rel="canonical"
+      href="https://compliar.co.uk/intruder-alarm-grades-maintenance-guide/"
+    />
     <meta name="theme-color" content="#1B2430" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="Intruder Alarm Grades 1 to 4 and Maintenance — Compliar" />
-    <meta property="og:description" content="Intruder alarm grades 1 to 4 under BS EN 50131 and PD 6662 explained, with what police response involves and how often maintenance visits are expected." />
-    <meta property="og:url" content="https://compliar.co.uk/intruder-alarm-grades-maintenance-guide/" />
+    <meta
+      property="og:title"
+      content="Intruder Alarm Grades 1 to 4 and Maintenance — Compliar"
+    />
+    <meta
+      property="og:description"
+      content="Intruder alarm grades 1 to 4 under BS EN 50131 and PD 6662 explained, with what police response involves and how often maintenance visits are expected."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/intruder-alarm-grades-maintenance-guide/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -62,8 +83,14 @@
       content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Intruder Alarm Grades 1 to 4 and Maintenance — Compliar" />
-    <meta name="twitter:description" content="Intruder alarm grades 1 to 4 under BS EN 50131 and PD 6662 explained, with what police response involves and how often maintenance visits are expected." />
+    <meta
+      name="twitter:title"
+      content="Intruder Alarm Grades 1 to 4 and Maintenance — Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="Intruder alarm grades 1 to 4 under BS EN 50131 and PD 6662 explained, with what police response involves and how often maintenance visits are expected."
+    />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
     <link
       rel="icon"
@@ -176,9 +203,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -200,7 +237,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -213,47 +252,177 @@
         </details>
       </div>
     </header>
-        <main id="main">
+    <main id="main">
       <section class="page-intro">
         <div class="wrap">
           <div class="crumbs">
-            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a><i>/</i>Intruder alarm grades and maintenance
+            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a
+            ><i>/</i>Intruder alarm grades and maintenance
           </div>
           <div class="eyebrow">Security · Guide</div>
           <h1>Intruder alarm grades and maintenance</h1>
-          <p>What grades 1 to 4 mean under BS EN 50131 and PD 6662, what police response asks of the system and its maintainer, and how often an intruder alarm should be visited.</p>
+          <p>
+            What grades 1 to 4 mean under BS EN 50131 and PD 6662, what police
+            response asks of the system and its maintainer, and how often an
+            intruder alarm should be visited.
+          </p>
         </div>
       </section>
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <p><strong>General guidance only. Check the standard itself and take advice from your own competent person for the job in front of you.</strong> Last reviewed 22 October 2026.</p>
-<h2>What a grade is</h2>
-<p>The BS EN 50131 series grades an intruder alarm system by the kind of intruder it is designed to resist. PD 6662 explains how those European standards are applied in the UK. The higher the grade, the more skill, knowledge and equipment the system assumes an intruder may have.</p>
-<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Grade</th><th>Intruder assumed</th><th>Typical use</th></tr></thead><tbody><tr><th scope="row">1</th><td>Little knowledge of the system and a limited range of tools.</td><td>Low-risk premises and some homes.</td></tr><tr><th scope="row">2</th><td>Some knowledge, using general tools and some specialist equipment.</td><td>Many homes and smaller commercial premises.</td></tr><tr><th scope="row">3</th><td>Good knowledge of the system and a comprehensive set of tools, including portable electronics.</td><td>Larger homes and most commercial premises. Insurers often ask for it.</td></tr><tr><th scope="row">4</th><td>Able to plan in detail, with the full range of equipment and the means to substitute vital components.</td><td>The highest-risk sites.</td></tr></tbody></table></div>
-<p>The system takes the grade of its lowest-graded component, so a grade 3 control panel with grade 2 detectors is a grade 2 system. The grade should be chosen from a risk assessment and written into the specification. Insurers set their own requirements, so check the policy wording before you design.</p>
-<h2>Police response</h2>
-<p>Police response is not automatic. Under the National Police Chiefs' Council (NPCC) requirements, the system must be monitored by a recognised alarm receiving centre, the installer and maintainer must be certified by a UKAS-accredited body, and the police force issues a unique reference number (URN) for the premises. Without a valid URN, an activation is treated as unconfirmed and will not get a police response without evidence of an offence in progress.</p>
-<p>A few details worth knowing when you talk to a customer:</p>
-<ul>
-  <li>The premises need at least two keyholders who can attend the premises within 20 minutes.</li>
-  <li>Police response can be withdrawn after repeated false calls. In the version of the requirements we checked, written notice is sent at two false calls in 12 months and response is withdrawn at three.</li>
-  <li>To restore it, the cause has to be identified and fixed and a period free of false calls achieved, unless extra confirmation is added.</li>
-</ul>
-<p>Police policy is reviewed from time to time, so use the current document and the force's own guidance for anything you put in a contract.</p>
-<h2>How often should an intruder alarm be maintained?</h2>
-<p>The expected number of visits depends on the grade, the type of signalling and the scheme the installing company is certified under. As a guide, NSI's member guidance table for the PD 6662 and BS EN 50131 grades sets out two visits a year for grades 2, 3 and 4. For grades 2 and 3, one of those can be a remote check if the equipment supports it, and lower-risk systems may need only one visit a year. Systems with remote signalling to a monitoring centre are generally expected to have two visits a year.</p>
-<p>BS 9263 covers commissioning, maintenance and remote support of intruder and hold-up alarms and is the document to read for the detail. Your certification body, the police requirements and the customer's insurer may each ask for more than the minimum, so agree the visit pattern in the maintenance agreement rather than assuming.</p>
-<p>When there is a fault, the maintainer is expected to attend as soon as practicable. Under NSI's scheme document that means within four hours, or before the system next has to be set if that is later.</p>
-<h2>What a maintenance visit covers</h2>
-<ul>
-  <li>Control equipment, power supply and standby battery, with readings recorded.</li>
-  <li>Detectors, contacts and keypads operated and recorded.</li>
-  <li>Sounders and strobes, tamper protection and any hold-up devices.</li>
-  <li>The signalling path to the monitoring centre, tested end to end where fitted.</li>
-  <li>A look round the site for changes, such as new rooms or blocked detectors, and at the event log for repeat false alarms.</li>
-  <li>Customer instructions refreshed and keyholder details checked.</li>
-</ul>
+            <p>
+              <strong
+                >General guidance only. Check the standard itself and take
+                advice from your own competent person for the job in front of
+                you.</strong
+              >
+              Last reviewed 22 October 2026.
+            </p>
+            <h2>What a grade is</h2>
+            <p>
+              The BS EN 50131 series grades an intruder alarm system by the kind
+              of intruder it is designed to resist. PD 6662 explains how those
+              European standards are applied in the UK. The higher the grade,
+              the more skill, knowledge and equipment the system assumes an
+              intruder may have.
+            </p>
+            <div class="tbl-wrap">
+              <table class="tbl">
+                <thead>
+                  <tr>
+                    <th>Grade</th>
+                    <th>Intruder assumed</th>
+                    <th>Typical use</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>
+                      Little knowledge of the system and a limited range of
+                      tools.
+                    </td>
+                    <td>Low-risk premises and some homes.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>
+                      Some knowledge, using general tools and some specialist
+                      equipment.
+                    </td>
+                    <td>Many homes and smaller commercial premises.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>
+                      Good knowledge of the system and a comprehensive set of
+                      tools, including portable electronics.
+                    </td>
+                    <td>
+                      Larger homes and most commercial premises. Insurers often
+                      ask for it.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>
+                      Able to plan in detail, with the full range of equipment
+                      and the means to substitute vital components.
+                    </td>
+                    <td>The highest-risk sites.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              The system takes the grade of its lowest-graded component, so a
+              grade 3 control panel with grade 2 detectors is a grade 2 system.
+              The grade should be chosen from a risk assessment and written into
+              the specification. Insurers set their own requirements, so check
+              the policy wording before you design.
+            </p>
+            <h2>Police response</h2>
+            <p>
+              Police response is not automatic. Under the National Police
+              Chiefs' Council (NPCC) requirements, the system must be monitored
+              by a recognised alarm receiving centre, the installer and
+              maintainer must be certified by a UKAS-accredited body, and the
+              police force issues a unique reference number (URN) for the
+              premises. Without a valid URN, an activation is treated as
+              unconfirmed and will not get a police response without evidence of
+              an offence in progress.
+            </p>
+            <p>A few details worth knowing when you talk to a customer:</p>
+            <ul>
+              <li>
+                The premises need at least two keyholders who can attend the
+                premises within 20 minutes.
+              </li>
+              <li>
+                Police response can be withdrawn after repeated false calls. In
+                the version of the requirements we checked, written notice is
+                sent at two false calls in 12 months and response is withdrawn
+                at three.
+              </li>
+              <li>
+                To restore it, the cause has to be identified and fixed and a
+                period free of false calls achieved, unless extra confirmation
+                is added.
+              </li>
+            </ul>
+            <p>
+              Police policy is reviewed from time to time, so use the current
+              document and the force's own guidance for anything you put in a
+              contract.
+            </p>
+            <h2>How often should an intruder alarm be maintained?</h2>
+            <p>
+              The expected number of visits depends on the grade, the type of
+              signalling and the scheme the installing company is certified
+              under. As a guide, NSI's member guidance table for the PD 6662 and
+              BS EN 50131 grades sets out two visits a year for grades 2, 3 and
+              4. For grades 2 and 3, one of those can be a remote check if the
+              equipment supports it, and lower-risk systems may need only one
+              visit a year. Systems with remote signalling to a monitoring
+              centre are generally expected to have two visits a year.
+            </p>
+            <p>
+              BS 9263 covers commissioning, maintenance and remote support of
+              intruder and hold-up alarms and is the document to read for the
+              detail. Your certification body, the police requirements and the
+              customer's insurer may each ask for more than the minimum, so
+              agree the visit pattern in the maintenance agreement rather than
+              assuming.
+            </p>
+            <p>
+              When there is a fault, the maintainer is expected to attend as
+              soon as practicable. Under NSI's scheme document that means within
+              four hours, or before the system next has to be set if that is
+              later.
+            </p>
+            <h2>What a maintenance visit covers</h2>
+            <ul>
+              <li>
+                Control equipment, power supply and standby battery, with
+                readings recorded.
+              </li>
+              <li>Detectors, contacts and keypads operated and recorded.</li>
+              <li>
+                Sounders and strobes, tamper protection and any hold-up devices.
+              </li>
+              <li>
+                The signalling path to the monitoring centre, tested end to end
+                where fitted.
+              </li>
+              <li>
+                A look round the site for changes, such as new rooms or blocked
+                detectors, and at the event log for repeat false alarms.
+              </li>
+              <li>
+                Customer instructions refreshed and keyholder details checked.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -266,19 +435,45 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary>What do intruder alarm grades 1 to 4 mean?</summary>
-              <p>The grades in the BS EN 50131 series describe the intruder a system is designed to resist, from grade 1 for little knowledge and limited tools to grade 4 for detailed planning and full equipment. The system takes the grade of its lowest-graded component.</p>
+              <p>
+                The grades in the BS EN 50131 series describe the intruder a
+                system is designed to resist, from grade 1 for little knowledge
+                and limited tools to grade 4 for detailed planning and full
+                equipment. The system takes the grade of its lowest-graded
+                component.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>What grade of intruder alarm does a business need?</summary>
-              <p>It depends on a risk assessment and the insurer. Many commercial premises specify grade 2 or 3, and insurers often ask for grade 3 where an alarm is a condition of cover. Check the policy wording.</p>
+              <summary>
+                What grade of intruder alarm does a business need?
+              </summary>
+              <p>
+                It depends on a risk assessment and the insurer. Many commercial
+                premises specify grade 2 or 3, and insurers often ask for grade
+                3 where an alarm is a condition of cover. Check the policy
+                wording.
+              </p>
             </details>
             <details class="faq-item">
               <summary>How often should an intruder alarm be serviced?</summary>
-              <p>NSI's member guidance table sets two visits a year for grades 2, 3 and 4, with one of them allowed to be a remote check for grades 2 and 3 where the equipment supports it. Check the requirements of your certification body, the police force and the insurer.</p>
+              <p>
+                NSI's member guidance table sets two visits a year for grades 2,
+                3 and 4, with one of them allowed to be a remote check for
+                grades 2 and 3 where the equipment supports it. Check the
+                requirements of your certification body, the police force and
+                the insurer.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>What is needed for police response to an intruder alarm?</summary>
-              <p>The system must be monitored by a recognised alarm receiving centre, installed and maintained by a company certified by a UKAS-accredited body, and the police force must issue a unique reference number for the premises.</p>
+              <summary>
+                What is needed for police response to an intruder alarm?
+              </summary>
+              <p>
+                The system must be monitored by a recognised alarm receiving
+                centre, installed and maintained by a company certified by a
+                UKAS-accredited body, and the police force must issue a unique
+                reference number for the premises.
+              </p>
             </details>
           </div>
         </div>
@@ -286,32 +481,69 @@
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">In the app</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              In the app
+            </div>
             <h2>How Compliar helps</h2>
-<p>Compliar's Intruder Alarm Periodic Maintenance Report is referenced to the BS EN 50131 series and PD 6662, and the template records the security grade of the system (grade 1 to 4) next to the equipment and test results. Alarm monitoring details for a site, including the alarm receiving centre's name and number, are kept with the site.</p>
-<ul>
-  <li>Maintenance plans on a quarterly, six-monthly or annual cycle, scheduled against the property (maintenance plans are on Office plans and above).</li>
-  <li>Equipment records per site, so a visit starts from the last one.</li>
-  <li>Defects raised against the failed device and turned into a quote.</li>
-  <li>Reports sent to the customer as branded PDFs when the engineer finishes.</li>
-</ul>
+            <p>
+              Compliar's Intruder Alarm Periodic Maintenance Report is
+              referenced to the BS EN 50131 series and PD 6662, and the template
+              records the security grade of the system (grade 1 to 4) next to
+              the equipment and test results. Alarm monitoring details for a
+              site, including the alarm receiving centre's name and number, are
+              kept with the site.
+            </p>
+            <ul>
+              <li>
+                Maintenance plans on a quarterly, six-monthly or annual cycle,
+                scheduled against the property (maintenance plans are on Office
+                plans and above).
+              </li>
+              <li>
+                Equipment records per site, so a visit starts from the last one.
+              </li>
+              <li>
+                Defects raised against the failed device and turned into a
+                quote.
+              </li>
+              <li>
+                Reports sent to the customer as branded PDFs when the engineer
+                finishes.
+              </li>
+            </ul>
             <div class="more-links">
-              <a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a>
-              <a href="/fire-alarm-servicing-guide/">Fire detection and alarm servicing guide</a>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+              <a href="/fire-alarm-servicing-guide/"
+                >Fire detection and alarm servicing guide</a
+              >
               <a href="/how-to-write-rams/">How to write RAMS</a>
               <a href="/cis-and-retention-guide/">CIS and retention guide</a>
               <a href="/getting-started/">Getting started</a>
-                          <a href="/what-is-a-grade-3-intruder-alarm/">What is a Grade 3 intruder alarm?</a>
-</div>
+              <a href="/what-is-a-grade-3-intruder-alarm/"
+                >What is a Grade 3 intruder alarm?</a
+              >
+            </div>
           </div>
         </div>
       </section>
       <section class="final-cta band">
         <div class="wrap">
           <h2>One app. Every job, start to finish.</h2>
-          <p>Book a demo and Keiran will walk through your own jobs. Early adopters lock their price for 3 years, with no contract.</p>
+          <p>
+            Book a demo and Keiran will walk through your own jobs. Early
+            adopters lock their price for 3 years, with no contract.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a><a class="btn btn-ghost-on-navy" href="/getting-started/">How getting started works</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            ><a class="btn btn-ghost-on-navy" href="/getting-started/"
+              >How getting started works</a
+            >
           </div>
         </div>
       </section>
@@ -328,7 +560,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -342,34 +575,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -379,10 +665,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -390,11 +688,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

@@ -6,44 +6,50 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>
       Data Centre &amp; Critical Site Maintenance Software — Compliar
@@ -64,9 +70,18 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="Data Centre &amp; Critical Site Maintenance Software — Compliar" />
-    <meta property="og:description" content="For fire, security and electrical companies working on data centres and critical sites: gas suppression, aspirating detection, UPS, generator and thermography records, contract response times, and site security rules. Book a demo." />
-    <meta property="og:url" content="https://compliar.co.uk/data-centre-critical-site-software/" />
+    <meta
+      property="og:title"
+      content="Data Centre &amp; Critical Site Maintenance Software — Compliar"
+    />
+    <meta
+      property="og:description"
+      content="For fire, security and electrical companies working on data centres and critical sites: gas suppression, aspirating detection, UPS, generator and thermography records, contract response times, and site security rules. Book a demo."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/data-centre-critical-site-software/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -76,75 +91,81 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
-    <meta name="twitter:title" content="Data Centre &amp; Critical Site Maintenance Software — Compliar" />
-    <meta name="twitter:description" content="For fire, security and electrical companies working on data centres and critical sites: gas suppression, aspirating detection, UPS, generator and thermography records, contract response times, and site security rules. Book a demo." />
+    <meta
+      name="twitter:title"
+      content="Data Centre &amp; Critical Site Maintenance Software — Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="For fire, security and electrical companies working on data centres and critical sites: gas suppression, aspirating detection, UPS, generator and thermography records, contract response times, and site security rules. Book a demo."
+    />
     <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Compliar",
-        "item": "https://compliar.co.uk/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Data centres and critical sites",
-        "item": "https://compliar.co.uk/data-centre-critical-site-software/"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is Compliar for data centre operators?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Compliar is built for the fire, security and electrical companies who install and maintain the systems in data centres and other critical sites, mainly small and medium companies. It runs your jobs, engineers, certificates and invoices; the operator gets the records and certificates from you."
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Compliar",
+              "item": "https://compliar.co.uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Data centres and critical sites",
+              "item": "https://compliar.co.uk/data-centre-critical-site-software/"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is Compliar for data centre operators?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Compliar is built for the fire, security and electrical companies who install and maintain the systems in data centres and other critical sites, mainly small and medium companies. It runs your jobs, engineers, certificates and invoices; the operator gets the records and certificates from you."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can each contract have its own response times?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Each maintenance contract can set its own respond and resolve times for reactive and remedial jobs. Leave them blank and the company targets apply. Each job shows when it must be responded to and resolved, and the SLA report shows which were met."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I record security clearance and permit rules for a site?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. A site can be marked as needing security clearance (with details), an escort, a permit to work and a notice period. Engineers see this on the job, and the office is warned when a visit is booked with less notice than the site needs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which records are included for critical sites?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Gas suppression installation, commissioning, service and enclosure integrity (door fan) tests; aspirating smoke detection; UPS maintenance; standby generator service and load tests; thermographic surveys; plus fire detection and alarm, emergency lighting, access control, CCTV, EICR, permit to work and isolation records."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What does it cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The built-in templates are included from the Lite plan at £35 + VAT per user per month, with no per-certificate fees and no contract."
+              }
+            }
+          ]
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Can each contract have its own response times?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Each maintenance contract can set its own respond and resolve times for reactive and remedial jobs. Leave them blank and the company targets apply. Each job shows when it must be responded to and resolved, and the SLA report shows which were met."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I record security clearance and permit rules for a site?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. A site can be marked as needing security clearance (with details), an escort, a permit to work and a notice period. Engineers see this on the job, and the office is warned when a visit is booked with less notice than the site needs."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Which records are included for critical sites?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Gas suppression installation, commissioning, service and enclosure integrity (door fan) tests; aspirating smoke detection; UPS maintenance; standby generator service and load tests; thermographic surveys; plus fire detection and alarm, emergency lighting, access control, CCTV, EICR, permit to work and isolation records."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does it cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The built-in templates are included from the Lite plan at £35 + VAT per user per month, with no per-certificate fees and no contract."
-        }
-      }
-    ]
-  }
-]
+      ]
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -162,9 +183,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -186,7 +217,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -209,24 +242,44 @@
             </div>
             <div class="eyebrow">Data centres and critical sites</div>
             <h1>One app for your <span>critical site</span> work</h1>
-            <p class="hero-sub">For fire, security and electrical companies who look after data centres, comms rooms and other sites that can't go down. Suppression, aspirating detection, UPS, generators, thermography, access control and CCTV in one place, with the response times and site security rules these contracts come with.</p>
+            <p class="hero-sub">
+              For fire, security and electrical companies who look after data
+              centres, comms rooms and other sites that can't go down.
+              Suppression, aspirating detection, UPS, generators, thermography,
+              access control and CCTV in one place, with the response times and
+              site security rules these contracts come with.
+            </p>
             <div
               class="calc-badge"
               style="display: inline-flex; margin-bottom: 22px"
             >
-              BOOK A DEMO · NO CONTRACT · EARLY ADOPTERS LOCK THEIR PRICE FOR 3 YEARS
+              BOOK A DEMO · NO CONTRACT · EARLY ADOPTERS LOCK THEIR PRICE FOR 3
+              YEARS
             </div>
             <div class="hero-ctas">
-              <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a>
+              <a
+                class="btn btn-primary"
+                href="/contact/?subject=Demo+request"
+                data-demo-open
+                >Book a demo</a
+              >
               <a class="btn btn-ghost-on-navy" href="/pricing/">See pricing</a>
             </div>
-            <div class="standards"><span>BS EN 15004-1</span><span>BS 5839-1</span><span>BS EN IEC 62040</span><span>BS ISO 8528</span></div>
+            <div class="standards">
+              <span>BS EN 15004-1</span><span>BS 5839-1</span
+              ><span>BS EN IEC 62040</span><span>BS ISO 8528</span>
+            </div>
           </div>
           <div class="mock" style="border-color: var(--line-on-navy)">
             <div class="mock-body">
               <div class="doc-row" style="padding-top: 0">
-                <span class="calc-title" style="color: var(--ink)">Critical site record set</span
-                ><span class="doc-amt" style="font-weight: 400; color: var(--muted)">One site, one history</span>
+                <span class="calc-title" style="color: var(--ink)"
+                  >Critical site record set</span
+                ><span
+                  class="doc-amt"
+                  style="font-weight: 400; color: var(--muted)"
+                  >One site, one history</span
+                >
               </div>
               <div class="doc-row">
                 <span class="doc-tag sales">SUPPRESS</span
@@ -262,22 +315,79 @@
           <div class="section-head">
             <div class="eyebrow">What's included</div>
             <h2>The records a critical site needs</h2>
-            <p>Every record below is a built-in template you fill in on site, sign and send as a branded PDF from the job. Each one references its standard; the engineer remains responsible for the work.</p>
+            <p>
+              Every record below is a built-in template you fill in on site,
+              sign and send as a branded PDF from the job. Each one references
+              its standard; the engineer remains responsible for the work.
+            </p>
           </div>
           <div class="tbl-wrap">
             <table class="tbl">
               <thead>
-                <tr><th>Record</th><th>What it covers</th></tr>
+                <tr>
+                  <th>Record</th>
+                  <th>What it covers</th>
+                </tr>
               </thead>
               <tbody>
-                <tr><th>Gas suppression</th><td>Installation, commissioning and service records, referenced to BS EN 15004-1.</td></tr>
-                <tr><th>Enclosure integrity (door fan) test</th><td>Room conditions, enclosure volume, leakage area, required and predicted hold time, and the result.</td></tr>
-                <tr><th>Aspirating smoke detection</th><td>Installation, commissioning and periodic service records, referenced to BS 5839-1 and BS EN 54-20.</td></tr>
-                <tr><th>UPS maintenance</th><td>Checks, bypass and battery tests, input and output readings, battery autonomy and ambient temperature, referenced to BS EN IEC 62040.</td></tr>
-                <tr><th>Standby generator service and load test</th><td>Service checks, mains failure start and transfer, load used, voltage and frequency on load, referenced to BS ISO 8528.</td></tr>
-                <tr><th>Thermographic survey</th><td>Areas surveyed and not surveyed, camera and calibration, hot spots with priority, and thermal and visible images, referenced to BS ISO 18434-1.</td></tr>
-                <tr><th>Fire, security and electrical</th><td>Fire detection and alarm, emergency lighting, access control, CCTV, EICR and PAT, all in the same system.</td></tr>
-                <tr><th>Permit to work and isolation</th><td>Permit to work (including hot work) and isolation and lock-off records against the job.</td></tr>
+                <tr>
+                  <th>Gas suppression</th>
+                  <td>
+                    Installation, commissioning and service records, referenced
+                    to BS EN 15004-1.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Enclosure integrity (door fan) test</th>
+                  <td>
+                    Room conditions, enclosure volume, leakage area, required
+                    and predicted hold time, and the result.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Aspirating smoke detection</th>
+                  <td>
+                    Installation, commissioning and periodic service records,
+                    referenced to BS 5839-1 and BS EN 54-20.
+                  </td>
+                </tr>
+                <tr>
+                  <th>UPS maintenance</th>
+                  <td>
+                    Checks, bypass and battery tests, input and output readings,
+                    battery autonomy and ambient temperature, referenced to BS
+                    EN IEC 62040.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Standby generator service and load test</th>
+                  <td>
+                    Service checks, mains failure start and transfer, load used,
+                    voltage and frequency on load, referenced to BS ISO 8528.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Thermographic survey</th>
+                  <td>
+                    Areas surveyed and not surveyed, camera and calibration, hot
+                    spots with priority, and thermal and visible images,
+                    referenced to BS ISO 18434-1.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Fire, security and electrical</th>
+                  <td>
+                    Fire detection and alarm, emergency lighting, access
+                    control, CCTV, EICR and PAT, all in the same system.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Permit to work and isolation</th>
+                  <td>
+                    Permit to work (including hot work) and isolation and
+                    lock-off records against the job.
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -292,15 +402,28 @@
           <div class="card-grid">
             <div class="roadmap-card">
               <h4>Response times per contract</h4>
-              <p>Set respond and resolve times on each contract, or use your company targets. Every job shows when it must be responded to and resolved, turns amber when time is nearly up, and the SLA report shows what was met.</p>
+              <p>
+                Set respond and resolve times on each contract, or use your
+                company targets. Every job shows when it must be responded to
+                and resolved, turns amber when time is nearly up, and the SLA
+                report shows what was met.
+              </p>
             </div>
             <div class="roadmap-card">
               <h4>Site security and permits</h4>
-              <p>Mark a site as needing security clearance, an escort, a permit to work or a notice period. Engineers see it on the job, and the office gets a warning if a visit is booked with too little notice.</p>
+              <p>
+                Mark a site as needing security clearance, an escort, a permit
+                to work or a notice period. Engineers see it on the job, and the
+                office gets a warning if a visit is booked with too little
+                notice.
+              </p>
             </div>
             <div class="roadmap-card">
               <h4>A record you can stand behind</h4>
-              <p>Issued certificates can't be deleted. Every edit needs a reason and is logged against the job, with who made it and when.</p>
+              <p>
+                Issued certificates can't be deleted. Every edit needs a reason
+                and is logged against the job, with who made it and when.
+              </p>
             </div>
           </div>
         </div>
@@ -308,13 +431,34 @@
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">Good to know</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              Good to know
+            </div>
             <h2>Who this is for</h2>
-            <p>Compliar is for the companies doing the work: fire, security and electrical companies who install and maintain systems in data centres, comms rooms, hospitals and other sites where downtime matters. It runs your quotes, jobs, engineers, certificates and invoices. Your customer gets the certificates, reports and site history from you, and can see them in the customer portal.</p>
-            <p>Critical sites tend to mix trades. One visit might cover the suppression system, the aspirating detection and the UPS. With Compliar those records sit against the same site, in the same job, under one login.</p>
-            <p>The templates reference the standards, but your contract, the system design and the manufacturer's instructions decide what is tested and to what limit. The engineer and your scheme remain responsible for the work.</p>
+            <p>
+              Compliar is for the companies doing the work: fire, security and
+              electrical companies who install and maintain systems in data
+              centres, comms rooms, hospitals and other sites where downtime
+              matters. It runs your quotes, jobs, engineers, certificates and
+              invoices. Your customer gets the certificates, reports and site
+              history from you, and can see them in the customer portal.
+            </p>
+            <p>
+              Critical sites tend to mix trades. One visit might cover the
+              suppression system, the aspirating detection and the UPS. With
+              Compliar those records sit against the same site, in the same job,
+              under one login.
+            </p>
+            <p>
+              The templates reference the standards, but your contract, the
+              system design and the manufacturer's instructions decide what is
+              tested and to what limit. The engineer and your scheme remain
+              responsible for the work.
+            </p>
             <div class="more-links">
-              <a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
               <a href="/access-control-door-entry-software/">Access control</a>
               <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
               <a href="/features/#coverage-title">All disciplines</a>
@@ -332,23 +476,53 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary>Is Compliar for data centre operators?</summary>
-              <p>Compliar is built for the fire, security and electrical companies who install and maintain the systems in data centres and other critical sites, mainly small and medium companies. It runs your jobs, engineers, certificates and invoices; the operator gets the records and certificates from you.</p>
+              <p>
+                Compliar is built for the fire, security and electrical
+                companies who install and maintain the systems in data centres
+                and other critical sites, mainly small and medium companies. It
+                runs your jobs, engineers, certificates and invoices; the
+                operator gets the records and certificates from you.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Can each contract have its own response times?</summary>
-              <p>Yes. Each maintenance contract can set its own respond and resolve times for reactive and remedial jobs. Leave them blank and the company targets apply. Each job shows when it must be responded to and resolved, and the SLA report shows which were met.</p>
+              <p>
+                Yes. Each maintenance contract can set its own respond and
+                resolve times for reactive and remedial jobs. Leave them blank
+                and the company targets apply. Each job shows when it must be
+                responded to and resolved, and the SLA report shows which were
+                met.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>Can I record security clearance and permit rules for a site?</summary>
-              <p>Yes. A site can be marked as needing security clearance (with details), an escort, a permit to work and a notice period. Engineers see this on the job, and the office is warned when a visit is booked with less notice than the site needs.</p>
+              <summary>
+                Can I record security clearance and permit rules for a site?
+              </summary>
+              <p>
+                Yes. A site can be marked as needing security clearance (with
+                details), an escort, a permit to work and a notice period.
+                Engineers see this on the job, and the office is warned when a
+                visit is booked with less notice than the site needs.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Which records are included for critical sites?</summary>
-              <p>Gas suppression installation, commissioning, service and enclosure integrity (door fan) tests; aspirating smoke detection; UPS maintenance; standby generator service and load tests; thermographic surveys; plus fire detection and alarm, emergency lighting, access control, CCTV, EICR, permit to work and isolation records.</p>
+              <p>
+                Gas suppression installation, commissioning, service and
+                enclosure integrity (door fan) tests; aspirating smoke
+                detection; UPS maintenance; standby generator service and load
+                tests; thermographic surveys; plus fire detection and alarm,
+                emergency lighting, access control, CCTV, EICR, permit to work
+                and isolation records.
+              </p>
             </details>
             <details class="faq-item">
               <summary>What does it cost?</summary>
-              <p>The built-in templates are included from the Lite plan at £35 + VAT per user per month, with no per-certificate fees and no contract.</p>
+              <p>
+                The built-in templates are included from the Lite plan at £35 +
+                VAT per user per month, with no per-certificate fees and no
+                contract.
+              </p>
             </details>
           </div>
         </div>
@@ -357,9 +531,18 @@
       <section class="final-cta band">
         <div class="wrap">
           <h2>Bring your critical site work into one place</h2>
-          <p>See the suppression, UPS and generator records, response times and site rules on your own jobs in a demo. Onboarding is from £195, quoted individually.</p>
+          <p>
+            See the suppression, UPS and generator records, response times and
+            site rules on your own jobs in a demo. Onboarding is from £195,
+            quoted individually.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            >
             <a class="btn btn-ghost-on-navy" href="/pricing/">See pricing</a>
           </div>
         </div>
@@ -378,7 +561,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -392,34 +576,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -429,10 +666,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -440,11 +689,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

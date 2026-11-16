@@ -6,44 +6,50 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>
       Access Control &amp; Door Entry Software | Service Records — Compliar
@@ -64,9 +70,18 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="Access Control &amp; Door Entry Software | Service Records — Compliar" />
-    <meta property="og:description" content="Commissioning, handover and service records for access control and door entry systems: controllers, readers and releases, signed on site, with defects to quotes. Book a demo." />
-    <meta property="og:url" content="https://compliar.co.uk/access-control-door-entry-software/" />
+    <meta
+      property="og:title"
+      content="Access Control &amp; Door Entry Software | Service Records — Compliar"
+    />
+    <meta
+      property="og:description"
+      content="Commissioning, handover and service records for access control and door entry systems: controllers, readers and releases, signed on site, with defects to quotes. Book a demo."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/access-control-door-entry-software/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -76,91 +91,97 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
-    <meta name="twitter:title" content="Access Control &amp; Door Entry Software | Service Records — Compliar" />
-    <meta name="twitter:description" content="Commissioning, handover and service records for access control and door entry systems: controllers, readers and releases, signed on site, with defects to quotes. Book a demo." />
+    <meta
+      name="twitter:title"
+      content="Access Control &amp; Door Entry Software | Service Records — Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="Commissioning, handover and service records for access control and door entry systems: controllers, readers and releases, signed on site, with defects to quotes. Book a demo."
+    />
     <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Compliar",
-        "item": "https://compliar.co.uk/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Access control software",
-        "item": "https://compliar.co.uk/access-control-door-entry-software/"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is there a handover record the customer can sign?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. A shared handover and acceptance record is used across intruder, CCTV and access control."
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Compliar",
+              "item": "https://compliar.co.uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Access control software",
+              "item": "https://compliar.co.uk/access-control-door-entry-software/"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is there a handover record the customer can sign?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. A shared handover and acceptance record is used across intruder, CCTV and access control."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I record doors that release on a fire alarm?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Record the check and the result on the visit, and raise a defect if a door does not behave as it should."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can a failed reader become a quote?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. A fault found on a visit can be raised as a defect and quoted without re-typing."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I record the fire alarm release test for each door?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hold each door as an asset on the site and record the result of the release check per door on the visit. Note the BS 7273-4 category the design gave the door so the next engineer knows what it should do."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can doors and controllers be held separately?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Controllers, readers and door releases can each be assets with their own history, so a fault at one door is recorded against that door."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the service record show open defects?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Defects raised on the visit are listed on the job and shown with the record sent to the customer, and they stay open until resolved."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What does it cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The built-in templates are included from the Lite plan at £35 + VAT per user per month, with no per-certificate fees and no contract."
+              }
+            }
+          ]
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I record doors that release on a fire alarm?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Record the check and the result on the visit, and raise a defect if a door does not behave as it should."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can a failed reader become a quote?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. A fault found on a visit can be raised as a defect and quoted without re-typing."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I record the fire alarm release test for each door?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Hold each door as an asset on the site and record the result of the release check per door on the visit. Note the BS 7273-4 category the design gave the door so the next engineer knows what it should do."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can doors and controllers be held separately?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Controllers, readers and door releases can each be assets with their own history, so a fault at one door is recorded against that door."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does the service record show open defects?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Defects raised on the visit are listed on the job and shown with the record sent to the customer, and they stay open until resolved."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does it cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The built-in templates are included from the Lite plan at £35 + VAT per user per month, with no per-certificate fees and no contract."
-        }
-      }
-    ]
-  }
-]
+      ]
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -178,9 +199,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -202,7 +233,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -225,24 +258,40 @@
             </div>
             <div class="eyebrow">Access control</div>
             <h1>Access control and door entry <span>software</span></h1>
-            <p class="hero-sub">Compliar holds commissioning, handover and service records for access control and door entry systems. Record the controllers, readers and door releases on site, get the customer's signature, and send a branded PDF from the job.</p>
+            <p class="hero-sub">
+              Compliar holds commissioning, handover and service records for
+              access control and door entry systems. Record the controllers,
+              readers and door releases on site, get the customer's signature,
+              and send a branded PDF from the job.
+            </p>
             <div
               class="calc-badge"
               style="display: inline-flex; margin-bottom: 22px"
             >
-              BOOK A DEMO · NO CONTRACT · EARLY ADOPTERS LOCK THEIR PRICE FOR 3 YEARS
+              BOOK A DEMO · NO CONTRACT · EARLY ADOPTERS LOCK THEIR PRICE FOR 3
+              YEARS
             </div>
             <div class="hero-ctas">
-              <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a>
+              <a
+                class="btn btn-primary"
+                href="/contact/?subject=Demo+request"
+                data-demo-open
+                >Book a demo</a
+              >
               <a class="btn btn-ghost-on-navy" href="/pricing/">See pricing</a>
             </div>
             <div class="standards"><span>BS EN 60839-11-1</span></div>
           </div>
           <div class="mock" style="border-color: var(--line-on-navy)">
-                        <div class="mock-body">
+            <div class="mock-body">
               <div class="doc-row" style="padding-top: 0">
-                <span class="calc-title" style="color: var(--ink)">Access control records</span
-                ><span class="doc-amt" style="font-weight: 400; color: var(--muted)">Template set</span>
+                <span class="calc-title" style="color: var(--ink)"
+                  >Access control records</span
+                ><span
+                  class="doc-amt"
+                  style="font-weight: 400; color: var(--muted)"
+                  >Template set</span
+                >
               </div>
               <div class="doc-row">
                 <span class="doc-tag sales">COMMISSION</span
@@ -274,18 +323,48 @@
           <div class="section-head">
             <div class="eyebrow">What's included</div>
             <h2>Controllers, readers and releases, door by door</h2>
-            <p>Access control faults are usually found at one door. Holding the controllers, readers and releases as assets on the site keeps their history together from visit to visit.</p>
+            <p>
+              Access control faults are usually found at one door. Holding the
+              controllers, readers and releases as assets on the site keeps
+              their history together from visit to visit.
+            </p>
           </div>
           <div class="tbl-wrap">
             <table class="tbl">
               <thead>
-                <tr><th>Equipment</th><th>What is recorded</th></tr>
+                <tr>
+                  <th>Equipment</th>
+                  <th>What is recorded</th>
+                </tr>
               </thead>
               <tbody>
-                <tr><th>Controllers</th><td>Where each controller is and what it controls, with a result per visit.</td></tr>
-                <tr><th>Readers and keypads</th><td>Each reader or keypad and whether it was tested and passed.</td></tr>
-                <tr><th>Door releases</th><td>Locks, magnets and strikes, including the fail-safe behaviour you checked.</td></tr>
-                <tr><th>Handover</th><td>A shared handover and acceptance record, signed by the customer.</td></tr>
+                <tr>
+                  <th>Controllers</th>
+                  <td>
+                    Where each controller is and what it controls, with a result
+                    per visit.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Readers and keypads</th>
+                  <td>
+                    Each reader or keypad and whether it was tested and passed.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Door releases</th>
+                  <td>
+                    Locks, magnets and strikes, including the fail-safe
+                    behaviour you checked.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Handover</th>
+                  <td>
+                    A shared handover and acceptance record, signed by the
+                    customer.
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -301,15 +380,25 @@
           <div class="card-grid">
             <div class="roadmap-card">
               <h4>On site</h4>
-              <p>The field app runs in your phone's browser and keeps working with no signal, so a plant room or a basement door is no problem.</p>
+              <p>
+                The field app runs in your phone's browser and keeps working
+                with no signal, so a plant room or a basement door is no
+                problem.
+              </p>
             </div>
             <div class="roadmap-card">
               <h4>Defects</h4>
-              <p>A failed reader or release is raised as a defect and quoted without re-typing, then tracked until it is resolved.</p>
+              <p>
+                A failed reader or release is raised as a defect and quoted
+                without re-typing, then tracked until it is resolved.
+              </p>
             </div>
             <div class="roadmap-card">
               <h4>Customer view</h4>
-              <p>Reports can be emailed from the job, and a customer portal login can show the customer their reports once issued.</p>
+              <p>
+                Reports can be emailed from the job, and a customer portal login
+                can show the customer their reports once issued.
+              </p>
             </div>
           </div>
         </div>
@@ -318,17 +407,38 @@
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">Good to know</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              Good to know
+            </div>
             <h2>What to record on an access control system</h2>
-            <p>BS EN 60839-11-1 covers electronic access control systems, and your specification may name further requirements. Record the standard or specification you worked to on the commissioning record.</p>
-            <p>On commissioning and on service, the checks that matter most are usually at the door: that the reader reads, that the release operates and relocks, that the door closes and holds as intended, and that exit routes work. Where the access control system is linked to the fire alarm, check how the doors behave on alarm and record the result.</p>
-            <p>Compliar keeps the records. The engineer and the customer remain responsible for the system and for how it is used.</p>
             <p>
-              The same system covers 32 system types across fire protection and life safety, security and electrical, so one login handles the whole company. See the
+              BS EN 60839-11-1 covers electronic access control systems, and
+              your specification may name further requirements. Record the
+              standard or specification you worked to on the commissioning
+              record.
+            </p>
+            <p>
+              On commissioning and on service, the checks that matter most are
+              usually at the door: that the reader reads, that the release
+              operates and relocks, that the door closes and holds as intended,
+              and that exit routes work. Where the access control system is
+              linked to the fire alarm, check how the doors behave on alarm and
+              record the result.
+            </p>
+            <p>
+              Compliar keeps the records. The engineer and the customer remain
+              responsible for the system and for how it is used.
+            </p>
+            <p>
+              The same system covers 32 system types across fire protection and
+              life safety, security and electrical, so one login handles the
+              whole company. See the
               <a href="/features/#coverage-title">full list of disciplines</a>.
             </p>
             <div class="more-links">
-              <a href="/intruder-alarm-grades-maintenance-guide/">Intruder alarm guide</a>
+              <a href="/intruder-alarm-grades-maintenance-guide/"
+                >Intruder alarm guide</a
+              >
               <a href="/features/">All features</a>
               <a href="/pricing/">Pricing</a>
             </div>
@@ -339,32 +449,116 @@
       <section class="band" style="background: var(--cream-2)">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">What to check</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              What to check
+            </div>
             <h2>Doors that release, doors that hold, and the fire alarm</h2>
-            <p><strong>General guidance only.</strong> BS EN 60839-11-1 covers electronic access control systems; BS 7273-4 covers how electrically locked doors on escape routes release on a fire alarm. Check the editions your specification names and your scheme document. Last reviewed 3 November 2026.</p>
+            <p>
+              <strong>General guidance only.</strong> BS EN 60839-11-1 covers
+              electronic access control systems; BS 7273-4 covers how
+              electrically locked doors on escape routes release on a fire
+              alarm. Check the editions your specification names and your scheme
+              document. Last reviewed 3 November 2026.
+            </p>
             <h3>The question that matters most</h3>
-            <p>Every electrically locked door on an escape route has to release when people need to get out, and BS 7273-4 is the standard for how that is arranged with the fire detection and alarm system. It describes categories of actuation, from doors that release on any fire signal to doors that release only on a local one, and the design decides which applies to each door. The commissioning record should name the category for each door and the check that it releases as intended, with the fire alarm actually operated rather than simulated. That is the item a fire risk assessor or a scheme auditor goes straight to.</p>
+            <p>
+              Every electrically locked door on an escape route has to release
+              when people need to get out, and BS 7273-4 is the standard for how
+              that is arranged with the fire detection and alarm system. It
+              describes categories of actuation, from doors that release on any
+              fire signal to doors that release only on a local one, and the
+              design decides which applies to each door. The commissioning
+              record should name the category for each door and the check that
+              it releases as intended, with the fire alarm actually operated
+              rather than simulated. That is the item a fire risk assessor or a
+              scheme auditor goes straight to.
+            </p>
             <h3>Commissioning, door by door</h3>
             <ul>
-              <li><strong>Reader and credential.</strong> Valid credential opens, invalid does not, and the event is logged with the right door name.</li>
-              <li><strong>Release and relock.</strong> The lock, magnet or strike releases on a valid read and on the request-to-exit device, and relocks within the set time.</li>
-              <li><strong>Fail-safe or fail-secure.</strong> What the door does on power loss, and whether that is what the escape route needs.</li>
-              <li><strong>Emergency release.</strong> Break-glass or green box at the door operates the release directly, not through the controller.</li>
-              <li><strong>Fire alarm interface.</strong> Operate the fire alarm and confirm each door releases per its category, then confirm it relocks on reset only where that is intended.</li>
-              <li><strong>Door closer and monitoring.</strong> The door closes and latches on its own, and door-forced and door-held-open alarms report correctly.</li>
-              <li><strong>Controller and power.</strong> Controller location, what it serves, standby battery and the network or cabling it depends on.</li>
+              <li>
+                <strong>Reader and credential.</strong> Valid credential opens,
+                invalid does not, and the event is logged with the right door
+                name.
+              </li>
+              <li>
+                <strong>Release and relock.</strong> The lock, magnet or strike
+                releases on a valid read and on the request-to-exit device, and
+                relocks within the set time.
+              </li>
+              <li>
+                <strong>Fail-safe or fail-secure.</strong> What the door does on
+                power loss, and whether that is what the escape route needs.
+              </li>
+              <li>
+                <strong>Emergency release.</strong> Break-glass or green box at
+                the door operates the release directly, not through the
+                controller.
+              </li>
+              <li>
+                <strong>Fire alarm interface.</strong> Operate the fire alarm
+                and confirm each door releases per its category, then confirm it
+                relocks on reset only where that is intended.
+              </li>
+              <li>
+                <strong>Door closer and monitoring.</strong> The door closes and
+                latches on its own, and door-forced and door-held-open alarms
+                report correctly.
+              </li>
+              <li>
+                <strong>Controller and power.</strong> Controller location, what
+                it serves, standby battery and the network or cabling it depends
+                on.
+              </li>
             </ul>
             <h3>Worked example</h3>
-            <p>On the Harbourview sample site there are eight controlled doors on two controllers. On the annual visit the engineer works down the doors from the asset list on the phone, recording the read, release, relock and emergency-release checks for each. With the site's fire detection and alarm system on test, a call point is operated and each escape-route door is checked for release; the plant room door, which is not on an escape route, is confirmed to hold. The first-floor fire door magnet holds after the alarm: it is marked Fail with a photo and becomes a defect with a Needs quoting status. The service record with the open defect goes to the customer from the job the same day.</p>
+            <p>
+              On the Harbourview sample site there are eight controlled doors on
+              two controllers. On the annual visit the engineer works down the
+              doors from the asset list on the phone, recording the read,
+              release, relock and emergency-release checks for each. With the
+              site's fire detection and alarm system on test, a call point is
+              operated and each escape-route door is checked for release; the
+              plant room door, which is not on an escape route, is confirmed to
+              hold. The first-floor fire door magnet holds after the alarm: it
+              is marked Fail with a photo and becomes a defect with a Needs
+              quoting status. The service record with the open defect goes to
+              the customer from the job the same day.
+            </p>
             <h3>Common mistakes</h3>
             <ul>
-              <li><strong>Testing the fire interface from the controller.</strong> Simulating the input proves the controller logic, not the wiring from the fire alarm panel. Operate the alarm.</li>
-              <li><strong>No category recorded per door.</strong> Without it, nobody can say whether the door behaved correctly.</li>
-              <li><strong>Emergency release wired through the controller.</strong> If the controller fails, so does the way out.</li>
-              <li><strong>Doors not held as assets.</strong> A system-level tick hides the one door that was never tested.</li>
-              <li><strong>Credentials never reviewed.</strong> Leavers still active and engineer defaults still in place are findings waiting to happen.</li>
+              <li>
+                <strong>Testing the fire interface from the controller.</strong>
+                Simulating the input proves the controller logic, not the wiring
+                from the fire alarm panel. Operate the alarm.
+              </li>
+              <li>
+                <strong>No category recorded per door.</strong> Without it,
+                nobody can say whether the door behaved correctly.
+              </li>
+              <li>
+                <strong>Emergency release wired through the controller.</strong>
+                If the controller fails, so does the way out.
+              </li>
+              <li>
+                <strong>Doors not held as assets.</strong> A system-level tick
+                hides the one door that was never tested.
+              </li>
+              <li>
+                <strong>Credentials never reviewed.</strong> Leavers still
+                active and engineer defaults still in place are findings waiting
+                to happen.
+              </li>
             </ul>
-            <p>See also the <a href="/fire-alarm-certificate-software/">fire detection and alarm certificate page</a> for the alarm side of the interface, and the <a href="/nsi-ssaib-audit-records-guide/">records a scheme audit asks for</a>.</p>
+            <p>
+              See also the
+              <a href="/fire-alarm-certificate-software/"
+                >fire detection and alarm certificate page</a
+              >
+              for the alarm side of the interface, and the
+              <a href="/nsi-ssaib-audit-records-guide/"
+                >records a scheme audit asks for</a
+              >.
+            </p>
           </div>
         </div>
       </section>
@@ -377,32 +571,64 @@
           </div>
           <div class="faq-list">
             <details class="faq-item">
-              <summary>Is there a handover record the customer can sign?</summary>
-              <p>Yes. A shared handover and acceptance record is used across intruder, CCTV and access control.</p>
+              <summary>
+                Is there a handover record the customer can sign?
+              </summary>
+              <p>
+                Yes. A shared handover and acceptance record is used across
+                intruder, CCTV and access control.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>Can I record doors that release on a fire alarm?</summary>
-              <p>Yes. Record the check and the result on the visit, and raise a defect if a door does not behave as it should.</p>
+              <summary>
+                Can I record doors that release on a fire alarm?
+              </summary>
+              <p>
+                Yes. Record the check and the result on the visit, and raise a
+                defect if a door does not behave as it should.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Can a failed reader become a quote?</summary>
-              <p>Yes. A fault found on a visit can be raised as a defect and quoted without re-typing.</p>
+              <p>
+                Yes. A fault found on a visit can be raised as a defect and
+                quoted without re-typing.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>How do I record the fire alarm release test for each door?</summary>
-              <p>Hold each door as an asset on the site and record the result of the release check per door on the visit. Note the BS 7273-4 category the design gave the door so the next engineer knows what it should do.</p>
+              <summary>
+                How do I record the fire alarm release test for each door?
+              </summary>
+              <p>
+                Hold each door as an asset on the site and record the result of
+                the release check per door on the visit. Note the BS 7273-4
+                category the design gave the door so the next engineer knows
+                what it should do.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Can doors and controllers be held separately?</summary>
-              <p>Yes. Controllers, readers and door releases can each be assets with their own history, so a fault at one door is recorded against that door.</p>
+              <p>
+                Yes. Controllers, readers and door releases can each be assets
+                with their own history, so a fault at one door is recorded
+                against that door.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Does the service record show open defects?</summary>
-              <p>Yes. Defects raised on the visit are listed on the job and shown with the record sent to the customer, and they stay open until resolved.</p>
+              <p>
+                Yes. Defects raised on the visit are listed on the job and shown
+                with the record sent to the customer, and they stay open until
+                resolved.
+              </p>
             </details>
             <details class="faq-item">
               <summary>What does it cost?</summary>
-              <p>The built-in templates are included from the Lite plan at £35 + VAT per user per month, with no per-certificate fees and no contract.</p>
+              <p>
+                The built-in templates are included from the Lite plan at £35 +
+                VAT per user per month, with no per-certificate fees and no
+                contract.
+              </p>
             </details>
           </div>
         </div>
@@ -411,9 +637,17 @@
       <section class="final-cta band">
         <div class="wrap">
           <h2>Keep every door's history in one place</h2>
-          <p>See the access control records on your own sites in a demo. Onboarding is from £195, quoted individually.</p>
+          <p>
+            See the access control records on your own sites in a demo.
+            Onboarding is from £195, quoted individually.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            >
             <a class="btn btn-ghost-on-navy" href="/pricing/">See pricing</a>
           </div>
         </div>
@@ -432,7 +666,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -446,34 +681,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -483,10 +771,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -494,11 +794,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

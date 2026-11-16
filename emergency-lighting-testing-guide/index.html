@@ -6,54 +6,75 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>How to Test Emergency Lighting: Monthly and Annual — Compliar</title>
-    <meta name="description" content="How to test emergency lighting: the monthly functional test, the annual full-duration test, who carries them out and the records to keep, with reference to BS 5266-1:2025." />
-    <link rel="canonical" href="https://compliar.co.uk/emergency-lighting-testing-guide/" />
+    <meta
+      name="description"
+      content="How to test emergency lighting: the monthly functional test, the annual full-duration test, who carries them out and the records to keep, with reference to BS 5266-1:2025."
+    />
+    <link
+      rel="canonical"
+      href="https://compliar.co.uk/emergency-lighting-testing-guide/"
+    />
     <meta name="theme-color" content="#1B2430" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="How to Test Emergency Lighting: Monthly and Annual — Compliar" />
-    <meta property="og:description" content="How to test emergency lighting: the monthly functional test, the annual full-duration test, who carries them out and the records to keep, with reference to BS 5266-1:2025." />
-    <meta property="og:url" content="https://compliar.co.uk/emergency-lighting-testing-guide/" />
+    <meta
+      property="og:title"
+      content="How to Test Emergency Lighting: Monthly and Annual — Compliar"
+    />
+    <meta
+      property="og:description"
+      content="How to test emergency lighting: the monthly functional test, the annual full-duration test, who carries them out and the records to keep, with reference to BS 5266-1:2025."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/emergency-lighting-testing-guide/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -62,8 +83,14 @@
       content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="How to Test Emergency Lighting: Monthly and Annual — Compliar" />
-    <meta name="twitter:description" content="How to test emergency lighting: the monthly functional test, the annual full-duration test, who carries them out and the records to keep, with reference to BS 5266-1:2025." />
+    <meta
+      name="twitter:title"
+      content="How to Test Emergency Lighting: Monthly and Annual — Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="How to test emergency lighting: the monthly functional test, the annual full-duration test, who carries them out and the records to keep, with reference to BS 5266-1:2025."
+    />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
     <link
       rel="icon"
@@ -176,9 +203,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -200,7 +237,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -213,54 +252,136 @@
         </details>
       </div>
     </header>
-        <main id="main">
+    <main id="main">
       <section class="page-intro">
         <div class="wrap">
           <div class="crumbs">
-            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a><i>/</i>Emergency lighting testing guide
+            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a
+            ><i>/</i>Emergency lighting testing guide
           </div>
           <div class="eyebrow">Fire · Guide</div>
           <h1>How to test emergency lighting: monthly and annual tests</h1>
-          <p>What the monthly and annual tests involve, who does them, and the records that show an emergency lighting system has been looked after, with BS 5266-1:2025 as the reference.</p>
+          <p>
+            What the monthly and annual tests involve, who does them, and the
+            records that show an emergency lighting system has been looked
+            after, with BS 5266-1:2025 as the reference.
+          </p>
         </div>
       </section>
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <p><strong>General guidance only. Check the standard itself and take advice from your own competent person for the job in front of you.</strong> Last reviewed 22 October 2026.</p>
-<h2>Why testing matters</h2>
-<p>Emergency lighting only has to work on the one night everything else has failed. Because the fittings sit unused for months, the only way to know a battery, lamp or charging circuit is healthy is to test it. In workplaces, the person responsible for fire safety has to make sure the lighting is maintained and in working order, and a dated test record is the evidence.</p>
-<h2>The current standard</h2>
-<p>BS 5266-1:2025 came into effect on 31 October 2025 and replaced the 2016 edition. It is a full revision. The main change is scope: it now covers local area lighting and standby lighting as well as emergency escape lighting. It also reflects changes to the related European standards. For certificates on systems designed to the older edition, check which edition the design was done to before you reference one.</p>
-<h2>The monthly functional test</h2>
-<p>Once a month each fitting is briefly run from its battery to prove it lights. The test is short, so batteries are not run down and the building is not left unprotected for long.</p>
-<ul>
-  <li>Use the system's test key or test device. Do not switch off the normal lighting at the mains, which can leave occupants in the dark.</li>
-  <li>Walk the building and confirm every luminaire and illuminated exit sign comes on.</li>
-  <li>Look at each fitting as you go: clean, undamaged, charge indicator lit when the mains is healthy.</li>
-  <li>Report anything that fails and record it straight away.</li>
-</ul>
-<p>This test is usually done by the responsible person or a nominated member of staff, who has been shown how at handover. You can also include it in your servicing visits.</p>
-<h2>The annual full-duration test</h2>
-<p>Once a year the lighting is run from its batteries for the full rated duration of the system, commonly three hours, and every fitting should still be lit at the end. This proves the batteries can still do the job they are sold for, which a short test cannot.</p>
-<p>A competent person should carry out the annual test and any remedial work that follows. Agree timing with the site first: the building should not be left without cover, and a full-duration test is best planned alongside other servicing so one visit does more than one job.</p>
-<h2>What to record</h2>
-<p>Give every fitting a location identity (a number on a plan is fine) and keep a log against it. For each test record:</p>
-<ul>
-  <li>the date, the type of test (monthly or annual) and who carried it out;</li>
-  <li>the result for each fitting, and the duration achieved on an annual test;</li>
-  <li>any defect, damage or fault found;</li>
-  <li>what was done about it and when it was cleared.</li>
-</ul>
-<p>Keep the log with the site's other fire protection and life safety records. If a fire and rescue inspector, an insurer or a landlord asks, the log is the first thing they will want to see.</p>
-<h2>Common faults</h2>
-<ul>
-  <li>Batteries that pass the monthly test but fail the annual one, because they hold a short charge but not a long one.</li>
-  <li>Fittings blocked or covered after a refit, or signs hidden behind new partitions.</li>
-  <li>Charge indicators that are off, which usually means a supply or charger fault.</li>
-  <li>Missing logs: the test was done but nobody wrote it down.</li>
-</ul>
-<p>A change to the building, such as new partitions, a change of use or a new plant room, can mean the original design no longer covers the escape routes. Flag it as an observation when you see it.</p>
+            <p>
+              <strong
+                >General guidance only. Check the standard itself and take
+                advice from your own competent person for the job in front of
+                you.</strong
+              >
+              Last reviewed 22 October 2026.
+            </p>
+            <h2>Why testing matters</h2>
+            <p>
+              Emergency lighting only has to work on the one night everything
+              else has failed. Because the fittings sit unused for months, the
+              only way to know a battery, lamp or charging circuit is healthy is
+              to test it. In workplaces, the person responsible for fire safety
+              has to make sure the lighting is maintained and in working order,
+              and a dated test record is the evidence.
+            </p>
+            <h2>The current standard</h2>
+            <p>
+              BS 5266-1:2025 came into effect on 31 October 2025 and replaced
+              the 2016 edition. It is a full revision. The main change is scope:
+              it now covers local area lighting and standby lighting as well as
+              emergency escape lighting. It also reflects changes to the related
+              European standards. For certificates on systems designed to the
+              older edition, check which edition the design was done to before
+              you reference one.
+            </p>
+            <h2>The monthly functional test</h2>
+            <p>
+              Once a month each fitting is briefly run from its battery to prove
+              it lights. The test is short, so batteries are not run down and
+              the building is not left unprotected for long.
+            </p>
+            <ul>
+              <li>
+                Use the system's test key or test device. Do not switch off the
+                normal lighting at the mains, which can leave occupants in the
+                dark.
+              </li>
+              <li>
+                Walk the building and confirm every luminaire and illuminated
+                exit sign comes on.
+              </li>
+              <li>
+                Look at each fitting as you go: clean, undamaged, charge
+                indicator lit when the mains is healthy.
+              </li>
+              <li>Report anything that fails and record it straight away.</li>
+            </ul>
+            <p>
+              This test is usually done by the responsible person or a nominated
+              member of staff, who has been shown how at handover. You can also
+              include it in your servicing visits.
+            </p>
+            <h2>The annual full-duration test</h2>
+            <p>
+              Once a year the lighting is run from its batteries for the full
+              rated duration of the system, commonly three hours, and every
+              fitting should still be lit at the end. This proves the batteries
+              can still do the job they are sold for, which a short test cannot.
+            </p>
+            <p>
+              A competent person should carry out the annual test and any
+              remedial work that follows. Agree timing with the site first: the
+              building should not be left without cover, and a full-duration
+              test is best planned alongside other servicing so one visit does
+              more than one job.
+            </p>
+            <h2>What to record</h2>
+            <p>
+              Give every fitting a location identity (a number on a plan is
+              fine) and keep a log against it. For each test record:
+            </p>
+            <ul>
+              <li>
+                the date, the type of test (monthly or annual) and who carried
+                it out;
+              </li>
+              <li>
+                the result for each fitting, and the duration achieved on an
+                annual test;
+              </li>
+              <li>any defect, damage or fault found;</li>
+              <li>what was done about it and when it was cleared.</li>
+            </ul>
+            <p>
+              Keep the log with the site's other fire protection and life safety
+              records. If a fire and rescue inspector, an insurer or a landlord
+              asks, the log is the first thing they will want to see.
+            </p>
+            <h2>Common faults</h2>
+            <ul>
+              <li>
+                Batteries that pass the monthly test but fail the annual one,
+                because they hold a short charge but not a long one.
+              </li>
+              <li>
+                Fittings blocked or covered after a refit, or signs hidden
+                behind new partitions.
+              </li>
+              <li>
+                Charge indicators that are off, which usually means a supply or
+                charger fault.
+              </li>
+              <li>Missing logs: the test was done but nobody wrote it down.</li>
+            </ul>
+            <p>
+              A change to the building, such as new partitions, a change of use
+              or a new plant room, can mean the original design no longer covers
+              the escape routes. Flag it as an observation when you see it.
+            </p>
           </div>
         </div>
       </section>
@@ -273,19 +394,39 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary>How often should emergency lighting be tested?</summary>
-              <p>As a general guide, a short functional test every month and a full-duration test once a year, in line with BS 5266-1. Every test should be recorded.</p>
+              <p>
+                As a general guide, a short functional test every month and a
+                full-duration test once a year, in line with BS 5266-1. Every
+                test should be recorded.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>How long does the annual emergency lighting test take?</summary>
-              <p>The lights are run from their batteries for the full rated duration of the system, which is commonly three hours, and every fitting should still be lit at the end.</p>
+              <summary>
+                How long does the annual emergency lighting test take?
+              </summary>
+              <p>
+                The lights are run from their batteries for the full rated
+                duration of the system, which is commonly three hours, and every
+                fitting should still be lit at the end.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Who can carry out emergency lighting tests?</summary>
-              <p>The monthly functional test is usually done by the responsible person or someone they nominate, using the system's test key. The annual test and any remedial work should be done by a competent person.</p>
+              <p>
+                The monthly functional test is usually done by the responsible
+                person or someone they nominate, using the system's test key.
+                The annual test and any remedial work should be done by a
+                competent person.
+              </p>
             </details>
             <details class="faq-item">
               <summary>What records are needed for emergency lighting?</summary>
-              <p>Keep a log by fitting showing the date, type of test, result, any defect or damage found and the action taken. Faults in fire protection and life safety systems should be recorded and put right.</p>
+              <p>
+                Keep a log by fitting showing the date, type of test, result,
+                any defect or damage found and the action taken. Faults in fire
+                protection and life safety systems should be recorded and put
+                right.
+              </p>
             </details>
           </div>
         </div>
@@ -293,18 +434,43 @@
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">In the app</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              In the app
+            </div>
             <h2>How Compliar helps</h2>
-<p>Compliar has an emergency lighting periodic inspection and servicing certificate referenced to BS 5266-1, with a 15-point checklist that includes the full-duration discharge test, the log book check and the state of escape routes and signage, followed by an overall assessment and the next service date.</p>
-<ul>
-  <li>The site's digital fire log book has an emergency lighting test category where you pick monthly function test or annual full-duration test, record the duration achieved in minutes and list the individual light fittings.</li>
-  <li>Maintenance plans on a monthly, six-monthly or annual cycle, scheduled against the property (maintenance plans are on Office plans and above).</li>
-  <li>Failed fittings raised as defects and turned into a quote.</li>
-</ul>
+            <p>
+              Compliar has an emergency lighting periodic inspection and
+              servicing certificate referenced to BS 5266-1, with a 15-point
+              checklist that includes the full-duration discharge test, the log
+              book check and the state of escape routes and signage, followed by
+              an overall assessment and the next service date.
+            </p>
+            <ul>
+              <li>
+                The site's digital fire log book has an emergency lighting test
+                category where you pick monthly function test or annual
+                full-duration test, record the duration achieved in minutes and
+                list the individual light fittings.
+              </li>
+              <li>
+                Maintenance plans on a monthly, six-monthly or annual cycle,
+                scheduled against the property (maintenance plans are on Office
+                plans and above).
+              </li>
+              <li>
+                Failed fittings raised as defects and turned into a quote.
+              </li>
+            </ul>
             <div class="more-links">
-              <a href="/fire-alarm-servicing-guide/">Fire detection and alarm servicing guide</a>
-              <a href="/fire-alarm-categories-explained/">Fire alarm categories explained</a>
-              <a href="/fire-extinguisher-servicing-guide/">Fire extinguisher servicing guide</a>
+              <a href="/fire-alarm-servicing-guide/"
+                >Fire detection and alarm servicing guide</a
+              >
+              <a href="/fire-alarm-categories-explained/"
+                >Fire alarm categories explained</a
+              >
+              <a href="/fire-extinguisher-servicing-guide/"
+                >Fire extinguisher servicing guide</a
+              >
               <a href="/eicr-intervals-codes-guide/">EICR guide</a>
             </div>
           </div>
@@ -313,9 +479,19 @@
       <section class="final-cta band">
         <div class="wrap">
           <h2>One app. Every job, start to finish.</h2>
-          <p>Book a demo and Keiran will walk through your own jobs. Early adopters lock their price for 3 years, with no contract.</p>
+          <p>
+            Book a demo and Keiran will walk through your own jobs. Early
+            adopters lock their price for 3 years, with no contract.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a><a class="btn btn-ghost-on-navy" href="/getting-started/">How getting started works</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            ><a class="btn btn-ghost-on-navy" href="/getting-started/"
+              >How getting started works</a
+            >
           </div>
         </div>
       </section>
@@ -332,7 +508,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -346,34 +523,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -383,10 +613,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -394,11 +636,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

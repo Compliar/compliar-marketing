@@ -6,44 +6,50 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>Sample certificates from Compliar</title>
     <meta
@@ -59,7 +65,10 @@
       property="og:description"
       content="Open real sample PDFs produced by Compliar: a fire alarm certificate, an emergency lighting certificate and an EICR. Fictional data, watermarked SAMPLE."
     />
-    <meta property="og:url" content="https://compliar.co.uk/sample-documents/" />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/sample-documents/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -85,16 +94,59 @@
       content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
     />
     <style>
-      .sample-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-      .sample-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column}
-      .sample-card .thumb{display:block;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#f6f4ef}
-      .sample-card .thumb img{display:block;width:100%;height:auto}
-      .sample-card h2{font-size:1.2rem;letter-spacing:-0.03em;margin-top:20px}
-      .sample-card .meta{color:var(--muted);font-size:0.88rem;margin-top:10px}
-      .sample-card .btn{margin-top:auto;align-self:flex-start}
-      .sample-card .meta+.btn{margin-top:20px}
-      .sample-note{max-width:64ch;margin:40px auto 0;text-align:center;font-weight:600}
-      @media (max-width:900px){.sample-grid{grid-template-columns:1fr}}
+      .sample-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+      .sample-card {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+      }
+      .sample-card .thumb {
+        display: block;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        background: #f6f4ef;
+      }
+      .sample-card .thumb img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .sample-card h2 {
+        font-size: 1.2rem;
+        letter-spacing: -0.03em;
+        margin-top: 20px;
+      }
+      .sample-card .meta {
+        color: var(--muted);
+        font-size: 0.88rem;
+        margin-top: 10px;
+      }
+      .sample-card .btn {
+        margin-top: auto;
+        align-self: flex-start;
+      }
+      .sample-card .meta + .btn {
+        margin-top: 20px;
+      }
+      .sample-note {
+        max-width: 64ch;
+        margin: 40px auto 0;
+        text-align: center;
+        font-weight: 600;
+      }
+      @media (max-width: 900px) {
+        .sample-grid {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body>
@@ -102,9 +154,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -126,7 +188,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -145,9 +209,10 @@
           <div class="eyebrow">Sample documents</div>
           <h1>Sample certificates from Compliar.</h1>
           <p>
-            These are real PDFs produced by the Compliar app from our Harbourview
-            sample company. The customer, site and data are fictional, and every
-            page is watermarked SAMPLE. Open them to see the layout.
+            These are real PDFs produced by the Compliar app from our
+            Harbourview sample company. The customer, site and data are
+            fictional, and every page is watermarked SAMPLE. Open them to see
+            the layout.
           </p>
         </div>
       </section>
@@ -155,35 +220,117 @@
         <div class="wrap">
           <h2 id="samples-title" class="sr-only">Sample PDFs</h2>
           <div class="sample-grid">
-          <article class="sample-card">
-            <a class="thumb" href="/assets/documents/fire-alarm-periodic-inspection-servicing-certificate-sample.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="/assets/documents/fire-alarm-periodic-inspection-servicing-certificate-sample-preview.webp" width="600" height="849" loading="lazy" alt="Page 1 of the sample fire detection and alarm periodic inspection and servicing certificate, watermarked SAMPLE." decoding="async" /></a>
-            <h2>Fire detection and alarm periodic inspection and servicing certificate</h2>
-            <p class="meta">BS 5839-1:2025 / BS 5839-6 · 4 pages</p>
-            <a class="btn btn-primary" href="/assets/documents/fire-alarm-periodic-inspection-servicing-certificate-sample.pdf" target="_blank" rel="noopener">Open the sample PDF<span class="sr-only"> (Fire detection and alarm periodic inspection and servicing certificate, opens in a new tab)</span></a>
-          </article>
-          <article class="sample-card">
-            <a class="thumb" href="/assets/documents/emergency-lighting-periodic-inspection-test-certificate-sample.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="/assets/documents/emergency-lighting-periodic-inspection-test-certificate-sample-preview.webp" width="600" height="849" loading="lazy" alt="Page 1 of the sample emergency lighting periodic inspection and test certificate, watermarked SAMPLE." decoding="async" /></a>
-            <h2>Emergency lighting periodic inspection and test certificate</h2>
-            <p class="meta">BS 5266-1:2025 · 2 pages</p>
-            <a class="btn btn-primary" href="/assets/documents/emergency-lighting-periodic-inspection-test-certificate-sample.pdf" target="_blank" rel="noopener">Open the sample PDF<span class="sr-only"> (Emergency lighting periodic inspection and test certificate, opens in a new tab)</span></a>
-          </article>
-          <article class="sample-card">
-            <a class="thumb" href="/assets/documents/eicr-sample.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="/assets/documents/eicr-sample-preview.webp" width="600" height="849" loading="lazy" alt="Page 1 of the sample electrical installation condition report, watermarked SAMPLE." decoding="async" /></a>
-            <h2>Electrical installation condition report (EICR)</h2>
-            <p class="meta">BS 7671:2018+A4:2026 · 11 pages</p>
-            <a class="btn btn-primary" href="/assets/documents/eicr-sample.pdf" target="_blank" rel="noopener">Open the sample PDF<span class="sr-only"> (Electrical installation condition report (EICR), opens in a new tab)</span></a>
-          </article>
+            <article class="sample-card">
+              <a
+                class="thumb"
+                href="/assets/documents/fire-alarm-periodic-inspection-servicing-certificate-sample.pdf"
+                target="_blank"
+                rel="noopener"
+                tabindex="-1"
+                aria-hidden="true"
+                ><img
+                  src="/assets/documents/fire-alarm-periodic-inspection-servicing-certificate-sample-preview.webp"
+                  width="600"
+                  height="849"
+                  loading="lazy"
+                  alt="Page 1 of the sample fire detection and alarm periodic inspection and servicing certificate, watermarked SAMPLE."
+                  decoding="async"
+              /></a>
+              <h2>
+                Fire detection and alarm periodic inspection and servicing
+                certificate
+              </h2>
+              <p class="meta">BS 5839-1:2025 / BS 5839-6 · 4 pages</p>
+              <a
+                class="btn btn-primary"
+                href="/assets/documents/fire-alarm-periodic-inspection-servicing-certificate-sample.pdf"
+                target="_blank"
+                rel="noopener"
+                >Open the sample PDF<span class="sr-only">
+                  (Fire detection and alarm periodic inspection and servicing
+                  certificate, opens in a new tab)</span
+                ></a
+              >
+            </article>
+            <article class="sample-card">
+              <a
+                class="thumb"
+                href="/assets/documents/emergency-lighting-periodic-inspection-test-certificate-sample.pdf"
+                target="_blank"
+                rel="noopener"
+                tabindex="-1"
+                aria-hidden="true"
+                ><img
+                  src="/assets/documents/emergency-lighting-periodic-inspection-test-certificate-sample-preview.webp"
+                  width="600"
+                  height="849"
+                  loading="lazy"
+                  alt="Page 1 of the sample emergency lighting periodic inspection and test certificate, watermarked SAMPLE."
+                  decoding="async"
+              /></a>
+              <h2>
+                Emergency lighting periodic inspection and test certificate
+              </h2>
+              <p class="meta">BS 5266-1:2025 · 2 pages</p>
+              <a
+                class="btn btn-primary"
+                href="/assets/documents/emergency-lighting-periodic-inspection-test-certificate-sample.pdf"
+                target="_blank"
+                rel="noopener"
+                >Open the sample PDF<span class="sr-only">
+                  (Emergency lighting periodic inspection and test certificate,
+                  opens in a new tab)</span
+                ></a
+              >
+            </article>
+            <article class="sample-card">
+              <a
+                class="thumb"
+                href="/assets/documents/eicr-sample.pdf"
+                target="_blank"
+                rel="noopener"
+                tabindex="-1"
+                aria-hidden="true"
+                ><img
+                  src="/assets/documents/eicr-sample-preview.webp"
+                  width="600"
+                  height="849"
+                  loading="lazy"
+                  alt="Page 1 of the sample electrical installation condition report, watermarked SAMPLE."
+                  decoding="async"
+              /></a>
+              <h2>Electrical installation condition report (EICR)</h2>
+              <p class="meta">BS 7671:2018+A4:2026 · 11 pages</p>
+              <a
+                class="btn btn-primary"
+                href="/assets/documents/eicr-sample.pdf"
+                target="_blank"
+                rel="noopener"
+                >Open the sample PDF<span class="sr-only">
+                  (Electrical installation condition report (EICR), opens in a
+                  new tab)</span
+                ></a
+              >
+            </article>
           </div>
-          <p class="sample-note">Compliar keeps the records. How each certificate is filled in stays with your competent engineer and your scheme.</p>
+          <p class="sample-note">
+            Compliar keeps the records. How each certificate is filled in stays
+            with your competent engineer and your scheme.
+          </p>
         </div>
       </section>
       <section class="final-cta band">
         <div class="wrap">
           <div class="eyebrow">Your next job starts here</div>
           <h2>See it working on your own jobs.</h2>
-          <p>Book a demo and Keiran will walk through your own jobs. Early adopters lock their price for 3 years, with no contract.</p>
+          <p>
+            Book a demo and Keiran will walk through your own jobs. Early
+            adopters lock their price for 3 years, with no contract.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/#contact-form" data-demo-open>Book a demo</a>
+            <a class="btn btn-primary" href="/#contact-form" data-demo-open
+              >Book a demo</a
+            >
           </div>
         </div>
       </section>
@@ -200,7 +347,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -214,34 +362,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -251,10 +452,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -262,11 +475,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

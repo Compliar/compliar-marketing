@@ -6,54 +6,78 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
-    <title>Fire Detection and Alarm Servicing: How Often and What Is Checked — Compliar</title>
-    <meta name="description" content="How often a fire alarm should be serviced under BS 5839-1:2025, what a service visit covers, the user&#x27;s weekly test and logbook, and how to handle false alarms." />
-    <link rel="canonical" href="https://compliar.co.uk/fire-alarm-servicing-guide/" />
+    <title>
+      Fire Detection and Alarm Servicing: How Often and What Is Checked —
+      Compliar
+    </title>
+    <meta
+      name="description"
+      content="How often a fire alarm should be serviced under BS 5839-1:2025, what a service visit covers, the user&#x27;s weekly test and logbook, and how to handle false alarms."
+    />
+    <link
+      rel="canonical"
+      href="https://compliar.co.uk/fire-alarm-servicing-guide/"
+    />
     <meta name="theme-color" content="#1B2430" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="Fire Detection and Alarm Servicing: How Often and What Is Checked — Compliar" />
-    <meta property="og:description" content="How often a fire alarm should be serviced under BS 5839-1:2025, what a service visit covers, the user&#x27;s weekly test and logbook, and how to handle false alarms." />
-    <meta property="og:url" content="https://compliar.co.uk/fire-alarm-servicing-guide/" />
+    <meta
+      property="og:title"
+      content="Fire Detection and Alarm Servicing: How Often and What Is Checked — Compliar"
+    />
+    <meta
+      property="og:description"
+      content="How often a fire alarm should be serviced under BS 5839-1:2025, what a service visit covers, the user&#x27;s weekly test and logbook, and how to handle false alarms."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/fire-alarm-servicing-guide/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -62,8 +86,14 @@
       content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Fire Detection and Alarm Servicing: How Often and What Is Checked — Compliar" />
-    <meta name="twitter:description" content="How often a fire alarm should be serviced under BS 5839-1:2025, what a service visit covers, the user&#x27;s weekly test and logbook, and how to handle false alarms." />
+    <meta
+      name="twitter:title"
+      content="Fire Detection and Alarm Servicing: How Often and What Is Checked — Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="How often a fire alarm should be serviced under BS 5839-1:2025, what a service visit covers, the user&#x27;s weekly test and logbook, and how to handle false alarms."
+    />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
     <link
       rel="icon"
@@ -176,9 +206,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -200,7 +240,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -213,50 +255,151 @@
         </details>
       </div>
     </header>
-        <main id="main">
+    <main id="main">
       <section class="page-intro">
         <div class="wrap">
           <div class="crumbs">
-            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a><i>/</i>Fire detection and alarm servicing guide
+            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a
+            ><i>/</i>Fire detection and alarm servicing guide
           </div>
           <div class="eyebrow">Fire · Guide</div>
-          <h1>Fire detection and alarm servicing: how often, and what is checked</h1>
-          <p>A plain guide to servicing under BS 5839-1:2025: the six-month visit, what the engineer actually looks at, who keeps the logbook and what to do about false alarms.</p>
+          <h1>
+            Fire detection and alarm servicing: how often, and what is checked
+          </h1>
+          <p>
+            A plain guide to servicing under BS 5839-1:2025: the six-month
+            visit, what the engineer actually looks at, who keeps the logbook
+            and what to do about false alarms.
+          </p>
         </div>
       </section>
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <p><strong>General guidance only. Check the standard itself and take advice from your own competent person for the job in front of you.</strong> Last reviewed 22 October 2026.</p>
-<h2>Two jobs, two people</h2>
-<p>Keeping a fire alarm in working order is shared. The responsible person for the building (usually the owner, landlord or manager) looks after the day-to-day: the weekly test, the logbook and getting faults fixed. A competent servicing company, usually you, does the periodic inspection and test.</p>
-<h2>How often does a fire alarm need servicing?</h2>
-<p>BS 5839-1 expects a periodic inspection and test about every six months, and the 2025 edition keeps that cycle. What has changed is the wording around timing: a visit that lands between five and seven months after the last one no longer puts the system out of line with the standard. That gives you some room to schedule around access and shutdowns, but do not treat it as a reason to let visits drift.</p>
-<h2>What a service visit covers</h2>
-<p>The exact scope depends on the system, but a typical visit covers:</p>
-<ul>
-  <li>Reading the log book and checking what has happened since the last visit: faults, false alarms, building changes and any work by other contractors.</li>
-  <li>The control panel: a look at the display, the fault and event history, the clock and the indicators.</li>
-  <li>The power supply and standby batteries, including the readings you record against the battery calculation.</li>
-  <li>A sample of detectors and call points, operated and recorded, plus sounders, beacons, remote indicators and any interfaces such as door holders or links to a monitoring centre.</li>
-  <li>Whether the zone plan and the cause and effect information still match the building.</li>
-</ul>
-<p>You do not test every device at every visit. A proportion is tested each time, chosen so that over a twelve-month cycle the whole system has been covered. Record which sections and devices were tested on the certificate so that next time you, or whoever follows you, can carry on from where you stopped. The 2025 edition also adds routine checks of remote indicators and visual alarm devices, and expects zone plans to be verified across the twelve months.</p>
-<h2>What the 12-month cycle adds</h2>
-<p>Think of the year as one programme rather than two separate visits. Planning the sample at the start of the contract is much easier than working out afterwards which devices have not been touched, and it is how anything that only falls due annually gets picked up.</p>
-<h2>The weekly test and the log book</h2>
-<p>Between visits the responsible person operates one manual call point each week, using a different one each time so all of them are covered in rotation, at about the same time of day. The result and the call point used go in the log book.</p>
-<p>The log book also records every fault and every false alarm. For each false alarm, note the date and time, the device and its location, the likely cause, what was happening in the area, what was done and whether the fire and rescue service attended. Under the 2025 edition any agreed variation from the standard also belongs in the log book, which can be paper or digital.</p>
-<h2>False alarm management</h2>
-<p>BS 5839-1:2025 says every false alarm should be investigated and, where appropriate, acted on. The engineer should look at the pattern at each visit: repeated alarms from the same device, the same cause or the same time of day usually point to something that can be fixed, such as the wrong detector type for a kitchen, a dirty head or a door left open on steam.</p>
-<p>The 2025 edition adds an annex on working out a false alarm rate and the point at which a closer investigation is needed. Read the annex itself for the figures rather than relying on rules of thumb from older editions.</p>
-<p>If the system sends alarms to a monitoring centre, the false alarms matter even more, because repeated false calls can lead to a withdrawn response. Make sure the site knows who to ring before an alarm goes in.</p>
-<h2>Putting it together</h2>
-<ul>
-  <li>Book the next visit before you leave the site, and aim for roughly six months, allowing the one-month tolerance either side only when you need it.</li>
-  <li>Record the sections and devices tested, the battery readings and any defects on the certificate.</li>
-  <li>Raise defects as quotes the same week, while the site still remembers the visit.</li>
-</ul>
+            <p>
+              <strong
+                >General guidance only. Check the standard itself and take
+                advice from your own competent person for the job in front of
+                you.</strong
+              >
+              Last reviewed 22 October 2026.
+            </p>
+            <h2>Two jobs, two people</h2>
+            <p>
+              Keeping a fire alarm in working order is shared. The responsible
+              person for the building (usually the owner, landlord or manager)
+              looks after the day-to-day: the weekly test, the logbook and
+              getting faults fixed. A competent servicing company, usually you,
+              does the periodic inspection and test.
+            </p>
+            <h2>How often does a fire alarm need servicing?</h2>
+            <p>
+              BS 5839-1 expects a periodic inspection and test about every six
+              months, and the 2025 edition keeps that cycle. What has changed is
+              the wording around timing: a visit that lands between five and
+              seven months after the last one no longer puts the system out of
+              line with the standard. That gives you some room to schedule
+              around access and shutdowns, but do not treat it as a reason to
+              let visits drift.
+            </p>
+            <h2>What a service visit covers</h2>
+            <p>
+              The exact scope depends on the system, but a typical visit covers:
+            </p>
+            <ul>
+              <li>
+                Reading the log book and checking what has happened since the
+                last visit: faults, false alarms, building changes and any work
+                by other contractors.
+              </li>
+              <li>
+                The control panel: a look at the display, the fault and event
+                history, the clock and the indicators.
+              </li>
+              <li>
+                The power supply and standby batteries, including the readings
+                you record against the battery calculation.
+              </li>
+              <li>
+                A sample of detectors and call points, operated and recorded,
+                plus sounders, beacons, remote indicators and any interfaces
+                such as door holders or links to a monitoring centre.
+              </li>
+              <li>
+                Whether the zone plan and the cause and effect information still
+                match the building.
+              </li>
+            </ul>
+            <p>
+              You do not test every device at every visit. A proportion is
+              tested each time, chosen so that over a twelve-month cycle the
+              whole system has been covered. Record which sections and devices
+              were tested on the certificate so that next time you, or whoever
+              follows you, can carry on from where you stopped. The 2025 edition
+              also adds routine checks of remote indicators and visual alarm
+              devices, and expects zone plans to be verified across the twelve
+              months.
+            </p>
+            <h2>What the 12-month cycle adds</h2>
+            <p>
+              Think of the year as one programme rather than two separate
+              visits. Planning the sample at the start of the contract is much
+              easier than working out afterwards which devices have not been
+              touched, and it is how anything that only falls due annually gets
+              picked up.
+            </p>
+            <h2>The weekly test and the log book</h2>
+            <p>
+              Between visits the responsible person operates one manual call
+              point each week, using a different one each time so all of them
+              are covered in rotation, at about the same time of day. The result
+              and the call point used go in the log book.
+            </p>
+            <p>
+              The log book also records every fault and every false alarm. For
+              each false alarm, note the date and time, the device and its
+              location, the likely cause, what was happening in the area, what
+              was done and whether the fire and rescue service attended. Under
+              the 2025 edition any agreed variation from the standard also
+              belongs in the log book, which can be paper or digital.
+            </p>
+            <h2>False alarm management</h2>
+            <p>
+              BS 5839-1:2025 says every false alarm should be investigated and,
+              where appropriate, acted on. The engineer should look at the
+              pattern at each visit: repeated alarms from the same device, the
+              same cause or the same time of day usually point to something that
+              can be fixed, such as the wrong detector type for a kitchen, a
+              dirty head or a door left open on steam.
+            </p>
+            <p>
+              The 2025 edition adds an annex on working out a false alarm rate
+              and the point at which a closer investigation is needed. Read the
+              annex itself for the figures rather than relying on rules of thumb
+              from older editions.
+            </p>
+            <p>
+              If the system sends alarms to a monitoring centre, the false
+              alarms matter even more, because repeated false calls can lead to
+              a withdrawn response. Make sure the site knows who to ring before
+              an alarm goes in.
+            </p>
+            <h2>Putting it together</h2>
+            <ul>
+              <li>
+                Book the next visit before you leave the site, and aim for
+                roughly six months, allowing the one-month tolerance either side
+                only when you need it.
+              </li>
+              <li>
+                Record the sections and devices tested, the battery readings and
+                any defects on the certificate.
+              </li>
+              <li>
+                Raise defects as quotes the same week, while the site still
+                remembers the visit.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -269,19 +412,41 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary>How often should a fire alarm be serviced?</summary>
-              <p>BS 5839-1:2025 keeps the six-month cycle for the periodic inspection and test. A visit between five and seven months after the last one is no longer treated as not meeting BS 5839-1, and a risk assessment or the type of system can justify visiting more often.</p>
+              <p>
+                BS 5839-1:2025 keeps the six-month cycle for the periodic
+                inspection and test. A visit between five and seven months after
+                the last one is no longer treated as not meeting BS 5839-1, and
+                a risk assessment or the type of system can justify visiting
+                more often.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>Is every detector tested at every service visit?</summary>
-              <p>No. A proportion of devices is tested at each visit, chosen so that the whole system is covered across a twelve-month cycle. The sections and devices tested should be recorded on the certificate so the next visit carries on from there.</p>
+              <summary>
+                Is every detector tested at every service visit?
+              </summary>
+              <p>
+                No. A proportion of devices is tested at each visit, chosen so
+                that the whole system is covered across a twelve-month cycle.
+                The sections and devices tested should be recorded on the
+                certificate so the next visit carries on from there.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Who does the weekly fire alarm test?</summary>
-              <p>The responsible person for the building, or someone they nominate. They operate one manual call point each week, a different one each time, and record the result in the logbook.</p>
+              <p>
+                The responsible person for the building, or someone they
+                nominate. They operate one manual call point each week, a
+                different one each time, and record the result in the logbook.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Do false alarms have to be recorded?</summary>
-              <p>Yes. Each false alarm should be logged with the date, device, cause and action taken, and BS 5839-1:2025 expects every one to be investigated. The servicing engineer reviews the pattern at each visit.</p>
+              <p>
+                Yes. Each false alarm should be logged with the date, device,
+                cause and action taken, and BS 5839-1:2025 expects every one to
+                be investigated. The servicing engineer reviews the pattern at
+                each visit.
+              </p>
             </details>
           </div>
         </div>
@@ -289,20 +454,52 @@
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">In the app</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              In the app
+            </div>
             <h2>How Compliar helps</h2>
-<p>Compliar has a fire alarm periodic inspection and servicing certificate referenced to BS 5839-1:2025, with panel, power supply and battery readings, and a link to the standby battery calculator beside them. The certificate goes to your customer as a branded PDF.</p>
-<ul>
-  <li>Maintenance plans on a monthly, quarterly or six-monthly cycle, scheduled against the property, so a visit does not quietly slip past its interval (maintenance plans and scheduling are on Office plans and above).</li>
-  <li>A digital fire log book for each site, with categories for the weekly fire alarm test, false alarm activations and fire system work or visits, plus a printable QR label so your team can open the logbook on site.</li>
-  <li>Defects raised against the failed device, turned into a quote in a click.</li>
-  <li>A site status that turns amber or red when servicing is due or overdue.</li>
-</ul>
+            <p>
+              Compliar has a fire alarm periodic inspection and servicing
+              certificate referenced to BS 5839-1:2025, with panel, power supply
+              and battery readings, and a link to the standby battery calculator
+              beside them. The certificate goes to your customer as a branded
+              PDF.
+            </p>
+            <ul>
+              <li>
+                Maintenance plans on a monthly, quarterly or six-monthly cycle,
+                scheduled against the property, so a visit does not quietly slip
+                past its interval (maintenance plans and scheduling are on
+                Office plans and above).
+              </li>
+              <li>
+                A digital fire log book for each site, with categories for the
+                weekly fire alarm test, false alarm activations and fire system
+                work or visits, plus a printable QR label so your team can open
+                the logbook on site.
+              </li>
+              <li>
+                Defects raised against the failed device, turned into a quote in
+                a click.
+              </li>
+              <li>
+                A site status that turns amber or red when servicing is due or
+                overdue.
+              </li>
+            </ul>
             <div class="more-links">
-              <a href="/fire-alarm-categories-explained/">Fire alarm categories explained</a>
-              <a href="/emergency-lighting-testing-guide/">Emergency lighting testing guide</a>
-              <a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a>
-              <a href="/fire-alarm-certificate-software/">Fire detection and alarm certificate software</a>
+              <a href="/fire-alarm-categories-explained/"
+                >Fire alarm categories explained</a
+              >
+              <a href="/emergency-lighting-testing-guide/"
+                >Emergency lighting testing guide</a
+              >
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificate software</a
+              >
             </div>
           </div>
         </div>
@@ -310,9 +507,19 @@
       <section class="final-cta band">
         <div class="wrap">
           <h2>One app. Every job, start to finish.</h2>
-          <p>Book a demo and Keiran will walk through your own jobs. Early adopters lock their price for 3 years, with no contract.</p>
+          <p>
+            Book a demo and Keiran will walk through your own jobs. Early
+            adopters lock their price for 3 years, with no contract.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a><a class="btn btn-ghost-on-navy" href="/getting-started/">How getting started works</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            ><a class="btn btn-ghost-on-navy" href="/getting-started/"
+              >How getting started works</a
+            >
           </div>
         </div>
       </section>
@@ -329,7 +536,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -343,34 +551,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -380,10 +641,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -391,11 +664,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

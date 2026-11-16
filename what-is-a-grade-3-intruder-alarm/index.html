@@ -6,48 +6,62 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
-    <title>What Is a Grade 3 Intruder Alarm? BS EN 50131 Explained — Compliar</title>
-    <meta name="description" content="A Grade 3 intruder alarm is designed to resist an intruder with good knowledge and a comprehensive set of tools. What Grade 3 means under BS EN 50131, where it is used and what it involves." />
-    <link rel="canonical" href="https://compliar.co.uk/what-is-a-grade-3-intruder-alarm/" />
+    <title>
+      What Is a Grade 3 Intruder Alarm? BS EN 50131 Explained — Compliar
+    </title>
+    <meta
+      name="description"
+      content="A Grade 3 intruder alarm is designed to resist an intruder with good knowledge and a comprehensive set of tools. What Grade 3 means under BS EN 50131, where it is used and what it involves."
+    />
+    <link
+      rel="canonical"
+      href="https://compliar.co.uk/what-is-a-grade-3-intruder-alarm/"
+    />
     <meta name="theme-color" content="#1B2430" />
     <link
       rel="icon"
@@ -56,138 +70,156 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="What Is a Grade 3 Intruder Alarm? BS EN 50131 Explained — Compliar" />
-    <meta property="og:description" content="A Grade 3 intruder alarm is designed to resist an intruder with good knowledge and a comprehensive set of tools. What Grade 3 means under BS EN 50131, where it is used and what it involves." />
-    <meta property="og:url" content="https://compliar.co.uk/what-is-a-grade-3-intruder-alarm/" />
+    <meta
+      property="og:title"
+      content="What Is a Grade 3 Intruder Alarm? BS EN 50131 Explained — Compliar"
+    />
+    <meta
+      property="og:description"
+      content="A Grade 3 intruder alarm is designed to resist an intruder with good knowledge and a comprehensive set of tools. What Grade 3 means under BS EN 50131, where it is used and what it involves."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/what-is-a-grade-3-intruder-alarm/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Compliar — management software for electrical, fire protection and life safety, and security contractors" />
+    <meta
+      property="og:image:alt"
+      content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
+    />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="What Is a Grade 3 Intruder Alarm? BS EN 50131 Explained — Compliar" />
-    <meta name="twitter:description" content="A Grade 3 intruder alarm is designed to resist an intruder with good knowledge and a comprehensive set of tools. What Grade 3 means under BS EN 50131, where it is used and what it involves." />
+    <meta
+      name="twitter:title"
+      content="What Is a Grade 3 Intruder Alarm? BS EN 50131 Explained — Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="A Grade 3 intruder alarm is designed to resist an intruder with good knowledge and a comprehensive set of tools. What Grade 3 means under BS EN 50131, where it is used and what it involves."
+    />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
     <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Compliar",
-        "item": "https://compliar.co.uk/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Resources",
-        "item": "https://compliar.co.uk/resources/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "What is a Grade 3 intruder alarm?",
-        "item": "https://compliar.co.uk/what-is-a-grade-3-intruder-alarm/"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "What is a Grade 3 intruder alarm?",
-    "description": "A Grade 3 intruder alarm is designed to resist an intruder with good knowledge and a comprehensive set of tools. What Grade 3 means under BS EN 50131, where it is used and what it involves.",
-    "image": "https://compliar.co.uk/og.png",
-    "inLanguage": "en-GB",
-    "datePublished": "2026-11-02",
-    "dateModified": "2026-11-02",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://compliar.co.uk/what-is-a-grade-3-intruder-alarm/"
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "Compliar",
-      "url": "https://compliar.co.uk/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Compliar",
-      "url": "https://compliar.co.uk/"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is a Grade 3 intruder alarm?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A Grade 3 intruder alarm is designed to resist an intruder with good knowledge of the system and a comprehensive set of tools, including portable electronics. The grade comes from the BS EN 50131 series."
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Compliar",
+              "item": "https://compliar.co.uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Resources",
+              "item": "https://compliar.co.uk/resources/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "What is a Grade 3 intruder alarm?",
+              "item": "https://compliar.co.uk/what-is-a-grade-3-intruder-alarm/"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "What is a Grade 3 intruder alarm?",
+          "description": "A Grade 3 intruder alarm is designed to resist an intruder with good knowledge and a comprehensive set of tools. What Grade 3 means under BS EN 50131, where it is used and what it involves.",
+          "image": "https://compliar.co.uk/og.png",
+          "inLanguage": "en-GB",
+          "datePublished": "2026-11-02",
+          "dateModified": "2026-11-02",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://compliar.co.uk/what-is-a-grade-3-intruder-alarm/"
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "Compliar",
+            "url": "https://compliar.co.uk/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Compliar",
+            "url": "https://compliar.co.uk/"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is a Grade 3 intruder alarm?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A Grade 3 intruder alarm is designed to resist an intruder with good knowledge of the system and a comprehensive set of tools, including portable electronics. The grade comes from the BS EN 50131 series."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Grade 3 better than Grade 2?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Grade 3 assumes a more capable intruder than Grade 2, so its equipment is built and tested to resist more. Which one a building needs depends on a risk assessment and the insurer."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need Grade 3 for insurance?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Insurers often ask for Grade 3 where an alarm is a condition of cover, but each insurer sets its own requirement. Check the policy wording."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does a Grade 3 alarm get a police response?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not on its own. The system must be monitored by a recognised alarm receiving centre, installed and maintained by a company certified by a UKAS-accredited body, and the police force must issue a unique reference number for the premises."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How often does a Grade 3 intruder alarm need servicing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "NSI's member guidance table sets two visits a year for grades 2, 3 and 4, with one of them allowed to be a remote check for grades 2 and 3 where the equipment supports it. Check the requirements of your certification body, the police force and the insurer."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between Grade 2 and Grade 3?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Grade 2 is for low to medium risk and assumes an intruder with limited knowledge. Grade 3 is for medium to high risk and assumes a knowledgeable intruder with a range of tools. Equipment and installation requirements are stricter at Grade 3."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I mix Grade 2 and Grade 3 equipment?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The system is only as good as its lowest-graded component, so a Grade 3 specification needs Grade 3 parts throughout, including the power supply and signalling."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who tells me which grade I need?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Usually the risk assessment, the insurer, or the standards of the certification body the installer is registered with. Ask for the requirement in writing and record it on the design and commissioning documents."
+              }
+            }
+          ]
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Is Grade 3 better than Grade 2?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Grade 3 assumes a more capable intruder than Grade 2, so its equipment is built and tested to resist more. Which one a building needs depends on a risk assessment and the insurer."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need Grade 3 for insurance?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Insurers often ask for Grade 3 where an alarm is a condition of cover, but each insurer sets its own requirement. Check the policy wording."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does a Grade 3 alarm get a police response?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Not on its own. The system must be monitored by a recognised alarm receiving centre, installed and maintained by a company certified by a UKAS-accredited body, and the police force must issue a unique reference number for the premises."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How often does a Grade 3 intruder alarm need servicing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "NSI's member guidance table sets two visits a year for grades 2, 3 and 4, with one of them allowed to be a remote check for grades 2 and 3 where the equipment supports it. Check the requirements of your certification body, the police force and the insurer."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between Grade 2 and Grade 3?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Grade 2 is for low to medium risk and assumes an intruder with limited knowledge. Grade 3 is for medium to high risk and assumes a knowledgeable intruder with a range of tools. Equipment and installation requirements are stricter at Grade 3."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I mix Grade 2 and Grade 3 equipment?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The system is only as good as its lowest-graded component, so a Grade 3 specification needs Grade 3 parts throughout, including the power supply and signalling."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who tells me which grade I need?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Usually the risk assessment, the insurer, or the standards of the certification body the installer is registered with. Ask for the requirement in writing and record it on the design and commissioning documents."
-        }
-      }
-    ]
-  }
-]
+      ]
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -205,9 +237,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -229,7 +271,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -242,50 +286,185 @@
         </details>
       </div>
     </header>
-        <main id="main">
+    <main id="main">
       <section class="page-intro">
         <div class="wrap">
           <div class="crumbs">
-            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a><i>/</i>What is a Grade 3 intruder alarm?
+            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a
+            ><i>/</i>What is a Grade 3 intruder alarm?
           </div>
           <div class="eyebrow">Security · Guide</div>
           <h1>What is a Grade 3 intruder alarm?</h1>
-          <p>Grade 3 is the grade most commercial premises are specified to, and the one insurers often ask for. Here is what it means and what it involves.</p>
+          <p>
+            Grade 3 is the grade most commercial premises are specified to, and
+            the one insurers often ask for. Here is what it means and what it
+            involves.
+          </p>
         </div>
       </section>
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <p><strong>General guidance only. Check the standard itself and take advice from your own competent person for the job in front of you.</strong> Last reviewed 2 November 2026.</p>
-<h2>The short answer</h2>
-<p>A Grade 3 intruder alarm is a system designed to resist an intruder with good knowledge of the system and a comprehensive set of tools, including portable electronics. The grade comes from the BS EN 50131 series, and PD 6662 explains how those European standards are applied in the UK.</p>
-<h2>How Grade 3 compares</h2>
-<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Grade</th><th>Intruder assumed</th></tr></thead><tbody><tr><th scope="row">1</th><td>Little knowledge of the system and a limited range of tools.</td></tr><tr><th scope="row">2</th><td>Some knowledge, using general tools and some specialist equipment.</td></tr><tr><th scope="row">3</th><td>Good knowledge of the system and a comprehensive set of tools, including portable electronics.</td></tr><tr><th scope="row">4</th><td>Able to plan in detail, with the full range of equipment and the means to substitute vital components.</td></tr></tbody></table></div>
-<h2>Where Grade 3 is used</h2>
-<p>Grade 3 is typical for larger homes and most commercial premises, and insurers often ask for it where an alarm is a condition of cover. The grade should be chosen from a risk assessment and written into the specification. Check the policy wording before you design, because insurers set their own requirements.</p>
-<h2>Every part has to be Grade 3</h2>
-<p>A system takes the grade of its lowest-graded component. A Grade 3 control panel with Grade 2 detectors is a Grade 2 system. When you quote or inspect a Grade 3 system, check the panel, detectors, keypads, sounders, communicator and power supply, and keep the product grades on file.</p>
-<h2>Grade 3 and police response</h2>
-<p>The grade alone does not get a police response. Under the National Police Chiefs' Council requirements, the system must be monitored by a recognised alarm receiving centre, installed and maintained by a company certified by a UKAS-accredited body, and the premises must hold a unique reference number (URN) from the police force. Police policy is reviewed from time to time, so use the current document for anything you put in a contract.</p>
-<h2>Maintenance and standby power</h2>
-<ul>
-  <li><strong>Visits.</strong> NSI's member guidance table sets two visits a year for grades 2, 3 and 4, and for grades 2 and 3 one of those can be a remote check if the equipment supports it. Check your own certification body, the police requirements and the insurer.</li>
-  <li><strong>Standby power.</strong> Power supply manufacturers publish 30 hours of standby for Grade 3 where a mains failure is reported to the alarm receiving centre, and 60 hours where it is not. Use the figure in the manufacturer's data sheet and your specification.</li>
-</ul>
-<h2>Grade 3 compared with Grade 2 and Grade 4</h2>
-<p>BS EN 50131 sets four security grades. Grade 1 is for low risk, where the intruder is expected to have little knowledge of alarm systems. Grade 2 is for low to medium risk. Grade 3 is for medium to high risk, where the intruder is expected to be knowledgeable and to carry a comprehensive range of tools and portable electronic equipment. Grade 4 is for high risk, such as sites where security takes priority over cost. Each step up asks more of the equipment in areas like tamper protection, signalling and power supply.</p>
-<h2>What changes in practice at Grade 3</h2>
-<ul>
-  <li><strong>Equipment.</strong> Detectors, control panel, keypads, sounders and the power supply are tested to the grade and carry a certificate or declaration for that grade.</li>
-  <li><strong>Tamper and fault monitoring.</strong> The system is expected to detect and report attempts to open or interfere with its parts, and faults such as low battery or loss of a communication path.</li>
-  <li><strong>Access control of the system.</strong> User codes, set and unset methods and engineer access are arranged so that a lower-level user cannot reach engineering functions.</li>
-  <li><strong>Alarm transmission.</strong> Where the alarm is passed to a monitoring centre, the signalling path is specified and graded as well, with its own checks and monitoring.</li>
-</ul>
-<h2>What an installer records</h2>
-<p>A Grade 3 job should leave a clear record: the system grade, the equipment fitted with model references, the zones and what each covers, how the system is set and unset, the signalling arrangement, and the test results. Those same details are what the next engineer needs at the first maintenance visit.</p>
-<h2>Choosing a grade</h2>
-<p>The grade follows from a risk assessment of the premises and the contents, and is often set by the insurer or the certification scheme the installer works under. If the insurer states a grade, get it in writing and put it on the paperwork.</p>
-<p>Work out battery sizes with our <a href="/intruder-alarm-battery-calculator/">intruder alarm battery calculator</a>, and read more in the <a href="/intruder-alarm-grades-maintenance-guide/">intruder alarm grades and maintenance guide</a>.</p>
+            <p>
+              <strong
+                >General guidance only. Check the standard itself and take
+                advice from your own competent person for the job in front of
+                you.</strong
+              >
+              Last reviewed 2 November 2026.
+            </p>
+            <h2>The short answer</h2>
+            <p>
+              A Grade 3 intruder alarm is a system designed to resist an
+              intruder with good knowledge of the system and a comprehensive set
+              of tools, including portable electronics. The grade comes from the
+              BS EN 50131 series, and PD 6662 explains how those European
+              standards are applied in the UK.
+            </p>
+            <h2>How Grade 3 compares</h2>
+            <div class="tbl-wrap">
+              <table class="tbl">
+                <thead>
+                  <tr>
+                    <th>Grade</th>
+                    <th>Intruder assumed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>
+                      Little knowledge of the system and a limited range of
+                      tools.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>
+                      Some knowledge, using general tools and some specialist
+                      equipment.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>
+                      Good knowledge of the system and a comprehensive set of
+                      tools, including portable electronics.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>
+                      Able to plan in detail, with the full range of equipment
+                      and the means to substitute vital components.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h2>Where Grade 3 is used</h2>
+            <p>
+              Grade 3 is typical for larger homes and most commercial premises,
+              and insurers often ask for it where an alarm is a condition of
+              cover. The grade should be chosen from a risk assessment and
+              written into the specification. Check the policy wording before
+              you design, because insurers set their own requirements.
+            </p>
+            <h2>Every part has to be Grade 3</h2>
+            <p>
+              A system takes the grade of its lowest-graded component. A Grade 3
+              control panel with Grade 2 detectors is a Grade 2 system. When you
+              quote or inspect a Grade 3 system, check the panel, detectors,
+              keypads, sounders, communicator and power supply, and keep the
+              product grades on file.
+            </p>
+            <h2>Grade 3 and police response</h2>
+            <p>
+              The grade alone does not get a police response. Under the National
+              Police Chiefs' Council requirements, the system must be monitored
+              by a recognised alarm receiving centre, installed and maintained
+              by a company certified by a UKAS-accredited body, and the premises
+              must hold a unique reference number (URN) from the police force.
+              Police policy is reviewed from time to time, so use the current
+              document for anything you put in a contract.
+            </p>
+            <h2>Maintenance and standby power</h2>
+            <ul>
+              <li>
+                <strong>Visits.</strong> NSI's member guidance table sets two
+                visits a year for grades 2, 3 and 4, and for grades 2 and 3 one
+                of those can be a remote check if the equipment supports it.
+                Check your own certification body, the police requirements and
+                the insurer.
+              </li>
+              <li>
+                <strong>Standby power.</strong> Power supply manufacturers
+                publish 30 hours of standby for Grade 3 where a mains failure is
+                reported to the alarm receiving centre, and 60 hours where it is
+                not. Use the figure in the manufacturer's data sheet and your
+                specification.
+              </li>
+            </ul>
+            <h2>Grade 3 compared with Grade 2 and Grade 4</h2>
+            <p>
+              BS EN 50131 sets four security grades. Grade 1 is for low risk,
+              where the intruder is expected to have little knowledge of alarm
+              systems. Grade 2 is for low to medium risk. Grade 3 is for medium
+              to high risk, where the intruder is expected to be knowledgeable
+              and to carry a comprehensive range of tools and portable
+              electronic equipment. Grade 4 is for high risk, such as sites
+              where security takes priority over cost. Each step up asks more of
+              the equipment in areas like tamper protection, signalling and
+              power supply.
+            </p>
+            <h2>What changes in practice at Grade 3</h2>
+            <ul>
+              <li>
+                <strong>Equipment.</strong> Detectors, control panel, keypads,
+                sounders and the power supply are tested to the grade and carry
+                a certificate or declaration for that grade.
+              </li>
+              <li>
+                <strong>Tamper and fault monitoring.</strong> The system is
+                expected to detect and report attempts to open or interfere with
+                its parts, and faults such as low battery or loss of a
+                communication path.
+              </li>
+              <li>
+                <strong>Access control of the system.</strong> User codes, set
+                and unset methods and engineer access are arranged so that a
+                lower-level user cannot reach engineering functions.
+              </li>
+              <li>
+                <strong>Alarm transmission.</strong> Where the alarm is passed
+                to a monitoring centre, the signalling path is specified and
+                graded as well, with its own checks and monitoring.
+              </li>
+            </ul>
+            <h2>What an installer records</h2>
+            <p>
+              A Grade 3 job should leave a clear record: the system grade, the
+              equipment fitted with model references, the zones and what each
+              covers, how the system is set and unset, the signalling
+              arrangement, and the test results. Those same details are what the
+              next engineer needs at the first maintenance visit.
+            </p>
+            <h2>Choosing a grade</h2>
+            <p>
+              The grade follows from a risk assessment of the premises and the
+              contents, and is often set by the insurer or the certification
+              scheme the installer works under. If the insurer states a grade,
+              get it in writing and put it on the paperwork.
+            </p>
+            <p>
+              Work out battery sizes with our
+              <a href="/intruder-alarm-battery-calculator/"
+                >intruder alarm battery calculator</a
+              >, and read more in the
+              <a href="/intruder-alarm-grades-maintenance-guide/"
+                >intruder alarm grades and maintenance guide</a
+              >.
+            </p>
           </div>
         </div>
       </section>
@@ -298,35 +477,77 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary>What is a Grade 3 intruder alarm?</summary>
-              <p>A Grade 3 intruder alarm is designed to resist an intruder with good knowledge of the system and a comprehensive set of tools, including portable electronics. The grade comes from the BS EN 50131 series.</p>
+              <p>
+                A Grade 3 intruder alarm is designed to resist an intruder with
+                good knowledge of the system and a comprehensive set of tools,
+                including portable electronics. The grade comes from the BS EN
+                50131 series.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Is Grade 3 better than Grade 2?</summary>
-              <p>Grade 3 assumes a more capable intruder than Grade 2, so its equipment is built and tested to resist more. Which one a building needs depends on a risk assessment and the insurer.</p>
+              <p>
+                Grade 3 assumes a more capable intruder than Grade 2, so its
+                equipment is built and tested to resist more. Which one a
+                building needs depends on a risk assessment and the insurer.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Do I need Grade 3 for insurance?</summary>
-              <p>Insurers often ask for Grade 3 where an alarm is a condition of cover, but each insurer sets its own requirement. Check the policy wording.</p>
+              <p>
+                Insurers often ask for Grade 3 where an alarm is a condition of
+                cover, but each insurer sets its own requirement. Check the
+                policy wording.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Does a Grade 3 alarm get a police response?</summary>
-              <p>Not on its own. The system must be monitored by a recognised alarm receiving centre, installed and maintained by a company certified by a UKAS-accredited body, and the police force must issue a unique reference number for the premises.</p>
+              <p>
+                Not on its own. The system must be monitored by a recognised
+                alarm receiving centre, installed and maintained by a company
+                certified by a UKAS-accredited body, and the police force must
+                issue a unique reference number for the premises.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>How often does a Grade 3 intruder alarm need servicing?</summary>
-              <p>NSI's member guidance table sets two visits a year for grades 2, 3 and 4, with one of them allowed to be a remote check for grades 2 and 3 where the equipment supports it. Check the requirements of your certification body, the police force and the insurer.</p>
+              <summary>
+                How often does a Grade 3 intruder alarm need servicing?
+              </summary>
+              <p>
+                NSI's member guidance table sets two visits a year for grades 2,
+                3 and 4, with one of them allowed to be a remote check for
+                grades 2 and 3 where the equipment supports it. Check the
+                requirements of your certification body, the police force and
+                the insurer.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>What is the difference between Grade 2 and Grade 3?</summary>
-              <p>Grade 2 is for low to medium risk and assumes an intruder with limited knowledge. Grade 3 is for medium to high risk and assumes a knowledgeable intruder with a range of tools. Equipment and installation requirements are stricter at Grade 3.</p>
+              <summary>
+                What is the difference between Grade 2 and Grade 3?
+              </summary>
+              <p>
+                Grade 2 is for low to medium risk and assumes an intruder with
+                limited knowledge. Grade 3 is for medium to high risk and
+                assumes a knowledgeable intruder with a range of tools.
+                Equipment and installation requirements are stricter at Grade 3.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Can I mix Grade 2 and Grade 3 equipment?</summary>
-              <p>The system is only as good as its lowest-graded component, so a Grade 3 specification needs Grade 3 parts throughout, including the power supply and signalling.</p>
+              <p>
+                The system is only as good as its lowest-graded component, so a
+                Grade 3 specification needs Grade 3 parts throughout, including
+                the power supply and signalling.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Who tells me which grade I need?</summary>
-              <p>Usually the risk assessment, the insurer, or the standards of the certification body the installer is registered with. Ask for the requirement in writing and record it on the design and commissioning documents.</p>
+              <p>
+                Usually the risk assessment, the insurer, or the standards of
+                the certification body the installer is registered with. Ask for
+                the requirement in writing and record it on the design and
+                commissioning documents.
+              </p>
             </details>
           </div>
         </div>
@@ -334,13 +555,26 @@
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">In the app</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              In the app
+            </div>
             <h2>How Compliar helps</h2>
-<p>Compliar's Intruder Alarm Periodic Maintenance Report is referenced to the BS EN 50131 series and PD 6662, and records the security grade of the system (grade 1 to 4) next to the equipment and test results. Alarm monitoring details are kept with the site.</p>
+            <p>
+              Compliar's Intruder Alarm Periodic Maintenance Report is
+              referenced to the BS EN 50131 series and PD 6662, and records the
+              security grade of the system (grade 1 to 4) next to the equipment
+              and test results. Alarm monitoring details are kept with the site.
+            </p>
             <div class="more-links">
-              <a href="/intruder-alarm-grades-maintenance-guide/">Intruder alarm grades and maintenance</a>
-              <a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a>
-              <a href="/fire-alarm-servicing-guide/">Fire detection and alarm servicing guide</a>
+              <a href="/intruder-alarm-grades-maintenance-guide/"
+                >Intruder alarm grades and maintenance</a
+              >
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+              <a href="/fire-alarm-servicing-guide/"
+                >Fire detection and alarm servicing guide</a
+              >
             </div>
           </div>
         </div>
@@ -348,9 +582,19 @@
       <section class="final-cta band">
         <div class="wrap">
           <h2>One app. Every job, start to finish.</h2>
-          <p>Book a demo and Keiran will walk through your own jobs. Early adopters lock their price for 3 years, with no contract.</p>
+          <p>
+            Book a demo and Keiran will walk through your own jobs. Early
+            adopters lock their price for 3 years, with no contract.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a><a class="btn btn-ghost-on-navy" href="/getting-started/">How getting started works</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            ><a class="btn btn-ghost-on-navy" href="/getting-started/"
+              >How getting started works</a
+            >
           </div>
         </div>
       </section>
@@ -367,7 +611,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -381,34 +626,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -418,10 +716,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -429,11 +739,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

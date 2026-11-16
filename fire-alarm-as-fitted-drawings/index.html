@@ -6,48 +6,62 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
-    <title>How to Do a Fire Alarm As-Fitted Drawing — Step by Step — Compliar</title>
-    <meta name="description" content="What a fire alarm as-fitted drawing is, what it must show, and how to produce one step by step, including device positions, cable runs and changes from the design." />
-    <link rel="canonical" href="https://compliar.co.uk/fire-alarm-as-fitted-drawings/" />
+    <title>
+      How to Do a Fire Alarm As-Fitted Drawing — Step by Step — Compliar
+    </title>
+    <meta
+      name="description"
+      content="What a fire alarm as-fitted drawing is, what it must show, and how to produce one step by step, including device positions, cable runs and changes from the design."
+    />
+    <link
+      rel="canonical"
+      href="https://compliar.co.uk/fire-alarm-as-fitted-drawings/"
+    />
     <meta name="theme-color" content="#1B2430" />
     <link
       rel="icon"
@@ -56,130 +70,148 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="How to Do a Fire Alarm As-Fitted Drawing — Step by Step — Compliar" />
-    <meta property="og:description" content="What a fire alarm as-fitted drawing is, what it must show, and how to produce one step by step, including device positions, cable runs and changes from the design." />
-    <meta property="og:url" content="https://compliar.co.uk/fire-alarm-as-fitted-drawings/" />
+    <meta
+      property="og:title"
+      content="How to Do a Fire Alarm As-Fitted Drawing — Step by Step — Compliar"
+    />
+    <meta
+      property="og:description"
+      content="What a fire alarm as-fitted drawing is, what it must show, and how to produce one step by step, including device positions, cable runs and changes from the design."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/fire-alarm-as-fitted-drawings/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Compliar — management software for electrical, fire protection and life safety, and security contractors" />
+    <meta
+      property="og:image:alt"
+      content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
+    />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="How to Do a Fire Alarm As-Fitted Drawing — Step by Step — Compliar" />
-    <meta name="twitter:description" content="What a fire alarm as-fitted drawing is, what it must show, and how to produce one step by step, including device positions, cable runs and changes from the design." />
+    <meta
+      name="twitter:title"
+      content="How to Do a Fire Alarm As-Fitted Drawing — Step by Step — Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="What a fire alarm as-fitted drawing is, what it must show, and how to produce one step by step, including device positions, cable runs and changes from the design."
+    />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
     <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Compliar",
-        "item": "https://compliar.co.uk/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Resources",
-        "item": "https://compliar.co.uk/resources/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Fire alarm as-fitted drawings",
-        "item": "https://compliar.co.uk/fire-alarm-as-fitted-drawings/"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "How to do a fire alarm as-fitted drawing",
-    "description": "What a fire alarm as-fitted drawing is, what it must show, and how to produce one step by step, including device positions, cable runs and changes from the design.",
-    "image": "https://compliar.co.uk/og.png",
-    "inLanguage": "en-GB",
-    "datePublished": "2026-11-02",
-    "dateModified": "2026-11-02",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://compliar.co.uk/fire-alarm-as-fitted-drawings/"
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "Compliar",
-      "url": "https://compliar.co.uk/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Compliar",
-      "url": "https://compliar.co.uk/"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is a fire alarm as-fitted drawing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "An as-fitted drawing shows the fire alarm system as it was actually installed, including device positions and cable runs, as opposed to the design drawing. It is part of the handover documents."
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Compliar",
+              "item": "https://compliar.co.uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Resources",
+              "item": "https://compliar.co.uk/resources/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Fire alarm as-fitted drawings",
+              "item": "https://compliar.co.uk/fire-alarm-as-fitted-drawings/"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "How to do a fire alarm as-fitted drawing",
+          "description": "What a fire alarm as-fitted drawing is, what it must show, and how to produce one step by step, including device positions, cable runs and changes from the design.",
+          "image": "https://compliar.co.uk/og.png",
+          "inLanguage": "en-GB",
+          "datePublished": "2026-11-02",
+          "dateModified": "2026-11-02",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://compliar.co.uk/fire-alarm-as-fitted-drawings/"
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "Compliar",
+            "url": "https://compliar.co.uk/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Compliar",
+            "url": "https://compliar.co.uk/"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is a fire alarm as-fitted drawing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An as-fitted drawing shows the fire alarm system as it was actually installed, including device positions and cable runs, as opposed to the design drawing. It is part of the handover documents."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is an as-fitted drawing the same as an as-built drawing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In practice the terms are used for the same thing: a drawing of the final installation. As-fitted, as-installed and as-built are all common names."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What should a fire alarm as-fitted drawing show?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The panel and power supplies, every device in its installed position with type and zone or address, cable routes with type and size, any change from the design, and a revision and date."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who produces the as-fitted drawing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The installer or the commissioning team produces it as the system is installed, from marked-up copies of the design drawings, and issues it at handover. It is updated when the system is altered."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between a design drawing and an as-fitted drawing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A design drawing shows what was intended before the install. An as-fitted drawing shows what was actually fitted, including any changes made on site."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do as-fitted drawings have to show cable routes?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "They should show enough for someone to trace and test the circuit. For fire-rated cable and loop wiring, the route and cable type are normally recorded."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who should sign off the as-fitted drawing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The person who carried out the installation checks it against the site, and it is usually issued with the handover documents. Follow the arrangements in your contract and your certification scheme."
+              }
+            }
+          ]
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Is an as-fitted drawing the same as an as-built drawing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In practice the terms are used for the same thing: a drawing of the final installation. As-fitted, as-installed and as-built are all common names."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What should a fire alarm as-fitted drawing show?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The panel and power supplies, every device in its installed position with type and zone or address, cable routes with type and size, any change from the design, and a revision and date."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who produces the as-fitted drawing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The installer or the commissioning team produces it as the system is installed, from marked-up copies of the design drawings, and issues it at handover. It is updated when the system is altered."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between a design drawing and an as-fitted drawing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A design drawing shows what was intended before the install. An as-fitted drawing shows what was actually fitted, including any changes made on site."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do as-fitted drawings have to show cable routes?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "They should show enough for someone to trace and test the circuit. For fire-rated cable and loop wiring, the route and cable type are normally recorded."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who should sign off the as-fitted drawing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The person who carried out the installation checks it against the site, and it is usually issued with the handover documents. Follow the arrangements in your contract and your certification scheme."
-        }
-      }
-    ]
-  }
-]
+      ]
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -197,9 +229,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -221,7 +263,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -234,69 +278,173 @@
         </details>
       </div>
     </header>
-        <main id="main">
+    <main id="main">
       <section class="page-intro">
         <div class="wrap">
           <div class="crumbs">
-            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a><i>/</i>Fire alarm as-fitted drawings
+            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a
+            ><i>/</i>Fire alarm as-fitted drawings
           </div>
           <div class="eyebrow">Fire · How-to</div>
           <h1>How to do a fire alarm as-fitted drawing</h1>
-          <p>An as-fitted drawing records what was actually installed. Here is what it needs to show and how to produce one.</p>
+          <p>
+            An as-fitted drawing records what was actually installed. Here is
+            what it needs to show and how to produce one.
+          </p>
         </div>
       </section>
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <p><strong>General guidance only. Check the standard itself and take advice from your own competent person for the job in front of you.</strong> Last reviewed 2 November 2026.</p>
-<h2>What an as-fitted drawing is</h2>
-<p>An as-fitted drawing (also called an as-installed or as-built drawing) shows the fire alarm system as it was actually installed, as opposed to the design drawing that says how it was meant to be. It is part of the handover documents under BS 5839-1: drawings of the final installation, including cable run details, that are complete and up to date.</p>
-<h2>What it should show</h2>
-<ul>
-  <li>The panel, repeaters and power supplies, and where they are.</li>
-  <li>Every call point, detector, sounder and visual alarm, in its installed position, with the type and the zone or address.</li>
-  <li>Cable routes, with the cable type and size.</li>
-  <li>Any change from the design drawing, such as moved devices, added devices or a different route.</li>
-  <li>A key to the symbols, and the revision and date.</li>
-</ul>
-<h2>How to do one, step by step</h2>
-<ol>
-  <li><strong>Start from the design drawing.</strong> Use the latest issue, with the floor plans and the zoning.</li>
-  <li><strong>Mark it up as you install.</strong> Note every change on a marked-up copy at the time, on paper or on a tablet. It is much harder to remember afterwards.</li>
-  <li><strong>Record each device.</strong> Position, type, address or zone, and a label that matches what is on the device.</li>
-  <li><strong>Record the cabling.</strong> Show the route of each circuit and the cable type and size. Do this before it is hidden behind ceilings and walls, and take photos where it helps.</li>
-  <li><strong>Note the changes from design.</strong> Make deviations visible on the drawing so the designer, the commissioning engineer and the customer can see what moved and why.</li>
-  <li><strong>Produce the final drawing.</strong> Redraw or update the plan, tidy the symbols, add a title block, revision and date, and issue it as a PDF.</li>
-  <li><strong>Check it against the building.</strong> Walk the site with the drawing and confirm that devices and zones match what is on the wall and in the ceiling.</li>
-  <li><strong>Issue it with the handover.</strong> Put it in the O&amp;M manual and give the customer a copy. Update it whenever the system is altered.</li>
-</ol>
-<h2>Common mistakes</h2>
-<ul>
-  <li>Issuing the design drawing as if it were as-fitted.</li>
-  <li>Cable routes drawn as straight lines that do not match the real route.</li>
-  <li>Devices renumbered at commissioning but not on the drawing.</li>
-  <li>No revision or date, so no one knows which version is current.</li>
-</ul>
-<h2>Starting from the design</h2>
-<p>Begin with the design drawing and mark up everything that changed on site. Installers often keep a working copy during the install and note each device as it is fitted, then clean it up at the end. This is far quicker than trying to recall changes from memory at handover.</p>
-<h2>What to record for each device</h2>
-<ul>
-  <li><strong>Type and reference.</strong> Detector type, call point, sounder and so on, with the model if it matters for spares.</li>
-  <li><strong>Address or loop position.</strong> The address shown on the panel, and the loop or zone it belongs to.</li>
-  <li><strong>Location.</strong> Room name and position on the plan, so anyone can find it.</li>
-  <li><strong>Cable route.</strong> Where the cable runs, with the type and size, especially for fire-rated cable.</li>
-</ul>
-<h2>Deviations from the design</h2>
-<p>List every deviation on the drawing or a schedule attached to it: moved devices, extra devices, removed devices and any change of cable type. For each one, record the reason and who agreed it. This protects the installer, and it saves the next engineer from having to guess whether a difference is a mistake.</p>
-<h2>Format and delivery</h2>
-<ul>
-  <li>Give each sheet a title block with site name, drawing number, revision and date.</li>
-  <li>Supply both PDF for reading and the editable source file where the contract allows.</li>
-  <li>Put a copy in the O&amp;M manual and tell the customer where the master is kept.</li>
-</ul>
-<h2>Updating after the handover</h2>
-<p>Any later alteration means an updated drawing with a new revision letter or number. Keep the old versions so the history is visible, but only the current revision should be displayed or handed out.</p>
-<p>The as-fitted drawing goes with the <a href="/how-to-create-a-fire-alarm-zone-plan/">zone plan</a> in the <a href="/fire-alarm-om-manual/">O&amp;M manual</a>.</p>
+            <p>
+              <strong
+                >General guidance only. Check the standard itself and take
+                advice from your own competent person for the job in front of
+                you.</strong
+              >
+              Last reviewed 2 November 2026.
+            </p>
+            <h2>What an as-fitted drawing is</h2>
+            <p>
+              An as-fitted drawing (also called an as-installed or as-built
+              drawing) shows the fire alarm system as it was actually installed,
+              as opposed to the design drawing that says how it was meant to be.
+              It is part of the handover documents under BS 5839-1: drawings of
+              the final installation, including cable run details, that are
+              complete and up to date.
+            </p>
+            <h2>What it should show</h2>
+            <ul>
+              <li>
+                The panel, repeaters and power supplies, and where they are.
+              </li>
+              <li>
+                Every call point, detector, sounder and visual alarm, in its
+                installed position, with the type and the zone or address.
+              </li>
+              <li>Cable routes, with the cable type and size.</li>
+              <li>
+                Any change from the design drawing, such as moved devices, added
+                devices or a different route.
+              </li>
+              <li>A key to the symbols, and the revision and date.</li>
+            </ul>
+            <h2>How to do one, step by step</h2>
+            <ol>
+              <li>
+                <strong>Start from the design drawing.</strong> Use the latest
+                issue, with the floor plans and the zoning.
+              </li>
+              <li>
+                <strong>Mark it up as you install.</strong> Note every change on
+                a marked-up copy at the time, on paper or on a tablet. It is
+                much harder to remember afterwards.
+              </li>
+              <li>
+                <strong>Record each device.</strong> Position, type, address or
+                zone, and a label that matches what is on the device.
+              </li>
+              <li>
+                <strong>Record the cabling.</strong> Show the route of each
+                circuit and the cable type and size. Do this before it is hidden
+                behind ceilings and walls, and take photos where it helps.
+              </li>
+              <li>
+                <strong>Note the changes from design.</strong> Make deviations
+                visible on the drawing so the designer, the commissioning
+                engineer and the customer can see what moved and why.
+              </li>
+              <li>
+                <strong>Produce the final drawing.</strong> Redraw or update the
+                plan, tidy the symbols, add a title block, revision and date,
+                and issue it as a PDF.
+              </li>
+              <li>
+                <strong>Check it against the building.</strong> Walk the site
+                with the drawing and confirm that devices and zones match what
+                is on the wall and in the ceiling.
+              </li>
+              <li>
+                <strong>Issue it with the handover.</strong> Put it in the
+                O&amp;M manual and give the customer a copy. Update it whenever
+                the system is altered.
+              </li>
+            </ol>
+            <h2>Common mistakes</h2>
+            <ul>
+              <li>Issuing the design drawing as if it were as-fitted.</li>
+              <li>
+                Cable routes drawn as straight lines that do not match the real
+                route.
+              </li>
+              <li>
+                Devices renumbered at commissioning but not on the drawing.
+              </li>
+              <li>
+                No revision or date, so no one knows which version is current.
+              </li>
+            </ul>
+            <h2>Starting from the design</h2>
+            <p>
+              Begin with the design drawing and mark up everything that changed
+              on site. Installers often keep a working copy during the install
+              and note each device as it is fitted, then clean it up at the end.
+              This is far quicker than trying to recall changes from memory at
+              handover.
+            </p>
+            <h2>What to record for each device</h2>
+            <ul>
+              <li>
+                <strong>Type and reference.</strong> Detector type, call point,
+                sounder and so on, with the model if it matters for spares.
+              </li>
+              <li>
+                <strong>Address or loop position.</strong> The address shown on
+                the panel, and the loop or zone it belongs to.
+              </li>
+              <li>
+                <strong>Location.</strong> Room name and position on the plan,
+                so anyone can find it.
+              </li>
+              <li>
+                <strong>Cable route.</strong> Where the cable runs, with the
+                type and size, especially for fire-rated cable.
+              </li>
+            </ul>
+            <h2>Deviations from the design</h2>
+            <p>
+              List every deviation on the drawing or a schedule attached to it:
+              moved devices, extra devices, removed devices and any change of
+              cable type. For each one, record the reason and who agreed it.
+              This protects the installer, and it saves the next engineer from
+              having to guess whether a difference is a mistake.
+            </p>
+            <h2>Format and delivery</h2>
+            <ul>
+              <li>
+                Give each sheet a title block with site name, drawing number,
+                revision and date.
+              </li>
+              <li>
+                Supply both PDF for reading and the editable source file where
+                the contract allows.
+              </li>
+              <li>
+                Put a copy in the O&amp;M manual and tell the customer where the
+                master is kept.
+              </li>
+            </ul>
+            <h2>Updating after the handover</h2>
+            <p>
+              Any later alteration means an updated drawing with a new revision
+              letter or number. Keep the old versions so the history is visible,
+              but only the current revision should be displayed or handed out.
+            </p>
+            <p>
+              The as-fitted drawing goes with the
+              <a href="/how-to-create-a-fire-alarm-zone-plan/">zone plan</a> in
+              the <a href="/fire-alarm-om-manual/">O&amp;M manual</a>.
+            </p>
           </div>
         </div>
       </section>
@@ -309,31 +457,71 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary>What is a fire alarm as-fitted drawing?</summary>
-              <p>An as-fitted drawing shows the fire alarm system as it was actually installed, including device positions and cable runs, as opposed to the design drawing. It is part of the handover documents.</p>
+              <p>
+                An as-fitted drawing shows the fire alarm system as it was
+                actually installed, including device positions and cable runs,
+                as opposed to the design drawing. It is part of the handover
+                documents.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>Is an as-fitted drawing the same as an as-built drawing?</summary>
-              <p>In practice the terms are used for the same thing: a drawing of the final installation. As-fitted, as-installed and as-built are all common names.</p>
+              <summary>
+                Is an as-fitted drawing the same as an as-built drawing?
+              </summary>
+              <p>
+                In practice the terms are used for the same thing: a drawing of
+                the final installation. As-fitted, as-installed and as-built are
+                all common names.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>What should a fire alarm as-fitted drawing show?</summary>
-              <p>The panel and power supplies, every device in its installed position with type and zone or address, cable routes with type and size, any change from the design, and a revision and date.</p>
+              <summary>
+                What should a fire alarm as-fitted drawing show?
+              </summary>
+              <p>
+                The panel and power supplies, every device in its installed
+                position with type and zone or address, cable routes with type
+                and size, any change from the design, and a revision and date.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Who produces the as-fitted drawing?</summary>
-              <p>The installer or the commissioning team produces it as the system is installed, from marked-up copies of the design drawings, and issues it at handover. It is updated when the system is altered.</p>
+              <p>
+                The installer or the commissioning team produces it as the
+                system is installed, from marked-up copies of the design
+                drawings, and issues it at handover. It is updated when the
+                system is altered.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>What is the difference between a design drawing and an as-fitted drawing?</summary>
-              <p>A design drawing shows what was intended before the install. An as-fitted drawing shows what was actually fitted, including any changes made on site.</p>
+              <summary>
+                What is the difference between a design drawing and an as-fitted
+                drawing?
+              </summary>
+              <p>
+                A design drawing shows what was intended before the install. An
+                as-fitted drawing shows what was actually fitted, including any
+                changes made on site.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>Do as-fitted drawings have to show cable routes?</summary>
-              <p>They should show enough for someone to trace and test the circuit. For fire-rated cable and loop wiring, the route and cable type are normally recorded.</p>
+              <summary>
+                Do as-fitted drawings have to show cable routes?
+              </summary>
+              <p>
+                They should show enough for someone to trace and test the
+                circuit. For fire-rated cable and loop wiring, the route and
+                cable type are normally recorded.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Who should sign off the as-fitted drawing?</summary>
-              <p>The person who carried out the installation checks it against the site, and it is usually issued with the handover documents. Follow the arrangements in your contract and your certification scheme.</p>
+              <p>
+                The person who carried out the installation checks it against
+                the site, and it is usually issued with the handover documents.
+                Follow the arrangements in your contract and your certification
+                scheme.
+              </p>
             </details>
           </div>
         </div>
@@ -341,13 +529,27 @@
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">In the app</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              In the app
+            </div>
             <h2>How Compliar helps</h2>
-<p>Compliar's Design editor draws floor plans with walls and doors, zones and as-fitted plans. You can load an existing plan with Upload Plan and place devices on it, route cable runs with a cable type and size, and note deviations from the design on the drawing. Drawings export with a title block that carries your company logo. Compliar is a drawing and records tool. The designer and the scheme remain responsible for the design.</p>
+            <p>
+              Compliar's Design editor draws floor plans with walls and doors,
+              zones and as-fitted plans. You can load an existing plan with
+              Upload Plan and place devices on it, route cable runs with a cable
+              type and size, and note deviations from the design on the drawing.
+              Drawings export with a title block that carries your company logo.
+              Compliar is a drawing and records tool. The designer and the
+              scheme remain responsible for the design.
+            </p>
             <div class="more-links">
-              <a href="/how-to-create-a-fire-alarm-zone-plan/">How to create a zone plan</a>
+              <a href="/how-to-create-a-fire-alarm-zone-plan/"
+                >How to create a zone plan</a
+              >
               <a href="/fire-alarm-om-manual/">Fire alarm O&amp;M manual</a>
-              <a href="/fire-alarm-design-software/">Fire detection and alarm design software</a>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design software</a
+              >
             </div>
           </div>
         </div>
@@ -355,9 +557,19 @@
       <section class="final-cta band">
         <div class="wrap">
           <h2>One app. Every job, start to finish.</h2>
-          <p>Book a demo and Keiran will walk through your own jobs. Early adopters lock their price for 3 years, with no contract.</p>
+          <p>
+            Book a demo and Keiran will walk through your own jobs. Early
+            adopters lock their price for 3 years, with no contract.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a><a class="btn btn-ghost-on-navy" href="/getting-started/">How getting started works</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            ><a class="btn btn-ghost-on-navy" href="/getting-started/"
+              >How getting started works</a
+            >
           </div>
         </div>
       </section>
@@ -374,7 +586,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -388,34 +601,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -425,10 +691,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -436,11 +714,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

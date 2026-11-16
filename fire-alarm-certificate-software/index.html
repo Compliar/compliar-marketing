@@ -6,46 +6,54 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
-    <title>Fire Detection and Alarm Certificate Software | BS 5839-1 — Compliar</title>
+    <title>
+      Fire Detection and Alarm Certificate Software | BS 5839-1 — Compliar
+    </title>
     <meta
       name="description"
       content="Issue BS 5839-1:2025 fire detection and alarm design, installation, commissioning, verification and servicing certificates from your phone, with a battery calculator for your templates and branded PDFs. Book a demo."
@@ -175,9 +183,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -199,7 +217,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -218,7 +238,8 @@
         <div class="wrap hero-grid">
           <div>
             <div class="crumbs">
-              <a href="/">Compliar</a><i>/</i>Fire detection and alarm certificate software
+              <a href="/">Compliar</a><i>/</i>Fire detection and alarm
+              certificate software
             </div>
             <div class="eyebrow">Fire detection and alarm certificates</div>
             <h1>Fire detection and alarm certificate <span>software</span></h1>
@@ -232,12 +253,14 @@
               class="calc-badge"
               style="display: inline-flex; margin-bottom: 22px"
             >
-              BOOK A DEMO · NO CONTRACT · EARLY ADOPTERS LOCK THEIR PRICE FOR 3 YEARS
+              BOOK A DEMO · NO CONTRACT · EARLY ADOPTERS LOCK THEIR PRICE FOR 3
+              YEARS
             </div>
             <div class="hero-ctas">
               <a
                 class="btn btn-primary"
-                href="/contact/?subject=Demo+request" data-demo-open
+                href="/contact/?subject=Demo+request"
+                data-demo-open
                 >Book a demo</a
               >
               <a
@@ -251,7 +274,7 @@
             </div>
           </div>
           <div class="mock" style="border-color: var(--line-on-navy)">
-                        <div class="mock-body">
+            <div class="mock-body">
               <div class="doc-row" style="padding-top: 0">
                 <span class="calc-title" style="color: var(--ink)"
                   >Fire detection and alarm certificate set</span
@@ -291,15 +314,38 @@
         </div>
       </section>
 
-      <section class="band-tight sample-offer" id="free-sample" aria-labelledby="sample-offer-title" data-sample-offer="certificate">
+      <section
+        class="band-tight sample-offer"
+        id="free-sample"
+        aria-labelledby="sample-offer-title"
+        data-sample-offer="certificate"
+      >
         <div class="wrap sample-offer-grid">
           <div class="sample-offer-copy">
-            <div class="eyebrow" style="color: var(--orange-deep)">Free sample</div>
-            <h2 id="sample-offer-title">Free sample: a fire alarm certificate, filled in</h2>
-            <p>Open a sample fire detection and alarm periodic inspection and servicing certificate (BS 5839-1:2025 / BS 5839-6) made in Compliar. Fictional data, watermarked SAMPLE. Leave your email and open it straight away.</p>
-            <p class="sample-by">From Keiran Sandham, founder, Kendal. 20 years in electrical, fire and security.</p>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              Free sample
+            </div>
+            <h2 id="sample-offer-title">
+              Free sample: a fire alarm certificate, filled in
+            </h2>
+            <p>
+              Open a sample fire detection and alarm periodic inspection and
+              servicing certificate (BS 5839-1:2025 / BS 5839-6) made in
+              Compliar. Fictional data, watermarked SAMPLE. Leave your email and
+              open it straight away.
+            </p>
+            <p class="sample-by">
+              From Keiran Sandham, founder, Kendal. 20 years in electrical, fire
+              and security.
+            </p>
           </div>
-          <div class="sample-offer-box" data-sample-form><p class="sample-nojs"><a class="btn btn-primary" href="/sample-documents/">See the sample documents</a></p></div>
+          <div class="sample-offer-box" data-sample-form>
+            <p class="sample-nojs">
+              <a class="btn btn-primary" href="/sample-documents/"
+                >See the sample documents</a
+              >
+            </p>
+          </div>
         </div>
       </section>
 
@@ -311,10 +357,9 @@
             <h2>The full <span class="nw">BS 5839-1</span> certificate set</h2>
             <p>
               One template for each stage of a fire alarm system's life, each
-              referenced to the relevant part of BS 5839-1:2025.
-              Verification, modification or extension, standby power and
-              battery record and schedule of test results templates are built
-              in too.
+              referenced to the relevant part of BS 5839-1:2025. Verification,
+              modification or extension, standby power and battery record and
+              schedule of test results templates are built in too.
             </p>
           </div>
           <div class="tbl-wrap">
@@ -328,7 +373,9 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Fire Detection and Alarm Design Certificate</th>
+                  <th scope="row">
+                    Fire Detection and Alarm Design Certificate
+                  </th>
                   <td>Design</td>
                   <td>Section 2 and Annex G.1</td>
                 </tr>
@@ -355,7 +402,8 @@
                 </tr>
                 <tr>
                   <th scope="row">
-                    Fire Detection and Alarm System Periodic Inspection &amp; Servicing
+                    Fire Detection and Alarm System Periodic Inspection &amp;
+                    Servicing
                   </th>
                   <td>Routine servicing</td>
                   <td>Section 6, clause 43</td>
@@ -386,17 +434,17 @@
               <h4>Servicing visits</h4>
               <p>
                 Checks for every visit and the annual inspection, panel, PSU and
-                battery readings, photo evidence and a recorded outcome. Add
-                the standby battery calculator when you edit the template.
+                battery readings, photo evidence and a recorded outcome. Add the
+                standby battery calculator when you edit the template.
               </p>
             </div>
             <div class="roadmap-card">
               <h4>Your own templates</h4>
               <p>
-                Edit the templates or build your own (company admins, Office plans and above), so
-                a certificate matches how your company works rather than how a
-                software vendor thinks it should. The built-in templates are
-                included from Lite.
+                Edit the templates or build your own (company admins, Office
+                plans and above), so a certificate matches how your company
+                works rather than how a software vendor thinks it should. The
+                built-in templates are included from Lite.
               </p>
             </div>
           </div>
@@ -444,10 +492,13 @@
             <h3>Not just fire alarms</h3>
             <p>
               The same system covers every system type we support across fire
-              protection and life safety, security and electrical, so one login handles the whole company: 32 system types in all
-              (including emergency lighting to BS 5266-1, evacuation alert systems to BS 8629,
-              extinguishers, sprinklers, risers, suppression and fire risk assessments, intruder and hold-up alarm systems to BS EN 50131 and PD 6662,
-              CCTV and access control, and electrical installation, inspection and testing). See the
+              protection and life safety, security and electrical, so one login
+              handles the whole company: 32 system types in all (including
+              emergency lighting to BS 5266-1, evacuation alert systems to BS
+              8629, extinguishers, sprinklers, risers, suppression and fire risk
+              assessments, intruder and hold-up alarm systems to BS EN 50131 and
+              PD 6662, CCTV and access control, and electrical installation,
+              inspection and testing). See the
               <a href="/features/#coverage-title">full list of disciplines</a>.
             </p>
             <div class="more-links">
@@ -489,7 +540,10 @@
             <details class="faq-item">
               <summary>Can I edit the certificate templates?</summary>
               <p>
-                Yes. On Office plans and above, company admins can edit the templates that come with Compliar or build your own, so you are not waiting on a software vendor to change a form. The built-in templates are included from Lite.
+                Yes. On Office plans and above, company admins can edit the
+                templates that come with Compliar or build your own, so you are
+                not waiting on a software vendor to change a form. The built-in
+                templates are included from Lite.
               </p>
             </details>
             <details class="faq-item">
@@ -497,16 +551,18 @@
               <p>
                 Yes. The field app runs in your phone's browser, so there is
                 nothing to install from an app store. Once your jobs have loaded
-                it keeps working with no signal on site and sends your work
-                when you are back in range.
+                it keeps working with no signal on site and sends your work when
+                you are back in range.
               </p>
             </details>
             <details class="faq-item">
               <summary>Does it calculate the standby battery?</summary>
               <p>
-                Yes. A BS 5839-1 Annex E standby battery calculator is
-                available in the certificate builder (company admins, Office plans and above) when you build or edit a template, so you can add it next to the panel, PSU and battery
-                readings. The same method is on our
+                Yes. A BS 5839-1 Annex E standby battery calculator is available
+                in the certificate builder (company admins, Office plans and
+                above) when you build or edit a template, so you can add it next
+                to the panel, PSU and battery readings. The same method is on
+                our
                 <a href="/fire-alarm-battery-calculator/"
                   >free fire alarm battery calculator</a
                 >.
@@ -517,8 +573,8 @@
               <p>
                 Compliar is priced per person. A Lite plan is £35 + VAT a month,
                 Office £65 and Design £95, and certificates are included from
-                the Lite plan up. Pay yearly and you get two
-                months free. Prices are plus VAT. There is no contract.
+                the Lite plan up. Pay yearly and you get two months free. Prices
+                are plus VAT. There is no contract.
               </p>
             </details>
           </div>
@@ -528,16 +584,20 @@
       <!-- FINAL CTA -->
       <section class="final-cta band">
         <div class="wrap">
-          <h2>Issue your next fire detection and alarm certificate from site</h2>
+          <h2>
+            Issue your next fire detection and alarm certificate from site
+          </h2>
           <p>
-            See the BS 5839-1 certificate set on your own jobs in a demo. Onboarding is from £195, quoted individually.
+            See the BS 5839-1 certificate set on your own jobs in a demo.
+            Onboarding is from £195, quoted individually.
           </p>
           <div class="final-ctas">
             <a
               class="btn btn-primary"
-              href="/contact/?subject=Demo+request" data-demo-open
-                >Book a demo</a
-              >
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            >
             <a class="btn btn-ghost-on-navy" href="/pricing/">See pricing</a>
           </div>
         </div>
@@ -556,7 +616,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -570,34 +631,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -607,10 +721,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -618,11 +744,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

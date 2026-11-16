@@ -6,57 +6,85 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
-    <title>Fire Detection and Alarm Design Software: Zone Plans and As-Fitted Drawings | Compliar</title>
-    <meta name="description" content="Draw fire alarm zone plans and as-fitted drawings, place symbols, route cables and take off quantities in Compliar. Design plan £95 per user per month + VAT." />
-    <link rel="canonical" href="https://compliar.co.uk/fire-alarm-design-software/" />
+    <title>
+      Fire Detection and Alarm Design Software: Zone Plans and As-Fitted
+      Drawings | Compliar
+    </title>
+    <meta
+      name="description"
+      content="Draw fire alarm zone plans and as-fitted drawings, place symbols, route cables and take off quantities in Compliar. Design plan £95 per user per month + VAT."
+    />
+    <link
+      rel="canonical"
+      href="https://compliar.co.uk/fire-alarm-design-software/"
+    />
     <meta name="theme-color" content="#141D2A" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="Fire Detection and Alarm Design Software: Zone Plans and As-Fitted Drawings | Compliar" />
-    <meta property="og:description" content="Draw fire alarm zone plans and as-fitted drawings, place symbols, route cables and take off quantities in Compliar. Design plan £95 per user per month + VAT." />
-    <meta property="og:url" content="https://compliar.co.uk/fire-alarm-design-software/" />
+    <meta
+      property="og:title"
+      content="Fire Detection and Alarm Design Software: Zone Plans and As-Fitted Drawings | Compliar"
+    />
+    <meta
+      property="og:description"
+      content="Draw fire alarm zone plans and as-fitted drawings, place symbols, route cables and take off quantities in Compliar. Design plan £95 per user per month + VAT."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/fire-alarm-design-software/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Compliar — management software for electrical, fire protection and life safety, and security contractors" />
+    <meta
+      property="og:image:alt"
+      content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
     <link
@@ -75,60 +103,60 @@
     <script src="/cookie-consent.js" defer></script>
     <script src="/demo-form.js" defer></script>
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Who is the Design plan for?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Engineers and project teams who draw fire alarm layouts. It is £95 per user per month plus VAT (£950 a year) and includes everything in Office."
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Who is the Design plan for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Engineers and project teams who draw fire alarm layouts. It is £95 per user per month plus VAT (£950 a year) and includes everything in Office."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I upload my own plan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Use Upload Plan in the Design editor to bring in a plan, then place devices on it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use my own symbols?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Your company can upload custom symbols, and there are extra symbol sets for power, lighting, CCTV, intruder, door entry and fire equipment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it produce take-offs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Flow to BOQ takes the drawing to a bill of quantities."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the drawing mean my design meets the standard?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Compliar is a drawing and records tool. The designer and the scheme remain responsible for the design."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I try it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Book a demo and we will show the Design editor on your kind of site."
+            }
+          }
+        ]
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I upload my own plan?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Use Upload Plan in the Design editor to bring in a plan, then place devices on it."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I use my own symbols?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Your company can upload custom symbols, and there are extra symbol sets for power, lighting, CCTV, intruder, door entry and fire equipment."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does it produce take-offs?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Flow to BOQ takes the drawing to a bill of quantities."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does the drawing mean my design meets the standard?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Compliar is a drawing and records tool. The designer and the scheme remain responsible for the design."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I try it?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Book a demo and we will show the Design editor on your kind of site."
-      }
-    }
-  ]
-}
     </script>
   </head>
   <body class="home-page">
@@ -137,9 +165,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -161,7 +199,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -179,18 +219,41 @@
       <section class="v2-hero" aria-labelledby="hero-title">
         <div class="wrap v2-hero-grid">
           <div>
-            <span class="v2-pill">Fire detection and alarm design · Design plan</span>
-            <h1 id="hero-title">Fire detection and alarm design software <span>for zone plans and as-fitted drawings.</span></h1>
-            <p class="v2-sub">Draw zones and as-fitted plans, place symbols, route cable runs and take off quantities, in the same system you use for jobs and certificates.</p>
+            <span class="v2-pill"
+              >Fire detection and alarm design · Design plan</span
+            >
+            <h1 id="hero-title">
+              Fire detection and alarm design software
+              <span>for zone plans and as-fitted drawings.</span>
+            </h1>
+            <p class="v2-sub">
+              Draw zones and as-fitted plans, place symbols, route cable runs
+              and take off quantities, in the same system you use for jobs and
+              certificates.
+            </p>
             <div class="v2-ctas">
               <a class="btn btn-primary" href="#contact-form">Book a demo</a>
             </div>
-            <p class="v2-reassure">Design plan £95 per user per month plus VAT · Early adopters lock their price for 3 years · No contract</p>
+            <p class="v2-reassure">
+              Design plan £95 per user per month plus VAT · Early adopters lock
+              their price for 3 years · No contract
+            </p>
           </div>
           <div class="hero-showcase">
             <figure class="device-frame device-desktop">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>app.compliar.co.uk</span><span class="device-badge">SAMPLE DATA</span></div>
-              <a class="shot" href="/assets/screens/desk-03-design-editor.webp"><img src="/assets/screens/desk-03-design-editor.webp" width="1600" height="1000" alt="Compliar Design editor on sample data showing an as-fitted ground floor plan with a symbol catalogue and a drawing key" decoding="async" fetchpriority="high" /></a>
+              <div class="device-bar" aria-hidden="true">
+                <i></i><i></i><i></i><span>app.compliar.co.uk</span
+                ><span class="device-badge">SAMPLE DATA</span>
+              </div>
+              <a class="shot" href="/assets/screens/desk-03-design-editor.webp"
+                ><img
+                  src="/assets/screens/desk-03-design-editor.webp"
+                  width="1600"
+                  height="1000"
+                  alt="Compliar Design editor on sample data showing an as-fitted ground floor plan with a symbol catalogue and a drawing key"
+                  decoding="async"
+                  fetchpriority="high"
+              /></a>
             </figure>
           </div>
         </div>
@@ -201,9 +264,17 @@
           <div class="price-strip">
             <div>
               <h2 id="price-h">Design plan £95 per user per month, plus VAT</h2>
-              <p>Other plans are from £35 per user per month, plus VAT. No per-certificate fees and no contract. Every plan and onboarding are on the pricing page.</p>
+              <p>
+                Other plans are from £35 per user per month, plus VAT. No
+                per-certificate fees and no contract. Every plan and onboarding
+                are on the pricing page.
+              </p>
             </div>
-            <div><a class="btn btn-ghost-on-cream" href="/pricing/">See pricing →</a></div>
+            <div>
+              <a class="btn btn-ghost-on-cream" href="/pricing/"
+                >See pricing →</a
+              >
+            </div>
           </div>
         </div>
       </section>
@@ -212,65 +283,180 @@
         <div class="wrap">
           <div class="v2-head">
             <span class="v2-kicker">What you get</span>
-            <h2 class="v2-h2" id="proof-h">Drawings that sit alongside your jobs.</h2>
+            <h2 class="v2-h2" id="proof-h">
+              Drawings that sit alongside your jobs.
+            </h2>
           </div>
           <div class="lp-proof">
             <div>
               <h3>As-fitted plans and zones</h3>
-              <p>The Design editor draws floor plans with walls and doors, zones and as-fitted plans. Load an existing plan with Upload Plan, then place devices on it.</p><p>Drawings can be exported with a title block that carries your company logo.</p><ul><li>As-fitted plans, with deviations from the design noted on the drawing</li><li>Rooms labelled with their floor area</li></ul>
+              <p>
+                The Design editor draws floor plans with walls and doors, zones
+                and as-fitted plans. Load an existing plan with Upload Plan,
+                then place devices on it.
+              </p>
+              <p>
+                Drawings can be exported with a title block that carries your
+                company logo.
+              </p>
+              <ul>
+                <li>
+                  As-fitted plans, with deviations from the design noted on the
+                  drawing
+                </li>
+                <li>Rooms labelled with their floor area</li>
+              </ul>
             </div>
             <figure class="lp-proof-fig">
-              <a class="shot" href="/assets/screens/desk-03-design-editor.webp"><img src="/assets/screens/desk-03-design-editor.webp" width="1600" height="1000" loading="lazy" alt="Compliar Design editor on sample data showing an as-fitted ground floor plan, a design catalogue on the left, and a drawing key of symbols" decoding="async" /></a>
-              <figcaption>Design editor with an as-fitted plan, sample data</figcaption>
+              <a class="shot" href="/assets/screens/desk-03-design-editor.webp"
+                ><img
+                  src="/assets/screens/desk-03-design-editor.webp"
+                  width="1600"
+                  height="1000"
+                  loading="lazy"
+                  alt="Compliar Design editor on sample data showing an as-fitted ground floor plan, a design catalogue on the left, and a drawing key of symbols"
+                  decoding="async"
+              /></a>
+              <figcaption>
+                Design editor with an as-fitted plan, sample data
+              </figcaption>
             </figure>
           </div>
           <div class="lp-proof lp-flip">
             <div>
               <h3>The zone plan, as it prints</h3>
-              <p>This is the A3 zone plan exported from the sample design above: four zones with their areas and device counts, a "you are here" marker, the BS 5839-1 symbol key, your company's title block, the drawing number and revision, and a scale bar so the print can be checked against paper. It is the sheet that goes next to the fire alarm panel.</p>
+              <p>
+                This is the A3 zone plan exported from the sample design above:
+                four zones with their areas and device counts, a "you are here"
+                marker, the BS 5839-1 symbol key, your company's title block,
+                the drawing number and revision, and a scale bar so the print
+                can be checked against paper. It is the sheet that goes next to
+                the fire alarm panel.
+              </p>
             </div>
             <figure class="lp-proof-fig">
-              <a class="shot" href="/assets/screens/doc-zone-plan-a3.webp"><img src="/assets/screens/doc-zone-plan-crop.webp" width="1600" height="872" loading="lazy" alt="A3 zone plan exported from Compliar on sample data: colour-coded zones, device symbols, fire alarm symbol key, title block with drawing number and revision, and a scale bar" decoding="async" /></a>
-              <figcaption>Zone plan PDF export, sample data. Tap to see the full A3 sheet.</figcaption>
+              <a class="shot" href="/assets/screens/doc-zone-plan-a3.webp"
+                ><img
+                  src="/assets/screens/doc-zone-plan-crop.webp"
+                  width="1600"
+                  height="872"
+                  loading="lazy"
+                  alt="A3 zone plan exported from Compliar on sample data: colour-coded zones, device symbols, fire alarm symbol key, title block with drawing number and revision, and a scale bar"
+                  decoding="async"
+              /></a>
+              <figcaption>
+                Zone plan PDF export, sample data. Tap to see the full A3 sheet.
+              </figcaption>
             </figure>
           </div>
           <div class="lp-proof">
             <div>
               <h3>The as-fitted drawing, as it prints</h3>
-              <p>The same floor exported as the as-fitted record: every device at its installed position with its loop address, the symbol key with the BS EN 54 part for each device type, and the title block. The as-fitted drawing, the zone plan and the O&amp;M manual are the handover documents the next engineer will ask for.</p>
+              <p>
+                The same floor exported as the as-fitted record: every device at
+                its installed position with its loop address, the symbol key
+                with the BS EN 54 part for each device type, and the title
+                block. The as-fitted drawing, the zone plan and the O&amp;M
+                manual are the handover documents the next engineer will ask
+                for.
+              </p>
             </div>
             <figure class="lp-proof-fig">
-              <a class="shot" href="/assets/screens/doc-as-fitted-a3.webp"><img src="/assets/screens/doc-as-fitted-crop.webp" width="1600" height="872" loading="lazy" alt="A3 as-fitted drawing exported from Compliar on sample data: device symbols with loop addresses on the floor plan, fire alarm symbol key and title block" decoding="async" /></a>
-              <figcaption>As-fitted drawing PDF export, sample data. Tap to see the full A3 sheet.</figcaption>
+              <a class="shot" href="/assets/screens/doc-as-fitted-a3.webp"
+                ><img
+                  src="/assets/screens/doc-as-fitted-crop.webp"
+                  width="1600"
+                  height="872"
+                  loading="lazy"
+                  alt="A3 as-fitted drawing exported from Compliar on sample data: device symbols with loop addresses on the floor plan, fire alarm symbol key and title block"
+                  decoding="async"
+              /></a>
+              <figcaption>
+                As-fitted drawing PDF export, sample data. Tap to see the full
+                A3 sheet.
+              </figcaption>
             </figure>
           </div>
-          <div class="lp-proof" style="grid-template-columns:1fr">
+          <div class="lp-proof" style="grid-template-columns: 1fr">
             <div>
               <h3>Symbols and cable runs</h3>
-              <p>A symbol catalogue and a drawing key sit beside the plan. There are extra symbol sets for power, lighting, CCTV, intruder, door entry and fire equipment, and you can upload your own symbols.</p><p>Cable runs can be drawn with a cable type, size and colour, with exact segment entry, angle steps and snaps.</p>
+              <p>
+                A symbol catalogue and a drawing key sit beside the plan. There
+                are extra symbol sets for power, lighting, CCTV, intruder, door
+                entry and fire equipment, and you can upload your own symbols.
+              </p>
+              <p>
+                Cable runs can be drawn with a cable type, size and colour, with
+                exact segment entry, angle steps and snaps.
+              </p>
             </div>
           </div>
           <div class="lp-proof">
             <div>
               <h3>Take-offs from the drawing</h3>
-              <p>The Flow to BOQ button takes the drawing through to a bill of quantities, so quantities come from what is on the plan.</p><p>Take-offs are part of the Design plan, which is £95 per user per month + VAT (or £950 a year), and includes everything in Office.</p><ul><li>Battery calc button in the editor</li></ul>
+              <p>
+                The Flow to BOQ button takes the drawing through to a bill of
+                quantities, so quantities come from what is on the plan.
+              </p>
+              <p>
+                Take-offs are part of the Design plan, which is £95 per user per
+                month + VAT (or £950 a year), and includes everything in Office.
+              </p>
+              <ul>
+                <li>Battery calc button in the editor</li>
+              </ul>
             </div>
             <figure class="lp-proof-fig">
-              <a class="shot" href="/assets/screens/desk-03-design-editor.webp"><img src="/assets/screens/desk-03-design-editor.webp" width="1600" height="1000" loading="lazy" alt="Compliar Design editor toolbar on sample data with Upload Plan, Battery calc, Export and Flow to BOQ buttons" decoding="async" /></a>
+              <a class="shot" href="/assets/screens/desk-03-design-editor.webp"
+                ><img
+                  src="/assets/screens/desk-03-design-editor.webp"
+                  width="1600"
+                  height="1000"
+                  loading="lazy"
+                  alt="Compliar Design editor toolbar on sample data with Upload Plan, Battery calc, Export and Flow to BOQ buttons"
+                  decoding="async"
+              /></a>
               <figcaption>Design toolbar, sample data</figcaption>
             </figure>
           </div>
           <div class="lp-proof lp-flip">
             <div>
               <h3>Then carry the job on</h3>
-              <p>Once the system is fitted, the same site carries the maintenance plan, the log book and the certificates, so the drawing, the visits and the records stay together.</p><ul><li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li><li><a href="/fire-log-book-software/">Digital fire log book</a></li></ul>
+              <p>
+                Once the system is fitted, the same site carries the maintenance
+                plan, the log book and the certificates, so the drawing, the
+                visits and the records stay together.
+              </p>
+              <ul>
+                <li>
+                  <a href="/fire-alarm-maintenance-software/"
+                    >Fire detection and alarm maintenance</a
+                  >
+                </li>
+                <li>
+                  <a href="/fire-log-book-software/">Digital fire log book</a>
+                </li>
+              </ul>
             </div>
             <figure class="lp-proof-fig">
-              <a class="shot" href="/assets/screens/desk-calendar.webp"><img src="/assets/screens/desk-calendar.webp" width="800" height="500" loading="lazy" alt="Compliar calendar week view on sample data" decoding="async" /></a>
+              <a class="shot" href="/assets/screens/desk-calendar.webp"
+                ><img
+                  src="/assets/screens/desk-calendar.webp"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  alt="Compliar calendar week view on sample data"
+                  decoding="async"
+              /></a>
               <figcaption>Calendar, sample data</figcaption>
             </figure>
           </div>
-          <p class="lp-note">Screens show sample data. Compliar produces records; the engineer and the scheme remain responsible for the work and for the certificates issued. Compliar is not affiliated with any standards body or scheme.</p>
+          <p class="lp-note">
+            Screens show sample data. Compliar produces records; the engineer
+            and the scheme remain responsible for the work and for the
+            certificates issued. Compliar is not affiliated with any standards
+            body or scheme.
+          </p>
         </div>
       </section>
 
@@ -283,27 +469,46 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary>Who is the Design plan for?</summary>
-              <p>Engineers and project teams who draw fire alarm layouts. It is £95 per user per month plus VAT (£950 a year) and includes everything in Office.</p>
+              <p>
+                Engineers and project teams who draw fire alarm layouts. It is
+                £95 per user per month plus VAT (£950 a year) and includes
+                everything in Office.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Can I upload my own plan?</summary>
-              <p>Yes. Use Upload Plan in the Design editor to bring in a plan, then place devices on it.</p>
+              <p>
+                Yes. Use Upload Plan in the Design editor to bring in a plan,
+                then place devices on it.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Can I use my own symbols?</summary>
-              <p>Yes. Your company can upload custom symbols, and there are extra symbol sets for power, lighting, CCTV, intruder, door entry and fire equipment.</p>
+              <p>
+                Yes. Your company can upload custom symbols, and there are extra
+                symbol sets for power, lighting, CCTV, intruder, door entry and
+                fire equipment.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Does it produce take-offs?</summary>
               <p>Yes. Flow to BOQ takes the drawing to a bill of quantities.</p>
             </details>
             <details class="faq-item">
-              <summary>Does the drawing mean my design meets the standard?</summary>
-              <p>No. Compliar is a drawing and records tool. The designer and the scheme remain responsible for the design.</p>
+              <summary>
+                Does the drawing mean my design meets the standard?
+              </summary>
+              <p>
+                No. Compliar is a drawing and records tool. The designer and the
+                scheme remain responsible for the design.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Can I try it?</summary>
-              <p>Book a demo and we will show the Design editor on your kind of site.</p>
+              <p>
+                Book a demo and we will show the Design editor on your kind of
+                site.
+              </p>
             </details>
           </div>
         </div>
@@ -311,19 +516,49 @@
 
       <section class="v2-section" aria-labelledby="more-h">
         <div class="wrap">
-          <h2 class="v2-h2" id="more-h" style="font-size:1.4rem">More from Compliar</h2>
-          <ul class="lp-more"><li><a href="/how-to-create-a-fire-alarm-zone-plan/">How to create a zone plan</a></li><li><a href="/fire-alarm-as-fitted-drawings/">How to do an as-fitted drawing</a></li><li><a href="/">Compliar home</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/features/">Features</a></li><li><a href="/faqs/">FAQs</a></li><li><a href="/fire-log-book-software/">Digital fire log book</a></li><li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li></ul>
+          <h2 class="v2-h2" id="more-h" style="font-size: 1.4rem">
+            More from Compliar
+          </h2>
+          <ul class="lp-more">
+            <li>
+              <a href="/how-to-create-a-fire-alarm-zone-plan/"
+                >How to create a zone plan</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-as-fitted-drawings/"
+                >How to do an as-fitted drawing</a
+              >
+            </li>
+            <li><a href="/">Compliar home</a></li>
+            <li><a href="/pricing/">Pricing</a></li>
+            <li><a href="/features/">Features</a></li>
+            <li><a href="/faqs/">FAQs</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="v2-section v2-dark v2-demo-section" id="contact-form" aria-labelledby="demo-title">
+      <section
+        class="v2-section v2-dark v2-demo-section"
+        id="contact-form"
+        aria-labelledby="demo-title"
+      >
         <div id="demo" aria-hidden="true"></div>
         <div class="wrap">
           <div class="v2-head">
             <span class="v2-kicker">Book a demo</span>
             <h2 class="v2-h2" id="demo-title">See it on your own sites.</h2>
             <p class="v2-lead">
-              15 minutes with Keiran, on your own sites. Fill in the form and we’ll get back to you as soon as possible.
+              15 minutes with Keiran, on your own sites. Fill in the form and
+              we’ll get back to you as soon as possible.
             </p>
           </div>
           <div class="demo-wrap" data-demo-form></div>
@@ -343,7 +578,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -357,34 +593,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -394,10 +683,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -405,11 +706,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-    <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
   </body>
 </html>

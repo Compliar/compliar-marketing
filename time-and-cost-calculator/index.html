@@ -6,48 +6,62 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
-    <title>Time and Cost Calculator: Your Own Figures, No Rival Prices | Compliar</title>
-    <meta name="description" content="Work out the admin time and cost of certificates with your own numbers, minus the Compliar subscription for your users, and compare with what you pay now. Nothing you enter is stored." />
-    <link rel="canonical" href="https://compliar.co.uk/time-and-cost-calculator/" />
+    <title>
+      Time and Cost Calculator: Your Own Figures, No Rival Prices | Compliar
+    </title>
+    <meta
+      name="description"
+      content="Work out the admin time and cost of certificates with your own numbers, minus the Compliar subscription for your users, and compare with what you pay now. Nothing you enter is stored."
+    />
+    <link
+      rel="canonical"
+      href="https://compliar.co.uk/time-and-cost-calculator/"
+    />
     <meta name="theme-color" content="#1B2430" />
     <link
       rel="icon"
@@ -56,19 +70,60 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="Time and Cost Calculator: Your Own Figures, No Rival Prices | Compliar" />
-    <meta property="og:description" content="Work out the admin time and cost of certificates with your own numbers, minus the Compliar subscription for your users, and compare with what you pay now. Nothing you enter is stored." />
-    <meta property="og:url" content="https://compliar.co.uk/time-and-cost-calculator/" />
+    <meta
+      property="og:title"
+      content="Time and Cost Calculator: Your Own Figures, No Rival Prices | Compliar"
+    />
+    <meta
+      property="og:description"
+      content="Work out the admin time and cost of certificates with your own numbers, minus the Compliar subscription for your users, and compare with what you pay now. Nothing you enter is stored."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/time-and-cost-calculator/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
-    <meta property="og:image:alt" content="Compliar — management software for electrical, fire protection and life safety, and security contractors" />
+    <meta
+      property="og:image:alt"
+      content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
-    <meta name="twitter:title" content="Time and Cost Calculator: Your Own Figures, No Rival Prices | Compliar" />
-    <meta name="twitter:description" content="Work out the admin time and cost of certificates with your own numbers, minus the Compliar subscription for your users, and compare with what you pay now. Nothing you enter is stored." />
+    <meta
+      name="twitter:title"
+      content="Time and Cost Calculator: Your Own Figures, No Rival Prices | Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="Work out the admin time and cost of certificates with your own numbers, minus the Compliar subscription for your users, and compare with what you pay now. Nothing you enter is stored."
+    />
     <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Compliar","item":"https://compliar.co.uk/"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://compliar.co.uk/resources/"},{"@type":"ListItem","position":3,"name":"Time and cost calculator","item":"https://compliar.co.uk/time-and-cost-calculator/"}]}
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Compliar",
+            "item": "https://compliar.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resources",
+            "item": "https://compliar.co.uk/resources/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Time and cost calculator",
+            "item": "https://compliar.co.uk/time-and-cost-calculator/"
+          }
+        ]
+      }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -88,9 +143,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -112,7 +177,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -130,60 +197,175 @@
       <section class="page-intro">
         <div class="wrap">
           <div class="crumbs">
-            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a><i>/</i>Time and cost calculator
+            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a
+            ><i>/</i>Time and cost calculator
           </div>
           <div class="eyebrow">Running your business · Tool</div>
           <h1>Time and cost calculator</h1>
-          <p>Your team, your certificate count, your minutes and your hourly cost. The calculator does the arithmetic, takes off the Compliar subscription for the users you choose and, if you enter it, compares with what you pay for software today. No rival prices, no measured savings claims: every figure is yours.</p>
+          <p>
+            Your team, your certificate count, your minutes and your hourly
+            cost. The calculator does the arithmetic, takes off the Compliar
+            subscription for the users you choose and, if you enter it, compares
+            with what you pay for software today. No rival prices, no measured
+            savings claims: every figure is yours.
+          </p>
         </div>
       </section>
       <!-- SECTION 6: TIME & COST CALCULATOR (#roi-calculator). Maths in /roi-calc.js -->
-      <section class="v2-section v2-white" id="roi-calculator" aria-labelledby="roi-title">
+      <section
+        class="v2-section v2-white"
+        id="roi-calculator"
+        aria-labelledby="roi-title"
+      >
         <div class="wrap">
           <div class="v2-head">
             <span class="v2-kicker">Time &amp; Cost Calculator</span>
-            <h2 class="v2-h2" id="roi-title">Work it out with your own numbers.</h2>
+            <h2 class="v2-h2" id="roi-title">
+              Work it out with your own numbers.
+            </h2>
             <p class="v2-lead">
-              Enter your team size, how many certificates or reports you produce, how long the admin takes you now, how long you expect it to take with Compliar and, if you like, what you pay for software today. The calculator does the arithmetic with your figures and takes off the Compliar subscription for your users. Nothing you type is stored or sent anywhere.
+              Enter your team size, how many certificates or reports you
+              produce, how long the admin takes you now, how long you expect it
+              to take with Compliar and, if you like, what you pay for software
+              today. The calculator does the arithmetic with your figures and
+              takes off the Compliar subscription for your users. Nothing you
+              type is stored or sent anywhere.
             </p>
           </div>
 
           <div class="roi-card">
-            <form class="roi-controls" id="roi-form" novalidate onsubmit="return false">
+            <form
+              class="roi-controls"
+              id="roi-form"
+              novalidate
+              onsubmit="return false;"
+            >
               <div class="roi-field">
                 <label for="roi-engineers">1. Field engineers</label>
-                <input type="number" id="roi-engineers" name="engineers" inputmode="numeric" min="0" max="500" step="1" data-example="5" placeholder="e.g. 5" />
+                <input
+                  type="number"
+                  id="roi-engineers"
+                  name="engineers"
+                  inputmode="numeric"
+                  min="0"
+                  max="500"
+                  step="1"
+                  data-example="5"
+                  placeholder="e.g. 5"
+                />
               </div>
 
               <div class="roi-field">
                 <label for="roi-office">2. Office / desk users</label>
-                <input type="number" id="roi-office" name="officeUsers" inputmode="numeric" min="0" max="500" step="1" data-example="1" placeholder="e.g. 1" />
+                <input
+                  type="number"
+                  id="roi-office"
+                  name="officeUsers"
+                  inputmode="numeric"
+                  min="0"
+                  max="500"
+                  step="1"
+                  data-example="1"
+                  placeholder="e.g. 1"
+                />
               </div>
 
               <div class="roi-field">
-                <label for="roi-certs">3. Certificates or reports per engineer per week</label>
-                <input type="number" id="roi-certs" name="certsPerEngineerPerWeek" inputmode="decimal" min="0" max="200" step="0.5" data-example="8" placeholder="e.g. 8" />
+                <label for="roi-certs"
+                  >3. Certificates or reports per engineer per week</label
+                >
+                <input
+                  type="number"
+                  id="roi-certs"
+                  name="certsPerEngineerPerWeek"
+                  inputmode="decimal"
+                  min="0"
+                  max="200"
+                  step="0.5"
+                  data-example="8"
+                  placeholder="e.g. 8"
+                />
               </div>
 
               <div class="roi-field">
-                <label for="roi-min-today">4. Minutes of admin per certificate today</label>
-                <input type="number" id="roi-min-today" name="minutesToday" inputmode="decimal" min="0" max="600" step="1" data-example="30" placeholder="e.g. 30" aria-describedby="roi-example-note" />
+                <label for="roi-min-today"
+                  >4. Minutes of admin per certificate today</label
+                >
+                <input
+                  type="number"
+                  id="roi-min-today"
+                  name="minutesToday"
+                  inputmode="decimal"
+                  min="0"
+                  max="600"
+                  step="1"
+                  data-example="30"
+                  placeholder="e.g. 30"
+                  aria-describedby="roi-example-note"
+                />
               </div>
 
               <div class="roi-field">
-                <label for="roi-min-compliar">5. Minutes you expect it to take with Compliar (your estimate)</label>
-                <input type="number" id="roi-min-compliar" name="minutesWithCompliar" inputmode="decimal" min="0" max="600" step="1" data-example="15" placeholder="e.g. 15" aria-describedby="roi-example-note" />
+                <label for="roi-min-compliar"
+                  >5. Minutes you expect it to take with Compliar (your
+                  estimate)</label
+                >
+                <input
+                  type="number"
+                  id="roi-min-compliar"
+                  name="minutesWithCompliar"
+                  inputmode="decimal"
+                  min="0"
+                  max="600"
+                  step="1"
+                  data-example="15"
+                  placeholder="e.g. 15"
+                  aria-describedby="roi-example-note"
+                />
               </div>
 
               <div class="roi-field">
-                <label for="roi-hourly">6. Hourly cost of that time (£, your figure)</label>
-                <input type="number" id="roi-hourly" name="hourlyCost" inputmode="decimal" min="0" max="1000" step="0.5" data-example="25" placeholder="e.g. 25" aria-describedby="roi-example-note" />
+                <label for="roi-hourly"
+                  >6. Hourly cost of that time (£, your figure)</label
+                >
+                <input
+                  type="number"
+                  id="roi-hourly"
+                  name="hourlyCost"
+                  inputmode="decimal"
+                  min="0"
+                  max="1000"
+                  step="0.5"
+                  data-example="25"
+                  placeholder="e.g. 25"
+                  aria-describedby="roi-example-note"
+                />
               </div>
 
               <div class="roi-field">
-                <label for="roi-current-spend">7. What you pay now for software or per-certificate fees, per month (£, optional)</label>
-                <input type="number" id="roi-current-spend" name="currentSpendPerMonth" inputmode="decimal" min="0" max="100000" step="1" placeholder="Leave blank if nothing" aria-describedby="roi-spend-note" />
-                <p class="roi-assume" id="roi-spend-note" style="margin-top:6px">Your own figure for whatever Compliar would replace, excluding VAT. It is added back in the net figure below.</p>
+                <label for="roi-current-spend"
+                  >7. What you pay now for software or per-certificate fees, per
+                  month (£, optional)</label
+                >
+                <input
+                  type="number"
+                  id="roi-current-spend"
+                  name="currentSpendPerMonth"
+                  inputmode="decimal"
+                  min="0"
+                  max="100000"
+                  step="1"
+                  placeholder="Leave blank if nothing"
+                  aria-describedby="roi-spend-note"
+                />
+                <p
+                  class="roi-assume"
+                  id="roi-spend-note"
+                  style="margin-top: 6px"
+                >
+                  Your own figure for whatever Compliar would replace, excluding
+                  VAT. It is added back in the net figure below.
+                </p>
               </div>
 
               <fieldset class="roi-field roi-seats">
@@ -200,7 +382,9 @@
                   <label for="roi-office-seat">Office users on</label>
                   <select id="roi-office-seat" name="officeSeat">
                     <option value="lite">Lite (£35 / month)</option>
-                    <option value="office" selected>Office (£65 / month)</option>
+                    <option value="office" selected>
+                      Office (£65 / month)
+                    </option>
                     <option value="design">Design (£95 / month)</option>
                   </select>
                 </div>
@@ -208,23 +392,41 @@
                   <label for="roi-billing">Billing</label>
                   <select id="roi-billing" name="billing">
                     <option value="monthly" selected>Monthly</option>
-                    <option value="yearly">Yearly (£350 / £650 / £950 per user)</option>
+                    <option value="yearly">
+                      Yearly (£350 / £650 / £950 per user)
+                    </option>
                   </select>
                 </div>
               </fieldset>
 
               <div class="roi-example-row">
-                <button type="button" class="btn btn-ghost-on-cream btn-sm" id="roi-example-btn">Fill in example figures</button>
-                <button type="button" class="roi-clear" id="roi-clear-btn">Clear</button>
+                <button
+                  type="button"
+                  class="btn btn-ghost-on-cream btn-sm"
+                  id="roi-example-btn"
+                >
+                  Fill in example figures
+                </button>
+                <button type="button" class="roi-clear" id="roi-clear-btn">
+                  Clear
+                </button>
               </div>
 
               <p class="roi-assume" id="roi-example-note">
-                The fields start blank. The example button fills in illustrative figures, which are not figures we have measured, so replace them with your own. Prices are per user, excluding VAT. A month is taken as 52 weeks ÷ 12. The optional site log book (£4 + VAT per site per year) is not included.
+                The fields start blank. The example button fills in illustrative
+                figures, which are not figures we have measured, so replace them
+                with your own. Prices are per user, excluding VAT. A month is
+                taken as 52 weeks ÷ 12. The optional site log book (£4 + VAT per
+                site per year) is not included.
               </p>
             </form>
 
             <div class="roi-results" aria-live="polite" aria-atomic="false">
-              <p class="roi-own-figures"><strong>Your own figures, not a promise or a prediction.</strong></p>
+              <p class="roi-own-figures">
+                <strong
+                  >Your own figures, not a promise or a prediction.</strong
+                >
+              </p>
 
               <div class="roi-stat">
                 <span>Admin time difference per month</span>
@@ -263,11 +465,20 @@
                   <b id="roi-net-out">£0.00 / month</b>
                   <small id="roi-net-year">£0.00 / year</small>
                 </strong>
-                <p id="roi-net-note">Value of time minus the Compliar subscription, plus whatever you pay now if you entered it. This can be negative.</p>
+                <p id="roi-net-note">
+                  Value of time minus the Compliar subscription, plus whatever
+                  you pay now if you entered it. This can be negative.
+                </p>
               </div>
 
               <div class="roi-cta">
-                <a class="btn btn-primary" id="roi-cta" href="/contact/?subject=Demo+request" data-demo-open data-engineers="0">
+                <a
+                  class="btn btn-primary"
+                  id="roi-cta"
+                  href="/contact/?subject=Demo+request"
+                  data-demo-open
+                  data-engineers="0"
+                >
                   Book a demo →
                 </a>
               </div>
@@ -276,13 +487,27 @@
         </div>
       </section>
 
-
       <section class="band">
         <div class="wrap">
           <div class="prose">
             <h2>How to read the result</h2>
-            <p>The time figure is simply certificates per month multiplied by the minutes you expect to save on each, at your hourly cost. If you think Compliar will take longer per certificate than what you do now, enter that and the figure goes negative; the calculator does not argue. The subscription line is the published prices for the mix you pick, ex VAT. The optional "what you pay now" line adds back whatever software or per-certificate fees Compliar would replace.</p>
-            <p>For the wider picture, including what paper and spreadsheets cost in time, see <a href="/paper-spreadsheets-or-software-cost-and-time/">Paper, spreadsheets or software?</a>. For the prices themselves, see <a href="/pricing/">pricing</a>.</p>
+            <p>
+              The time figure is simply certificates per month multiplied by the
+              minutes you expect to save on each, at your hourly cost. If you
+              think Compliar will take longer per certificate than what you do
+              now, enter that and the figure goes negative; the calculator does
+              not argue. The subscription line is the published prices for the
+              mix you pick, ex VAT. The optional "what you pay now" line adds
+              back whatever software or per-certificate fees Compliar would
+              replace.
+            </p>
+            <p>
+              For the wider picture, including what paper and spreadsheets cost
+              in time, see
+              <a href="/paper-spreadsheets-or-software-cost-and-time/"
+                >Paper, spreadsheets or software?</a
+              >. For the prices themselves, see <a href="/pricing/">pricing</a>.
+            </p>
           </div>
         </div>
       </section>
@@ -300,7 +525,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -314,34 +540,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -351,10 +630,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -362,11 +653,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

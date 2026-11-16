@@ -6,48 +6,63 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
-    <title>Records to Keep for an NSI, SSAIB or BAFE Audit: Checklist for Contractors — Compliar</title>
-    <meta name="description" content="A plain checklist of the job, maintenance, people and equipment records a fire or security contractor is usually asked for at a scheme audit, how to keep them findable, and the gaps that get raised. General guidance; your scheme document is the authority." />
-    <link rel="canonical" href="https://compliar.co.uk/nsi-ssaib-audit-records-guide/" />
+    <title>
+      Records to Keep for an NSI, SSAIB or BAFE Audit: Checklist for Contractors
+      — Compliar
+    </title>
+    <meta
+      name="description"
+      content="A plain checklist of the job, maintenance, people and equipment records a fire or security contractor is usually asked for at a scheme audit, how to keep them findable, and the gaps that get raised. General guidance; your scheme document is the authority."
+    />
+    <link
+      rel="canonical"
+      href="https://compliar.co.uk/nsi-ssaib-audit-records-guide/"
+    />
     <meta name="theme-color" content="#1B2430" />
     <link
       rel="icon"
@@ -56,9 +71,18 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="Records to Keep for an NSI, SSAIB or BAFE Audit: Checklist for Contractors — Compliar" />
-    <meta property="og:description" content="A plain checklist of the job, maintenance, people and equipment records a fire or security contractor is usually asked for at a scheme audit, how to keep them findable, and the gaps that get raised. General guidance; your scheme document is the authority." />
-    <meta property="og:url" content="https://compliar.co.uk/nsi-ssaib-audit-records-guide/" />
+    <meta
+      property="og:title"
+      content="Records to Keep for an NSI, SSAIB or BAFE Audit: Checklist for Contractors — Compliar"
+    />
+    <meta
+      property="og:description"
+      content="A plain checklist of the job, maintenance, people and equipment records a fire or security contractor is usually asked for at a scheme audit, how to keep them findable, and the gaps that get raised. General guidance; your scheme document is the authority."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/nsi-ssaib-audit-records-guide/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -68,124 +92,130 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
-    <meta name="twitter:title" content="Records to Keep for an NSI, SSAIB or BAFE Audit: Checklist for Contractors — Compliar" />
-    <meta name="twitter:description" content="A plain checklist of the job, maintenance, people and equipment records a fire or security contractor is usually asked for at a scheme audit, how to keep them findable, and the gaps that get raised. General guidance; your scheme document is the authority." />
+    <meta
+      name="twitter:title"
+      content="Records to Keep for an NSI, SSAIB or BAFE Audit: Checklist for Contractors — Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="A plain checklist of the job, maintenance, people and equipment records a fire or security contractor is usually asked for at a scheme audit, how to keep them findable, and the gaps that get raised. General guidance; your scheme document is the authority."
+    />
     <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Compliar",
-        "item": "https://compliar.co.uk/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Resources",
-        "item": "https://compliar.co.uk/resources/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Records for a scheme audit",
-        "item": "https://compliar.co.uk/nsi-ssaib-audit-records-guide/"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Will using Compliar get us through an audit?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No software can promise that. An audit judges your work, your people and your records against your scheme document and the standards. Compliar keeps the records in one place, laid out to the standards, so the trail is there to show; what is in them is down to your competent engineers."
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Compliar",
+              "item": "https://compliar.co.uk/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Resources",
+              "item": "https://compliar.co.uk/resources/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Records for a scheme audit",
+              "item": "https://compliar.co.uk/nsi-ssaib-audit-records-guide/"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Will using Compliar get us through an audit?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No software can promise that. An audit judges your work, your people and your records against your scheme document and the standards. Compliar keeps the records in one place, laid out to the standards, so the trail is there to show; what is in them is down to your competent engineers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Compliar affiliated with NSI, SSAIB or BAFE?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Compliar is not affiliated with or endorsed by any scheme or certification body. The templates reference the British Standards for each discipline; the engineer and the scheme remain responsible."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How many jobs does an auditor sample?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It varies by scheme, by the size of the company and by what was found last time. Assume any job since the last audit can be picked, and keep every job's trail complete rather than preparing a few."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What records do we need for subcontractors?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Usually the same as for your own staff: competence, training and, for security work, screening, plus evidence that the subcontracted work was checked. Check your scheme document for what it requires."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do we need calibration certificates for every instrument?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For instruments whose readings go on certificates, such as multifunction testers and sound level meters, the usual expectation is a current calibration record. Keep a register with serial numbers, dates and who holds each instrument."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can old certificates from our previous software be kept with the site?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Legacy certificates as PDFs or photos can be added against any site in Compliar, so the history is in one place."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What about electrical schemes such as NICEIC or NAPIT?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The job-trail principle is the same: survey, quote, RAMS, the certificate laid out to BS 7671, defects and invoice held together. Each scheme's assessment criteria are its own; check them."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What does it cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Certificates, RAMS and the records described here are included with every plan, from £35 + VAT per user per month on Lite. No per-certificate fees and no contract."
+              }
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Records to keep for an NSI, SSAIB or BAFE audit",
+          "description": "A plain checklist of the job, maintenance, people and equipment records a fire or security contractor is usually asked for at a scheme audit, how to keep them findable, and the gaps that get raised. General guidance; your scheme document is the authority.",
+          "author": {
+            "@type": "Person",
+            "name": "Keiran Sandham"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Compliar Ltd",
+            "url": "https://compliar.co.uk/"
+          },
+          "datePublished": "2026-11-03",
+          "dateModified": "2026-11-03",
+          "mainEntityOfPage": "https://compliar.co.uk/nsi-ssaib-audit-records-guide/",
+          "inLanguage": "en-GB"
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Is Compliar affiliated with NSI, SSAIB or BAFE?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Compliar is not affiliated with or endorsed by any scheme or certification body. The templates reference the British Standards for each discipline; the engineer and the scheme remain responsible."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How many jobs does an auditor sample?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It varies by scheme, by the size of the company and by what was found last time. Assume any job since the last audit can be picked, and keep every job's trail complete rather than preparing a few."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What records do we need for subcontractors?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Usually the same as for your own staff: competence, training and, for security work, screening, plus evidence that the subcontracted work was checked. Check your scheme document for what it requires."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do we need calibration certificates for every instrument?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For instruments whose readings go on certificates, such as multifunction testers and sound level meters, the usual expectation is a current calibration record. Keep a register with serial numbers, dates and who holds each instrument."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can old certificates from our previous software be kept with the site?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Legacy certificates as PDFs or photos can be added against any site in Compliar, so the history is in one place."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What about electrical schemes such as NICEIC or NAPIT?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The job-trail principle is the same: survey, quote, RAMS, the certificate laid out to BS 7671, defects and invoice held together. Each scheme's assessment criteria are its own; check them."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does it cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Certificates, RAMS and the records described here are included with every plan, from £35 + VAT per user per month on Lite. No per-certificate fees and no contract."
-        }
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Records to keep for an NSI, SSAIB or BAFE audit",
-    "description": "A plain checklist of the job, maintenance, people and equipment records a fire or security contractor is usually asked for at a scheme audit, how to keep them findable, and the gaps that get raised. General guidance; your scheme document is the authority.",
-    "author": {
-      "@type": "Person",
-      "name": "Keiran Sandham"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Compliar Ltd",
-      "url": "https://compliar.co.uk/"
-    },
-    "datePublished": "2026-11-03",
-    "dateModified": "2026-11-03",
-    "mainEntityOfPage": "https://compliar.co.uk/nsi-ssaib-audit-records-guide/",
-    "inLanguage": "en-GB"
-  }
-]
+      ]
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -203,9 +233,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -227,7 +267,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -245,35 +287,155 @@
       <section class="page-intro">
         <div class="wrap">
           <div class="crumbs">
-            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a><i>/</i>Records for a scheme audit
+            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a
+            ><i>/</i>Records for a scheme audit
           </div>
           <div class="eyebrow">Running your business · Guide</div>
           <h1>Records to keep for an NSI, SSAIB or BAFE audit</h1>
-          <p>A scheme audit is mostly a records exercise: the auditor samples jobs and asks to see the paperwork behind them. This guide lists the records a small or medium fire or security contractor is usually asked for, how to keep them findable, and the gaps that tend to get raised. It is general guidance; your own scheme document and the standards it cites are the authority.</p>
+          <p>
+            A scheme audit is mostly a records exercise: the auditor samples
+            jobs and asks to see the paperwork behind them. This guide lists the
+            records a small or medium fire or security contractor is usually
+            asked for, how to keep them findable, and the gaps that tend to get
+            raised. It is general guidance; your own scheme document and the
+            standards it cites are the authority.
+          </p>
         </div>
       </section>
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <p><strong>General guidance only.</strong> Compliar is not affiliated with or endorsed by NSI, SSAIB, BAFE, NICEIC or any other scheme or certification body. Each scheme publishes its own scheme documents and audits against them and the standards they cite. Read yours; where this page and your scheme document differ, your scheme document wins. Last reviewed 3 November 2026.</p>
+            <p>
+              <strong>General guidance only.</strong> Compliar is not affiliated
+              with or endorsed by NSI, SSAIB, BAFE, NICEIC or any other scheme
+              or certification body. Each scheme publishes its own scheme
+              documents and audits against them and the standards they cite.
+              Read yours; where this page and your scheme document differ, your
+              scheme document wins. Last reviewed 3 November 2026.
+            </p>
             <h2>What an audit actually looks at</h2>
-            <p>Whichever scheme you are with, the pattern of an audit is similar. The auditor has your scope of certification in front of them: the disciplines you are certificated for, such as intruder and hold-up alarm systems to PD 6662 and BS EN 50131, CCTV to BS EN 62676, access control, or fire detection and alarm systems to BS 5839-1. They then pick a sample of jobs from the period since the last visit and follow each one from enquiry to invoice, asking for the record at each step. Alongside the job sample they look at the company: who does the work, whether they are competent and screened, what equipment they use and whether it is calibrated, how complaints and false alarms are handled, and whether last year's findings were closed.</p>
-            <p>So the question is not "do we have good paperwork" but "for any job the auditor picks, can we put the whole trail in front of them in a few minutes". That is a filing problem as much as a quality problem.</p>
+            <p>
+              Whichever scheme you are with, the pattern of an audit is similar.
+              The auditor has your scope of certification in front of them: the
+              disciplines you are certificated for, such as intruder and hold-up
+              alarm systems to PD 6662 and BS EN 50131, CCTV to BS EN 62676,
+              access control, or fire detection and alarm systems to BS 5839-1.
+              They then pick a sample of jobs from the period since the last
+              visit and follow each one from enquiry to invoice, asking for the
+              record at each step. Alongside the job sample they look at the
+              company: who does the work, whether they are competent and
+              screened, what equipment they use and whether it is calibrated,
+              how complaints and false alarms are handled, and whether last
+              year's findings were closed.
+            </p>
+            <p>
+              So the question is not "do we have good paperwork" but "for any
+              job the auditor picks, can we put the whole trail in front of them
+              in a few minutes". That is a filing problem as much as a quality
+              problem.
+            </p>
             <h2>Records by stage of the job</h2>
             <div class="tbl-wrap">
               <table class="tbl">
                 <thead>
-                  <tr><th>Stage</th><th>Records usually asked for</th><th>What the auditor is checking</th></tr>
+                  <tr>
+                    <th>Stage</th>
+                    <th>Records usually asked for</th>
+                    <th>What the auditor is checking</th>
+                  </tr>
                 </thead>
                 <tbody>
-                  <tr><th>Enquiry and survey</th><td>The enquiry, the site survey or risk assessment for a security system, the design proposal and the system grade or category.</td><td>That the design was based on a survey and the grade or category was chosen for a reason, not by default.</td></tr>
-                  <tr><th>Quote and agreement</th><td>The quotation, the customer's acceptance, the specification and any agreed variations from the standard.</td><td>That what was sold matches what was designed, and that variations were agreed in writing.</td></tr>
-                  <tr><th>Planning</th><td>RAMS for the job, the engineer assignment and the appointment confirmation.</td><td>That the work was planned by someone competent for it, with the risks assessed before the engineer arrived.</td></tr>
-                  <tr><th>Installation and commissioning</th><td>Installation and commissioning records, test results, as-fitted drawings, zone plan, programming or cause and effect, standby battery calculation.</td><td>That the system was tested and works as designed, and that the records exist for the next engineer.</td></tr>
-                  <tr><th>Handover</th><td>Acceptance or handover record signed by the customer, user instructions, log book handed over, ARC and keyholder details.</td><td>That the customer knows what they have and how to use it, and that monitoring was set up properly.</td></tr>
-                  <tr><th>Maintenance</th><td>The maintenance contract, the visit schedule, each visit's service report and certificate, readings, defects raised and the follow-up.</td><td>That visits happen at the frequency the standard and the contract require, and that faults found were dealt with.</td></tr>
-                  <tr><th>Reactive and false alarms</th><td>Call-out records, response times, false alarm investigations and what was changed as a result.</td><td>That false alarms are investigated and reduced, and that call-outs met the agreed response.</td></tr>
-                  <tr><th>Invoice</th><td>The invoice and any remedial quotes raised from defects.</td><td>Mostly to tie the sample together: the job that was invoiced is the job that was recorded.</td></tr>
+                  <tr>
+                    <th>Enquiry and survey</th>
+                    <td>
+                      The enquiry, the site survey or risk assessment for a
+                      security system, the design proposal and the system grade
+                      or category.
+                    </td>
+                    <td>
+                      That the design was based on a survey and the grade or
+                      category was chosen for a reason, not by default.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Quote and agreement</th>
+                    <td>
+                      The quotation, the customer's acceptance, the
+                      specification and any agreed variations from the standard.
+                    </td>
+                    <td>
+                      That what was sold matches what was designed, and that
+                      variations were agreed in writing.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Planning</th>
+                    <td>
+                      RAMS for the job, the engineer assignment and the
+                      appointment confirmation.
+                    </td>
+                    <td>
+                      That the work was planned by someone competent for it,
+                      with the risks assessed before the engineer arrived.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Installation and commissioning</th>
+                    <td>
+                      Installation and commissioning records, test results,
+                      as-fitted drawings, zone plan, programming or cause and
+                      effect, standby battery calculation.
+                    </td>
+                    <td>
+                      That the system was tested and works as designed, and that
+                      the records exist for the next engineer.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Handover</th>
+                    <td>
+                      Acceptance or handover record signed by the customer, user
+                      instructions, log book handed over, ARC and keyholder
+                      details.
+                    </td>
+                    <td>
+                      That the customer knows what they have and how to use it,
+                      and that monitoring was set up properly.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Maintenance</th>
+                    <td>
+                      The maintenance contract, the visit schedule, each visit's
+                      service report and certificate, readings, defects raised
+                      and the follow-up.
+                    </td>
+                    <td>
+                      That visits happen at the frequency the standard and the
+                      contract require, and that faults found were dealt with.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Reactive and false alarms</th>
+                    <td>
+                      Call-out records, response times, false alarm
+                      investigations and what was changed as a result.
+                    </td>
+                    <td>
+                      That false alarms are investigated and reduced, and that
+                      call-outs met the agreed response.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Invoice</th>
+                    <td>
+                      The invoice and any remedial quotes raised from defects.
+                    </td>
+                    <td>
+                      Mostly to tie the sample together: the job that was
+                      invoiced is the job that was recorded.
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -289,27 +451,53 @@
           <div class="card-grid">
             <div class="roadmap-card">
               <h4>People</h4>
-              <p>Who works for you, what each person is competent to do, their training and qualification records, and for security work the screening records the scheme requires (BS 7858 is the usual reference). Subcontractors need the same trail.</p>
+              <p>
+                Who works for you, what each person is competent to do, their
+                training and qualification records, and for security work the
+                screening records the scheme requires (BS 7858 is the usual
+                reference). Subcontractors need the same trail.
+              </p>
             </div>
             <div class="roadmap-card">
               <h4>Test equipment</h4>
-              <p>A register of the instruments engineers use, with serial numbers and calibration dates where calibration applies, and which engineer holds each one. The auditor may pick an instrument and ask for the certificate.</p>
+              <p>
+                A register of the instruments engineers use, with serial numbers
+                and calibration dates where calibration applies, and which
+                engineer holds each one. The auditor may pick an instrument and
+                ask for the certificate.
+              </p>
             </div>
             <div class="roadmap-card">
               <h4>Complaints and non-conformances</h4>
-              <p>A log of customer complaints and of your own non-conformances, what was done about each, and evidence that last year's audit findings were closed.</p>
+              <p>
+                A log of customer complaints and of your own non-conformances,
+                what was done about each, and evidence that last year's audit
+                findings were closed.
+              </p>
             </div>
             <div class="roadmap-card">
               <h4>Documents in use</h4>
-              <p>The current versions of your certificate templates, RAMS templates and procedures, and a way of showing that engineers use the current one and not a copy from 2019.</p>
+              <p>
+                The current versions of your certificate templates, RAMS
+                templates and procedures, and a way of showing that engineers
+                use the current one and not a copy from 2019.
+              </p>
             </div>
             <div class="roadmap-card">
               <h4>Monitoring and keyholding</h4>
-              <p>For monitored systems, the alarm receiving centre details, the unique reference number where police response applies, and keyholder details held and kept up to date.</p>
+              <p>
+                For monitored systems, the alarm receiving centre details, the
+                unique reference number where police response applies, and
+                keyholder details held and kept up to date.
+              </p>
             </div>
             <div class="roadmap-card">
               <h4>Insurance and the basics</h4>
-              <p>Public and employer's liability, professional indemnity where your scheme asks for it, and the company details the scheme holds on file matching reality.</p>
+              <p>
+                Public and employer's liability, professional indemnity where
+                your scheme asks for it, and the company details the scheme
+                holds on file matching reality.
+              </p>
             </div>
           </div>
         </div>
@@ -319,23 +507,84 @@
           <div class="prose">
             <h2>The gaps that get raised</h2>
             <ul>
-              <li><strong>The survey that was never written down.</strong> The engineer surveyed the site in their head and went straight to a quote. The grade or category then has no recorded basis.</li>
-              <li><strong>Variations agreed on the phone.</strong> The customer asked for fewer detectors in the stock room; nobody wrote it on the design record. The next engineer raises it as a defect and the auditor asks why.</li>
-              <li><strong>Visits late with no reason.</strong> A six-monthly service done at eight months with no note explaining why. Keep the planned date fixed and record the actual date and the reason.</li>
-              <li><strong>Defects with no outcome.</strong> A failed sounder on March's report that never became a quote, a job or a customer refusal in writing.</li>
-              <li><strong>Certificates nobody can find.</strong> They exist, in an engineer's email. If it takes twenty minutes to produce one certificate, the auditor's sample of ten jobs takes the afternoon.</li>
-              <li><strong>Old templates still in use.</strong> A certificate referencing a superseded edition of the standard, printed from a laptop that was never updated.</li>
-              <li><strong>Calibration out of date.</strong> A sound level meter or a multifunction tester past its calibration date, with readings recorded from it.</li>
+              <li>
+                <strong>The survey that was never written down.</strong> The
+                engineer surveyed the site in their head and went straight to a
+                quote. The grade or category then has no recorded basis.
+              </li>
+              <li>
+                <strong>Variations agreed on the phone.</strong> The customer
+                asked for fewer detectors in the stock room; nobody wrote it on
+                the design record. The next engineer raises it as a defect and
+                the auditor asks why.
+              </li>
+              <li>
+                <strong>Visits late with no reason.</strong> A six-monthly
+                service done at eight months with no note explaining why. Keep
+                the planned date fixed and record the actual date and the
+                reason.
+              </li>
+              <li>
+                <strong>Defects with no outcome.</strong> A failed sounder on
+                March's report that never became a quote, a job or a customer
+                refusal in writing.
+              </li>
+              <li>
+                <strong>Certificates nobody can find.</strong> They exist, in an
+                engineer's email. If it takes twenty minutes to produce one
+                certificate, the auditor's sample of ten jobs takes the
+                afternoon.
+              </li>
+              <li>
+                <strong>Old templates still in use.</strong> A certificate
+                referencing a superseded edition of the standard, printed from a
+                laptop that was never updated.
+              </li>
+              <li>
+                <strong>Calibration out of date.</strong> A sound level meter or
+                a multifunction tester past its calibration date, with readings
+                recorded from it.
+              </li>
             </ul>
             <h2>Keeping it findable: one job, one trail</h2>
-            <p>The simplest structure is the one auditors follow: everything about a site is held against that site, and everything about a job is held against that job, in date order. Enquiry, survey, quote, RAMS, visits, certificates, defects, quotes raised from them and invoices all hang off the same record, so the whole sample can be opened from one screen rather than assembled from email, a shared drive and a filing cabinet.</p>
-            <p>That is how <a href="/features/">Compliar</a> is arranged. Customers hold sites, sites hold assets, maintenance plans and the log book, and jobs hold the visit, the service report, the certificates, the defects and the documents that were sent. Certificates are laid out to the standard for the discipline, name the standard on the document, and once issued cannot be deleted; an edit needs a reason, which is logged against the job. Training and qualification records are held against each person. Defects are tracked from the visit that found them to the quote, the job and the resolution, so the outcome is never missing. Import and export of all data is on every plan, so moving in does not mean starting the trail again.</p>
-            <p>Compliar provides record-keeping and certificate workflows. It does not certify work, grant accreditation or stand in for your scheme. The competent engineer and your scheme remain responsible for the work and for what is certified.</p>
+            <p>
+              The simplest structure is the one auditors follow: everything
+              about a site is held against that site, and everything about a job
+              is held against that job, in date order. Enquiry, survey, quote,
+              RAMS, visits, certificates, defects, quotes raised from them and
+              invoices all hang off the same record, so the whole sample can be
+              opened from one screen rather than assembled from email, a shared
+              drive and a filing cabinet.
+            </p>
+            <p>
+              That is how <a href="/features/">Compliar</a> is arranged.
+              Customers hold sites, sites hold assets, maintenance plans and the
+              log book, and jobs hold the visit, the service report, the
+              certificates, the defects and the documents that were sent.
+              Certificates are laid out to the standard for the discipline, name
+              the standard on the document, and once issued cannot be deleted;
+              an edit needs a reason, which is logged against the job. Training
+              and qualification records are held against each person. Defects
+              are tracked from the visit that found them to the quote, the job
+              and the resolution, so the outcome is never missing. Import and
+              export of all data is on every plan, so moving in does not mean
+              starting the trail again.
+            </p>
+            <p>
+              Compliar provides record-keeping and certificate workflows. It
+              does not certify work, grant accreditation or stand in for your
+              scheme. The competent engineer and your scheme remain responsible
+              for the work and for what is certified.
+            </p>
             <div class="more-links">
               <a href="/service-report-software/">Service report software</a>
               <a href="/how-to-write-rams/">Writing RAMS</a>
-              <a href="/intruder-alarm-grades-maintenance-guide/">Intruder alarm grades and maintenance</a>
-              <a href="/fire-alarm-servicing-guide/">Fire detection and alarm servicing</a>
+              <a href="/intruder-alarm-grades-maintenance-guide/"
+                >Intruder alarm grades and maintenance</a
+              >
+              <a href="/fire-alarm-servicing-guide/"
+                >Fire detection and alarm servicing</a
+              >
             </div>
           </div>
         </div>
@@ -350,35 +599,80 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary>Will using Compliar get us through an audit?</summary>
-              <p>No software can promise that. An audit judges your work, your people and your records against your scheme document and the standards. Compliar keeps the records in one place, laid out to the standards, so the trail is there to show; what is in them is down to your competent engineers.</p>
+              <p>
+                No software can promise that. An audit judges your work, your
+                people and your records against your scheme document and the
+                standards. Compliar keeps the records in one place, laid out to
+                the standards, so the trail is there to show; what is in them is
+                down to your competent engineers.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Is Compliar affiliated with NSI, SSAIB or BAFE?</summary>
-              <p>No. Compliar is not affiliated with or endorsed by any scheme or certification body. The templates reference the British Standards for each discipline; the engineer and the scheme remain responsible.</p>
+              <p>
+                No. Compliar is not affiliated with or endorsed by any scheme or
+                certification body. The templates reference the British
+                Standards for each discipline; the engineer and the scheme
+                remain responsible.
+              </p>
             </details>
             <details class="faq-item">
               <summary>How many jobs does an auditor sample?</summary>
-              <p>It varies by scheme, by the size of the company and by what was found last time. Assume any job since the last audit can be picked, and keep every job&#x27;s trail complete rather than preparing a few.</p>
+              <p>
+                It varies by scheme, by the size of the company and by what was
+                found last time. Assume any job since the last audit can be
+                picked, and keep every job&#x27;s trail complete rather than
+                preparing a few.
+              </p>
             </details>
             <details class="faq-item">
               <summary>What records do we need for subcontractors?</summary>
-              <p>Usually the same as for your own staff: competence, training and, for security work, screening, plus evidence that the subcontracted work was checked. Check your scheme document for what it requires.</p>
+              <p>
+                Usually the same as for your own staff: competence, training
+                and, for security work, screening, plus evidence that the
+                subcontracted work was checked. Check your scheme document for
+                what it requires.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>Do we need calibration certificates for every instrument?</summary>
-              <p>For instruments whose readings go on certificates, such as multifunction testers and sound level meters, the usual expectation is a current calibration record. Keep a register with serial numbers, dates and who holds each instrument.</p>
+              <summary>
+                Do we need calibration certificates for every instrument?
+              </summary>
+              <p>
+                For instruments whose readings go on certificates, such as
+                multifunction testers and sound level meters, the usual
+                expectation is a current calibration record. Keep a register
+                with serial numbers, dates and who holds each instrument.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>Can old certificates from our previous software be kept with the site?</summary>
-              <p>Yes. Legacy certificates as PDFs or photos can be added against any site in Compliar, so the history is in one place.</p>
+              <summary>
+                Can old certificates from our previous software be kept with the
+                site?
+              </summary>
+              <p>
+                Yes. Legacy certificates as PDFs or photos can be added against
+                any site in Compliar, so the history is in one place.
+              </p>
             </details>
             <details class="faq-item">
-              <summary>What about electrical schemes such as NICEIC or NAPIT?</summary>
-              <p>The job-trail principle is the same: survey, quote, RAMS, the certificate laid out to BS 7671, defects and invoice held together. Each scheme&#x27;s assessment criteria are its own; check them.</p>
+              <summary>
+                What about electrical schemes such as NICEIC or NAPIT?
+              </summary>
+              <p>
+                The job-trail principle is the same: survey, quote, RAMS, the
+                certificate laid out to BS 7671, defects and invoice held
+                together. Each scheme&#x27;s assessment criteria are its own;
+                check them.
+              </p>
             </details>
             <details class="faq-item">
               <summary>What does it cost?</summary>
-              <p>Certificates, RAMS and the records described here are included with every plan, from £35 + VAT per user per month on Lite. No per-certificate fees and no contract.</p>
+              <p>
+                Certificates, RAMS and the records described here are included
+                with every plan, from £35 + VAT per user per month on Lite. No
+                per-certificate fees and no contract.
+              </p>
             </details>
           </div>
         </div>
@@ -386,9 +680,18 @@
       <section class="final-cta band">
         <div class="wrap">
           <h2>Keep the records where the auditor can find them</h2>
-          <p>Book a demo and Keiran will show you how a sampled job looks in Compliar: survey, quote, RAMS, visit, certificate, defects and invoice on one screen.</p>
+          <p>
+            Book a demo and Keiran will show you how a sampled job looks in
+            Compliar: survey, quote, RAMS, visit, certificate, defects and
+            invoice on one screen.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            >
             <a class="btn btn-ghost-on-navy" href="/pricing/">See pricing</a>
           </div>
         </div>
@@ -407,7 +710,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -421,34 +725,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -458,10 +815,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -469,11 +838,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

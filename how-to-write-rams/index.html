@@ -6,54 +6,72 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>How to Write RAMS Engineers Actually Read — Compliar</title>
-    <meta name="description" content="How to write risk assessments and method statements (RAMS) for electrical, fire protection and life safety, and security jobs that engineers read: keep them short, specific, briefed and signed." />
+    <meta
+      name="description"
+      content="How to write risk assessments and method statements (RAMS) for electrical, fire protection and life safety, and security jobs that engineers read: keep them short, specific, briefed and signed."
+    />
     <link rel="canonical" href="https://compliar.co.uk/how-to-write-rams/" />
     <meta name="theme-color" content="#1B2430" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Compliar" />
-    <meta property="og:title" content="How to Write RAMS Engineers Actually Read — Compliar" />
-    <meta property="og:description" content="How to write risk assessments and method statements (RAMS) for electrical, fire protection and life safety, and security jobs that engineers read: keep them short, specific, briefed and signed." />
-    <meta property="og:url" content="https://compliar.co.uk/how-to-write-rams/" />
+    <meta
+      property="og:title"
+      content="How to Write RAMS Engineers Actually Read — Compliar"
+    />
+    <meta
+      property="og:description"
+      content="How to write risk assessments and method statements (RAMS) for electrical, fire protection and life safety, and security jobs that engineers read: keep them short, specific, briefed and signed."
+    />
+    <meta
+      property="og:url"
+      content="https://compliar.co.uk/how-to-write-rams/"
+    />
     <meta property="og:image" content="https://compliar.co.uk/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -62,8 +80,14 @@
       content="Compliar — management software for electrical, fire protection and life safety, and security contractors"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="How to Write RAMS Engineers Actually Read — Compliar" />
-    <meta name="twitter:description" content="How to write risk assessments and method statements (RAMS) for electrical, fire protection and life safety, and security jobs that engineers read: keep them short, specific, briefed and signed." />
+    <meta
+      name="twitter:title"
+      content="How to Write RAMS Engineers Actually Read — Compliar"
+    />
+    <meta
+      name="twitter:description"
+      content="How to write risk assessments and method statements (RAMS) for electrical, fire protection and life safety, and security jobs that engineers read: keep them short, specific, briefed and signed."
+    />
     <meta name="twitter:image" content="https://compliar.co.uk/og.png" />
     <link
       rel="icon"
@@ -176,9 +200,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -200,7 +234,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -213,55 +249,153 @@
         </details>
       </div>
     </header>
-        <main id="main">
+    <main id="main">
       <section class="page-intro">
         <div class="wrap">
           <div class="crumbs">
-            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a><i>/</i>How to write RAMS
+            <a href="/">Compliar</a><i>/</i><a href="/resources/">Resources</a
+            ><i>/</i>How to write RAMS
           </div>
           <div class="eyebrow">Running your business · Guide</div>
           <h1>Writing RAMS that engineers actually read</h1>
-          <p>A risk assessment and method statement is only useful if the people doing the work read it. Practical tips for writing short, job-specific RAMS that stand up on site, based on HSE guidance.</p>
+          <p>
+            A risk assessment and method statement is only useful if the people
+            doing the work read it. Practical tips for writing short,
+            job-specific RAMS that stand up on site, based on HSE guidance.
+          </p>
         </div>
       </section>
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <p><strong>General guidance only. Check the standard itself and take advice from your own competent person for the job in front of you.</strong> Last reviewed 22 October 2026.</p>
-<h2>What RAMS are for</h2>
-<p>A risk assessment says what could go wrong and what you will do about it. A method statement says how the job will be done, step by step, including the control measures. Together they plan the work, tell the engineer what is expected and show a client or principal contractor that you have thought about it.</p>
-<p>HSE's five steps for risk assessment are a good frame: identify the hazards, assess the risks, control the risks, record your findings, and review the controls. If you employ five or more people you must record your significant findings, and HSE is clear that paperwork should not be the main priority. Controlling the risk on site is.</p>
-<h2>Why most RAMS are not read</h2>
-<ul>
-  <li>They are generic. The same twenty pages go to every customer for every job.</li>
-  <li>They are long, with legislation pasted in and the actual method buried on page fourteen.</li>
-  <li>They describe the company, not the job: nothing about this building, this ceiling void or this live board.</li>
-  <li>They arrive late, or only on the day, so nobody has time to read them.</li>
-</ul>
-<h2>A shape that works</h2>
-<p>Aim for a few pages that someone could read in ten minutes on the way to site.</p>
-<ol>
-  <li>The job in two lines: where, what, when, who is on it and who is in charge.</li>
-  <li>The hazards that are real for this job, in plain words, each with who is at risk, how you will control it and what is left over. Five hazards that matter beat thirty that do not.</li>
-  <li>The method as a short sequence in the order the work happens: access and isolation, the work, testing, making safe and tidying up.</li>
-  <li>What stops the job: the conditions under which the engineer should stop and ring the supervisor, such as an unexpected live supply, asbestos-looking material or a change to the plan.</li>
-  <li>Emergency arrangements: where the first aid kit is, who to ring, the nearest hospital, the fire evacuation point.</li>
-  <li>Equipment and PPE actually needed for this task, not the full list.</li>
-</ol>
-<h2>Specifics that make it believable</h2>
-<ul>
-  <li>Name the real things on the job: the ceiling void above the corridor, the dead-leg in the riser, the occupied hotel rooms.</li>
-  <li>Say how you will isolate and prove dead, and who is responsible for permits and hot works.</li>
-  <li>For working at height, state the access equipment, not just a hazard heading.</li>
-  <li>Use diagrams or photos where they make the method clearer. HSE notes that diagrams help the people doing the work.</li>
-  <li>Write it as instructions to the engineer, not as a description of what the company believes.</li>
-</ul>
-<h2>Brief it and get it signed</h2>
-<p>HSE describes a method statement as an effective way to give employees information about how the work is to be carried out. For that to be true, the engineer has to have seen it. Send it ahead, talk through anything unusual, and ask each person on the job to confirm they have read and understood it. A signed record that people were briefed is often what a customer or inspector will ask to see.</p>
-<h2>Check that it is followed</h2>
-<p>Walk the job and compare what is happening with what the method statement says. If the method does not match reality, change the method, not just the paperwork. HSE suggests checking on site that the stated methods are followed. Review the RAMS when the job changes, after an incident or near miss, and whenever an engineer raises a problem.</p>
-<h2>Reuse, don't copy</h2>
-<p>Repeated jobs can share a base: a fire alarm service visit, a CCTV install or an EICR in an occupied flat. Keep a good starting document for each type of work, then adapt the hazards and the method to the actual site before it is issued. HSE says statements for repeated operations can be similar from job to job, but should be revised when circumstances change.</p>
+            <p>
+              <strong
+                >General guidance only. Check the standard itself and take
+                advice from your own competent person for the job in front of
+                you.</strong
+              >
+              Last reviewed 22 October 2026.
+            </p>
+            <h2>What RAMS are for</h2>
+            <p>
+              A risk assessment says what could go wrong and what you will do
+              about it. A method statement says how the job will be done, step
+              by step, including the control measures. Together they plan the
+              work, tell the engineer what is expected and show a client or
+              principal contractor that you have thought about it.
+            </p>
+            <p>
+              HSE's five steps for risk assessment are a good frame: identify
+              the hazards, assess the risks, control the risks, record your
+              findings, and review the controls. If you employ five or more
+              people you must record your significant findings, and HSE is clear
+              that paperwork should not be the main priority. Controlling the
+              risk on site is.
+            </p>
+            <h2>Why most RAMS are not read</h2>
+            <ul>
+              <li>
+                They are generic. The same twenty pages go to every customer for
+                every job.
+              </li>
+              <li>
+                They are long, with legislation pasted in and the actual method
+                buried on page fourteen.
+              </li>
+              <li>
+                They describe the company, not the job: nothing about this
+                building, this ceiling void or this live board.
+              </li>
+              <li>
+                They arrive late, or only on the day, so nobody has time to read
+                them.
+              </li>
+            </ul>
+            <h2>A shape that works</h2>
+            <p>
+              Aim for a few pages that someone could read in ten minutes on the
+              way to site.
+            </p>
+            <ol>
+              <li>
+                The job in two lines: where, what, when, who is on it and who is
+                in charge.
+              </li>
+              <li>
+                The hazards that are real for this job, in plain words, each
+                with who is at risk, how you will control it and what is left
+                over. Five hazards that matter beat thirty that do not.
+              </li>
+              <li>
+                The method as a short sequence in the order the work happens:
+                access and isolation, the work, testing, making safe and tidying
+                up.
+              </li>
+              <li>
+                What stops the job: the conditions under which the engineer
+                should stop and ring the supervisor, such as an unexpected live
+                supply, asbestos-looking material or a change to the plan.
+              </li>
+              <li>
+                Emergency arrangements: where the first aid kit is, who to ring,
+                the nearest hospital, the fire evacuation point.
+              </li>
+              <li>
+                Equipment and PPE actually needed for this task, not the full
+                list.
+              </li>
+            </ol>
+            <h2>Specifics that make it believable</h2>
+            <ul>
+              <li>
+                Name the real things on the job: the ceiling void above the
+                corridor, the dead-leg in the riser, the occupied hotel rooms.
+              </li>
+              <li>
+                Say how you will isolate and prove dead, and who is responsible
+                for permits and hot works.
+              </li>
+              <li>
+                For working at height, state the access equipment, not just a
+                hazard heading.
+              </li>
+              <li>
+                Use diagrams or photos where they make the method clearer. HSE
+                notes that diagrams help the people doing the work.
+              </li>
+              <li>
+                Write it as instructions to the engineer, not as a description
+                of what the company believes.
+              </li>
+            </ul>
+            <h2>Brief it and get it signed</h2>
+            <p>
+              HSE describes a method statement as an effective way to give
+              employees information about how the work is to be carried out. For
+              that to be true, the engineer has to have seen it. Send it ahead,
+              talk through anything unusual, and ask each person on the job to
+              confirm they have read and understood it. A signed record that
+              people were briefed is often what a customer or inspector will ask
+              to see.
+            </p>
+            <h2>Check that it is followed</h2>
+            <p>
+              Walk the job and compare what is happening with what the method
+              statement says. If the method does not match reality, change the
+              method, not just the paperwork. HSE suggests checking on site that
+              the stated methods are followed. Review the RAMS when the job
+              changes, after an incident or near miss, and whenever an engineer
+              raises a problem.
+            </p>
+            <h2>Reuse, don't copy</h2>
+            <p>
+              Repeated jobs can share a base: a fire alarm service visit, a CCTV
+              install or an EICR in an occupied flat. Keep a good starting
+              document for each type of work, then adapt the hazards and the
+              method to the actual site before it is issued. HSE says statements
+              for repeated operations can be similar from job to job, but should
+              be revised when circumstances change.
+            </p>
           </div>
         </div>
       </section>
@@ -274,19 +408,37 @@
           <div class="faq-list">
             <details class="faq-item">
               <summary>What does RAMS stand for?</summary>
-              <p>Risk assessment and method statement. The risk assessment identifies hazards and controls, and the method statement sets out step by step how the work will be done safely.</p>
+              <p>
+                Risk assessment and method statement. The risk assessment
+                identifies hazards and controls, and the method statement sets
+                out step by step how the work will be done safely.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Do I have to write down a risk assessment?</summary>
-              <p>If you employ five or more people you must record your significant findings: the hazards, who might be harmed and how, and what you are doing to control the risks. Everyone must still assess the risks, whatever the size of the business.</p>
+              <p>
+                If you employ five or more people you must record your
+                significant findings: the hazards, who might be harmed and how,
+                and what you are doing to control the risks. Everyone must still
+                assess the risks, whatever the size of the business.
+              </p>
             </details>
             <details class="faq-item">
               <summary>How long should a RAMS be?</summary>
-              <p>As short as it can be while still covering the real hazards and the method for this job. A few pages that an engineer can read in ten minutes is more useful than a long generic document.</p>
+              <p>
+                As short as it can be while still covering the real hazards and
+                the method for this job. A few pages that an engineer can read
+                in ten minutes is more useful than a long generic document.
+              </p>
             </details>
             <details class="faq-item">
               <summary>Do engineers need to sign the RAMS?</summary>
-              <p>It is good practice to brief everyone on the job and keep a signed record that each person has read and understood it. A method statement is only effective if the people doing the work have seen it.</p>
+              <p>
+                It is good practice to brief everyone on the job and keep a
+                signed record that each person has read and understood it. A
+                method statement is only effective if the people doing the work
+                have seen it.
+              </p>
             </details>
           </div>
         </div>
@@ -294,18 +446,37 @@
       <section class="band">
         <div class="wrap">
           <div class="prose">
-            <div class="eyebrow" style="color: var(--orange-deep)">In the app</div>
+            <div class="eyebrow" style="color: var(--orange-deep)">
+              In the app
+            </div>
             <h2>How Compliar helps</h2>
-<p>Compliar has RAMS built into the workspace and included on every plan. Create one straight from a job and it pulls in the site and job details, and hazards and a method statement from ready-made templates covering every discipline Compliar supports. You can also start from a blank RAMS for anything bespoke.</p>
-<ul>
-  <li>Editable hazards and methods, so you adapt them to the site rather than send a generic document.</li>
-  <li>Electronic sign-off and a printable PDF.</li>
-  <li>Once a RAMS is issued, the office can email each person on it a link to read and sign it on their phone, and the time they signed is recorded.</li>
-</ul>
+            <p>
+              Compliar has RAMS built into the workspace and included on every
+              plan. Create one straight from a job and it pulls in the site and
+              job details, and hazards and a method statement from ready-made
+              templates covering every discipline Compliar supports. You can
+              also start from a blank RAMS for anything bespoke.
+            </p>
+            <ul>
+              <li>
+                Editable hazards and methods, so you adapt them to the site
+                rather than send a generic document.
+              </li>
+              <li>Electronic sign-off and a printable PDF.</li>
+              <li>
+                Once a RAMS is issued, the office can email each person on it a
+                link to read and sign it on their phone, and the time they
+                signed is recorded.
+              </li>
+            </ul>
             <div class="more-links">
-              <a href="/fire-alarm-servicing-guide/">Fire detection and alarm servicing guide</a>
+              <a href="/fire-alarm-servicing-guide/"
+                >Fire detection and alarm servicing guide</a
+              >
               <a href="/eicr-intervals-codes-guide/">EICR guide</a>
-              <a href="/intruder-alarm-grades-maintenance-guide/">Intruder alarm grades and maintenance</a>
+              <a href="/intruder-alarm-grades-maintenance-guide/"
+                >Intruder alarm grades and maintenance</a
+              >
               <a href="/getting-started/">Getting started</a>
             </div>
           </div>
@@ -314,9 +485,19 @@
       <section class="final-cta band">
         <div class="wrap">
           <h2>One app. Every job, start to finish.</h2>
-          <p>Book a demo and Keiran will walk through your own jobs. Early adopters lock their price for 3 years, with no contract.</p>
+          <p>
+            Book a demo and Keiran will walk through your own jobs. Early
+            adopters lock their price for 3 years, with no contract.
+          </p>
           <div class="final-ctas">
-            <a class="btn btn-primary" href="/contact/?subject=Demo+request" data-demo-open>Book a demo</a><a class="btn btn-ghost-on-navy" href="/getting-started/">How getting started works</a>
+            <a
+              class="btn btn-primary"
+              href="/contact/?subject=Demo+request"
+              data-demo-open
+              >Book a demo</a
+            ><a class="btn btn-ghost-on-navy" href="/getting-started/"
+              >How getting started works</a
+            >
           </div>
         </div>
       </section>
@@ -333,7 +514,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -347,34 +529,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -384,10 +619,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -395,11 +642,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

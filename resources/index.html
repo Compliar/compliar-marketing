@@ -6,44 +6,50 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>Resources &amp; Tools — Compliar</title>
     <meta
@@ -238,9 +244,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -262,7 +278,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -280,7 +298,11 @@
         <div class="wrap">
           <div class="eyebrow">Resources</div>
           <h1>Useful tools. Clearer answers.</h1>
-          <p>A free calculator and plain-English guides for electrical, fire protection and life safety, and security contractors: servicing, testing, certificates, RAMS and getting paid.</p>
+          <p>
+            A free calculator and plain-English guides for electrical, fire
+            protection and life safety, and security contractors: servicing,
+            testing, certificates, RAMS and getting paid.
+          </p>
         </div>
       </section>
       <section class="band" id="fire">
@@ -292,94 +314,128 @@
             </div>
           </div>
           <div class="overview-grid">
-          <a class="overview-card" href="/fire-alarm-battery-calculator/"
-            ><span class="card-index mono">01 /</span>
-            <h3>Fire alarm battery calculator</h3>
-            <p>Calculate standby battery capacity and see the working for your fire detection and alarm design.</p>
-            <span class="text-link"
-              >Open calculator <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/fire-alarm-servicing-guide/"
-            ><span class="card-index mono">02 /</span>
-            <h3>Fire detection and alarm servicing: how often and what is checked</h3>
-            <p>Six-monthly visits, what an engineer covers, the log book and how to deal with false alarms.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/fire-alarm-categories-explained/"
-            ><span class="card-index mono">03 /</span>
-            <h3>Fire alarm categories explained</h3>
-            <p>What L1 to L5, M, P1 and P2 mean in practice, and who decides which one a building needs.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/what-is-an-l4-fire-alarm-system/"
-            ><span class="card-index mono">04 /</span>
-            <h3>What is an L4 fire alarm system?</h3>
-            <p>What Category L4 covers, how it differs from L3, and who decides.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/how-to-create-a-fire-alarm-zone-plan/"
-            ><span class="card-index mono">05 /</span>
-            <h3>How to create a fire alarm zone plan</h3>
-            <p>What a zone plan must show, where it goes and how to make one.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/fire-alarm-as-fitted-drawings/"
-            ><span class="card-index mono">06 /</span>
-            <h3>How to do a fire alarm as-fitted drawing</h3>
-            <p>What the drawing shows and how to produce it step by step.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/fire-alarm-om-manual/"
-            ><span class="card-index mono">07 /</span>
-            <h3>How to do a fire alarm O&amp;M manual</h3>
-            <p>What goes in the handover pack and how to put it together.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/emergency-lighting-testing-guide/"
-            ><span class="card-index mono">08 /</span>
-            <h3>Emergency lighting testing and records</h3>
-            <p>Monthly functional tests, the annual full-duration test and what the log should show.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/fire-extinguisher-servicing-guide/"
-            ><span class="card-index mono">09 /</span>
-            <h3>Fire extinguisher servicing basics</h3>
-            <p>Monthly checks, the annual basic service, extended service and what to record under BS 5306-3.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/fire-alarm-certificate-software/"
-            ><span class="card-index mono">10 /</span>
-            <h3>Fire detection and alarm certificates</h3>
-            <p>Explore fire detection and alarm certificate sets and built-in calculations.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/fire-alarm-commissioning-certificate/"
-            ><span class="card-index mono">11 /</span>
-            <h3>Fire alarm commissioning certificate</h3>
-            <p>What the BS 5839-1 commissioning certificate records, who signs it, what to check before you sign and the mistakes that cause trouble at handover.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
+            <a class="overview-card" href="/fire-alarm-battery-calculator/"
+              ><span class="card-index mono">01 /</span>
+              <h3>Fire alarm battery calculator</h3>
+              <p>
+                Calculate standby battery capacity and see the working for your
+                fire detection and alarm design.
+              </p>
+              <span class="text-link"
+                >Open calculator <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/fire-alarm-servicing-guide/"
+              ><span class="card-index mono">02 /</span>
+              <h3>
+                Fire detection and alarm servicing: how often and what is
+                checked
+              </h3>
+              <p>
+                Six-monthly visits, what an engineer covers, the log book and
+                how to deal with false alarms.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/fire-alarm-categories-explained/"
+              ><span class="card-index mono">03 /</span>
+              <h3>Fire alarm categories explained</h3>
+              <p>
+                What L1 to L5, M, P1 and P2 mean in practice, and who decides
+                which one a building needs.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/what-is-an-l4-fire-alarm-system/"
+              ><span class="card-index mono">04 /</span>
+              <h3>What is an L4 fire alarm system?</h3>
+              <p>
+                What Category L4 covers, how it differs from L3, and who
+                decides.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a
+              class="overview-card"
+              href="/how-to-create-a-fire-alarm-zone-plan/"
+              ><span class="card-index mono">05 /</span>
+              <h3>How to create a fire alarm zone plan</h3>
+              <p>
+                What a zone plan must show, where it goes and how to make one.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/fire-alarm-as-fitted-drawings/"
+              ><span class="card-index mono">06 /</span>
+              <h3>How to do a fire alarm as-fitted drawing</h3>
+              <p>What the drawing shows and how to produce it step by step.</p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/fire-alarm-om-manual/"
+              ><span class="card-index mono">07 /</span>
+              <h3>How to do a fire alarm O&amp;M manual</h3>
+              <p>What goes in the handover pack and how to put it together.</p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/emergency-lighting-testing-guide/"
+              ><span class="card-index mono">08 /</span>
+              <h3>Emergency lighting testing and records</h3>
+              <p>
+                Monthly functional tests, the annual full-duration test and what
+                the log should show.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/fire-extinguisher-servicing-guide/"
+              ><span class="card-index mono">09 /</span>
+              <h3>Fire extinguisher servicing basics</h3>
+              <p>
+                Monthly checks, the annual basic service, extended service and
+                what to record under BS 5306-3.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/fire-alarm-certificate-software/"
+              ><span class="card-index mono">10 /</span>
+              <h3>Fire detection and alarm certificates</h3>
+              <p>
+                Explore fire detection and alarm certificate sets and built-in
+                calculations.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a
+              class="overview-card"
+              href="/fire-alarm-commissioning-certificate/"
+              ><span class="card-index mono">11 /</span>
+              <h3>Fire alarm commissioning certificate</h3>
+              <p>
+                What the BS 5839-1 commissioning certificate records, who signs
+                it, what to check before you sign and the mistakes that cause
+                trouble at handover.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
           </div>
         </div>
       </section>
@@ -392,38 +448,52 @@
             </div>
           </div>
           <div class="overview-grid">
-          <a class="overview-card" href="/intruder-alarm-grades-maintenance-guide/"
-            ><span class="card-index mono">01 /</span>
-            <h3>Intruder alarm grades and maintenance</h3>
-            <p>Grades 1 to 4 in plain English, what police response involves and how often to visit.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/what-is-a-grade-3-intruder-alarm/"
-            ><span class="card-index mono">02 /</span>
-            <h3>What is a Grade 3 intruder alarm?</h3>
-            <p>What Grade 3 means under BS EN 50131, where it is used and what it involves.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/intruder-alarm-battery-calculator/"
-            ><span class="card-index mono">03 /</span>
-            <h3>Intruder alarm battery calculator</h3>
-            <p>Work out standby battery capacity for Grade 2 and Grade 3 systems.</p>
-            <span class="text-link"
-              >Open calculator <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/features/#certificates"
-            ><span class="card-index mono">04 /</span>
-            <h3>Security certificates and reports</h3>
-            <p>Certificates and service reports for intruder alarms, CCTV, access control, door entry and more.</p>
-            <span class="text-link"
-              >See the certificates <span aria-hidden="true">↗</span></span
-            ></a
-          >
+            <a
+              class="overview-card"
+              href="/intruder-alarm-grades-maintenance-guide/"
+              ><span class="card-index mono">01 /</span>
+              <h3>Intruder alarm grades and maintenance</h3>
+              <p>
+                Grades 1 to 4 in plain English, what police response involves
+                and how often to visit.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/what-is-a-grade-3-intruder-alarm/"
+              ><span class="card-index mono">02 /</span>
+              <h3>What is a Grade 3 intruder alarm?</h3>
+              <p>
+                What Grade 3 means under BS EN 50131, where it is used and what
+                it involves.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/intruder-alarm-battery-calculator/"
+              ><span class="card-index mono">03 /</span>
+              <h3>Intruder alarm battery calculator</h3>
+              <p>
+                Work out standby battery capacity for Grade 2 and Grade 3
+                systems.
+              </p>
+              <span class="text-link"
+                >Open calculator <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/features/#certificates"
+              ><span class="card-index mono">04 /</span>
+              <h3>Security certificates and reports</h3>
+              <p>
+                Certificates and service reports for intruder alarms, CCTV,
+                access control, door entry and more.
+              </p>
+              <span class="text-link"
+                >See the certificates <span aria-hidden="true">↗</span></span
+              ></a
+            >
           </div>
         </div>
       </section>
@@ -436,22 +506,30 @@
             </div>
           </div>
           <div class="overview-grid">
-          <a class="overview-card" href="/eicr-intervals-codes-guide/"
-            ><span class="card-index mono">01 /</span>
-            <h3>EICR guide: intervals, codes and unsatisfactory reports</h3>
-            <p>How often to inspect each property type, what C1, C2, C3 and FI mean, and what makes a report unsatisfactory.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/eicr-and-electrical-certificate-software/"
-            ><span class="card-index mono">02 /</span>
-            <h3>Electrical certificates</h3>
-            <p>EICRs, installation certificates and minor works, connected to the job.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
+            <a class="overview-card" href="/eicr-intervals-codes-guide/"
+              ><span class="card-index mono">01 /</span>
+              <h3>EICR guide: intervals, codes and unsatisfactory reports</h3>
+              <p>
+                How often to inspect each property type, what C1, C2, C3 and FI
+                mean, and what makes a report unsatisfactory.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a
+              class="overview-card"
+              href="/eicr-and-electrical-certificate-software/"
+              ><span class="card-index mono">02 /</span>
+              <h3>Electrical certificates</h3>
+              <p>
+                EICRs, installation certificates and minor works, connected to
+                the job.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
           </div>
         </div>
       </section>
@@ -464,84 +542,118 @@
             </div>
           </div>
           <div class="overview-grid">
-          <a class="overview-card" href="/how-to-write-rams/"
-            ><span class="card-index mono">01 /</span>
-            <h3>Writing RAMS that engineers actually read</h3>
-            <p>Short, job-specific risk assessments and method statements, and how to get them briefed and signed.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/cis-and-retention-guide/"
-            ><span class="card-index mono">02 /</span>
-            <h3>CIS and retention for subcontractors</h3>
-            <p>How the 20%, 30% and 0% rates work, what the deduction is taken from, and how retention fits in.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/paper-spreadsheets-or-software-cost-and-time/"
-            ><span class="card-index mono">03 /</span>
-            <h3>Paper, spreadsheets or software?</h3>
-            <p>What each way of running a small contractor really costs in money and time, using published prices.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/time-and-cost-calculator/"
-            ><span class="card-index mono">04 /</span>
-            <h3>Time and cost calculator</h3>
-            <p>Your team, your certificate count, your minutes and your hourly cost, minus the Compliar subscription and compared with what you pay now.</p>
-            <span class="text-link"
-              >Open calculator <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/service-report-software/"
-            ><span class="card-index mono">05 /</span>
-            <h3>Service report software</h3>
-            <p>What a service report should show, how it differs from a certificate, and how the report is produced from the visit the engineer recorded.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/nsi-ssaib-audit-records-guide/"
-            ><span class="card-index mono">06 /</span>
-            <h3>Records to keep for a scheme audit</h3>
-            <p>The job, maintenance, people and equipment records usually asked for at an NSI, SSAIB or BAFE audit, and the gaps that get raised.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/features/#xero"
-            ><span class="card-index mono">07 /</span>
-            <h3>Invoices and Xero</h3>
-            <p>Send an invoice from Compliar and have it created in Xero or QuickBooks Online.</p>
-            <span class="text-link"
-              >See how it works <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/getting-started/"
-            ><span class="card-index mono">08 /</span>
-            <h3>Getting started</h3>
-            <p>Follow a typical job and find a starting point for your team.</p>
-            <span class="text-link"
-              >Read the guide <span aria-hidden="true">↗</span></span
-            ></a
-          >
-          <a class="overview-card" href="/log-book/"
-            ><span class="card-index mono">09 /</span>
-            <h3>Digital fire log book for property owners</h3>
-            <p>A fire and emergency lighting log book for each property, without buying per-user plans.</p>
-            <span class="text-link"
-              >See how it works <span aria-hidden="true">↗</span></span
-            ></a
-          >
+            <a class="overview-card" href="/how-to-write-rams/"
+              ><span class="card-index mono">01 /</span>
+              <h3>Writing RAMS that engineers actually read</h3>
+              <p>
+                Short, job-specific risk assessments and method statements, and
+                how to get them briefed and signed.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/cis-and-retention-guide/"
+              ><span class="card-index mono">02 /</span>
+              <h3>CIS and retention for subcontractors</h3>
+              <p>
+                How the 20%, 30% and 0% rates work, what the deduction is taken
+                from, and how retention fits in.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a
+              class="overview-card"
+              href="/paper-spreadsheets-or-software-cost-and-time/"
+              ><span class="card-index mono">03 /</span>
+              <h3>Paper, spreadsheets or software?</h3>
+              <p>
+                What each way of running a small contractor really costs in
+                money and time, using published prices.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/time-and-cost-calculator/"
+              ><span class="card-index mono">04 /</span>
+              <h3>Time and cost calculator</h3>
+              <p>
+                Your team, your certificate count, your minutes and your hourly
+                cost, minus the Compliar subscription and compared with what you
+                pay now.
+              </p>
+              <span class="text-link"
+                >Open calculator <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/service-report-software/"
+              ><span class="card-index mono">05 /</span>
+              <h3>Service report software</h3>
+              <p>
+                What a service report should show, how it differs from a
+                certificate, and how the report is produced from the visit the
+                engineer recorded.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/nsi-ssaib-audit-records-guide/"
+              ><span class="card-index mono">06 /</span>
+              <h3>Records to keep for a scheme audit</h3>
+              <p>
+                The job, maintenance, people and equipment records usually asked
+                for at an NSI, SSAIB or BAFE audit, and the gaps that get
+                raised.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/features/#xero"
+              ><span class="card-index mono">07 /</span>
+              <h3>Invoices and Xero</h3>
+              <p>
+                Send an invoice from Compliar and have it created in Xero or
+                QuickBooks Online.
+              </p>
+              <span class="text-link"
+                >See how it works <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/getting-started/"
+              ><span class="card-index mono">08 /</span>
+              <h3>Getting started</h3>
+              <p>
+                Follow a typical job and find a starting point for your team.
+              </p>
+              <span class="text-link"
+                >Read the guide <span aria-hidden="true">↗</span></span
+              ></a
+            >
+            <a class="overview-card" href="/log-book/"
+              ><span class="card-index mono">09 /</span>
+              <h3>Digital fire log book for property owners</h3>
+              <p>
+                A fire and emergency lighting log book for each property,
+                without buying per-user plans.
+              </p>
+              <span class="text-link"
+                >See how it works <span aria-hidden="true">↗</span></span
+              ></a
+            >
           </div>
         </div>
       </section>
       <section class="band-tight">
         <div class="wrap">
-          <p class="help-note">General guidance only. Check the standard itself and take advice from your own competent person for the job in front of you.</p>
+          <p class="help-note">
+            General guidance only. Check the standard itself and take advice
+            from your own competent person for the job in front of you.
+          </p>
         </div>
       </section>
       <section class="guide-invite">
@@ -559,13 +671,19 @@
         <div class="wrap">
           <div class="eyebrow">Your next job starts here</div>
           <h2>One app. Every job, start to finish.</h2>
-          <p>Book a demo and Keiran will walk through your own jobs. Early adopters lock their price for 3 years, with no contract.</p>
+          <p>
+            Book a demo and Keiran will walk through your own jobs. Early
+            adopters lock their price for 3 years, with no contract.
+          </p>
           <div class="final-ctas">
             <a
               class="btn btn-primary"
-              href="/contact/?subject=Demo+request" data-demo-open
+              href="/contact/?subject=Demo+request"
+              data-demo-open
               >Book a demo</a
-            ><a class="btn btn-ghost-on-navy" href="/getting-started/">How getting started works</a>
+            ><a class="btn btn-ghost-on-navy" href="/getting-started/"
+              >How getting started works</a
+            >
           </div>
         </div>
       </section>
@@ -582,7 +700,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -596,34 +715,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -633,10 +805,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -644,11 +828,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>

@@ -6,47 +6,56 @@
     <!-- Google Consent Mode v2 setup -->
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       // Default consent to denied for UK GDPR/PECR compliance
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
       });
       // Re-apply an earlier consent choice before the Google tag loads
       try {
-        var rawPrefs = localStorage.getItem('compliar_cookie_prefs');
+        var rawPrefs = localStorage.getItem("compliar_cookie_prefs");
         if (rawPrefs) {
           var prefs = JSON.parse(rawPrefs);
-          var adState = prefs.marketing ? 'granted' : 'denied';
-          var anState = prefs.analytics ? 'granted' : 'denied';
-          gtag('consent', 'update', {
-            'ad_storage': adState,
-            'ad_user_data': adState,
-            'ad_personalization': adState,
-            'analytics_storage': anState
+          var adState = prefs.marketing ? "granted" : "denied";
+          var anState = prefs.analytics ? "granted" : "denied";
+          gtag("consent", "update", {
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
+            analytics_storage: anState,
           });
-        } else if (localStorage.getItem('compliar_cookie_consent') === 'granted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted',
-            'analytics_storage': 'granted'
+        } else if (
+          localStorage.getItem("compliar_cookie_consent") === "granted"
+        ) {
+          gtag("consent", "update", {
+            ad_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+            analytics_storage: "granted",
           });
         }
       } catch (e) {}
     </script>
 
     <!-- Google tag (gtag.js) for Compliar -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18545152858"
+    ></script>
     <script>
-      gtag('js', new Date());
-      gtag('config', 'AW-18545152858');
-
+      gtag("js", new Date());
+      gtag("config", "AW-18545152858");
     </script>
     <title>Privacy Policy — Compliar</title>
-    <meta name="description" content="How Compliar Ltd collects and uses personal data on this website, for enquiries and in the Compliar application, and your rights." />
+    <meta
+      name="description"
+      content="How Compliar Ltd collects and uses personal data on this website, for enquiries and in the Compliar application, and your rights."
+    />
     <link rel="canonical" href="https://compliar.co.uk/privacy/" />
     <meta name="theme-color" content="#1B2430" />
     <meta property="og:type" content="website" />
@@ -87,9 +96,19 @@
     <header class="nav">
       <div class="wrap nav-inner">
         <a class="brand" href="/" aria-label="Compliar home">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z" fill="#cf6225"/>
-            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a"/>
+          <svg
+            class="brand-mark"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 4H8L4 8V16L8 20H20V16H10L8 14V10L10 8H20V4Z"
+              fill="#cf6225"
+            />
+            <path d="M11 10H18V14H11L10 13V11L11 10Z" fill="#e6a98a" />
           </svg>
           <span class="brand-wordmark">
             <span class="brand-text">Compliar</span>
@@ -111,7 +130,9 @@
         </div>
 
         <details class="mobile-menu">
-          <summary aria-label="Toggle navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+          <summary aria-label="Toggle navigation menu">
+            Menu <span aria-hidden="true">☰</span>
+          </summary>
           <nav aria-label="Mobile navigation">
             <ul>
               <li><a href="/#trades">Trades</a></li>
@@ -125,145 +146,179 @@
       </div>
     </header>
     <main id="main">
-<section class="page-intro">
-  <div class="wrap">
-    <div class="eyebrow">Legal · Privacy Policy</div>
-    <h1>How we handle<br />your information.</h1>
-    <p>
-      This notice explains what Compliar Ltd collects when you use this website, enquire about a
-      demo, or use the Compliar application, and the choices you have.
-    </p>
-  </div>
-</section>
-<section class="band">
-  <div class="wrap prose">
-    <p><strong>Last updated:</strong> 30 October 2026.</p>
+      <section class="page-intro">
+        <div class="wrap">
+          <div class="eyebrow">Legal · Privacy Policy</div>
+          <h1>How we handle<br />your information.</h1>
+          <p>
+            This notice explains what Compliar Ltd collects when you use this
+            website, enquire about a demo, or use the Compliar application, and
+            the choices you have.
+          </p>
+        </div>
+      </section>
+      <section class="band">
+        <div class="wrap prose">
+          <p><strong>Last updated:</strong> 30 October 2026.</p>
 
-    <h2>Who we are</h2>
-    <p>
-      COMPLIAR LTD is a private limited company registered in England and Wales, company number
-      17519777, registered office 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. We are the
-      controller for the personal data described in this notice unless we say otherwise.
-    </p>
-    <p>
-      We are registered with the Information Commissioner's Office (ICO) as a data controller,
-      registration reference ZC278853. Our Data Protection Officer is Keiran Sandham. Contact him
-      about anything in this notice at
-      <a href="mailto:keiran@compliar.co.uk">keiran@compliar.co.uk</a>.
-    </p>
+          <h2>Who we are</h2>
+          <p>
+            COMPLIAR LTD is a private limited company registered in England and
+            Wales, company number 17519777, registered office 11 Wakefield
+            Drive, Endmoor, Kendal, LA8 0BF. We are the controller for the
+            personal data described in this notice unless we say otherwise.
+          </p>
+          <p>
+            We are registered with the Information Commissioner's Office (ICO)
+            as a data controller, registration reference ZC278853. Our Data
+            Protection Officer is Keiran Sandham. Contact him about anything in
+            this notice at
+            <a href="mailto:keiran@compliar.co.uk">keiran@compliar.co.uk</a>.
+          </p>
 
-    <h2>This website</h2>
-    <p>
-      The website is a set of static pages and does not ask you to create an account. We use the
-      Google tag for Google Ads to measure which of our adverts lead to demo requests. Advertising
-      and analytics cookies are only set if you choose &ldquo;Accept&rdquo; in the cookie
-      banner (lawful basis: consent, which you can withdraw at any time with Cookie settings in the
-      footer). If you choose &ldquo;Decline&rdquo;, Google still receives limited cookieless
-      signals, such as a page view or demo-button click with your IP address and browser details,
-      which it uses to model conversions in aggregate (lawful basis: our legitimate interest in
-      measuring our advertising). Google acts as an independent controller for this data; our
-      <a href="/cookies/">Cookies page</a> has the details. We use Cloudflare Web Analytics to count page views: it
-      sets no cookies, stores nothing in your browser and does not fingerprint or track you across
-      sites. Cloudflare receives your IP address and browser details to count the visit and gives
-      us totals only (pages viewed, referring sites, country and device type). The typefaces are loaded from
-      Google Fonts, so your browser requests them from Google's servers and Google receives your
-      IP address and browser details in the course of serving them (Google says it does not use
-      this to set cookies or build profiles); we plan to serve the fonts from our own domain. Our
-      hosting provider (GitHub Pages, operated by GitHub, Inc.) keeps
-      standard server logs, which include your IP address and the pages requested, for security
-      and operation of the service; we do not receive personal data from those logs.
-    </p>
+          <h2>This website</h2>
+          <p>
+            The website is a set of static pages and does not ask you to create
+            an account. We use the Google tag for Google Ads to measure which of
+            our adverts lead to demo requests. Advertising and analytics cookies
+            are only set if you choose &ldquo;Accept&rdquo; in the cookie banner
+            (lawful basis: consent, which you can withdraw at any time with
+            Cookie settings in the footer). If you choose &ldquo;Decline&rdquo;,
+            Google still receives limited cookieless signals, such as a page
+            view or demo-button click with your IP address and browser details,
+            which it uses to model conversions in aggregate (lawful basis: our
+            legitimate interest in measuring our advertising). Google acts as an
+            independent controller for this data; our
+            <a href="/cookies/">Cookies page</a> has the details. We use
+            Cloudflare Web Analytics to count page views: it sets no cookies,
+            stores nothing in your browser and does not fingerprint or track you
+            across sites. Cloudflare receives your IP address and browser
+            details to count the visit and gives us totals only (pages viewed,
+            referring sites, country and device type). The typefaces are loaded
+            from Google Fonts, so your browser requests them from Google's
+            servers and Google receives your IP address and browser details in
+            the course of serving them (Google says it does not use this to set
+            cookies or build profiles); we plan to serve the fonts from our own
+            domain. Our hosting provider (GitHub Pages, operated by GitHub,
+            Inc.) keeps standard server logs, which include your IP address and
+            the pages requested, for security and operation of the service; we
+            do not receive personal data from those logs.
+          </p>
 
-    <h2>Enquiries and demos</h2>
-    <p>
-      When you email us or fill in the demo request form (on the home page, the contact page or
-      the &ldquo;Book a demo&rdquo; pop-up), we receive your name, company name, phone number and work email
-      address, and whatever else you write in an email. The form is delivered by Web3Forms, a service provider that passes your submission to
-      our email; see <a href="https://web3forms.com/privacy" rel="noopener">Web3Forms' privacy policy</a>. We also
-      keep the enquiry as a contact record in our CRM (HubSpot, EU data centre; see
-      <a href="https://legal.hubspot.com/privacy-policy" rel="noopener">HubSpot's privacy policy</a>) so we can follow up. We
-      use this to reply, arrange a demo, set up your workspace and keep a record of the
-      conversation. The lawful basis is our legitimate interest in responding to business
-      enquiries and, where you ask to subscribe, taking steps at your request before entering a
-      contract. If you use the free sample form on a landing page, we receive only your email
-      address and the page you sent it from, delivered in the same way by Web3Forms to
-      enquiry@compliar.co.uk. The same retention applies. We keep enquiry correspondence for up to 24 months after our last contact, or
-      for the life of your account if you become a customer. Email is handled through Google
-      Workspace.
-    </p>
+          <h2>Enquiries and demos</h2>
+          <p>
+            When you email us or fill in the demo request form (on the home
+            page, the contact page or the &ldquo;Book a demo&rdquo; pop-up), we
+            receive your name, company name, phone number and work email
+            address, and whatever else you write in an email. The form is
+            delivered by Web3Forms, a service provider that passes your
+            submission to our email; see
+            <a href="https://web3forms.com/privacy" rel="noopener"
+              >Web3Forms' privacy policy</a
+            >. We also keep the enquiry as a contact record in our CRM (HubSpot,
+            EU data centre; see
+            <a href="https://legal.hubspot.com/privacy-policy" rel="noopener"
+              >HubSpot's privacy policy</a
+            >) so we can follow up. We use this to reply, arrange a demo, set up
+            your workspace and keep a record of the conversation. The lawful
+            basis is our legitimate interest in responding to business enquiries
+            and, where you ask to subscribe, taking steps at your request before
+            entering a contract. If you use the free sample form on a landing
+            page, we receive only your email address and the page you sent it
+            from, delivered in the same way by Web3Forms to
+            enquiry@compliar.co.uk. The same retention applies. We keep enquiry
+            correspondence for up to 24 months after our last contact, or for
+            the life of your account if you become a customer. Email is handled
+            through Google Workspace.
+          </p>
 
-    <h2>The Compliar application</h2>
-    <h3>Account data (we are the controller)</h3>
-    <p>
-      To run your workspace we hold the name, work email address, role and sign-in details of
-      each user, your company details and billing contact, and usage and security logs. We use
-      this to provide the service, bill for it, keep it secure, support you and send service
-      messages. The lawful basis is performance of our contract with your company and our
-      legitimate interests in running a secure service. Payments are processed by Stripe; we do
-      not store card numbers.
-    </p>
-    <h3>Your customers' data (you are the controller, we are the processor)</h3>
-    <p>
-      The sites, assets, jobs, certificates, reports, defects, photographs, signatures and
-      contacts you record in Compliar belong to your company. You decide what to collect and why;
-      we process it only on your instructions to provide the service, under the data-processing
-      terms in our <a href="/terms/">Terms of Service</a>. We do not sell it, use it for
-      advertising or use it to train models.
-    </p>
+          <h2>The Compliar application</h2>
+          <h3>Account data (we are the controller)</h3>
+          <p>
+            To run your workspace we hold the name, work email address, role and
+            sign-in details of each user, your company details and billing
+            contact, and usage and security logs. We use this to provide the
+            service, bill for it, keep it secure, support you and send service
+            messages. The lawful basis is performance of our contract with your
+            company and our legitimate interests in running a secure service.
+            Payments are processed by Stripe; we do not store card numbers.
+          </p>
+          <h3>
+            Your customers' data (you are the controller, we are the processor)
+          </h3>
+          <p>
+            The sites, assets, jobs, certificates, reports, defects,
+            photographs, signatures and contacts you record in Compliar belong
+            to your company. You decide what to collect and why; we process it
+            only on your instructions to provide the service, under the
+            data-processing terms in our <a href="/terms/">Terms of Service</a>.
+            We do not sell it, use it for advertising or use it to train models.
+          </p>
 
-    <h2>Who we share data with</h2>
-    <p>
-      Service providers who host and operate parts of Compliar on our behalf under contract:
-      database and file storage (Supabase), application hosting (Lovable), payments (Stripe),
-      email (Google Workspace), demo request form delivery (Web3Forms), contact records for enquiries (HubSpot), transactional email such as invites, quotes, invoices and
-      certificates sent from the app (Resend), the in-app help assistant, which sends your
-      question to an AI model through Lovable's AI gateway, site address lookups (OpenStreetMap
-      Nominatim), web push notifications delivered through your browser or phone's push service,
-      and source control and website hosting (GitHub). Some providers
-      operate outside the United Kingdom; where personal data is transferred outside the UK we
-      rely on the UK International Data Transfer Agreement or Addendum, or an adequacy
-      regulation. We will also disclose data where the law requires it.
-    </p>
+          <h2>Who we share data with</h2>
+          <p>
+            Service providers who host and operate parts of Compliar on our
+            behalf under contract: database and file storage (Supabase),
+            application hosting (Lovable), payments (Stripe), email (Google
+            Workspace), demo request form delivery (Web3Forms), contact records
+            for enquiries (HubSpot), transactional email such as invites,
+            quotes, invoices and certificates sent from the app (Resend), the
+            in-app help assistant, which sends your question to an AI model
+            through Lovable's AI gateway, site address lookups (OpenStreetMap
+            Nominatim), web push notifications delivered through your browser or
+            phone's push service, and source control and website hosting
+            (GitHub). Some providers operate outside the United Kingdom; where
+            personal data is transferred outside the UK we rely on the UK
+            International Data Transfer Agreement or Addendum, or an adequacy
+            regulation. We will also disclose data where the law requires it.
+          </p>
 
-    <h2>How long we keep it</h2>
-    <p>
-      Account data for the life of your subscription and up to 12 months afterwards, then
-      deleted or anonymised, except where we must keep records for tax or legal reasons (normally
-      six years for financial records). Workspace content is available for export for 30 days
-      after your subscription ends and is then deleted from live systems; backups roll off within
-      a further 35 days.
-    </p>
+          <h2>How long we keep it</h2>
+          <p>
+            Account data for the life of your subscription and up to 12 months
+            afterwards, then deleted or anonymised, except where we must keep
+            records for tax or legal reasons (normally six years for financial
+            records). Workspace content is available for export for 30 days
+            after your subscription ends and is then deleted from live systems;
+            backups roll off within a further 35 days.
+          </p>
 
-    <h2>Your rights</h2>
-    <p>
-      You can ask for a copy of the personal data we hold about you, ask us to correct or delete
-      it, object to or restrict processing, and ask for data you gave us in a portable form. Email
-      our Data Protection Officer at
-      <a href="mailto:keiran@compliar.co.uk">keiran@compliar.co.uk</a> and we will respond within
-      one month. If your data is in a customer's workspace, we may refer your request to that
-      customer, who controls it. You can complain to the Information Commissioner's Office at
-      <a href="https://ico.org.uk" rel="noopener">ico.org.uk</a> or on 0303 123 1113; our
-      registration reference is ZC278853.
-    </p>
+          <h2>Your rights</h2>
+          <p>
+            You can ask for a copy of the personal data we hold about you, ask
+            us to correct or delete it, object to or restrict processing, and
+            ask for data you gave us in a portable form. Email our Data
+            Protection Officer at
+            <a href="mailto:keiran@compliar.co.uk">keiran@compliar.co.uk</a> and
+            we will respond within one month. If your data is in a customer's
+            workspace, we may refer your request to that customer, who controls
+            it. You can complain to the Information Commissioner's Office at
+            <a href="https://ico.org.uk" rel="noopener">ico.org.uk</a> or on
+            0303 123 1113; our registration reference is ZC278853.
+          </p>
 
-    <h2 id="security">Security</h2>
-    <p>
-      Data is encrypted in transit and at rest, access inside the application is limited to your
-      own company by database-level controls, and staff access to production systems is
-      restricted and logged. No system is perfectly secure; if we become aware of a breach that
-      affects you we will tell you without undue delay.
-    </p>
+          <h2 id="security">Security</h2>
+          <p>
+            Data is encrypted in transit and at rest, access inside the
+            application is limited to your own company by database-level
+            controls, and staff access to production systems is restricted and
+            logged. No system is perfectly secure; if we become aware of a
+            breach that affects you we will tell you without undue delay.
+          </p>
 
-    <h2>Children</h2>
-    <p>Compliar is a business tool and is not intended for anyone under 18.</p>
+          <h2>Children</h2>
+          <p>
+            Compliar is a business tool and is not intended for anyone under 18.
+          </p>
 
-    <h2>Changes</h2>
-    <p>
-      We will post changes here with a new date. If a change materially affects how we use your
-      data we will tell account holders by email first.
-    </p>
-  </div>
-</section>
+          <h2>Changes</h2>
+          <p>
+            We will post changes here with a new date. If a change materially
+            affects how we use your data we will tell account holders by email
+            first.
+          </p>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="wrap foot-grid">
@@ -277,7 +332,8 @@
             >Compliar</a
           >
           <p class="footer-intro">
-            Less admin. More time for the job.<br />Built for UK electrical, fire protection and life safety, and security contractors.
+            Less admin. More time for the job.<br />Built for UK electrical,
+            fire protection and life safety, and security contractors.
           </p>
         </div>
         <div class="foot-col">
@@ -291,34 +347,87 @@
             <li><a href="/early-adopters/">Early adopters</a></li>
             <li><a href="/switching-to-compliar/">Switching to Compliar</a></li>
             <li><a href="/contact/">Contact</a></li>
-            <li><a href="https://app.compliar.co.uk" target="_blank" rel="noopener">Customer log in ↗</a></li>
+            <li>
+              <a
+                href="https://app.compliar.co.uk"
+                target="_blank"
+                rel="noopener"
+                >Customer log in ↗</a
+              >
+            </li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Trades</h2>
           <ul>
-            <li><a href="/fire-alarm-certificate-software/">Fire detection and alarm certificates</a></li>
-            <li><a href="/fire-alarm-maintenance-software/">Fire detection and alarm maintenance</a></li>
-            <li><a href="/fire-alarm-design-software/">Fire detection and alarm design</a></li>
-            <li><a href="/emergency-lighting-certificate-software/">Emergency lighting certificates</a></li>
-            <li><a href="/eicr-and-electrical-certificate-software/">Electrical certificates</a></li>
+            <li>
+              <a href="/fire-alarm-certificate-software/"
+                >Fire detection and alarm certificates</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-maintenance-software/"
+                >Fire detection and alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/fire-alarm-design-software/"
+                >Fire detection and alarm design</a
+              >
+            </li>
+            <li>
+              <a href="/emergency-lighting-certificate-software/"
+                >Emergency lighting certificates</a
+              >
+            </li>
+            <li>
+              <a href="/eicr-and-electrical-certificate-software/"
+                >Electrical certificates</a
+              >
+            </li>
             <li><a href="/pat-testing-software/">PAT testing</a></li>
-            <li><a href="/intruder-alarm-maintenance-software/">Intruder alarm maintenance</a></li>
-            <li><a href="/cctv-commissioning-maintenance-software/">CCTV</a></li>
-            <li><a href="/access-control-door-entry-software/">Access control and door entry</a></li>
-            <li><a href="/data-centre-critical-site-software/">Data centres and critical sites</a></li>
+            <li>
+              <a href="/intruder-alarm-maintenance-software/"
+                >Intruder alarm maintenance</a
+              >
+            </li>
+            <li>
+              <a href="/cctv-commissioning-maintenance-software/">CCTV</a>
+            </li>
+            <li>
+              <a href="/access-control-door-entry-software/"
+                >Access control and door entry</a
+              >
+            </li>
+            <li>
+              <a href="/data-centre-critical-site-software/"
+                >Data centres and critical sites</a
+              >
+            </li>
             <li><a href="/service-report-software/">Service reports</a></li>
           </ul>
         </div>
         <div class="foot-col">
           <h2>Log books, tools &amp; guides</h2>
           <ul>
-            <li><a href="/fire-log-book-software/">Digital fire log book</a></li>
+            <li>
+              <a href="/fire-log-book-software/">Digital fire log book</a>
+            </li>
             <li><a href="/log-book/">Log book for property owners</a></li>
             <li><a href="/fire-log-book-software/#stickers">Stickers</a></li>
-            <li><a href="/fire-alarm-battery-calculator/">Fire alarm battery calculator</a></li>
-            <li><a href="/intruder-alarm-battery-calculator/">Intruder alarm battery calculator</a></li>
-            <li><a href="/time-and-cost-calculator/">Time and cost calculator</a></li>
+            <li>
+              <a href="/fire-alarm-battery-calculator/"
+                >Fire alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/intruder-alarm-battery-calculator/"
+                >Intruder alarm battery calculator</a
+              >
+            </li>
+            <li>
+              <a href="/time-and-cost-calculator/">Time and cost calculator</a>
+            </li>
             <li><a href="/resources/">Guides and resources</a></li>
             <li><a href="/sample-documents/">Sample certificates</a></li>
           </ul>
@@ -328,10 +437,22 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms &amp; Conditions</a></li>
-            <li><a href="/privacy/#security">Security &amp; Data Protection</a></li>
+            <li>
+              <a href="/privacy/#security">Security &amp; Data Protection</a>
+            </li>
             <li><a href="/cookies/">Cookies</a></li>
-            <li hidden><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
-            <li><a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a></li>
+            <li hidden>
+              <button
+                type="button"
+                class="cookie-settings-link"
+                data-cookie-settings
+              >
+                Cookie settings
+              </button>
+            </li>
+            <li>
+              <a href="mailto:enquiry@compliar.co.uk">enquiry@compliar.co.uk</a>
+            </li>
             <li><a href="/contact/">Book a demo</a></li>
           </ul>
         </div>
@@ -339,11 +460,18 @@
       <div class="wrap foot-bottom">
         <span>© 2026 COMPLIAR LTD · Built in the UK</span
         ><span
-          >COMPLIAR LTD is registered in England and Wales, company number 17519777, VAT number GB 532 0690 15. Registered
-          office: 11 Wakefield Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
+          >COMPLIAR LTD is registered in England and Wales, company number
+          17519777, VAT number GB 532 0690 15. Registered office: 11 Wakefield
+          Drive, Endmoor, Kendal, LA8 0BF. ICO registration ZC278853.</span
         >
       </div>
     </footer>
-      <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "abdf47c963bb43d086fd6fa762c45059"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
 </html>
