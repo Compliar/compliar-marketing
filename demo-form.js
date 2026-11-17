@@ -206,7 +206,7 @@
         <div class="demo-error" role="alert" hidden></div>
         <div class="demo-submit-row">
           <button type="submit" class="btn btn-primary">Book a demo</button>
-          <p class="fine"><strong>What happens next:</strong> 15 minutes with Keiran, on your own sites. We use these details only to arrange your demo. See our <a href="/privacy/">Privacy Policy</a>.</p>
+          <p class="fine"><strong>What happens next:</strong> 15 minutes with Keiran, a live walk-through of Compliar on a demo account. We use these details only to arrange your demo. See our <a href="/privacy/">Privacy Policy</a>.</p>
         </div>
       </form>`;
     const form = wrap.firstElementChild;
@@ -268,7 +268,7 @@
       card.className = "demo-thanks";
       card.setAttribute("role", "status");
       card.innerHTML =
-        '<div class="demo-thanks-icon" aria-hidden="true">✓</div><h3>Thanks. Your demo request is in.</h3><p>We\'ll get back to you as soon as possible to arrange your demo: 15 minutes with Keiran, on your own sites.</p><p><a href="/sample-documents/">Open the sample certificates</a><br /><a href="/pricing/">See pricing</a><br /><a href="/#one-job-video">Watch one job start to finish (36 seconds)</a></p>';
+        '<div class="demo-thanks-icon" aria-hidden="true">✓</div><h3>Thanks. Your demo request is in.</h3><p>We\'ll get back to you as soon as possible to arrange your demo: 15 minutes with Keiran, a live walk-through of Compliar on a demo account.</p><p><a href="/sample-documents/">Open the sample certificates</a><br /><a href="/pricing/">See pricing</a><br /><a href="/#one-job-video">Watch one job start to finish (36 seconds)</a></p>';
       form.replaceWith(card);
     }
     return form;
@@ -288,7 +288,7 @@
         <div class="demo-modal-inner">
           <button type="button" class="demo-modal-close" aria-label="Close">✕</button>
           <h2 id="demo-modal-title">Book a demo</h2>
-          <p class="modal-sub">15 minutes with Keiran, on your own sites.</p>
+          <p class="modal-sub">15 minutes with Keiran, a live walk-through of Compliar on a demo account.</p>
           <div class="modal-form"></div>
         </div>`;
       document.body.appendChild(dialog);
