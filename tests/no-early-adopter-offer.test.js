@@ -42,6 +42,7 @@ test("sitemap does not list the early-adopters redirect", () => {
 test("/early-adopters/ is a redirect to /pricing/", () => {
   const html = fs.readFileSync(path.join(root, REDIRECT), "utf8");
   assert.match(html, /http-equiv="refresh" content="0; url=\/pricing\/"/);
+  assert.match(html, /<meta name="robots" content="noindex"/);
   assert.match(html, /rel="canonical" href="https:\/\/compliar\.co\.uk\/pricing\/"/);
 });
 
